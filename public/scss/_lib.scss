@@ -1,2 +1,27 @@
 // _lib.scss
 
+@import "./_var.scss";
+
+h1 {
+    font-size: map-get($size-text, 'xxl');
+}
+
+h2 {
+    font-size: map-get($size-text, 'xl');
+}
+
+h3 {
+    font-size: map-get($size-text, 'l');
+}
+
+h4 {
+    font-size: map-get($size-text, 'm');
+}
+
+h5 {
+    font-size: map-get($size-text, 's');
+}
+
+h6 {
+    font-size: map-get($size-text, 'xs');
+}
