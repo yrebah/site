@@ -1,5 +1,18 @@
 // _var.scss
 
+$color: (
+    0: transparent,
+    1: black,
+    2: white,
+    3: gray,
+    4: dodgerblue,
+    5: mediumseagreen,
+    6: yellow,
+    7: orange,
+    8: red,
+    9: purple
+);
+
 $font-family: (
     0: segoe ui,
     1: segoe ui,
@@ -18,29 +31,84 @@ $size-text: (
     xxl: clamp(38px, 10vw, 46px)
 );
 
-$size-xs: 414px;
-$size-s: 576px;
-$size-m: 768px;
-$size-l: 992px;
-$size-xl: 1200px;
-$size-xxl: 1400px;
-
-$color: (
-    0: transparent,
-    1: black,
-    2: white,
-    3: gray,
-    4: dodgerblue,
-    5: mediumseagreen,
-    6: yellow,
-    7: orange,
-    8: red,
-    9: purple
-);
-
 $display: (
     block: block,
     flex: flex,
     grid: grid,
     none: none
+);
+
+$align-items: (
+    stard: start,
+    center: center,
+    end: end
+);
+
+$justify-content: (
+    stard: start,
+    center: center,
+    end: end
+);
+
+$flex: (
+    xs: 9%,
+    s: 24%,
+    m: 39%,
+    l: 49%,
+    xl: 59%,
+    xxl: 74%
+);
+
+$gap: (
+    xs: 6px,
+    s: 10px,
+    m: 12px,
+    l: 16px,
+    xl: 22px,
+    xxl: 30px
+);
+
+$size-screen: (
+    xs: 414px,
+    s: 576px,
+    m: 768px,
+    l: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+$padding: (
+    xs: 4px,
+    s: 6px,
+    m: 10px,
+    l: 16px,
+    xl: 24px,
+    xxl: 30px
+);
+
+$margin: (
+    xs: 4px,
+    s: 6px,
+    m: 10px,
+    l: 16px,
+    xl: 24px,
+    xxl: 30px
+);
+
+$border-radius: (
+    xs: 4px,
+    s: 6px,
+    m: 10px,
+    l: 16px,
+    xl: 30px,
+    xxl: 50%
+);
+
+$border-solid: (
+    xs: 1px solid,
+    s: 2px solid,
+    m: 3px solid,
+    l: 4px solid,
+    xl: 6px solid,
+    xxl: 8px solid
 );
