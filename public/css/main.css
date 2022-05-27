@@ -19,8 +19,17 @@ button {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-size: clamp(18px, 10vw, 20px);
+  font-family: segoe ui;
 }
 
 h1 {
@@ -28,23 +37,27 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(32px, 8vw, 36px);
+  font-size: clamp(32px, 10vw, 36px);
 }
 
 h3 {
-  font-size: clamp(24px, 7vw, 30px);
+  font-size: clamp(26px, 10vw, 30px);
 }
 
 h4 {
-  font-size: clamp(20px, 6vw, 22px);
+  font-size: clamp(22px, 10vw, 24px);
 }
 
 h5 {
-  font-size: clamp(18px, 5vw, 20px);
+  font-size: clamp(18px, 10vw, 20px);
 }
 
 h6 {
-  font-size: clamp(15px, 4vw, 16px);
+  font-size: clamp(14px, 10vw, 16px);
+}
+
+a {
+  border-bottom: 2px solid;
 }
 
 input {
@@ -52,7 +65,7 @@ input {
   padding: 16px;
   border: 1px solid;
   border-color: #e6e6e6;
-  font-size: clamp(15px, 4vw, 16px);
+  font-size: clamp(14px, 10vw, 16px);
 }
 
 input:read-only {

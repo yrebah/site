@@ -1,15 +1,17 @@
 // _var.scss
 
-$color-0: transparent;
-$color-1: black;
-$color-2: white;
-$color-3: hsl(0, 0%, 90%);
-$color-4: dodgerblue;
-$color-5: mediumseagreen;
-$color-6: yellow;
-$color-7: orange;
-$color-8: red;
-$color-9: purple;
+$color: (
+    0: transparent,
+    1: black,
+    2: white,
+    3: hsl(0, 0%, 90%),
+    4: dodgerblue,
+    5: mediumseagreen,
+    6: yellow,
+    7: orange,
+    8: red,
+    9: purple,
+);
 
 $font-family: (
     0: segoe ui,
@@ -20,12 +22,12 @@ $font-family: (
     5: segoe ui
 );
 
-$size-text: (
-    xs: clamp(15px, 4vw, 16px),
-    s: clamp(18px, 5vw, 20px),
-    m: clamp(20px, 6vw, 22px),
-    l: clamp(24px, 7vw, 30px),
-    xl: clamp(32px, 8vw, 36px),
+$font-size: (
+    xs: clamp(14px, 10vw, 16px),
+    s: clamp(18px, 10vw, 20px),
+    m: clamp(22px, 10vw, 24px),
+    l: clamp(26px, 10vw, 30px),
+    xl: clamp(32px, 10vw, 36px),
     xxl: clamp(38px, 10vw, 46px)
 );
 
@@ -106,16 +108,7 @@ $border-solid: (
     xs: 1px solid,
     s: 2px solid,
     m: 3px solid,
-    l: 4px solid,
-    xl: 6px solid,
-    xxl: 8px solid
-);
-
-$outline: (
-    xs: 1px,
-    s: 2px,
-    m: 3px,
-    l: 4px,
-    xl: 6px,
-    xxl: 8px
+    l: 6px solid,
+    xl: 8px solid,
+    xxl: 10px solid
 );

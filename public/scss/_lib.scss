@@ -2,43 +2,52 @@
 
 @import "./_var.scss";
 
+body {
+    font-size: map-get($font-size, 's');
+    font-family: map-get($font-family, 0);
+}
+
 h1 {
-    font-size: map-get($size-text, 'xxl');
+    font-size: map-get($font-size, 'xxl');
 }
 
 h2 {
-    font-size: map-get($size-text, 'xl');
+    font-size: map-get($font-size, 'xl');
 }
 
 h3 {
-    font-size: map-get($size-text, 'l');
+    font-size: map-get($font-size, 'l');
 }
 
 h4 {
-    font-size: map-get($size-text, 'm');
+    font-size: map-get($font-size, 'm');
 }
 
 h5 {
-    font-size: map-get($size-text, 's');
+    font-size: map-get($font-size, 's');
 }
 
 h6 {
-    font-size: map-get($size-text, 'xs');
+    font-size: map-get($font-size, 'xs');
+}
+
+a {
+    border-bottom: map-get($border-solid, 's');
 }
 
 input {
     border-radius: map-get($border-radius, 'xs');
     padding: map-get($padding, 'l');
     border: map-get($border-solid, 'xs');
-    border-color: $color-3;
-    font-size: map-get($size-text, 'xs');
+    border-color: map-get($color, 3);
+    font-size: map-get($font-size, 'xs');
 
     &:read-only {
         background: $color-3;
-        color: $color-1;
+        color: map-get($color, 1);
     }
 
     &:focus-within {
-        outline-color: $color-4;
+        outline-color: map-get($color, 4);
     }
 }
