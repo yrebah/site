@@ -15,6 +15,19 @@ input {
     outline: none;
 }
 
+button,
+.pointer {
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+}
+
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    font-family: map.get($body, 'font-family');
+    font-size: map.get($body, 'font-size');
+    color: map.get($body, 'color');
+    background: map.get($body, 'background');
 }

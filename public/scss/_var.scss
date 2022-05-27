@@ -1,1 +1,41 @@
 // _var.scss
+
+$font-family: (
+    0: segoe ui,
+    1: segoe ui,
+    2: segoe ui,
+    3: segoe ui,
+    4: segoe ui,
+    5: segoe ui
+);
+
+$text-size: (
+    xs: clamp(16px, 3vw, 18px),
+    s: clamp(18px, 4vw, 20px),
+    m: clamp(20px, 5vw, 24px),
+    l: clamp(22px, 6vw, 26px),
+    xl: clamp(28px, 7vw, 34px),
+    xxl: clamp(36px, 8vw, 42px)
+);
+
+$size: (
+    xs: 414,
+    s: 576px,
+    m: 768px,
+    l: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+$color: (
+    0: transparent,
+    1: black,
+    2: white,
+    3: gray,
+    4: dodgerblue,
+    5: mediumseagreen,
+    6: yellow,
+    7: orange,
+    8: red,
+    9: purple
+);

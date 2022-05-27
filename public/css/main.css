@@ -13,6 +13,11 @@ input {
   outline: none;
 }
 
+button, .pointer {
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+}
+
 html {
   scroll-behavior: smooth;
 }
