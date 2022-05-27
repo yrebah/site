@@ -1,1 +1,33 @@
 // _responsive.scss
+
+@import "./_var.scss";
+
+// xs
+@media screen and (max-width: map.get($size, 'xs')) {
+
+}
+
+// s
+@media screen and (max-width: map.get($size, 's')) {
+
+}
+
+// m
+@media screen and (max-width: map.get($size, 'm')) {
+
+}
+
+// l
+@media screen and (max-width: map.get($size, 'l')) {
+
+}
+
+// xl
+@media screen and (max-width: map.get($size, 'xl')) {
+
+}
+
+// xxl
+@media screen and (max-width: map.get($size, 'xxl')) {
+    
+}
