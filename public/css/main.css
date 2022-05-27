@@ -7,9 +7,11 @@
 }
 
 button,
-select,
-textarea,
-input {
+select {
+  outline: none;
+}
+
+input[readonly] {
   outline: none;
 }
 
@@ -47,13 +49,17 @@ h6 {
 
 input {
   border-radius: 3px;
-  padding: 14px;
+  padding: 16px;
   border: 1px solid;
-  border-color: lightgray;
+  border-color: #e6e6e6;
   font-size: clamp(15px, 4vw, 16px);
 }
 
 input:read-only {
-  background: lightgray;
+  background: #e6e6e6;
   color: black;
+}
+
+input:focus-within {
+  outline-color: dodgerblue;
 }

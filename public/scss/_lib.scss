@@ -37,4 +37,8 @@ input {
         background: $color-3;
         color: $color-1;
     }
+
+    &:focus-within {
+        outline-color: $color-4;
+    }
 }

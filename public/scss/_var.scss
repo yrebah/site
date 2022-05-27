@@ -3,7 +3,7 @@
 $color-0: transparent;
 $color-1: black;
 $color-2: white;
-$color-3: lightgray;
+$color-3: hsl(0, 0%, 90%);
 $color-4: dodgerblue;
 $color-5: mediumseagreen;
 $color-6: yellow;
@@ -78,10 +78,10 @@ $size-screen: (
 $padding: (
     xs: 4px,
     s: 6px,
-    m: 10px,
-    l: 14px,
-    xl: 20px,
-    xxl: 26px
+    m: 12px,
+    l: 16px,
+    xl: 22px,
+    xxl: 30px
 );
 
 $margin: (
@@ -109,4 +109,13 @@ $border-solid: (
     l: 4px solid,
     xl: 6px solid,
     xxl: 8px solid
+);
+
+$outline: (
+    xs: 1px,
+    s: 2px,
+    m: 3px,
+    l: 4px,
+    xl: 6px,
+    xxl: 8px
 );

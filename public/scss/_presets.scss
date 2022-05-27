@@ -9,9 +9,11 @@
 }
 
 button,
-select,
-textarea,
-input {
+select {
+    outline: none;
+}
+
+input[readonly] {
     outline: none;
 }
 
