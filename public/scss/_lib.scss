@@ -35,7 +35,8 @@ a {
     border-bottom: map-get($border-solid, 's');
 }
 
-input {
+input,
+textarea {
     border-radius: map-get($border-radius, 'xs');
     padding: map-get($padding, 'l');
     border: map-get($border-solid, 'xs');

@@ -11,6 +11,10 @@ select {
   outline: none;
 }
 
+textarea {
+  resize: none;
+}
+
 input[readonly] {
   outline: none;
 }
@@ -21,6 +25,10 @@ button {
 
 a {
   text-decoration: none;
+}
+
+strong {
+  font-weight: 500;
 }
 
 html {
@@ -60,7 +68,8 @@ a {
   border-bottom: 2px solid;
 }
 
-input {
+input,
+textarea {
   border-radius: 3px;
   padding: 16px;
   border: 1px solid;
@@ -68,11 +77,13 @@ input {
   font-size: clamp(14px, 10vw, 16px);
 }
 
-input:read-only {
+input:read-only,
+textarea:read-only {
   background: #e6e6e6;
   color: black;
 }
 
-input:focus-within {
+input:focus-within,
+textarea:focus-within {
   outline-color: dodgerblue;
 }

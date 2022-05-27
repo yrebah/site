@@ -13,6 +13,10 @@ select {
     outline: none;
 }
 
+textarea {
+    resize: none;
+}
+
 input[readonly] {
     outline: none;
 }
@@ -23,6 +27,10 @@ button {
 
 a {
     text-decoration: none;
+}
+
+strong {
+    font-weight: 500;
 }
 
 html {
