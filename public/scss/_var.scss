@@ -18,14 +18,12 @@ $text-size: (
     xxl: clamp(36px, 8vw, 42px)
 );
 
-$size: (
-    xs: 414px,
-    s: 576px,
-    m: 768px,
-    l: 992px,
-    xl: 1200px,
-    xxl: 1400px
-);
+$size-xs: 414px;
+$size-s: 576px;
+$size-m: 768px;
+$size-l: 992px;
+$size-xl: 1200px;
+$size-xxl: 1400px;
 
 $color: (
     0: transparent,
@@ -38,4 +36,11 @@ $color: (
     7: orange,
     8: red,
     9: purple
+);
+
+$display: (
+    block: block,
+    flex: flex,
+    grid: grid,
+    none: none
 );

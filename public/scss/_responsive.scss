@@ -3,31 +3,31 @@
 @import "./_var.scss";
 
 // xs
-@media screen and (max-width: map.get($size, 'xs')) {
-
+@media screen and (max-width: $size-xs) {
+    
 }
 
 // s
-@media screen and (max-width: map.get($size, 's')) {
+@media screen and (max-width: $size-s) {
 
 }
 
 // m
-@media screen and (max-width: map.get($size, 'm')) {
+@media screen and (max-width: $size-m) {
 
 }
 
 // l
-@media screen and (max-width: map.get($size, 'l')) {
+@media screen and (max-width: $size-l) {
 
 }
 
 // xl
-@media screen and (max-width: map.get($size, 'xl')) {
+@media screen and (max-width: $size-xl) {
 
 }
 
 // xxl
-@media screen and (max-width: map.get($size, 'xxl')) {
-    
+@media screen and (max-width: $size-xxl) {
+
 }

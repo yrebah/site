@@ -13,7 +13,8 @@ input {
   outline: none;
 }
 
-button, .pointer {
+button,
+.pointer {
   cursor: pointer;
   transition: 0.15s ease-in-out;
 }
