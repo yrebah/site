@@ -1,17 +1,15 @@
 // _var.scss
 
-$color: (
-    0: transparent,
-    1: black,
-    2: white,
-    3: gray,
-    4: dodgerblue,
-    5: mediumseagreen,
-    6: yellow,
-    7: orange,
-    8: red,
-    9: purple
-);
+$color-0: transparent;
+$color-1: black;
+$color-2: white;
+$color-3: lightgray;
+$color-4: dodgerblue;
+$color-5: mediumseagreen;
+$color-6: yellow;
+$color-7: orange;
+$color-8: red;
+$color-9: purple;
 
 $font-family: (
     0: segoe ui,
@@ -23,9 +21,9 @@ $font-family: (
 );
 
 $size-text: (
-    xs: clamp(16px, 3vw, 18px),
-    s: clamp(18px, 4vw, 20px),
-    m: clamp(20px, 5vw, 22px),
+    xs: clamp(15px, 4vw, 16px),
+    s: clamp(18px, 5vw, 20px),
+    m: clamp(20px, 6vw, 22px),
     l: clamp(24px, 7vw, 30px),
     xl: clamp(32px, 8vw, 36px),
     xxl: clamp(38px, 10vw, 46px)
@@ -81,9 +79,9 @@ $padding: (
     xs: 4px,
     s: 6px,
     m: 10px,
-    l: 16px,
-    xl: 24px,
-    xxl: 30px
+    l: 14px,
+    xl: 20px,
+    xxl: 26px
 );
 
 $margin: (
@@ -96,9 +94,9 @@ $margin: (
 );
 
 $border-radius: (
-    xs: 4px,
-    s: 6px,
-    m: 10px,
+    xs: 3px,
+    s: 4px,
+    m: 6px,
     l: 16px,
     xl: 30px,
     xxl: 50%

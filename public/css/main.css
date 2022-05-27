@@ -34,20 +34,26 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(20px, 5vw, 22px);
+  font-size: clamp(20px, 6vw, 22px);
 }
 
 h5 {
-  font-size: clamp(18px, 4vw, 20px);
+  font-size: clamp(18px, 5vw, 20px);
 }
 
 h6 {
-  font-size: clamp(16px, 3vw, 18px);
+  font-size: clamp(15px, 4vw, 16px);
 }
 
 input {
   border-radius: 3px;
-  padding: 10px;
-  border: 1px solid gray;
-  font-size: 16px;
+  padding: 14px;
+  border: 1px solid;
+  border-color: lightgray;
+  font-size: clamp(15px, 4vw, 16px);
+}
+
+input:read-only {
+  background: lightgray;
+  color: black;
 }

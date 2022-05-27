@@ -27,8 +27,14 @@ h6 {
 }
 
 input {
-    border-radius: 3px;
-    padding: 10px;
-    border: 1px solid gray;
-    font-size: 16px;
+    border-radius: map-get($border-radius, 'xs');
+    padding: map-get($padding, 'l');
+    border: map-get($border-solid, 'xs');
+    border-color: $color-3;
+    font-size: map-get($size-text, 'xs');
+
+    &:read-only {
+        background: $color-3;
+        color: $color-1;
+    }
 }
