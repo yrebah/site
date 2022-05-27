@@ -10,7 +10,7 @@ $color: (
     6: yellow,
     7: orange,
     8: red,
-    9: purple,
+    9: purple
 );
 
 $font-family: (
@@ -29,25 +29,6 @@ $font-size: (
     l: clamp(26px, 10vw, 30px),
     xl: clamp(32px, 10vw, 36px),
     xxl: clamp(38px, 10vw, 46px)
-);
-
-$display: (
-    block: block,
-    flex: flex,
-    grid: grid,
-    none: none
-);
-
-$align-items: (
-    stard: start,
-    center: center,
-    end: end
-);
-
-$justify-content: (
-    stard: start,
-    center: center,
-    end: end
 );
 
 $flex: (
