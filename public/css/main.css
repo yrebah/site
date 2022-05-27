@@ -44,3 +44,10 @@ h5 {
 h6 {
   font-size: clamp(16px, 3vw, 18px);
 }
+
+input {
+  border-radius: 3px;
+  padding: 10px;
+  border: 1px solid gray;
+  font-size: 16px;
+}
