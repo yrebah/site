@@ -2,15 +2,27 @@
 
 $color: (
     0: transparent,
-    1: black,
-    2: white,
+    1: hsl(0, 0%, 0%),
+    2: hsl(0, 0%, 100%),
     3: hsl(0, 0%, 90%),
-    4: dodgerblue,
-    5: mediumseagreen,
-    6: yellow,
-    7: orange,
-    8: red,
-    9: purple
+    4: hsl(210, 100%, 56%),
+    5: hsl(147, 50%, 47%),
+    6: hsl(60, 100%, 50%),
+    7: hsl(39, 100%, 50%),
+    8: hsl(0, 100%, 50%),
+    9: hsl(300, 100%, 25%)
+);
+
+$color-trans: (
+    1: hsla(0, 0%, 0%, 0.25),
+    2: hsla(0, 0%, 100%, 0.25),
+    3: hsla(0, 0%, 90%, 0.25),
+    4: hsla(210, 100%, 56%, 0.25),
+    5: hsl(147, 50%, 47%, 0.25),
+    6: hsl(60, 100%, 50%, 0.25),
+    7: hsl(39, 100%, 50%, 0.25),
+    8: hsl(0, 100%, 50%, 0.25),
+    9: hsl(300, 100%, 25%, 0.25)
 );
 
 $font-family: (
@@ -73,9 +85,11 @@ $padding: (
     s: 8px,
     m: 14px,
     l: 16px,
-    xl: 22px,
+    xl: 24px,
     xxl: 30px
 );
+
+$test: blue;
 
 $margin: (
     xs: 4px,

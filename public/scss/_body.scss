@@ -6,3 +6,8 @@ body {
     font-size: map-get($font-size, 's');
     font-family: map-get($font-family, 0);
 }
+
+main{
+    padding-right: map-get($padding, 'xxl');
+    padding-left: map-get($padding, 'xxl');
+}

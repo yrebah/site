@@ -11,16 +11,17 @@ const port = 3000;
 
 // Static files
 app.use(express.static(__dirname + '/public'));
-app.use('/css', express.static(__dirname + '/public/css'))
-app.use('/js', express.static(__dirname + '/public/js'))
-app.use('/mjs', express.static(__dirname + '/public/mjs'))
-app.use('/img', express.static(__dirname + '/public/img'))
-app.use('/json', express.static(__dirname + '/public/json'))
+app.use('/css', express.static(__dirname + '/public/css'));
+app.use('/js', express.static(__dirname + '/public/js'));
+app.use('/mjs', express.static(__dirname + '/public/mjs'));
+app.use('/img', express.static(__dirname + '/public/img'));
+app.use('/json', express.static(__dirname + '/public/json'));
 
 // Set Views
-app.set('views', './views')
-app.set('view engine', 'ejs')
+app.set('views', './views');
+app.set('view engine', 'ejs');
 
+// page Home
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Accueil',
@@ -28,6 +29,7 @@ app.get('', (req, res) => {
     })
 })
 
+// page About
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'A propos',
@@ -35,6 +37,7 @@ app.get('/about', (req, res) => {
     })
 })
 
+// page 404
 app.get('*', (req, res) => {
     res.render('404', {
         title: 'Erreur 404',

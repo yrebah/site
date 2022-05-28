@@ -11,6 +11,7 @@ textarea {
     font-size: map-get($font-size, 'xs');
     color: map-get($color, 1);
     transition: 0.15s ease-in-out;
+    background: $test;
 
     &:read-only {
         background: map-get($color, 3);

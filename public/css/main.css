@@ -42,6 +42,11 @@ body {
   font-family: segoe ui;
 }
 
+main {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
 .row {
   display: flex;
   flex-direction: row;
@@ -229,7 +234,7 @@ textarea:hover {
 
 input:focus-within,
 textarea:focus-within {
-  outline-color: dodgerblue;
+  outline-color: #1f8fff;
 }
 
 .select {
@@ -257,7 +262,7 @@ textarea:focus-within {
 }
 
 .select:focus {
-  border-color: dodgerblue;
+  border-color: #1f8fff;
 }
 
 /*
