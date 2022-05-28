@@ -2,3 +2,39 @@
 
 @import "./_var.scss";
 
+.select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: map-get($padding, 'm');
+    border-radius: map-get($border-radius, 'xs');
+    border: map-get($border-solid, 'xs');
+    border-color: map-get($color, 3);
+    transition: 0.15s ease-in-out;
+
+    select {
+        padding: map-get($padding, 'l');
+        font-size: clamp(14px, 10vw, 16px);
+        color: map-get($color, 1);
+        width: 100%;
+        height: 100%;
+        flex: 90%;
+    }
+
+    &:hover {
+        border-color: map-get($color, 1);
+    }
+
+    &:focus {
+        border-color: map-get($color, 4);
+    }
+}
+
+/*
+    <div class="select">
+        <select name="" id="">
+            <option value="val-1">Hello</option>
+            <option value="val-2">World !</option>
+        </select>
+    </div>
+*/

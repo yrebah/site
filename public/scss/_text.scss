@@ -28,4 +28,8 @@ h6 {
 
 a {
     border-bottom: map-get($border-solid, 's');
+
+    &:hover{ 
+        filter: brightness(90%);
+    }
 }

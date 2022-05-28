@@ -7,6 +7,10 @@
     border-radius: map-get($border-radius, 'xs');
     font-size: map-get($font-size, 'xs');
 
+    &:hover{ 
+        filter: brightness(93%);
+    }
+
     &.btn-primary{
         background: map-get($button, 'primary');
     }

@@ -1,5 +1,5 @@
 // main.js
 
-$(document).ready(()=>{
-    
+$(document).ready(() => {
+    console.log('start')
 })

@@ -21,7 +21,8 @@ input[readonly] {
     outline: none;
 }
 
-button {
+button,
+select {
     border: none;
     cursor: pointer;
 }
