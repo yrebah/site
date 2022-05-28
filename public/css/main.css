@@ -20,6 +20,7 @@ input[readonly] {
 }
 
 button {
+  border: none;
   cursor: pointer;
 }
 
@@ -75,17 +76,59 @@ textarea {
   border: 1px solid;
   border-color: #e6e6e6;
   font-size: clamp(14px, 10vw, 16px);
+  transition: 0.15s ease-in-out;
 }
 
 input:read-only,
 textarea:read-only {
   background: #e6e6e6;
   color: black;
+  border: none;
+}
+
+input:hover,
+textarea:hover {
+  border-color: black;
 }
 
 input:focus-within,
 textarea:focus-within {
   outline-color: dodgerblue;
+}
+
+.btn {
+  padding: 14px;
+  border-radius: 3px;
+  font-size: clamp(14px, 10vw, 16px);
+}
+
+.btn.btn-primary {
+  background: #63b1ff;
+}
+
+.btn.btn-secondary {
+  background: #e6e6e6;
+}
+
+.btn.btn-cancel {
+  background: black;
+  color: #e6e6e6;
+}
+
+.btn.btn-accept {
+  background: #42e88d;
+}
+
+.btn.btn-back {
+  background: transparent;
+}
+
+.btn.btn-send {
+  background: #63b1ff;
+}
+
+.btn.btn-alert {
+  background: #ff7f7f;
 }
 
 .row {

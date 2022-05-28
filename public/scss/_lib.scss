@@ -42,14 +42,49 @@ textarea {
     border: map-get($border-solid, 'xs');
     border-color: map-get($color, 3);
     font-size: map-get($font-size, 'xs');
+    transition: 0.15s ease-in-out;
 
     &:read-only {
         background: map-get($color, 3);
         color: map-get($color, 1);
+        border: none;
+    }
+
+    &:hover {
+        border-color: map-get($color, 1);
     }
 
     &:focus-within {
         outline-color: map-get($color, 4);
+    }
+}
+
+.btn{
+    padding: map-get($padding, 'm');
+    border-radius: map-get($border-radius, 'xs');
+    font-size: map-get($font-size, 'xs');
+
+    &.btn-primary{
+        background: map-get($button, 'primary');
+    }
+    &.btn-secondary{
+        background: map-get($button, 'secondary');
+    }
+    &.btn-cancel{
+        background: map-get($button, 'cancel');
+        color: map-get($color, 3);
+    }
+    &.btn-accept{
+        background: map-get($button, 'accept');
+    }
+    &.btn-back{
+        background: map-get($button, 'back');
+    }
+    &.btn-send{
+        background: map-get($button, 'send');
+    }
+    &.btn-alert{
+        background: map-get($button, 'alert');
     }
 }
 
