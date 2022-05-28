@@ -2,35 +2,56 @@
 
 @import "./_var.scss";
 
-.btn{
+.btn {
     padding: map-get($padding, 'm');
     border-radius: map-get($border-radius, 'xs');
-    font-size: map-get($font-size, 'xs');
+    font-size: map-get($font-size, 's');
+    transition: 0.15s ease-in-out;
 
-    &:hover{ 
+    &:hover {
         filter: brightness(93%);
     }
 
-    &.btn-primary{
+    &.btn-primary {
         background: map-get($button, 'primary');
     }
-    &.btn-secondary{
+
+    &.btn-secondary {
         background: map-get($button, 'secondary');
     }
-    &.btn-cancel{
+
+    &.btn-cancel {
         background: map-get($button, 'cancel');
         color: map-get($color, 3);
     }
-    &.btn-accept{
+
+    &.btn-accept {
         background: map-get($button, 'accept');
     }
-    &.btn-back{
+
+    &.btn-back {
         background: map-get($button, 'back');
     }
-    &.btn-send{
+
+    &.btn-send {
         background: map-get($button, 'send');
     }
-    &.btn-alert{
+
+    &.btn-alert {
         background: map-get($button, 'alert');
+    }
+
+    &.btn-icon {
+        background: map-get($button, 'icon');
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover{ 
+            background: map-get($color-trans, 3);
+        }
     }
 }

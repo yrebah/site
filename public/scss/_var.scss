@@ -13,6 +13,19 @@ $color: (
     9: hsl(300, 100%, 25%)
 );
 
+$color-light: (
+    0: transparent,
+    1: hsl(0, 0%, 16%),
+    2: hsl(0, 0%, 100%),
+    3: hsl(0, 0%, 95%),
+    4: hsl(210, 100%, 68%),
+    5: hsl(147, 85%, 71%),
+    6: hsl(60, 96%, 72%),
+    7: hsl(39, 100%, 71%),
+    8: hsl(0, 100%, 65%),
+    9: hsl(300, 56%, 50%)
+);
+
 $color-dark: (
     0: transparent,
     1: hsl(0, 0%, 0%),
@@ -50,7 +63,7 @@ $font-family: (
 
 $font-size: (
     xs: clamp(14px, 10vw, 16px),
-    s: clamp(18px, 10vw, 20px),
+    s: clamp(16px, 10vw, 18px),
     m: clamp(22px, 10vw, 24px),
     l: clamp(26px, 10vw, 30px),
     xl: clamp(32px, 10vw, 36px),
@@ -64,7 +77,17 @@ $button: (
     accept: rgb(66, 232, 141),
     back: transparent,
     send: rgb(99, 177, 255),
-    alert: rgb(255, 127, 127)
+    alert: rgb(255, 127, 127),
+    icon: transparent
+);
+
+$width: (
+    xs: 15%,
+    s: 30%,
+    m: 50%,
+    l: 60%,
+    xl: 80%,
+    xxl: 100%
 );
 
 $flex: (
@@ -140,7 +163,7 @@ $border-solid: (
 );
 
 @mixin screen-xs {
-    @media (max-width: 472px) {
+    @media (min-width: 472px) {
         @content;
     }
 }

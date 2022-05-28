@@ -9,7 +9,8 @@
 }
 
 button,
-select {
+select,
+input[readonly] {
     outline: none;
 }
 
@@ -17,14 +18,16 @@ textarea {
     resize: none;
 }
 
-input[readonly] {
-    outline: none;
-}
-
 button,
 select {
     border: none;
+    background: none;
     cursor: pointer;
+}
+
+button >*,
+a >* {
+    pointer-events: none;
 }
 
 a {
