@@ -5,10 +5,10 @@ const port = 3000;
 
 // Static files
 app.use(express.static(__dirname + '/public'));
-// app.use('/css', express.static(__dirname + '/public/css'))
-// app.use('/js', express.static(__dirname + '/public/js'))
-// app.use('/img', express.static(__dirname + '/public/img'))
-// app.use('/json', express.static(__dirname + '/public/json'))
+app.use('/css', express.static(__dirname + '/public/css'))
+app.use('/js', express.static(__dirname + '/public/js'))
+app.use('/img', express.static(__dirname + '/public/img'))
+app.use('/json', express.static(__dirname + '/public/json'))
 
 // Set Views
 app.set('views', './views')
