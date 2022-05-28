@@ -1,5 +1,11 @@
 // Imports
-const express = require('express');
+import path from 'path';
+import {fileURLToPath} from 'url';
+import express from 'express';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
 const port = 3000;
 
@@ -7,6 +13,7 @@ const port = 3000;
 app.use(express.static(__dirname + '/public'));
 app.use('/css', express.static(__dirname + '/public/css'))
 app.use('/js', express.static(__dirname + '/public/js'))
+app.use('/mjs', express.static(__dirname + '/public/mjs'))
 app.use('/img', express.static(__dirname + '/public/img'))
 app.use('/json', express.static(__dirname + '/public/json'))
 
