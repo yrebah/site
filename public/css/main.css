@@ -33,60 +33,59 @@ strong {
   font-weight: 500;
 }
 
+ul,
+ol {
+  list-style-type: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-size: clamp(18px, 10vw, 20px);
-  font-family: segoe ui;
-}
-
-main,
-section {
+main {
   margin-top: 30px;
   padding-right: 20%;
   padding-left: 20%;
 }
 
 @media (max-width: 599px) {
-  main,
-  section {
+  main {
     padding-right: 3%;
     padding-left: 3%;
   }
 }
 
 @media (min-width: 600px) {
-  main,
-  section {
+  main {
     padding-right: 8%;
     padding-left: 8%;
   }
 }
 
 @media (min-width: 900px) {
-  main,
-  section {
+  main {
     padding-right: 10%;
     padding-left: 10%;
   }
 }
 
 @media (min-width: 1200px) {
-  main,
-  section {
+  main {
     padding-right: 15%;
     padding-left: 15%;
   }
 }
 
 @media (min-width: 1800px) {
-  main,
-  section {
+  main {
     padding-right: 20%;
     padding-left: 20%;
   }
+}
+
+body {
+  font-size: clamp(18px, 10vw, 20px);
+  font-family: segoe ui;
 }
 
 .row {
