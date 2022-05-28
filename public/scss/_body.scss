@@ -4,4 +4,15 @@
 
 body {
     font-family: map-get($font-family, 0);
+    background: map-get($color, 2);
+    color: map-get($color, 1);
+
+    &.dark-mode {
+        background: map-get($color, 1);
+        color: map-get($color, 2) !important;
+
+        a, .btn, p, h1, h2, h3, h4, h5, h6{
+            color: map-get($color, 2) !important;
+        }
+    }
 }

@@ -7,7 +7,7 @@ header {
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
-    height: 60px;
+    height: 80px;
     padding-left: map-get($padding-block, 's');
     padding-right: map-get($padding-block, 's');
 
@@ -58,15 +58,15 @@ header {
 
             @include screen-xs {
                 display: none;
-            } 
+            }
 
             @include screen-s {
                 display: none;
-            } 
+            }
 
             @include screen-m {
                 display: flex;
-            } 
+            }
         }
 
         &:nth-child(3) {
@@ -84,15 +84,15 @@ header {
         @include screen-m {
             width: map-get($width, 'xl');
         }
-    
+
         @include screen-l {
             width: map-get($width, 'l');
         }
-    
+
         @include screen-xl {
             width: map-get($width, 'm');
         }
-    
+
         @include screen-xxl {
             width: map-get($width, 'm');
         }
@@ -100,6 +100,7 @@ header {
         li {
             display: flex;
             align-items: center;
+            justify-content: center;
             width: 100%;
             height: 100%;
 
@@ -112,14 +113,72 @@ header {
                 content: '';
             }
 
-            a {
+            div {
                 display: flex;
+                align-items: center;
                 justify-content: center;
                 width: 100%;
                 height: 100%;
-                color: map-get($color, 1);
-                font-weight: 400;
+
+                a {
+                    font-weight: 400;
+                    padding: map-get($padding, 'xs');
+                    color: map-get($color, 1);
+                    padding-left: map-get($padding, 's');
+                    padding-right: map-get($padding, 's');
+                    border-radius: map-get($border-radius, 's');
+                    transition: 0.15s ease-in-out;
+
+                    &:hover { 
+                        background: map-get($color-trans, 3);
+                    }
+                }
             }
         }
     }
 }
+
+// <header>
+//     <section>
+//         <button class="btn btn-icon">
+//             <i class="fa-solid fa-bars"></i>
+//         </button>
+//     </section>
+//     <section>
+//         <ul>
+//             <li>
+//                 <div>
+//                     <a href="#">Menu 1</a>
+//                 </div>
+//             </li>
+//             <li>
+//                 <div>
+//                     <a href="#">Menu 1</a>
+//                 </div>
+//             </li>
+//             <li>
+//                 <div>
+//                     <a href="#">Menu 1</a>
+//                 </div>
+//             </li>
+//             <li>
+//                 <div>
+//                     <a href="#">Menu 1</a>
+//                 </div>
+//             </li>
+//             <li>
+//                 <div>
+//                     <a href="#">Menu 1</a>
+//                 </div>
+//             </li>
+//         </ul>
+//     </section>
+//     <section>
+//         <button id="sun" class="btn btn-icon">
+//             <i class="fa-solid fa-sun"></i>
+//         </button>
+//         <button id="moon" class="btn btn-icon">
+//             <i class="fa-solid fa-moon"></i>
+//         </button>
+//     </section>
+// </header>

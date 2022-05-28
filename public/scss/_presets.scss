@@ -1,5 +1,7 @@
 // _presets.scss
 
+@import "./_var.scss";
+
 *,
 *::before,
 *::after {
@@ -25,8 +27,8 @@ select {
     cursor: pointer;
 }
 
-button >*,
-a >* {
+button>*,
+a>* {
     pointer-events: none;
 }
 

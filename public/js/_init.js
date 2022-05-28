@@ -1,7 +1,6 @@
 // _init.js
 
 $(document).ready(() => {
-    set_defaultTheme()
     apply_theme()
     set_btnThemeFunctions()
 })
@@ -12,17 +11,15 @@ const apply_theme = () => {
             case 'light':
                 $('#moon').show()
                 $('#sun').hide()
+                $('*').removeClass('dark-mode')
                 break;
             case 'dark':
                 $('#moon').hide()
                 $('#sun').show()
+                $('body').addClass('dark-mode')
                 break;
         }
-    }
-}
-
-const set_defaultTheme = () => {
-    if (localStorage.getItem('theme') == null) {
+    } else {
         set_theme('light')
     }
 }
@@ -33,10 +30,10 @@ const set_theme = (value) => {
 }
 
 const set_btnThemeFunctions = () => {
-    $('#moon').click(() =>{
+    $('#moon').click(() => {
         set_theme('dark')
     })
-    $('#sun').click(() =>{
+    $('#sun').click(() => {
         set_theme('light')
     })
 }
