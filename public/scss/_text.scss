@@ -1,0 +1,31 @@
+// _text.scss
+
+@import "./_var.scss";
+
+h1 {
+    font-size: map-get($font-size, 'xxl');
+}
+
+h2 {
+    font-size: map-get($font-size, 'xl');
+}
+
+h3 {
+    font-size: map-get($font-size, 'l');
+}
+
+h4 {
+    font-size: map-get($font-size, 'm');
+}
+
+h5 {
+    font-size: map-get($font-size, 's');
+}
+
+h6 {
+    font-size: map-get($font-size, 'xs');
+}
+
+a {
+    border-bottom: map-get($border-solid, 's');
+}

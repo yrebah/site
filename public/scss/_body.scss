@@ -1,0 +1,8 @@
+// _button.scss
+
+@import "./_var.scss";
+
+body {
+    font-size: map-get($font-size, 's');
+    font-family: map-get($font-family, 0);
+}
