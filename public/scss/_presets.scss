@@ -49,27 +49,32 @@ main {
     padding-right: map-get($padding-block, 'xxl');
     padding-left: map-get($padding-block, 'xxl');
 
-    @include for-phone-only {
+    @include screen-xs {
         padding-right: map-get($padding-block, 'xs');
         padding-left: map-get($padding-block, 'xs');
     }
 
-    @include for-tablet-portrait-up {
+    @include screen-s {
+        padding-right: map-get($padding-block, 's');
+        padding-left: map-get($padding-block, 's');
+    }
+
+    @include screen-m {
         padding-right: map-get($padding-block, 'm');
         padding-left: map-get($padding-block, 'm');
     }
 
-    @include for-tablet-landscape-up {
+    @include screen-l {
         padding-right: map-get($padding-block, 'l');
         padding-left: map-get($padding-block, 'l');
     }
 
-    @include for-desktop-up {
+    @include screen-xl {
         padding-right: map-get($padding-block, 'xl');
         padding-left: map-get($padding-block, 'xl');
     }
 
-    @include for-big-desktop-up {
+    @include screen-xxl {
         padding-right: map-get($padding-block, 'xxl');
         padding-left: map-get($padding-block, 'xxl');
     }

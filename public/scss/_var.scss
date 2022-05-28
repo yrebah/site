@@ -139,31 +139,37 @@ $border-solid: (
     xxl: 10px solid
 );
 
-@mixin for-phone-only {
-    @media (max-width: 599px) {
+@mixin screen-xs {
+    @media (max-width: 472px) {
         @content;
     }
 }
 
-@mixin for-tablet-portrait-up {
+@mixin screen-s {
     @media (min-width: 600px) {
         @content;
     }
 }
 
-@mixin for-tablet-landscape-up {
+@mixin screen-m {
     @media (min-width: 900px) {
         @content;
     }
 }
 
-@mixin for-desktop-up {
+@mixin screen-l {
     @media (min-width: 1200px) {
         @content;
     }
 }
 
-@mixin for-big-desktop-up {
+@mixin screen-xl {
+    @media (min-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin screen-xxl {
     @media (min-width: 1800px) {
         @content;
     }
