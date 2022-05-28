@@ -13,16 +13,30 @@ $color: (
     9: hsl(300, 100%, 25%)
 );
 
+$color-dark: (
+    0: transparent,
+    1: hsl(0, 0%, 0%),
+    2: hsl(0, 0%, 100%),
+    3: hsl(0, 0%, 70%),
+    4: hsl(210, 74%, 27%),
+    5: hsl(148, 63%, 23%),
+    6: hsl(60, 71%, 29%),
+    7: hsl(39, 80%, 28%),
+    8: hsl(0, 81%, 25%),
+    9: hsl(300, 71%, 13%)
+);
+
 $color-trans: (
+    0: transparent,
     1: hsla(0, 0%, 0%, 0.25),
     2: hsla(0, 0%, 100%, 0.25),
     3: hsla(0, 0%, 90%, 0.25),
     4: hsla(210, 100%, 56%, 0.25),
-    5: hsl(147, 50%, 47%, 0.25),
-    6: hsl(60, 100%, 50%, 0.25),
-    7: hsl(39, 100%, 50%, 0.25),
-    8: hsl(0, 100%, 50%, 0.25),
-    9: hsl(300, 100%, 25%, 0.25)
+    5: hsla(147, 50%, 47%, 0.25),
+    6: hsla(60, 100%, 50%, 0.25),
+    7: hsla(39, 100%, 50%, 0.25),
+    8: hsla(0, 100%, 50%, 0.25),
+    9: hsla(300, 100%, 25%, 0.25)
 );
 
 $font-family: (
@@ -89,7 +103,14 @@ $padding: (
     xxl: 30px
 );
 
-$test: blue;
+$padding-block: (
+    xs: 3%,
+    s: 5%,
+    m: 8%,
+    l: 10%,
+    xl: 15%,
+    xxl: 20%
+);
 
 $margin: (
     xs: 4px,
@@ -117,3 +138,33 @@ $border-solid: (
     xl: 8px solid,
     xxl: 10px solid
 );
+
+@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+
+@mixin for-desktop-up {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) {
+        @content;
+    }
+}

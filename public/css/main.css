@@ -42,9 +42,51 @@ body {
   font-family: segoe ui;
 }
 
-main {
-  padding-right: 30px;
-  padding-left: 30px;
+main,
+section {
+  margin-top: 30px;
+  padding-right: 20%;
+  padding-left: 20%;
+}
+
+@media (max-width: 599px) {
+  main,
+  section {
+    padding-right: 3%;
+    padding-left: 3%;
+  }
+}
+
+@media (min-width: 600px) {
+  main,
+  section {
+    padding-right: 8%;
+    padding-left: 8%;
+  }
+}
+
+@media (min-width: 900px) {
+  main,
+  section {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  main,
+  section {
+    padding-right: 15%;
+    padding-left: 15%;
+  }
+}
+
+@media (min-width: 1800px) {
+  main,
+  section {
+    padding-right: 20%;
+    padding-left: 20%;
+  }
 }
 
 .row {

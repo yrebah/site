@@ -7,7 +7,34 @@ body {
     font-family: map-get($font-family, 0);
 }
 
-main{
-    padding-right: map-get($padding, 'xxl');
-    padding-left: map-get($padding, 'xxl');
+main,
+section {
+    margin-top: map-get($margin, 'xxl');
+    padding-right: map-get($padding-block, 'xxl');
+    padding-left: map-get($padding-block, 'xxl');
+
+    @include for-phone-only {
+        padding-right: map-get($padding-block, 'xs');
+        padding-left: map-get($padding-block, 'xs');
+    }
+
+    @include for-tablet-portrait-up {
+        padding-right: map-get($padding-block, 'm');
+        padding-left: map-get($padding-block, 'm');
+    }
+
+    @include for-tablet-landscape-up {
+        padding-right: map-get($padding-block, 'l');
+        padding-left: map-get($padding-block, 'l');
+    }
+
+    @include for-desktop-up {
+        padding-right: map-get($padding-block, 'xl');
+        padding-left: map-get($padding-block, 'xl');
+    }
+
+    @include for-big-desktop-up {
+        padding-right: map-get($padding-block, 'xxl');
+        padding-left: map-get($padding-block, 'xxl');
+    }
 }
