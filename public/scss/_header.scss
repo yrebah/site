@@ -1,6 +1,6 @@
 // _header.scss
 
-header {
+.header {
     position: sticky;
     top: 0;
     display: flex;
@@ -73,65 +73,65 @@ header {
             flex: 10%;
             justify-content: end;
         }
-    }
 
-    ul {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: map-get($width, 'm');
-
-        @include screen-m {
-            width: map-get($width, 'xl');
+        .header-link {
+            font-weight: 400;
+            padding: map-get($padding, 'xs');
+            color: map-get($color, 1);
+            padding-left: map-get($padding, 's');
+            padding-right: map-get($padding, 's');
+            border-bottom: 2px solid transparent;
+            transition: 0.15s ease-in-out;
+    
+            &:hover { 
+                border-bottom-color: map-get($color, 1);
+            }
         }
 
-        @include screen-l {
-            width: map-get($width, 'l');
-        }
-
-        @include screen-xl {
-            width: map-get($width, 'm');
-        }
-
-        @include screen-xxl {
-            width: map-get($width, 'm');
-        }
-
-        li {
+        ul {
             display: flex;
             align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-
-            &:after {
-                content: '|';
-                font-weight: 300;
+            justify-content: space-between;
+            width: map-get($width, 'm');
+    
+            @include screen-m {
+                width: map-get($width, 'xl');
             }
-
-            &:last-child:after {
-                content: '';
+    
+            @include screen-l {
+                width: map-get($width, 'l');
             }
-
-            div {
+    
+            @include screen-xl {
+                width: map-get($width, 'm');
+            }
+    
+            @include screen-xxl {
+                width: map-get($width, 'm');
+            }
+    
+            li {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 width: 100%;
                 height: 100%;
-
-                a {
-                    font-weight: 400;
-                    padding: map-get($padding, 'xs');
-                    color: map-get($color, 1);
-                    padding-left: map-get($padding, 's');
-                    padding-right: map-get($padding, 's');
-                    border-radius: map-get($border-radius, 's');
-                    transition: 0.15s ease-in-out;
-
-                    &:hover { 
-                        background: map-get($color-trans, 3);
-                    }
+    
+                &:after {
+                    content: '|';
+                    font-weight: 300;
+                }
+    
+                &:last-child:after {
+                    content: '';
+                }
+    
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
                 }
             }
         }

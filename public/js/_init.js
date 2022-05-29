@@ -88,7 +88,7 @@ const remove_loader = (id) => {
 const get_header = () => {
     $('#header').append(
         `<section>
-            <button class="btn btn-icon">
+            <button class="btn btn-icon" title="Menu principal">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </section>
@@ -96,10 +96,10 @@ const get_header = () => {
             <ul id="header-list-links"></ul>
         </section>
         <section>
-            <button id="sun" class="btn btn-icon">
+            <button id="sun" class="btn btn-icon" title="Thème Light">
                 <i class="fa-solid fa-sun"></i>
             </button>
-            <button id="moon" class="btn btn-icon">
+            <button id="moon" class="btn btn-icon" title="Thème Dark">
                 <i class="fa-solid fa-moon"></i>
             </button>
         </section>`
@@ -116,7 +116,7 @@ const get_headerLinks = () => {
             $('#header-list-links').append(
                 `<li>
                     <div>
-                        <a href="${elem.href}" target="${elem.target}">${elem.text}</a>
+                        <a class="header-link" title="${elem.title}" href="${elem.href}" target="${elem.target}">${elem.text}</a>
                     </div>
                 </li>`
             )

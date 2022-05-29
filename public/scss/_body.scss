@@ -15,7 +15,7 @@ body {
         color: map-get($color, 2) !important;
 
         a,
-        .btn,
+        button,
         p,
         h1,
         h2,
@@ -24,6 +24,10 @@ body {
         h5,
         h6 {
             color: map-get($color, 2) !important;
+        }
+
+        .header-link:hover{
+            border-bottom-color: map-get($color, 2) !important;
         }
 
         .loader {

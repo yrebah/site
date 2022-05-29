@@ -7,5 +7,5 @@ $(document).ready(() => {
 
     setTimeout(() => {
         remove_loader('#loader')
-    }, 3000)
+    }, 6000)
 })
