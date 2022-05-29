@@ -46,7 +46,7 @@ html {
 }
 
 main {
-  margin-top: 30px;
+  margin-top: 50px;
   padding-right: 22%;
   padding-left: 22%;
 }
@@ -573,8 +573,8 @@ textarea:focus-within {
 }
 
 .loader .container {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -583,8 +583,8 @@ textarea:focus-within {
 .loader .container .circle {
   position: relative;
   border-radius: 50%;
-  width: 65%;
-  height: 65%;
+  width: 80%;
+  height: 80%;
   animation: circle 1s infinite linear;
 }
 
@@ -631,7 +631,7 @@ textarea:focus-within {
 @keyframes dot {
   50% {
     border-radius: 0%;
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(720deg);
   }
 }
 
@@ -726,8 +726,8 @@ textarea:focus-within {
   grid-area: modal-content;
   max-height: 100%;
   overflow-y: auto;
-  margin-top: 16px;
-  margin-bottom: 24px;
+  margin-top: 50px;
+  margin-bottom: 70px;
 }
 
 .modal .container .modal-footer {

@@ -50,7 +50,7 @@ html {
 }
 
 main {
-    margin-top: map-get($margin, 'xxl');
+    margin-top: map-get($margin, 'l');
     padding-right: map-get($padding-block, 'xxl');
     padding-left: map-get($padding-block, 'xxl');
 
