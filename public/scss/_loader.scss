@@ -1,0 +1,77 @@
+// _loader.scss
+
+@import './_var.scss';
+
+.container {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .circle {
+        position: relative;
+        border-radius: 50%;
+        width: 65%;
+        height: 65%;
+        animation: circle 1.5s infinite linear;
+    }
+
+    .dot {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: map-get($color, 1);
+        width: 20px;
+        height: 20px;
+        animation: dot 3s infinite linear;
+
+        &:nth-child(1) {
+            top: 0%;
+            left: 50%;
+        }
+        
+        &:nth-child(2) {
+            top: 50%;
+            left: 100%;
+        }
+        
+        &:nth-child(3) {
+            top: 100%;
+            left: 50%;
+        }
+        
+        &:nth-child(4) {
+            top: 50%;
+            left: 0%;
+        }
+    }
+}
+
+@keyframes circle {
+    50% {
+        width: 50%;
+        height: 50%;
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dot {
+    50% {
+        border-radius: 0%;
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+// <div class="loader global">
+//     <div class="container">
+//         <div class="circle">
+//             <div class="dot"></div>
+//             <div class="dot"></div>
+//             <div class="dot"></div>
+//             <div class="dot"></div>
+//         </div>
+//     </div>
+// </div>

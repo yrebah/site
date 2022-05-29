@@ -37,3 +37,40 @@ const set_btnThemeFunctions = () => {
         set_theme('light')
     })
 }
+
+const get_loader = (id, container) => {
+
+    const loaderGlobal = 
+    `<div id="${id}" class="loader global">
+        <div class="container">
+            <div class="circle">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>`
+
+    const loaderSpecific = 
+    `<div id="${id}" class="loader specific">
+        <div class="container">
+            <div class="circle">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>`
+
+    if(container == 'body') {
+        $('body').append(loaderGlobal)
+    } else {
+        $(`${container}`).append(loaderSpecific)
+    }
+}
+
+const remove_loader = (id) => {
+    $(`${id}`).remove()
+}
