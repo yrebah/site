@@ -4,8 +4,10 @@
 
 .btn {
     padding: map-get($padding, 'm');
-    border-radius: map-get($border-radius, 'xs');
-    font-size: map-get($font-size, 's');
+    padding-left: map-get($padding, 'l');
+    padding-right: map-get($padding, 'l');
+    border-radius: map-get($border-radius, 's');
+    font-size: map-get($font-size, 'xs');
     transition: 0.15s ease-in-out;
 
     &:hover {

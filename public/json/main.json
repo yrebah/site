@@ -1,5 +1,34 @@
 {
-    "name": "site",
-    "version": "1.0.0",
-    "description": ""
+    "header": [
+        {
+            "id": "link-1",
+            "text": "Link 1",
+            "href": "#",
+            "target": ""
+        },
+        {
+            "id": "link-2",
+            "text": "Link 2",
+            "href": "#",
+            "target": ""
+        },
+        {
+            "id": "link-3",
+            "text": "Link 3",
+            "href": "#",
+            "target": ""
+        },
+        {
+            "id": "link-4",
+            "text": "Link 4",
+            "href": "#",
+            "target": ""
+        },
+        {
+            "id": "link-5",
+            "text": "Link 5",
+            "href": "#",
+            "target": ""
+        }
+    ]
 }

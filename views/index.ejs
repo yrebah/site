@@ -26,55 +26,24 @@
 
 <body>
 
-    <header>
-        <section>
-            <button class="btn btn-icon">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </section>
-        <section>
-            <ul>
-                <li>
-                    <div>
-                        <a href="#">Menu 1</a>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <a href="#">Menu 1</a>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <a href="#">Menu 1</a>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <a href="#">Menu 1</a>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <a href="#">Menu 1</a>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <button id="sun" class="btn btn-icon">
-                <i class="fa-solid fa-sun"></i>
-            </button>
-            <button id="moon" class="btn btn-icon">
-                <i class="fa-solid fa-moon"></i>
-            </button>
-        </section>
-    </header>
+    <header id="header"></header>
 
     <main>
         <h1>
             <%= h1 %>
         </h1>
+
+        <div class="modal global active">
+            <div class="container">
+                <div class="modal-header">Titre du modal</div>
+                <div class="modal-content">Contenu du modal</div>
+                <div class="modal-footer">
+                    <button class="btn btn-cancel">Refuser en l'état</button>
+                    <button class="btn btn-accept">Accepter les conditions</button>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer></footer>

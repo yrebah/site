@@ -1,0 +1,134 @@
+// _modal.scss
+
+@import "./_var.scss";
+
+.modal {
+    z-index: 8;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: map-get($color-trans, 1);
+    animation: modal 0.6s forwards;
+
+    &.global {
+        position: fixed;
+    }
+
+    &.specific {
+        position: absolute;
+    }
+
+    &.active {
+        display: flex;
+    }
+
+    .container {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 2fr 0.5fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "modal-header"
+            "modal-content"
+            "modal-footer";
+        padding: map-get($padding, 'xxl');
+        background: map-get($color, 2);
+        border: 2px solid map-get($color, 3);
+        border-radius: map-get($border-radius, 'l');
+        min-width: 50%;
+        min-height: 50%;
+        max-height: 70%;
+        animation: modal-container 0.6s forwards;
+
+        @include screen-xs {
+            max-width: 95%;
+        }
+
+        @include screen-s {
+            max-width: 90%;
+        }
+
+        @include screen-m {
+            max-width: 80%;
+        }
+
+        @include screen-l {
+            max-width: 70%;
+        }
+
+        @include screen-xl {
+            max-width: 60%;
+        }
+
+        @include screen-xxl {
+            max-width: 55%;
+        }
+
+        .modal-header {
+            grid-area: modal-header;
+            font-size: map-get($font-size, "m");
+            font-weight: 500;
+            border-bottom: 1px solid map-get($color, 3);
+            padding-bottom: map-get($padding, 's');
+        }
+
+        .modal-content {
+            position: relative;
+            grid-area: modal-content;
+            max-height: 100%;
+            overflow-y: auto;
+            margin-top: map-get($margin, "l");
+            margin-bottom: map-get($margin, "xl");
+        }
+
+        .modal-footer {
+            grid-area: modal-footer;
+            display: flex;
+            justify-content: end;
+            gap: 12px;
+        }
+    }
+}
+
+@keyframes modal {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes modal-container {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+// <div class="modal global active">
+//     <div class="container">
+//         <div class="modal-header">Titre du modal</div>
+//         <div class="modal-content">Contenu du modal</div>
+//         <div class="modal-footer">
+//             <button class="btn btn-cancel">Refuser en l'état</button>
+//             <button class="btn btn-accept">Accepter les conditions</button>
+//         </div>
+//     </div>
+// </div>
+
+// get_modal(
+//     'body', 
+//     'Titre du modal de test', 
+//     'Contenu du modal... hello world !', 
+//     'footer du modal'
+// )

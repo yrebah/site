@@ -5,7 +5,7 @@ $(document).ready(() => {
 
     get_loader('loader', 'body')
 
-    setTimeout(() =>{
+    setTimeout(() => {
         remove_loader('#loader')
-    },3000)
+    }, 3000)
 })

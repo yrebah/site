@@ -1,8 +1,9 @@
 // _init.js
 
 $(document).ready(() => {
+    get_header()
     apply_theme()
-    set_btnThemeFunctions()
+    set_modalFunctions()
 })
 
 const apply_theme = () => {
@@ -38,39 +39,123 @@ const set_btnThemeFunctions = () => {
     })
 }
 
+const set_btnMainMenuFunctions = () => {
+    $('#moon').click(() => {
+        set_theme('dark')
+    })
+    $('#sun').click(() => {
+        set_theme('light')
+    })
+}
+
 const get_loader = (id, container) => {
 
-    const loaderGlobal = 
-    `<div id="${id}" class="loader global">
-        <div class="container">
-            <div class="circle">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
+    const global =
+        `<div id="${id}" class="loader global">
+            <div class="container">
+                <div class="circle">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
             </div>
-        </div>
-    </div>`
+        </div>`
 
-    const loaderSpecific = 
-    `<div id="${id}" class="loader specific">
-        <div class="container">
-            <div class="circle">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
+    const specific =
+        `<div id="${id}" class="loader specific">
+            <div class="container">
+                <div class="circle">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
             </div>
-        </div>
-    </div>`
+        </div>`
 
-    if(container == 'body') {
-        $('body').append(loaderGlobal)
+    if (container == 'body') {
+        $('body').append(global)
     } else {
-        $(`${container}`).append(loaderSpecific)
+        $(`${container}`).append(specific)
     }
 }
 
 const remove_loader = (id) => {
     $(`${id}`).remove()
+}
+
+const get_header = () => {
+    $('#header').append(
+        `<section>
+            <button class="btn btn-icon">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </section>
+        <section>
+            <ul id="header-list-links"></ul>
+        </section>
+        <section>
+            <button id="sun" class="btn btn-icon">
+                <i class="fa-solid fa-sun"></i>
+            </button>
+            <button id="moon" class="btn btn-icon">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </section>`
+    )
+
+    get_headerLinks()
+    set_btnThemeFunctions()
+    set_btnMainMenuFunctions()
+}
+
+const get_headerLinks = () => {
+    $.getJSON('./json/main.json', (data) => {
+        data.header.forEach((elem) => {
+            $('#header-list-links').append(
+                `<li>
+                    <div>
+                        <a href="${elem.href}" target="${elem.target}">${elem.text}</a>
+                    </div>
+                </li>`
+            )
+        })
+    });
+}
+
+const get_modal = (container, title, content, footer) => {
+    const global =
+        `<div class="modal global active">
+            <div class="container">
+                <div class="modal-header">${title}</div>
+                <div class="modal-content">${content}</div>
+                <div class="modal-footer">${footer}</div>
+            </div>
+        </div>`
+
+    const specific =
+        `<div class="modal specific active">
+            <div class="container">
+                <div class="modal-header">${title}</div>
+                <div class="modal-content">${content}</div>
+                <div class="modal-footer">${footer}</div>
+            </div>
+        </div>`
+
+    if (container == 'body') {
+        $('body').append(global)
+    } else {
+        $(`${container}`).append(specific)
+    }
+
+    set_modalFunctions()
+}
+
+const set_modalFunctions = () => {
+    $('.modal').click(() => {
+        $('.modal').removeClass('active')
+    }).children().click(() => {
+        return false
+    })
 }
