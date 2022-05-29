@@ -94,9 +94,12 @@ main {
 }
 
 body {
+  opacity: 0;
+  pointer-events: none;
   font-family: segoe ui;
   background: white;
   color: black;
+  animation: body 3s forwards;
 }
 
 body.dark-mode {
@@ -106,6 +109,21 @@ body.dark-mode {
 
 body.dark-mode a, body.dark-mode .btn, body.dark-mode p, body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
   color: white !important;
+}
+
+body.dark-mode .loader {
+  background: black;
+}
+
+body.dark-mode .loader .dot {
+  background: white;
+}
+
+@keyframes body {
+  100% {
+    opacity: 1;
+    pointer-events: all;
+  }
 }
 
 header {
@@ -513,3 +531,85 @@ textarea:focus-within {
         </select>
     </div>
 */
+.loader {
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: white;
+}
+
+.loader.global {
+  position: fixed;
+}
+
+.loader.specific {
+  position: absolute;
+}
+
+.loader .container {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader .container .circle {
+  position: relative;
+  border-radius: 50%;
+  width: 65%;
+  height: 65%;
+  animation: circle 1.5s infinite linear;
+}
+
+.loader .container .dot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: black;
+  width: 20px;
+  height: 20px;
+  animation: dot 3s infinite linear;
+}
+
+.loader .container .dot:nth-child(1) {
+  top: 0%;
+  left: 50%;
+}
+
+.loader .container .dot:nth-child(2) {
+  top: 50%;
+  left: 100%;
+}
+
+.loader .container .dot:nth-child(3) {
+  top: 100%;
+  left: 50%;
+}
+
+.loader .container .dot:nth-child(4) {
+  top: 50%;
+  left: 0%;
+}
+
+@keyframes circle {
+  50% {
+    width: 50%;
+    height: 50%;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dot {
+  50% {
+    border-radius: 0%;
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
