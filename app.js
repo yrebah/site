@@ -1,7 +1,34 @@
 // Imports
 import path from 'path';
-import {fileURLToPath} from 'url';
+import { fileURLToPath } from 'url';
 import express from 'express';
+import nodemailer from 'nodemailer';
+
+// NODEMAILER
+// let transporter = nodemailer.createTransport({
+//     service: 'gmail',
+//     auth: {
+//         user: 'alientechnology.less@gmail.com',
+//         pass: 'Hailie?_0201?'
+//     }
+// });
+
+// let mailOptions = {
+//     from: 'alientechnology.less@gmail.com',
+//     to: 'y.rebah.pro@gmail.com',
+//     subject: 'Sending Email using Node.js',
+//     text: 'That was easy!'
+// };
+
+// transporter.sendMail(mailOptions, function (error, info) {
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         console.log('Email sent: ' + info.response);
+//     }
+// });
+
+// ---------------------------------------------------
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -46,4 +73,4 @@ app.get('*', (req, res) => {
 })
 
 // Listen on port 3000
-app.listen(port, ()=> console.info(`listening on port ${port}`))
+app.listen(port, () => console.info(`listening on port ${port}`))
