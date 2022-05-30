@@ -57,27 +57,20 @@
             "href": "#",
             "target": "",
             "title": ""
+        }
+    ],
+    "faq": [
+        {
+            "question": "Comment vont-je ?",
+            "response": "loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum "
         },
         {
-            "id": "link-5",
-            "text": "Link 5",
-            "href": "#",
-            "target": "",
-            "title": ""
+            "question": "Bien ou bien ?",
+            "response": "loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum "
         },
         {
-            "id": "link-5",
-            "text": "Link 5",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "link-5",
-            "text": "Link 5",
-            "href": "#",
-            "target": "",
-            "title": ""
+            "question": "Quand suis-je ?",
+            "response": "loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum "
         }
     ]
 }
