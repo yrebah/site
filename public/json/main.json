@@ -2,7 +2,30 @@
     "header": [
         {
             "id": "link-1",
-            "text": "Link 1",
+            "text": "<i class='fa-solid fa-house'></i>",
+            "href": "#",
+            "target": "",
+            "title": "Accueil"
+        },
+        {
+            "id": "link-2",
+            "text": "<i class='fa-solid fa-circle-question'></i>",
+            "href": "#",
+            "target": "",
+            "title": "FAQ"
+        },
+        {
+            "id": "link-3",
+            "text": "<i class='fa-brands fa-github'></i>",
+            "href": "#",
+            "target": "",
+            "title": "GitHub repo"
+        }
+    ],
+    "mainMenu": [
+        {
+            "id": "link-1",
+            "text": "Menu secondaire",
             "href": "#",
             "target": "",
             "title": ""
@@ -24,6 +47,27 @@
         {
             "id": "link-4",
             "text": "Link 4",
+            "href": "#",
+            "target": "",
+            "title": ""
+        },
+        {
+            "id": "link-5",
+            "text": "Link 5",
+            "href": "#",
+            "target": "",
+            "title": ""
+        },
+        {
+            "id": "link-5",
+            "text": "Link 5",
+            "href": "#",
+            "target": "",
+            "title": ""
+        },
+        {
+            "id": "link-5",
+            "text": "Link 5",
             "href": "#",
             "target": "",
             "title": ""

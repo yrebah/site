@@ -38,8 +38,21 @@ body {
             }
         }
 
-        .modal {
+        .main-menu {
+            .container {
+                background: map-get($color, 1);
+        
+                .main-menu-header {
+                    border-bottom: 1px solid map-get($color, 4);
+                }
 
+                .main-menu-link {
+                    color: map-get($color, 2);
+                }
+            }
+        }
+
+        .modal {
             .modal-header,
             .modal-content,
             .modal-footer {

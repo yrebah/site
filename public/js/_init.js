@@ -1,10 +1,20 @@
 // _init.js
 
 $(document).ready(() => {
+
     get_header()
+    get_mainMenu()
     apply_theme()
     set_modalFunctions()
+    get_loader('loader', 'body')
+
+    setTimeout(() => {
+        remove_loader('#loader')
+    }, 3000)
+
 })
+
+// THEME
 
 const apply_theme = () => {
     if (localStorage.getItem('theme') != null) {
@@ -30,23 +40,9 @@ const set_theme = (value) => {
     apply_theme()
 }
 
-const set_btnThemeFunctions = () => {
-    $('#moon').click(() => {
-        set_theme('dark')
-    })
-    $('#sun').click(() => {
-        set_theme('light')
-    })
-}
+// --------------------------------------
 
-const set_btnMainMenuFunctions = () => {
-    $('#moon').click(() => {
-        set_theme('dark')
-    })
-    $('#sun').click(() => {
-        set_theme('light')
-    })
-}
+// LOADER
 
 const get_loader = (id, container) => {
 
@@ -85,10 +81,14 @@ const remove_loader = (id) => {
     $(`${id}`).remove()
 }
 
+// --------------------------------------
+
+// HEADER
+
 const get_header = () => {
     $('#header').append(
         `<section>
-            <button class="btn btn-icon" title="Menu principal">
+            <button id="btn-main-menu" class="btn btn-icon" title="Menu principal">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </section>
@@ -123,6 +123,86 @@ const get_headerLinks = () => {
         })
     });
 }
+
+const set_btnThemeFunctions = () => {
+    $('#moon').click(() => {
+        set_theme('dark')
+    })
+    $('#sun').click(() => {
+        set_theme('light')
+    })
+}
+
+const set_btnMainMenuFunctions = () => {
+    $('#btn-main-menu').click(() => {
+        open_mainMenu()
+    })
+}
+
+// --------------------------------------
+
+// MAIN MENU
+
+const get_mainMenu = () => {
+    $('#main-menu').append(
+        `<div class="container">
+            <div class="main-menu-header">
+                <h4>Menu</h4>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+                <div class="main-menu-content">
+                    <ul id="main-menu-list"></ul>
+                </div>
+                <div class="main-menu-footer">
+                    <i id="btn-user-account" class="fa-solid fa-circle-user" title="Mon compte"></i>
+                    <i id="btn-user-settings" class="fa-solid fa-gear" title="Paramètres"></i>
+                </div>
+            </div>
+        <div class="main-menu-outside"></div>`
+    )
+
+    get_mainMenuLinks()
+}
+
+const get_mainMenuLinks = () => {
+    $.getJSON('./json/main.json', (data) => {
+        data.mainMenu.forEach((elem) => {
+            $('#main-menu-list').append(
+                `<li>
+                    <div>
+                        <a class="main-menu-link" title="${elem.title}" href="${elem.href}" target="${elem.target}">${elem.text}</a>
+                    </div>
+                </li>`
+            )
+        })
+        set_mainMenuFunctions()
+    })
+}
+
+const set_mainMenuFunctions = () => {
+
+    $('.main-menu-outside').click(() => {
+        close_mainMenu()
+    })
+
+    $('.main-menu-link').click(() => {
+        setTimeout(() => {
+            close_mainMenu()
+        }, 150)
+    })
+}
+
+const open_mainMenu = () => {
+    $('.main-menu').addClass('active')
+}
+
+const close_mainMenu = () => {
+    $('.main-menu').removeClass('active')
+}
+
+// --------------------------------------
+
+// MODAL
 
 const get_modal = (container, title, content, footer) => {
     const global =
@@ -159,3 +239,5 @@ const set_modalFunctions = () => {
         return false
     })
 }
+
+// --------------------------------------
