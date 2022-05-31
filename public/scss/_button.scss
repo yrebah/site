@@ -1,7 +1,5 @@
 // _button.scss
 
-@import "./_var.scss";
-
 .btn {
     padding: map-get($padding, 'm');
     padding-left: map-get($padding, 'l');

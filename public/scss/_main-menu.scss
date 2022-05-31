@@ -1,7 +1,5 @@
 // _main-menu.scss
 
-@import './_var.scss';
-
 .main-menu {
     position: fixed;
     z-index: 8;
@@ -58,7 +56,7 @@
 
         .main-menu-header {
             grid-area: main-menu-header;
-            font-size: map-get($font-size, "m");
+            font-size: map-get($font-size, "s");
             display: flex;
             align-items: center;
             justify-content: space-between;

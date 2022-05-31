@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
-    height: 80px;
+    height: var(--header-height);
     padding-left: map-get($padding-block, 's');
     padding-right: map-get($padding-block, 's');
 

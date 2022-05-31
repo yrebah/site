@@ -1,7 +1,5 @@
 // _text.scss
 
-@import "./_var.scss";
-
 h1 {
     font-size: map-get($font-size, 'xxl');
     font-weight: 500;

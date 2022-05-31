@@ -1,6 +1,8 @@
 // _presets.scss
 
-@import "./_var.scss";
+:root{
+    --header-height: 80px;
+}
 
 *,
 *::before,
@@ -50,37 +52,6 @@ html {
 }
 
 main {
-    margin-top: map-get($margin, 'l');
-    padding-right: map-get($padding-block, 'xxl');
-    padding-left: map-get($padding-block, 'xxl');
-
-    @include screen-xs {
-        padding-right: map-get($padding-block, 'xs');
-        padding-left: map-get($padding-block, 'xs');
-    }
-
-    @include screen-s {
-        padding-right: map-get($padding-block, 's');
-        padding-left: map-get($padding-block, 's');
-    }
-
-    @include screen-m {
-        padding-right: map-get($padding-block, 'm');
-        padding-left: map-get($padding-block, 'm');
-    }
-
-    @include screen-l {
-        padding-right: map-get($padding-block, 'l');
-        padding-left: map-get($padding-block, 'l');
-    }
-
-    @include screen-xl {
-        padding-right: map-get($padding-block, 'xl');
-        padding-left: map-get($padding-block, 'xl');
-    }
-
-    @include screen-xxl {
-        padding-right: map-get($padding-block, 'xxl');
-        padding-left: map-get($padding-block, 'xxl');
-    }
+    position: relative;
+    min-height: calc(100vh - var(--header-height));
 }

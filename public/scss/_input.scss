@@ -1,7 +1,5 @@
 // _input.scss
 
-@import "./_var.scss";
-
 input,
 textarea {
     border-radius: map-get($border-radius, 'xs');
