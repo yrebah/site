@@ -223,7 +223,7 @@ body.dark-mode .modal .modal-footer {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-  top: 108%;
+  top: 112%;
   content: "";
   display: block;
   background: dodgerblue;

@@ -148,7 +148,9 @@ const get_mainMenu = () => {
         `<div class="container">
             <div class="main-menu-header">
                 <h4>Menu</h4>
-                <i class="fa-solid fa-chevron-down"></i>
+                <button id="btn-close-main-menu" class="btn btn-icon" title="Fermer">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
             </div>
                 <div class="main-menu-content">
                     <ul id="main-menu-list"></ul>
@@ -180,6 +182,10 @@ const get_mainMenuLinks = () => {
 }
 
 const set_mainMenuFunctions = () => {
+
+    $('#btn-close-main-menu').click(() => {
+        close_mainMenu()
+    })
 
     $('.main-menu-outside').click(() => {
         close_mainMenu()
@@ -241,3 +247,41 @@ const set_modalFunctions = () => {
 }
 
 // --------------------------------------
+
+// NOTIFICATION
+
+const notification = async (title, message, icon, redirect) => {
+
+    // create and show the notification
+    const showNotification = () => {
+
+        // create a new notification
+        const notification = new Notification(title, {
+            body: message,
+            icon: ""
+        })
+
+        // close the notification after 10 seconds
+        setTimeout(() => {
+            notification.close()
+        }, 10000)
+
+        if (redirect != null) {
+            notification.addEventListener('click', () => {
+                window.open(redirect, '_blank');
+            })
+        }
+    }
+
+    // check notification permission
+    let granted = false
+
+    if (Notification.permission === 'granted') {
+        granted = true;
+    } else if (Notification.permission !== 'denied') {
+        let permission = await Notification.requestPermission();
+        granted = permission === 'granted' ? true : false
+    }
+
+    if (granted) showNotification()
+}
