@@ -926,15 +926,18 @@ textarea:focus-within {
 }
 
 .page-404 .container .title span:nth-child(1) {
+  color: #3cb472;
   animation-delay: 0.33s;
 }
 
 .page-404 .container .title span:nth-child(2) {
+  color: #ffa600;
   font-weight: 600;
   animation-delay: 0.66s;
 }
 
 .page-404 .container .title span:nth-child(3) {
+  color: red;
   animation-delay: 1s;
 }
 

@@ -39,15 +39,18 @@
                 animation: title-span 1s forwards;
 
                 &:nth-child(1) {
+                    color: map-get($color, 5);
                     animation-delay: 0.33s;
                 }
 
                 &:nth-child(2) {
+                    color: map-get($color, 7);
                     font-weight: 600;
                     animation-delay: 0.66s;
                 }
 
                 &:nth-child(3) {
+                    color: map-get($color, 8);
                     animation-delay: 1s;
                 }
             }
