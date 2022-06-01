@@ -895,8 +895,71 @@ textarea:focus-within {
 
 .page-404 img {
   position: fixed;
+}
+
+.page-404 img.img-1 {
+  z-index: 1;
   left: -115px;
-  bottom: -60px;
+  transform: translateY(150%);
+  animation: img-1 2s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes img-1 {
+  100% {
+    transform: translateY(36%);
+  }
+}
+
+.page-404 img.img-2 {
+  z-index: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  transform: translateX(100%);
+  animation: img-2 5s infinite alternate;
+}
+
+@keyframes img-2 {
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+@media (min-width: 0px) {
+  .page-404 img {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .page-404 img {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-404 img {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .page-404 img {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-404 img {
+    display: block;
+  }
+}
+
+@media (min-width: 1400px) {
+  .page-404 img {
+    display: block;
+  }
 }
 
 .page-404 .container {
@@ -963,11 +1026,30 @@ textarea:focus-within {
   text-align: center;
   margin-top: 50px;
   color: white;
+  animation: link 20s infinite linear;
   transition: 0.15s ease-in-out;
 }
 
 .page-404 .container a:hover {
   background: #292929;
+}
+
+@keyframes link {
+  0% {
+    background: black;
+  }
+  25% {
+    background: #ffa600;
+  }
+  50% {
+    background: red;
+  }
+  75% {
+    background: purple;
+  }
+  100% {
+    background: black;
+  }
 }
 
 .test {

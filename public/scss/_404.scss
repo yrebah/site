@@ -11,8 +11,59 @@
 
     img {
         position: fixed;
-        left: -115px;
-        bottom: -60px;
+
+        &.img-1 {
+            z-index: 1;
+            left: -115px;
+            transform: translateY(150%);
+            animation: img-1 2s forwards;
+            animation-delay: 1s;
+
+            @keyframes img-1 {
+                100% {
+                    transform: translateY(36%);
+                }
+            }
+        }
+
+        &.img-2 {
+            z-index: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            transform: translateX(100%);
+            animation: img-2 5s infinite alternate;
+
+            @keyframes img-2 {
+                100% {
+                    transform: translateX(25%);
+                }
+            }
+        }
+
+        @include screen-xs {
+            display: none;
+        }
+
+        @include screen-s {
+            display: none;
+        }
+
+        @include screen-m {
+            display: block;
+        }
+
+        @include screen-l {
+            display: block;
+        }
+
+        @include screen-xl {
+            display: block;
+        }
+
+        @include screen-xxl {
+            display: block;
+        }
     }
 
     .container {
@@ -78,10 +129,29 @@
             text-align: center;
             margin-top: 50px;
             color: white;
+            animation: link 20s infinite linear;
             transition: 0.15s ease-in-out;
 
             &:hover {
                 background: hsl(0, 0%, 16%);
+            }
+
+            @keyframes link {
+                0% {
+                    background: map-get($color, 1);
+                }
+                25% {
+                    background: map-get($color, 7);
+                }
+                50% {
+                    background: map-get($color, 8);
+                }
+                75% {
+                    background: map-get($color, 9);
+                }
+                100% {
+                    background: map-get($color, 1);
+                }
             }
         }
     }
