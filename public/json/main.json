@@ -107,7 +107,7 @@
         }
     ],
     "footer": {
-        "column-1": [
+        "Titre colonne 1": [
             {
                 "href": "#",
                 "text": "Toto 1",
@@ -142,31 +142,31 @@
         "column-2": [
             {
                 "href": "#",
-                "text": "Toto 1",
+                "text": "Titi 1",
                 "target": "",
                 "title": ""
             },
             {
                 "href": "#",
-                "text": "Toto 2",
+                "text": "Titi 2",
                 "target": "",
                 "title": ""
             },
             {
                 "href": "#",
-                "text": "Toto 3",
+                "text": "Titi 3",
                 "target": "",
                 "title": ""
             },
             {
                 "href": "#",
-                "text": "Toto 4",
+                "text": "Titi 4",
                 "target": "",
                 "title": ""
             },
             {
                 "href": "#",
-                "text": "Toto 5",
+                "text": "Titi 5",
                 "target": "",
                 "title": ""
             }
@@ -206,7 +206,7 @@
         "column-4": [
             {
                 "href": "#",
-                "text": "Toto 1",
+                "text": "Tata 1",
                 "target": "",
                 "title": ""
             },

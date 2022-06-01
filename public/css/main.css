@@ -891,14 +891,13 @@ textarea:focus-within {
   display: flex;
   flex-wrap: wrap;
   background: dodgerblue;
-  height: 350px;
+  min-height: 35vh;
 }
 
 .footer section {
   position: relative;
   display: flex;
-  height: 100%;
-  padding: 30px;
+  padding: 40px;
 }
 
 .footer section:nth-child(1) {
@@ -909,10 +908,16 @@ textarea:focus-within {
 }
 
 .footer section:nth-child(1) .container-description {
-  height: 35%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
+  min-height: 180px;
+}
+
+.footer section:nth-child(1) .container-description p {
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .footer section:nth-child(2) {
@@ -923,12 +928,37 @@ textarea:focus-within {
 .footer section:nth-child(2) .container-column {
   position: relative;
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
   width: 100%;
 }
 
 .footer section:nth-child(2) .container-column .column {
+  justify-content: space-evenly;
+  flex: 1 1 auto;
+  margin: 30px;
+}
+
+.footer section:nth-child(2) .container-column .column ul li {
+  margin-bottom: 5px;
+}
+
+.social-bar {
+  position: relative;
   width: 100%;
+  max-width: 230px;
+  min-width: 200px;
+}
+
+.social-bar ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-bar ul li a {
+  font-size: clamp(22px, 5vw, 24px);
 }
 
 .page-404 {

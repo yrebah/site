@@ -1,10 +1,20 @@
 // _social-bar.scss
 
 .social-bar {
+    position: relative;
+    width: 100%;
+    max-width: 230px;
+    min-width: 200px;
+
     ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
         li {
             a {
-                
+                font-size: map-get($font-size, "m");
             }
         }
     }
