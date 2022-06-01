@@ -78,8 +78,7 @@ app.get('/about', (req, res) => {
 // page 404
 app.get('*', (req, res) => {
     res.render('404', {
-        title: 'Erreur 404',
-        h1: "Erreur 404"
+        title: 'Erreur 404'
     })
 })
 

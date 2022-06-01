@@ -67,7 +67,8 @@ $font-size: (
     m: clamp(22px, 5vw, 24px),
     l: clamp(26px, 6vw, 30px),
     xl: clamp(32px, 7vw, 36px),
-    xxl: clamp(38px, 8vw, 46px)
+    xxl: clamp(38px, 8vw, 46px),
+    oversize: clamp(72px, 20vw, 150px)
 );
 
 $button: (
