@@ -5,102 +5,26 @@
         <div class="container-description">
             <h4>Titre du site</h4>
             <p>Description du site, qui contient beaucoup d'information que personne ne lit jamais.</p>
+            <%- include('social-bar') %>
         </div>
     </section>
     <section>
         <div class="container-column">
-            <div class="column">
-                <h5>Menu 1</h5>
-                <ul>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="column">
-                <h5>Menu 2</h5>
-                <ul>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="column">
-                <h5>A Propos</h5>
-                <ul>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="column">
-                <h5>A Propos</h5>
-                <ul>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                    <li>
-                        <a href="#">lien vers qqchose</a>
-                    </li>
-                </ul>
-            </div>
+            <% Object.keys(data_footer).forEach((key) => { %>
+                <div class="column">
+                    <h5><%- key %></h5>
+                    <ul>
+                        <% for (let key1 in data_footer[key]) { %>
+                            <li>
+                                <a class="social-bar-link" title="<%= data_footer[key][key1].title %>" href="<%= data_footer[key][key1].href %>"
+                                    target="<%= data_footer[key][key1].target %>">
+                                    <%- data_footer[key][key1].text %>
+                                </a>
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
+            <% }) %>
         </div>
     </section>
 </footer>

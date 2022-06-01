@@ -76,26 +76,164 @@
             "response": "loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum "
         }
     ],
-    "social": [
+    "socialBar": [
         {
             "id": "social-link-1",
             "href": "#",
-            "text": "<i class='fa-brands fa-facebook'></i>"
+            "text": "<i class='fa-brands fa-facebook'></i>",
+            "target": "",
+            "title": ""
         },
         {
             "id": "social-link-2",
             "href": "#",
-            "text": "<i class='fa-brands fa-twitter'></i>"
+            "text": "<i class='fa-brands fa-twitter'></i>",
+            "target": "",
+            "title": ""
         },
         {
             "id": "social-link-3",
             "href": "#",
-            "text": "<i class='fa-brands fa-instagram'></i>"
+            "text": "<i class='fa-brands fa-instagram'></i>",
+            "target": "",
+            "title": ""
         },
         {
             "id": "social-link-4",
             "href": "#",
-            "text": "<i class='fa-solid fa-at'></i>"
+            "text": "<i class='fa-solid fa-at'></i>",
+            "target": "",
+            "title": ""
         }
-    ]
+    ],
+    "footer": {
+        "column-1": [
+            {
+                "href": "#",
+                "text": "Toto 1",
+                "target": "",
+                "title": ""
+            },
+            {
+                "href": "#",
+                "text": "Toto 2",
+                "target": "",
+                "title": ""
+            },
+            {
+                "href": "#",
+                "text": "Toto 3",
+                "target": "",
+                "title": ""
+            },
+            {
+                "href": "#",
+                "text": "Toto 4",
+                "target": "",
+                "title": ""
+            },
+            {
+                "href": "#",
+                "text": "Toto 5",
+                "target": "",
+                "title": ""
+            }
+        ],
+        "column-2": [
+            {
+                "href": "#",
+                "text": "Toto 1",
+                "target": "",
+                "title": ""
+            },
+            {
+                "href": "#",
+                "text": "Toto 2",
+                "target": "",
+                "title": ""
+            },
+            {
+                "href": "#",
+                "text": "Toto 3",
+                "target": "",
+                "title": ""
+            },
+            {
+                "href": "#",
+                "text": "Toto 4",
+                "target": "",
+                "title": ""
+            },
+            {
+                "href": "#",
+                "text": "Toto 5",
+                "target": "",
+                "title": ""
+            }
+        ],
+        "column-3": [
+            {
+                "href": "#",
+                "text": "Toto 1",
+                "target": "",
+                "title": ""
+            },
+            {
+                "href": "#",
+                "text": "Toto 2",
+                "target": "",
+                "title": ""
+            },
+            {
+                "href": "#",
+                "text": "Toto 3",
+                "target": "",
+                "title": ""
+            },
+            {
+                "href": "#",
+                "text": "Toto 4",
+                "target": "",
+                "title": ""
+            },
+            {
+                "href": "#",
+                "text": "Toto 5",
+                "target": "",
+                "title": ""
+            }
+        ],
+        "column-4": [
+            {
+                "href": "#",
+                "text": "Toto 1",
+                "target": "",
+                "title": ""
+            },
+            {
+                "href": "#",
+                "text": "Toto 2",
+                "target": "",
+                "title": ""
+            },
+            {
+                "href": "#",
+                "text": "Toto 3",
+                "target": "",
+                "title": ""
+            },
+            {
+                "href": "#",
+                "text": "Toto 4",
+                "target": "",
+                "title": ""
+            },
+            {
+                "href": "#",
+                "text": "Toto 5",
+                "target": "",
+                "title": ""
+            }
+        ]
+    }
 }

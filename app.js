@@ -10,6 +10,8 @@ const main_json_parsed = JSON.parse(main_json)
 
 const data_header = main_json_parsed.header
 const data_mainMenu = main_json_parsed.mainMenu
+const data_socialBar = main_json_parsed.socialBar
+const data_footer = main_json_parsed.footer
 
 // NODEMAILER
 // let transporter = nodemailer.createTransport({
@@ -61,7 +63,9 @@ app.get('', (req, res) => {
         title: 'Accueil',
         h1: "Accueil",
         data_header,
-        data_mainMenu
+        data_mainMenu,
+        data_socialBar,
+        data_footer
     })
 })
 
@@ -71,7 +75,9 @@ app.get('/about', (req, res) => {
         title: 'A propos',
         h1: "A propos",
         data_header,
-        data_mainMenu
+        data_mainMenu,
+        data_socialBar,
+        data_footer
     })
 })
 
