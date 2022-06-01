@@ -75,6 +75,7 @@
         }
 
         .header-link {
+            font-size: map-get($font-size, "s");
             font-weight: 400;
             padding: map-get($padding, 'xs');
             color: map-get($color, 1);

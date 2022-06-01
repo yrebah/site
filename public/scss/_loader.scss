@@ -20,8 +20,8 @@
     }
 
     .container {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -39,8 +39,8 @@
             transform: translate(-50%, -50%);
             border-radius: 50%;
             background: map-get($color, 1);
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
             animation: dot 3s infinite linear;
     
             &:nth-child(1) {

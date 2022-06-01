@@ -12,3 +12,10 @@
 @import "./_loader.scss";
 @import "./_modal.scss";
 @import "./_main-menu.scss";
+
+.test{
+    position: relative;
+    border: 1px solid red;
+    width:250px;
+    height:250px;
+}

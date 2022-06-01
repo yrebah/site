@@ -7,4 +7,7 @@ $(document).ready(() => {
         "",
         "https://www.google.com"
     )
+
+    get_loader('tes','.test')
+
 })

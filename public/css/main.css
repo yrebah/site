@@ -212,6 +212,7 @@ body.dark-mode .modal .modal-footer {
 }
 
 .header section .header-link {
+  font-size: clamp(16px, 4vw, 18px);
   font-weight: 400;
   padding: 4px;
   color: black;
@@ -564,8 +565,8 @@ textarea:focus-within {
 }
 
 .loader .container {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -584,8 +585,8 @@ textarea:focus-within {
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background: black;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   animation: dot 3s infinite linear;
 }
 
@@ -881,4 +882,11 @@ textarea:focus-within {
   100% {
     transform: translateX(0%);
   }
+}
+
+.test {
+  position: relative;
+  border: 1px solid red;
+  width: 250px;
+  height: 250px;
 }

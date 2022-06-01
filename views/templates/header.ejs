@@ -1,0 +1,29 @@
+<header id="header" class="header">
+    <section>
+        <button id="btn-main-menu" class="btn btn-icon" title="Menu principal">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </section>
+    <section>
+        <ul>
+            <% data_header.forEach((elem)=> { %>
+                <li>
+                    <div>
+                        <a class="header-link" title="<%= elem.title %>" href="<%= elem.href %>"
+                            target="<%= elem.target %>">
+                            <%- elem.text %>
+                        </a>
+                    </div>
+                </li>
+            <% }) %>
+        </ul>
+    </section>
+    <section>
+        <button id="sun" class="btn btn-icon" title="Thème Light">
+            <i class="fa-solid fa-sun"></i>
+        </button>
+        <button id="moon" class="btn btn-icon" title="Thème Dark">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </section>
+</header>

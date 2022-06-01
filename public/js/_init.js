@@ -2,8 +2,10 @@
 
 $(document).ready(() => {
 
-    get_header()
-    get_mainMenu()
+    set_btnThemeFunctions()
+    set_btnMainMenuFunctions()
+    set_mainMenuFunctions()
+
     apply_theme()
     set_modalFunctions()
     get_loader('loader', 'body')
@@ -85,45 +87,6 @@ const remove_loader = (id) => {
 
 // HEADER
 
-const get_header = () => {
-    $('#header').append(
-        `<section>
-            <button id="btn-main-menu" class="btn btn-icon" title="Menu principal">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </section>
-        <section>
-            <ul id="header-list-links"></ul>
-        </section>
-        <section>
-            <button id="sun" class="btn btn-icon" title="Thème Light">
-                <i class="fa-solid fa-sun"></i>
-            </button>
-            <button id="moon" class="btn btn-icon" title="Thème Dark">
-                <i class="fa-solid fa-moon"></i>
-            </button>
-        </section>`
-    )
-
-    get_headerLinks()
-    set_btnThemeFunctions()
-    set_btnMainMenuFunctions()
-}
-
-const get_headerLinks = () => {
-    $.getJSON('./json/main.json', (data) => {
-        data.header.forEach((elem) => {
-            $('#header-list-links').append(
-                `<li>
-                    <div>
-                        <a class="header-link" title="${elem.title}" href="${elem.href}" target="${elem.target}">${elem.text}</a>
-                    </div>
-                </li>`
-            )
-        })
-    });
-}
-
 const set_btnThemeFunctions = () => {
     $('#moon').click(() => {
         set_theme('dark')
@@ -142,44 +105,6 @@ const set_btnMainMenuFunctions = () => {
 // --------------------------------------
 
 // MAIN MENU
-
-const get_mainMenu = () => {
-    $('#main-menu').append(
-        `<div class="container">
-            <div class="main-menu-header">
-                <h4>Menu</h4>
-                <button id="btn-close-main-menu" class="btn btn-icon" title="Fermer">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </button>
-            </div>
-                <div class="main-menu-content">
-                    <ul id="main-menu-list"></ul>
-                </div>
-                <div class="main-menu-footer">
-                    <i id="btn-user-account" class="fa-solid fa-circle-user" title="Mon compte"></i>
-                    <i id="btn-user-settings" class="fa-solid fa-gear" title="Paramètres"></i>
-                </div>
-            </div>
-        <div class="main-menu-outside"></div>`
-    )
-
-    get_mainMenuLinks()
-}
-
-const get_mainMenuLinks = () => {
-    $.getJSON('./json/main.json', (data) => {
-        data.mainMenu.forEach((elem) => {
-            $('#main-menu-list').append(
-                `<li>
-                    <div>
-                        <a class="main-menu-link" title="${elem.title}" href="${elem.href}" target="${elem.target}">${elem.text}</a>
-                    </div>
-                </li>`
-            )
-        })
-        set_mainMenuFunctions()
-    })
-}
 
 const set_mainMenuFunctions = () => {
 
@@ -252,16 +177,13 @@ const set_modalFunctions = () => {
 
 const notification = async (title, message, icon, redirect) => {
 
-    // create and show the notification
     const showNotification = () => {
 
-        // create a new notification
         const notification = new Notification(title, {
             body: message,
             icon: ""
         })
 
-        // close the notification after 10 seconds
         setTimeout(() => {
             notification.close()
         }, 10000)
@@ -273,7 +195,6 @@ const notification = async (title, message, icon, redirect) => {
         }
     }
 
-    // check notification permission
     let granted = false
 
     if (Notification.permission === 'granted') {

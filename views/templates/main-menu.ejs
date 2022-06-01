@@ -1,0 +1,33 @@
+<div id="main-menu" class="main-menu global">
+    <div class="container">
+        <div class="main-menu-header">
+            <h4>Menu</h4>
+            <button id="btn-close-main-menu" class="btn btn-icon" title="Fermer">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+        </div>
+        <div class="main-menu-content">
+            <ul>
+                <% data_mainMenu.forEach((elem)=> { %>
+                    <li>
+                        <div>
+                            <a class="main-menu-link" title="<%=elem.title%>" href="<%=elem.href%>"
+                                target="<%=elem.target%>">
+                                <%-elem.text%>
+                            </a>
+                        </div>
+                    </li>
+                    <% }) %>
+            </ul>
+        </div>
+        <div class="main-menu-footer">
+            <button id="btn-user-account" class="btn btn-icon" title="Mon compte">
+                <i class="fa-solid fa-circle-user"></i>
+            </button>
+            <button id="btn-user-settings" class="btn btn-icon" title="Paramètres">
+                <i class="fa-solid fa-gear"></i>
+            </button>
+        </div>
+    </div>
+    <div class="main-menu-outside"></div>
+</div>
