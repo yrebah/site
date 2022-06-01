@@ -958,7 +958,7 @@ textarea:focus-within {
   background: black;
   min-width: 70%;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 50px;
   color: white;
   transition: 0.15s ease-in-out;
 }
