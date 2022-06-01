@@ -2,42 +2,7 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 import express from 'express';
-import nodemailer from 'nodemailer';
 import fs from 'fs';
-
-const main_json = fs.readFileSync('./public/json/main.json')
-const main_json_parsed = JSON.parse(main_json)
-
-const data_header = main_json_parsed.header
-const data_mainMenu = main_json_parsed.mainMenu
-const data_socialBar = main_json_parsed.socialBar
-const data_footer = main_json_parsed.footer
-
-// NODEMAILER
-// let transporter = nodemailer.createTransport({
-//     service: 'gmail',
-//     auth: {
-//         user: 'alientechnology.less@gmail.com',
-//         pass: 'Hailie?_0201?'
-//     }
-// });
-
-// let mailOptions = {
-//     from: 'alientechnology.less@gmail.com',
-//     to: 'y.rebah.pro@gmail.com',
-//     subject: 'Sending Email using Node.js',
-//     text: 'That was easy!'
-// };
-
-// transporter.sendMail(mailOptions, function (error, info) {
-//     if (error) {
-//         console.log(error);
-//     } else {
-//         console.log('Email sent: ' + info.response);
-//     }
-// });
-
-// ---------------------------------------------------
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -56,6 +21,15 @@ app.use('/json', express.static(__dirname + '/public/json'));
 // Set Views
 app.set('views', './views');
 app.set('view engine', 'ejs');
+
+// Data page from main.json
+const main_json = fs.readFileSync('./public/json/main.json')
+const main_json_parsed = JSON.parse(main_json)
+
+const data_header = main_json_parsed.header
+const data_mainMenu = main_json_parsed.mainMenu
+const data_socialBar = main_json_parsed.socialBar
+const data_footer = main_json_parsed.footer
 
 // page Home
 app.get('', (req, res) => {
