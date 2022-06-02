@@ -109,7 +109,7 @@
     "footer": {
         "Titre colonne 1": [
             {
-                "href": "www.google.fr",
+                "href": "about",
                 "text": "Toto 1",
                 "target": "",
                 "title": ""
@@ -203,16 +203,16 @@
                 "title": ""
             }
         ],
-        "column-4": [
+        "A Propos": [
             {
-                "href": "#",
-                "text": "Tata 1",
+                "href": "about",
+                "text": "A Propos",
                 "target": "",
                 "title": ""
             },
             {
-                "href": "#",
-                "text": "Toto 2",
+                "href": "about#contact",
+                "text": "Nous contacter",
                 "target": "",
                 "title": ""
             },

@@ -1,19 +1,11 @@
 // _init.js
 
 $(document).ready(() => {
-
     set_btnThemeFunctions()
     set_btnMainMenuFunctions()
     set_mainMenuFunctions()
-
     apply_theme()
     set_modalFunctions()
-    get_loader('loader', 'body')
-
-    setTimeout(() => {
-        remove_loader('#loader')
-    }, 3000)
-
 })
 
 // THEME
@@ -205,10 +197,4 @@ const notification = async (title, message, icon, redirect) => {
     }
 
     if (granted) showNotification()
-}
-
-function get_windowLocation(elem) {
-    console.log(elem.value)
-    console.log(elem.getAttribute('data-target'))
-    $(location).prop('href', elem.value)
 }

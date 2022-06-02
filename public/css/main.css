@@ -65,6 +65,51 @@ html {
 main {
   position: relative;
   min-height: calc(100vh - var(--header-height));
+  margin-top: 30px;
+  padding-left: 22%;
+  padding-right: 22%;
+}
+
+@media (min-width: 0px) {
+  main {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+@media (min-width: 576px) {
+  main {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+@media (min-width: 1400px) {
+  main {
+    padding-left: 22%;
+    padding-right: 22%;
+  }
 }
 
 body {
@@ -114,7 +159,7 @@ body.dark-mode .main-menu .container {
 }
 
 body.dark-mode .main-menu .container .main-menu-header {
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #262626;
 }
 
 body.dark-mode .main-menu .container .main-menu-link {
@@ -125,6 +170,10 @@ body.dark-mode .modal .modal-header,
 body.dark-mode .modal .modal-content,
 body.dark-mode .modal .modal-footer {
   color: black !important;
+}
+
+body.dark-mode .footer {
+  background: #262626;
 }
 
 @keyframes body {
@@ -246,7 +295,7 @@ body.dark-mode .modal .modal-footer {
   top: 112%;
   content: "";
   display: block;
-  background: dodgerblue;
+  background: #e6e6e6;
   height: 3px;
   width: 0%;
   transition: 0.15s ease-in-out;
@@ -298,7 +347,7 @@ body.dark-mode .modal .modal-footer {
 .header section ul li:after {
   content: '|';
   font-weight: 300;
-  color: gray;
+  color: #262626;
 }
 
 .header section ul li:last-child:after {
@@ -524,7 +573,7 @@ textarea:hover {
 
 input:focus-within,
 textarea:focus-within {
-  outline-color: gray;
+  outline-color: #262626;
 }
 
 .select {
@@ -553,7 +602,7 @@ textarea:focus-within {
 }
 
 .select:focus {
-  border-color: gray;
+  border-color: #262626;
 }
 
 /*
@@ -908,7 +957,7 @@ textarea:focus-within {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  background: dodgerblue;
+  background: #e6e6e6;
   min-height: 30vh;
 }
 

@@ -34,7 +34,7 @@
             <% Object.keys(data_footer).forEach((key)=> { %>
                 <div class="row">
                     <div class="select">
-                        <select onchange="get_windowLocation(this)">
+                        <select onchange="window.location.replace(this.value)">
                             <option disabled selected><%- key %></option>
                             <% for (let key1 in data_footer[key]) { %>
                                 <option value="<%= data_footer[key][key1].href %>" data-target="<%= data_footer[key][key1].target %>">
