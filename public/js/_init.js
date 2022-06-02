@@ -206,3 +206,9 @@ const notification = async (title, message, icon, redirect) => {
 
     if (granted) showNotification()
 }
+
+function get_windowLocation(elem) {
+    console.log(elem.value)
+    console.log(elem.getAttribute('data-target'))
+    $(location).prop('href', elem.value)
+}

@@ -4,25 +4,45 @@
     <section>
         <div class="container-description">
             <h4>Titre du site</h4>
-            <p>Description du site, qui contient beaucoup d'information que personne ne lit jamais. Description du site, qui contient beaucoup d'information que personne ne lit jamais.</p>
+            <p>Description du site, qui contient beaucoup d'information que personne ne lit jamais. Description du site,
+                qui contient beaucoup d'information que personne ne lit jamais.</p>
             <%- include('social-bar') %>
         </div>
     </section>
     <section>
         <div class="container-column">
-            <% Object.keys(data_footer).forEach((key) => { %>
+            <% Object.keys(data_footer).forEach((key)=> { %>
                 <div class="column">
-                    <h5><%- key %></h5>
+                    <h5>
+                        <%- key %>
+                    </h5>
                     <ul>
                         <% for (let key1 in data_footer[key]) { %>
                             <li>
-                                <a class="social-bar-link" title="<%= data_footer[key][key1].title %>" href="<%= data_footer[key][key1].href %>"
+                                <a class="social-bar-link" title="<%= data_footer[key][key1].title %>"
+                                    href="<%= data_footer[key][key1].href %>"
                                     target="<%= data_footer[key][key1].target %>">
                                     <%- data_footer[key][key1].text %>
                                 </a>
                             </li>
-                        <% } %>
+                            <% } %>
                     </ul>
+                </div>
+            <% }) %>
+        </div>
+        <div class="container-select">
+            <% Object.keys(data_footer).forEach((key)=> { %>
+                <div class="row">
+                    <div class="select">
+                        <select onchange="get_windowLocation(this)">
+                            <option disabled selected><%- key %></option>
+                            <% for (let key1 in data_footer[key]) { %>
+                                <option value="<%= data_footer[key][key1].href %>" data-target="<%= data_footer[key][key1].target %>">
+                                    <%- data_footer[key][key1].text %>
+                                </option>
+                                <% } %>
+                        </select>
+                    </div>
                 </div>
             <% }) %>
         </div>

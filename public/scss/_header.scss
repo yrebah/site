@@ -2,6 +2,7 @@
 
 .header {
     position: sticky;
+    background: map-get($color, 2);
     z-index: 8;
     top: 0;
     display: flex;

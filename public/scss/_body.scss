@@ -24,8 +24,12 @@ body {
             color: map-get($color, 2) !important;
         }
 
-        .header-link:hover{
-            border-bottom-color: map-get($color, 2) !important;
+        .header {
+            background: map-get($color, 1);
+
+            .header-link:hover{
+                border-bottom-color: map-get($color, 2) !important;
+            }
         }
 
         .loader {
