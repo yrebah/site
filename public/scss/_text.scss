@@ -3,11 +3,15 @@
 h1 {
     font-size: map-get($font-size, 'xxl');
     font-weight: 500;
+    margin-top: map-get($margin, 'xxl');
+    margin-bottom: map-get($margin, 'xl');
 }
 
 h2 {
     font-size: map-get($font-size, 'xl');
     font-weight: 500;
+    margin-top: map-get($margin, 'xxl');
+    margin-bottom: map-get($margin, 'xl');
 }
 
 h3 {

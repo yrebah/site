@@ -8,14 +8,14 @@
         {
             "id": "header-link-1",
             "text": "<i class='fa-solid fa-house'></i>",
-            "href": "/",
+            "href": "#home",
             "target": "",
             "title": "Accueil"
         },
         {
             "id": "header-link-2",
             "text": "<i class='fa-solid fa-circle-question'></i>",
-            "href": "#home-faq",
+            "href": "#faq",
             "target": "",
             "title": "FAQ"
         },
@@ -86,28 +86,28 @@
             "id": "social-link-1",
             "href": "#",
             "text": "<i class='fa-brands fa-facebook'></i>",
-            "target": "",
+            "target": "_blank",
             "title": ""
         },
         {
             "id": "social-link-2",
-            "href": "#",
+            "href": "https://twitter.com/?lang=fr",
             "text": "<i class='fa-brands fa-twitter'></i>",
-            "target": "",
+            "target": "_blank",
             "title": ""
         },
         {
             "id": "social-link-3",
             "href": "#",
             "text": "<i class='fa-brands fa-instagram'></i>",
-            "target": "",
+            "target": "_blank",
             "title": ""
         },
         {
             "id": "social-link-4",
             "href": "#",
             "text": "<i class='fa-solid fa-at'></i>",
-            "target": "",
+            "target": "_blank",
             "title": ""
         }
     ],

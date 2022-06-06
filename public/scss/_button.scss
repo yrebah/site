@@ -18,7 +18,6 @@
 
     &.btn-cancel {
         background: map-get($button, 'cancel');
-        color: map-get($color, 3);
     }
 
     &.btn-accept {
@@ -45,10 +44,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
-        &:hover{ 
-            background: map-get($color-trans, 3);
-        }
     }
 }
 

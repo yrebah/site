@@ -6,23 +6,18 @@ body {
     font-family: map-get($font-family, 0);
     background: map-get($color-primary, 2);
     color: map-get($color-primary, 1);
-    animation: body 3s forwards;
+    animation: body 1.5s forwards;
+
+    @keyframes body {
+        100% {
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
 
     &.dark-mode {
         background: map-get($color-primary, 1);
         color: map-get($color-primary, 2);
-
-        a,
-        button,
-        p,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            color: map-get($color-primary, 2);
-        }
 
         .header {
             background: map-get($color-primary, 1);
@@ -75,27 +70,11 @@ body {
         }
 
         .modal {
-
             .modal-header,
             .modal-content,
             .modal-footer {
                 color: map-get($color, 1) !important;
             }
         }
-
-        .footer {
-            background: map-get($color, 4);
-
-            .footer-link {
-                color: map-get($color, 1);
-            }
-        }
-    }
-}
-
-@keyframes body {
-    100% {
-        opacity: 1;
-        pointer-events: all;
     }
 }

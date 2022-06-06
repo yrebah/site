@@ -4,11 +4,11 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    background: map-get($color, 3);
-    min-height: 30vh;
+    background: map-get($color-primary, 5);
+    min-height: 25vh;
 
     .footer-link {
-        color: map-get($color, 1);
+        color: map-get($color-primary, 1);
     }
 
     section {
@@ -26,7 +26,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                height: 100%;
+                height: 80%;
                 min-height: 200px;
 
                 .row {
@@ -92,7 +92,7 @@
 
                     ul {
                         li {
-                            margin-bottom: 5px;
+                            margin-bottom: 8px;
                         }
                     }
                 }
