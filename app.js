@@ -26,16 +26,20 @@ app.set('view engine', 'ejs');
 const main_json = fs.readFileSync('./public/json/main.json')
 const main_json_parsed = JSON.parse(main_json)
 
+const data_site = main_json_parsed.site
 const data_header = main_json_parsed.header
 const data_mainMenu = main_json_parsed.mainMenu
 const data_socialBar = main_json_parsed.socialBar
 const data_footer = main_json_parsed.footer
+
+let isAuthentified = false
 
 // page Home
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Accueil',
         h1: "Accueil",
+        data_site,
         data_header,
         data_mainMenu,
         data_socialBar,
@@ -48,10 +52,20 @@ app.get('/about', (req, res) => {
     res.render('about', {
         title: 'A propos',
         h1: "A propos",
+        data_site,
         data_header,
         data_mainMenu,
         data_socialBar,
         data_footer
+    })
+})
+
+// page my-account
+app.get('/my-account', (req, res) => {
+    res.render('my-account', {
+        title: 'Mon Compte',
+        h1: "Mon Compte",
+        isAuthentified
     })
 })
 

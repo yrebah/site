@@ -3,9 +3,11 @@
 <footer class="footer">
     <section>
         <div class="container-description">
-            <h4>Titre du site</h4>
-            <p>Description du site, qui contient beaucoup d'information que personne ne lit jamais. Description du site,
-                qui contient beaucoup d'information que personne ne lit jamais.</p>
+            <div class="row">
+                <img class="img-xs" src="<%- data_site.logo %>"/>
+                <h4><%- data_site.title %></h4>
+            </div>
+            <p><%- data_site.description %></p>
             <%- include('social-bar') %>
         </div>
     </section>
@@ -19,13 +21,13 @@
                     <ul>
                         <% for (let key1 in data_footer[key]) { %>
                             <li>
-                                <a class="social-bar-link" title="<%= data_footer[key][key1].title %>"
+                                <a class="footer-link" title="<%= data_footer[key][key1].title %>"
                                     href="<%= data_footer[key][key1].href %>"
                                     target="<%= data_footer[key][key1].target %>">
                                     <%- data_footer[key][key1].text %>
                                 </a>
                             </li>
-                            <% } %>
+                        <% } %>
                     </ul>
                 </div>
             <% }) %>

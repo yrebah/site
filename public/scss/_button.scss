@@ -8,10 +8,6 @@
     font-size: map-get($font-size, 'xs');
     transition: 0.15s ease-in-out;
 
-    &:hover {
-        filter: brightness(93%);
-    }
-
     &.btn-primary {
         background: map-get($button, 'primary');
     }

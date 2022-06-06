@@ -6,6 +6,9 @@ $(document).ready(() => {
     set_mainMenuFunctions()
     apply_theme()
     set_modalFunctions()
+
+    let isAuthentified = false
+    if(localStorage.getItem('isAuthentified')) isAuthentified = true
 })
 
 // THEME
@@ -112,6 +115,10 @@ const set_mainMenuFunctions = () => {
         setTimeout(() => {
             close_mainMenu()
         }, 150)
+    })
+
+    $('#btn-user-account').click(() => {
+        $(location).prop('href', 'my-account')
     })
 }
 

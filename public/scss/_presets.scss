@@ -62,7 +62,8 @@ html {
 
 main {
     position: relative;
-    min-height: calc(100vh - var(--header-height));
+    max-height: calc(100vh - var(--header-height));
+    overflow-y: auto;
     margin-top: map-get($margin, "m");
     padding-left: map-get($padding-block, "xxl");
     padding-right: map-get($padding-block, "xxl");

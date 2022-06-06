@@ -7,8 +7,7 @@
     align-items: center;
     padding-right: map-get($padding, 'm');
     border-radius: map-get($border-radius, 'xs');
-    border: map-get($border-solid, 'xs');
-    border-color: map-get($color, 3);
+    border: 1px solid map-get($color-primary, 3);
     transition: 0.15s ease-in-out;
 
     select {

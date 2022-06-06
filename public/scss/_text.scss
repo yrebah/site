@@ -29,11 +29,3 @@ h6 {
     font-size: map-get($font-size, 'xs');
     font-weight: 500;
 }
-
-.link {
-    border-bottom: map-get($border-solid, 's');
-
-    &:hover{ 
-        filter: brightness(90%);
-    }
-}

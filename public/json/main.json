@@ -1,16 +1,21 @@
 {
+    "site": {
+        "logo": "../img/logo-icon.png",
+        "title": "Titre du site",
+        "description": "Description du site, qui contient beaucoup d'information que personne ne lit jamais."
+    },
     "header": [
         {
             "id": "header-link-1",
             "text": "<i class='fa-solid fa-house'></i>",
-            "href": "#",
+            "href": "/",
             "target": "",
             "title": "Accueil"
         },
         {
             "id": "header-link-2",
             "text": "<i class='fa-solid fa-circle-question'></i>",
-            "href": "#",
+            "href": "#home-faq",
             "target": "",
             "title": "FAQ"
         },
@@ -107,10 +112,10 @@
         }
     ],
     "footer": {
-        "Titre colonne 1": [
+        "Accueil": [
             {
-                "href": "about",
-                "text": "Toto 1",
+                "href": "/",
+                "text": "Accueil",
                 "target": "",
                 "title": ""
             },

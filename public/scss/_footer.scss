@@ -7,6 +7,10 @@
     background: map-get($color, 3);
     min-height: 30vh;
 
+    .footer-link {
+        color: map-get($color, 1);
+    }
+
     section {
         position: relative;
         display: flex;
@@ -25,8 +29,14 @@
                 height: 100%;
                 min-height: 200px;
 
-                h4 {
-                    letter-spacing: 1px;
+                .row {
+                    img {
+                        margin-right: 6px;
+                    }
+
+                    h4 {
+                        letter-spacing: 1px;
+                    }
                 }
 
                 p {
@@ -50,31 +60,31 @@
                 @include screen-xs {
                     display: none;
                 }
-            
+
                 @include screen-s {
                     display: none;
                 }
-            
+
                 @include screen-m {
                     display: flex;
                 }
-            
+
                 @include screen-l {
                     display: flex;
                 }
-            
+
                 @include screen-xl {
                     display: flex;
                 }
-            
+
                 @include screen-xxl {
                     display: flex;
                 }
 
                 .column {
                     justify-content: space-evenly;
-                    flex: 1 1 auto;  
-                    margin: 30px;     
+                    flex: 1 1 auto;
+                    margin: 30px;
 
                     h5 {
                         margin-bottom: 10px;
@@ -98,30 +108,30 @@
                 @include screen-xs {
                     display: flex;
                 }
-            
+
                 @include screen-s {
                     display: flex;
                 }
-            
+
                 @include screen-m {
                     display: none;
                 }
-            
+
                 @include screen-l {
                     display: none;
                 }
-            
+
                 @include screen-xl {
                     display: none;
                 }
-            
+
                 @include screen-xxl {
                     display: none;
                 }
 
                 .row {
-                    margin: 12px;  
-                    width: 100%;   
+                    margin: 12px;
+                    width: 100%;
                 }
             }
         }

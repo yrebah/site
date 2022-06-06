@@ -1,0 +1,24 @@
+// _textarea.scss
+
+textarea {
+    border-radius: map-get($border-radius, 'xs');
+    padding: map-get($padding, 'l');
+    border: 1px solid map-get($color-primary, 3);
+    font-size: map-get($font-size, 'xs');
+    color: map-get($color, 1);
+    transition: 0.15s ease-in-out;
+
+    &:read-only {
+        background: map-get($color, 3);
+        color: map-get($color, 1);
+        border: none;
+    }
+
+    &:hover {
+        border-color: map-get($color, 1);
+    }
+
+    &:focus-within {
+        outline-color: map-get($color, 4);
+    }
+}

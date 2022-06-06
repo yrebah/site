@@ -1,0 +1,25 @@
+// _img.scss
+
+.img-xs {
+    width: map-get($img-size, 'xs');
+}
+
+.img-s {
+    width: map-get($img-size, 's');
+}
+
+.img-m {
+    width: map-get($img-size, 'm');
+}
+
+.img-l {
+    width: map-get($img-size, 'l');
+}
+
+.img-xl {
+    width: map-get($img-size, 'xl');
+}
+
+.img-xxl {
+    width: map-get($img-size, 'xxl');
+}

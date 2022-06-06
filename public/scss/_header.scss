@@ -43,6 +43,34 @@
         padding-left: map-get($padding-block, 's');
     }
 
+    .header-link {
+        font-size: map-get($font-size, "s");
+        font-weight: 400;
+        padding: map-get($padding, 'xs');
+        color: map-get($color-primary, 1);
+        padding-left: map-get($padding, 's');
+        padding-right: map-get($padding, 's');
+
+        &::after {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left:50%;
+            top: 112%;
+            content: "";
+            display: block;
+            background: map-get($color, 5);
+            height: 3px;
+            width: 0%;
+            transition: 0.15s ease-in-out;
+        }
+
+        &:hover, &.active { 
+            &::after {
+                width: 38%;
+            }
+        }
+    }
+
     section {
         display: flex;
         align-items: center;
@@ -74,34 +102,6 @@
         &:nth-child(3) {
             flex: 10%;
             justify-content: end;
-        }
-
-        .header-link {
-            font-size: map-get($font-size, "s");
-            font-weight: 400;
-            padding: map-get($padding, 'xs');
-            color: map-get($color, 1);
-            padding-left: map-get($padding, 's');
-            padding-right: map-get($padding, 's');
-
-            &::after {
-                position: absolute;
-                transform: translate(-50%, -50%);
-                left:50%;
-                top: 112%;
-                content: "";
-                display: block;
-                background: map-get($color, 3);
-                height: 3px;
-                width: 0%;
-                transition: 0.15s ease-in-out;
-            }
-    
-            &:hover, &.active { 
-                &::after {
-                    width: 38%;
-                }
-            }
         }
 
         ul {

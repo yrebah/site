@@ -6,16 +6,15 @@
     max-width: 230px;
     min-width: 200px;
 
+    .social-bar-link {
+        font-size: map-get($font-size, "s");
+        color: map-get($color, 1);
+    }
+
     ul {
         display: flex;
         width: 100%;
         justify-content: space-between;
         align-items: center;
-
-        li {
-            a {
-                font-size: map-get($font-size, "m");
-            }
-        }
     }
 }
