@@ -1,29 +1,5 @@
 // _var.scss
 
-$color-primary: (
-    0: transparent,
-    1: black,
-    2: white,
-    3: lightgray,
-    4: dodgerblue,
-    5: mediumseagreen,
-    6: orange,
-    7: red
-);
-
-$color: (
-    0: transparent,
-    1: hsl(0, 0%, 0%),
-    2: hsl(0, 0%, 100%),
-    3: hsl(0, 0%, 94%),
-    4: hsl(0, 0%, 15%),
-    5: hsl(216, 82%, 57%),
-    6: hsl(60, 100%, 50%),
-    7: hsl(39, 100%, 50%),
-    8: hsl(0, 100%, 50%),
-    9: hsl(300, 100%, 25%)
-);
-
 $font-family: (
     0: segoe ui,
     1: segoe ui,
@@ -31,6 +7,52 @@ $font-family: (
     3: segoe ui,
     4: segoe ui,
     5: segoe ui
+);
+
+$color-primary: (
+    0: transparent,
+    1: black,
+    2: white,
+    3: lightgray,
+    4: gray
+);
+
+$color: (
+    0: dodgerblue,
+    1: rgb(223, 238, 255),
+    2: orange,
+    3: darkorange,
+    4: darkred,
+    5: hsl(216, 82%, 57%),
+    6: hsl(60, 100%, 50%),
+    7: hsl(39, 100%, 50%),
+    8: hsl(0, 100%, 50%),
+    9: hsl(300, 100%, 25%)
+);
+
+$color-link: (
+    0: rgb(9, 74, 139),
+    1: hsl(0, 0%, 80%)
+);
+
+$color-header: (
+    0: hsl(0, 0%, 100%),
+    1: hsl(0, 0%, 0%)
+);
+
+$color-footer: (
+    0: hsl(0, 0%, 97%),
+    1: hsl(0, 0%, 8%)
+);
+
+$color-main-menu: (
+    0: hsl(0, 0%, 97%),
+    1: hsl(0, 0%, 8%)
+);
+
+$color-loader: (
+    0: hsl(0, 0%, 97%),
+    1: hsl(0, 0%, 8%)
 );
 
 $font-size: (

@@ -47,6 +47,10 @@
     }
 }
 
-// <button id="moon" class="btn btn-icon" title="Thème Dark">
-//     <i class="fa-solid fa-moon"></i>
-// </button>
+body {
+    &.dark-mode {
+        .btn-icon {
+            color: map-get($color-primary, 2) !important;
+        }
+    }
+}

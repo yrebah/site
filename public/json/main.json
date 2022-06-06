@@ -1,6 +1,7 @@
 {
     "site": {
-        "logo": "../img/logo-icon.png",
+        "logo_icon": "../img/logo-icon.png",
+        "logo_text": "../img/logo-text.png",
         "title": "Titre du site",
         "description": "Description du site, qui contient beaucoup d'information que personne ne lit jamais."
     },

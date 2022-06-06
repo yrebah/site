@@ -1,0 +1,13 @@
+// _link.scss
+
+.link {
+    color: map-get($color-link, 0);
+}
+
+body {
+    &.dark-mode {
+        .link {
+            color: map-get($color-link, 1) !important;
+        }
+    }
+}

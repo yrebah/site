@@ -4,12 +4,8 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    background: map-get($color-primary, 5);
     min-height: 25vh;
-
-    .footer-link {
-        color: map-get($color-primary, 1);
-    }
+    background: map-get($color-footer, 0);
 
     section {
         position: relative;
@@ -87,7 +83,7 @@
                     margin: 30px;
 
                     h5 {
-                        margin-bottom: 10px;
+                        margin-bottom: 20px;
                     }
 
                     ul {
@@ -134,6 +130,14 @@
                     width: 100%;
                 }
             }
+        }
+    }
+}
+
+body {
+    &.dark-mode {
+        .footer {
+            background: map-get($color-footer, 1) !important;
         }
     }
 }

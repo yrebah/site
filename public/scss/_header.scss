@@ -2,7 +2,6 @@
 
 .header {
     position: sticky;
-    background: map-get($color, 2);
     z-index: 8;
     top: 0;
     display: flex;
@@ -12,6 +11,7 @@
     height: var(--header-height);
     padding-left: map-get($padding-block, 's');
     padding-right: map-get($padding-block, 's');
+    background: map-get($color-header, 0);
 
     @include screen-xs {
         padding-right: map-get($padding-block, 'l');
@@ -43,7 +43,7 @@
         padding-left: map-get($padding-block, 's');
     }
 
-    .header-link {
+    .link {
         font-size: map-get($font-size, "s");
         font-weight: 400;
         padding: map-get($padding, 'xs');
@@ -58,16 +58,22 @@
             top: 112%;
             content: "";
             display: block;
-            background: map-get($color, 5);
-            height: 3px;
+            background: map-get($color, 0);
+            border-radius: map-get($border-radius, 'xl');
+            height: 4px;
             width: 0%;
             transition: 0.15s ease-in-out;
         }
 
-        &:hover,
+        &:hover {
+            &::after {
+                width: 10%;
+            }
+        }
+
         &.active {
             &::after {
-                width: 38%;
+                width: 30%;
             }
         }
     }
@@ -116,22 +122,12 @@
             justify-content: start;
 
             ul {
-                width: map-get($width, "m");
+                width: map-get($width, "xxl");
 
-                @include screen-m {
-                    width: map-get($width, 'xl');
-                }
-
-                @include screen-l {
-                    width: map-get($width, 'l');
-                }
-
-                @include screen-xl {
-                    width: map-get($width, 'm');
-                }
-
-                @include screen-xxl {
-                    width: map-get($width, 'm');
+                li {
+                    &:after {
+                        content: '' !important;
+                    }
                 }
             }
         }
@@ -196,6 +192,14 @@
                     width: map-get($width, 's');
                 }
             }
+        }
+    }
+}
+
+body {
+    &.dark-mode {
+        .header {
+            background: map-get($color-header, 1) !important;
         }
     }
 }

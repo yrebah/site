@@ -4,7 +4,7 @@
     <section>
         <div class="container-description">
             <div class="row">
-                <img class="img-xs" src="<%- data_site.logo %>"/>
+                <img class="img-xs" src="<%- data_site.logo_icon %>"/>
                 <h4><%- data_site.title %></h4>
             </div>
             <p><%- data_site.description %></p>
@@ -21,7 +21,7 @@
                     <ul>
                         <% for (let key1 in data_footer[key]) { %>
                             <li>
-                                <a class="footer-link" title="<%= data_footer[key][key1].title %>"
+                                <a class="link" title="<%= data_footer[key][key1].title %>"
                                     href="<%= data_footer[key][key1].href %>"
                                     target="<%= data_footer[key][key1].target %>">
                                     <%- data_footer[key][key1].text %>

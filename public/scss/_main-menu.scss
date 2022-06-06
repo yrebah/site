@@ -11,13 +11,23 @@
     flex-wrap: nowrap;
     animation: main-menu 0.3s forwards;
 
+    @keyframes main-menu {
+        0% {
+            transform: translateX(-100%);
+        }
+    
+        100% {
+            transform: translateX(0%);
+        }
+    }
+
     &.active {
         display: flex;
     }
 
     .container {
         position: relative;
-        background: map-get($color, 2);
+        background: map-get($color-main-menu, 0);
         display: grid;
         flex: 25%;
         grid-template-columns: 1fr;
@@ -61,7 +71,7 @@
             align-items: center;
             justify-content: space-between;
             font-weight: 500;
-            border-bottom: 1px solid map-get($color, 3);
+            border-bottom: 1px solid map-get($color-primary, 3);
             padding-bottom: map-get($padding, 's');
         }
 
@@ -89,12 +99,13 @@
             }
         }
 
-        .main-menu-link {
-            color: map-get($color, 1);
+        .link {
+            font-size: map-get($font-size, 's');
+            color: map-get($color-main-menu, 1);
             transition: 0.15s ease-in-out;
 
             &:hover {
-                transform: translateX(6px);
+                transform: translateX(4px);
             }
         }
 
@@ -121,12 +132,20 @@
     }
 }
 
-@keyframes main-menu {
-    0% {
-        transform: translateX(-100%);
-    }
+body {
+    &.dark-mode {
+        .main-menu {
+            .container {
+                background: map-get($color-main-menu, 1) !important;
 
-    100% {
-        transform: translateX(0%);
+                .main-menu-header {
+                    border-bottom: 1px solid map-get($color-primary, 3);
+                }
+
+                .link {
+                    color: map-get($color-main-menu, 0);
+                }
+            }
+        }
     }
 }

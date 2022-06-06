@@ -4,11 +4,9 @@ $(document).ready(() => {
     set_btnThemeFunctions()
     set_btnMainMenuFunctions()
     set_mainMenuFunctions()
+    set_linkHeaderFunctions()
     apply_theme()
     set_modalFunctions()
-
-    let isAuthentified = false
-    if(localStorage.getItem('isAuthentified')) isAuthentified = true
 })
 
 // THEME
@@ -95,6 +93,16 @@ const set_btnMainMenuFunctions = () => {
     $('#btn-main-menu').click(() => {
         open_mainMenu()
     })
+}
+
+const set_linkHeaderFunctions = () => {
+    let links = document.querySelectorAll('.header .link');
+    links.forEach(elem => {
+        elem.addEventListener('click', function () {
+            links.forEach(link => link.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
 }
 
 // --------------------------------------

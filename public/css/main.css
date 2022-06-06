@@ -139,7 +139,7 @@ body.dark-mode .header {
 }
 
 body.dark-mode .header .header-link {
-  color: white;
+  color: black;
 }
 
 body.dark-mode .header .header-link::after {
@@ -154,35 +154,14 @@ body.dark-mode .loader {
   background: black;
 }
 
-body.dark-mode .loader .dot {
-  background: white;
-}
-
-body.dark-mode .main-menu .container {
-  background: black;
-}
-
-body.dark-mode .main-menu .container .main-menu-header {
-  border-bottom: 1px solid #262626;
-}
-
-body.dark-mode .main-menu .container .main-menu-link {
-  color: white;
-}
-
-body.dark-mode .social-bar .social-bar-link {
-  color: white;
-}
-
 body.dark-mode .modal .modal-header,
 body.dark-mode .modal .modal-content,
 body.dark-mode .modal .modal-footer {
-  color: black !important;
+  color: #dfeeff !important;
 }
 
 .header {
   position: sticky;
-  background: white;
   z-index: 8;
   top: 0;
   display: flex;
@@ -192,6 +171,7 @@ body.dark-mode .modal .modal-footer {
   height: var(--header-height);
   padding-left: 5%;
   padding-right: 5%;
+  background: white;
 }
 
 @media (min-width: 0px) {
@@ -236,7 +216,7 @@ body.dark-mode .modal .modal-footer {
   }
 }
 
-.header .header-link {
+.header .link {
   font-size: clamp(16px, 4vw, 18px);
   font-weight: 400;
   padding: 4px;
@@ -245,21 +225,26 @@ body.dark-mode .modal .modal-footer {
   padding-right: 10px;
 }
 
-.header .header-link::after {
+.header .link::after {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 112%;
   content: "";
   display: block;
-  background: #377feb;
-  height: 3px;
+  background: dodgerblue;
+  border-radius: 30px;
+  height: 4px;
   width: 0%;
   transition: 0.15s ease-in-out;
 }
 
-.header .header-link:hover::after, .header .header-link.active::after {
-  width: 38%;
+.header .link:hover::after {
+  width: 10%;
+}
+
+.header .link.active::after {
+  width: 30%;
 }
 
 .header section {
@@ -286,7 +271,7 @@ body.dark-mode .modal .modal-footer {
 .header section ul li:after {
   content: '|';
   font-weight: 300;
-  color: #262626;
+  color: darkred;
 }
 
 .header section ul li:last-child:after {
@@ -308,31 +293,11 @@ body.dark-mode .modal .modal-footer {
 }
 
 .header section:nth-child(1) ul {
-  width: 50%;
+  width: 100%;
 }
 
-@media (min-width: 768px) {
-  .header section:nth-child(1) ul {
-    width: 80%;
-  }
-}
-
-@media (min-width: 992px) {
-  .header section:nth-child(1) ul {
-    width: 60%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .header section:nth-child(1) ul {
-    width: 50%;
-  }
-}
-
-@media (min-width: 1400px) {
-  .header section:nth-child(1) ul {
-    width: 50%;
-  }
+.header section:nth-child(1) ul li:after {
+  content: '' !important;
 }
 
 .header section:nth-child(2) {
@@ -417,6 +382,10 @@ body.dark-mode .modal .modal-footer {
   .header section:nth-child(3) ul {
     width: 30%;
   }
+}
+
+body.dark-mode .header {
+  background: black !important;
 }
 
 .row {
@@ -545,6 +514,14 @@ h6 {
   font-weight: 500;
 }
 
+.link {
+  color: #094a8b;
+}
+
+body.dark-mode .link {
+  color: #cccccc !important;
+}
+
 .btn {
   padding: 14px;
   padding-left: 16px;
@@ -592,27 +569,31 @@ h6 {
   justify-content: center;
 }
 
+body.dark-mode .btn-icon {
+  color: white !important;
+}
+
 input {
   border-radius: 3px;
   padding: 16px;
   border: 1px solid lightgray;
   font-size: clamp(14px, 3vw, 16px);
-  color: black;
+  color: #dfeeff;
   transition: 0.15s ease-in-out;
 }
 
 input:read-only {
-  background: #f0f0f0;
-  color: black;
+  background: darkorange;
+  color: #dfeeff;
   border: none;
 }
 
 input:hover {
-  border-color: black;
+  border-color: #dfeeff;
 }
 
 input:focus-within {
-  outline-color: #262626;
+  outline-color: darkred;
 }
 
 textarea {
@@ -620,22 +601,22 @@ textarea {
   padding: 16px;
   border: 1px solid lightgray;
   font-size: clamp(14px, 3vw, 16px);
-  color: black;
+  color: #dfeeff;
   transition: 0.15s ease-in-out;
 }
 
 textarea:read-only {
-  background: #f0f0f0;
-  color: black;
+  background: darkorange;
+  color: #dfeeff;
   border: none;
 }
 
 textarea:hover {
-  border-color: black;
+  border-color: #dfeeff;
 }
 
 textarea:focus-within {
-  outline-color: #262626;
+  outline-color: darkred;
 }
 
 .select {
@@ -652,18 +633,18 @@ textarea:focus-within {
 .select select {
   padding: 16px;
   font-size: clamp(14px, 10vw, 16px);
-  color: black;
+  color: #dfeeff;
   width: 100%;
   height: 100%;
   flex: 90%;
 }
 
 .select:hover {
-  border-color: black;
+  border-color: #dfeeff;
 }
 
 .select:focus {
-  border-color: #262626;
+  border-color: darkred;
 }
 
 /*
@@ -675,15 +656,15 @@ textarea:focus-within {
     </div>
 */
 .loader {
+  top: 0;
+  left: 0;
   z-index: 9;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  background: white;
+  background: #f7f7f7;
 }
 
 .loader.global {
@@ -714,7 +695,7 @@ textarea:focus-within {
   position: absolute;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: black;
+  background: dodgerblue;
   width: 16px;
   height: 16px;
   animation: dot 3s infinite linear;
@@ -757,6 +738,14 @@ textarea:focus-within {
   }
 }
 
+body.dark-mode .loader {
+  background: #141414;
+}
+
+body.dark-mode .loader .dot {
+  background: dodgerblue;
+}
+
 .modal {
   z-index: 8;
   top: 0;
@@ -789,8 +778,8 @@ textarea:focus-within {
   gap: 0px 0px;
   grid-template-areas: "modal-header" "modal-content" "modal-footer";
   padding: 30px;
-  background: white;
-  border: 2px solid #f0f0f0;
+  background: orange;
+  border: 2px solid darkorange;
   border-radius: 16px;
   min-width: 50%;
   min-height: 50%;
@@ -838,7 +827,7 @@ textarea:focus-within {
   grid-area: modal-header;
   font-size: clamp(22px, 5vw, 24px);
   font-weight: 500;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid darkorange;
   padding-bottom: 10px;
 }
 
@@ -888,13 +877,22 @@ textarea:focus-within {
   animation: main-menu 0.3s forwards;
 }
 
+@keyframes main-menu {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 .main-menu.active {
   display: flex;
 }
 
 .main-menu .container {
   position: relative;
-  background: white;
+  background: #f7f7f7;
   display: grid;
   flex: 25%;
   grid-template-columns: 1fr;
@@ -948,7 +946,7 @@ textarea:focus-within {
   align-items: center;
   justify-content: space-between;
   font-weight: 500;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid lightgray;
   padding-bottom: 10px;
 }
 
@@ -974,13 +972,14 @@ textarea:focus-within {
   align-items: center;
 }
 
-.main-menu .container .main-menu-link {
-  color: black;
+.main-menu .container .link {
+  font-size: clamp(16px, 4vw, 18px);
+  color: #141414;
   transition: 0.15s ease-in-out;
 }
 
-.main-menu .container .main-menu-link:hover {
-  transform: translateX(6px);
+.main-menu .container .link:hover {
+  transform: translateX(4px);
 }
 
 .main-menu .container .main-menu-footer {
@@ -1004,25 +1003,24 @@ textarea:focus-within {
   flex: 75%;
 }
 
-@keyframes main-menu {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
+body.dark-mode .main-menu .container {
+  background: #141414 !important;
+}
+
+body.dark-mode .main-menu .container .main-menu-header {
+  border-bottom: 1px solid lightgray;
+}
+
+body.dark-mode .main-menu .container .link {
+  color: #f7f7f7;
 }
 
 .footer {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  background: mediumseagreen;
   min-height: 25vh;
-}
-
-.footer .footer-link {
-  color: black;
+  background: #f7f7f7;
 }
 
 .footer section {
@@ -1115,7 +1113,7 @@ textarea:focus-within {
 }
 
 .footer section:nth-child(2) .container-column .column h5 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .footer section:nth-child(2) .container-column .column ul li {
@@ -1171,6 +1169,10 @@ textarea:focus-within {
   width: 100%;
 }
 
+body.dark-mode .footer {
+  background: #141414 !important;
+}
+
 .social-bar {
   position: relative;
   width: 100%;
@@ -1178,9 +1180,8 @@ textarea:focus-within {
   min-width: 200px;
 }
 
-.social-bar .social-bar-link {
+.social-bar .link {
   font-size: clamp(16px, 4vw, 18px);
-  color: black;
 }
 
 .social-bar ul {
@@ -1388,7 +1389,7 @@ textarea:focus-within {
 
 @keyframes link {
   0% {
-    background: black;
+    background: #dfeeff;
   }
   25% {
     background: #ffa600;
@@ -1400,6 +1401,6 @@ textarea:focus-within {
     background: purple;
   }
   100% {
-    background: black;
+    background: #dfeeff;
   }
 }

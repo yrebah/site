@@ -23,10 +23,10 @@ body {
             background: map-get($color-primary, 1);
 
             .header-link {
-                color: map-get($color-primary, 2);
+                color: map-get($color-primary, 1);
 
                 &::after {
-                    background: map-get($color-primary, 4);
+                    background: map-get($color, 0);
                 }
             }
 
@@ -43,30 +43,6 @@ body {
 
         .loader {
             background: map-get($color-primary, 1);
-
-            .dot {
-                background: map-get($color-primary, 2);
-            }
-        }
-
-        .main-menu {
-            .container {
-                background: map-get($color-primary, 1);
-
-                .main-menu-header {
-                    border-bottom: 1px solid map-get($color, 4);
-                }
-
-                .main-menu-link {
-                    color: map-get($color, 2);
-                }
-            }
-        }
-
-        .social-bar {
-            .social-bar-link {
-                color: map-get($color, 2);
-            }
         }
 
         .modal {

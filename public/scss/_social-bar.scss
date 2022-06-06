@@ -6,9 +6,8 @@
     max-width: 230px;
     min-width: 200px;
 
-    .social-bar-link {
+    .link {
         font-size: map-get($font-size, "s");
-        color: map-get($color, 1);
     }
 
     ul {

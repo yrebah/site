@@ -10,7 +10,7 @@
             </li>
             <li>
                 <a href="/">
-                    <img class="img-xs" src="<%- data_site.logo %>" style="margin-left: 8px;" />
+                    <img class="img-m" src="<%- data_site.logo_text %>" style="margin-left: 8px;" />
                 </a>
             </li>
         </ul>
@@ -20,7 +20,7 @@
             <% data_header.forEach((elem)=> { %>
                 <li>
                     <div>
-                        <a class="header-link" title="<%= elem.title %>" href="<%= elem.href %>"
+                        <a class="link" title="<%= elem.title %>" href="<%= elem.href %>"
                             target="<%= elem.target %>">
                             <%- elem.text %>
                         </a>
