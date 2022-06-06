@@ -1,5 +1,10 @@
 // _loader.scss
 
+$color-loader: (
+    0: hsl(0, 0%, 100%),
+    1: hsl(0, 0%, 0%)
+);
+
 .loader {
     top: 0;
     left: 0;

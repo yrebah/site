@@ -1,5 +1,10 @@
 // _link.scss
 
+$color-link: (
+    0: rgb(9, 74, 139),
+    1: hsl(0, 0%, 80%)
+);
+
 .link {
     color: map-get($color-link, 0);
 }

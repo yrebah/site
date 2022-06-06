@@ -1,5 +1,10 @@
 // _main-menu.scss
 
+$color-main-menu: (
+    0: hsl(0, 0%, 97%),
+    1: hsl(0, 0%, 8%)
+);
+
 .main-menu {
     position: fixed;
     z-index: 8;

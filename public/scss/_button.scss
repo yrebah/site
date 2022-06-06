@@ -1,5 +1,16 @@
 // _button.scss
 
+$button: (
+    primary: rgb(99, 177, 255),
+    secondary: hsl(0, 0%, 90%),
+    cancel: black,
+    accept: rgb(66, 232, 141),
+    back: transparent,
+    send: rgb(99, 177, 255),
+    alert: rgb(255, 127, 127),
+    icon: transparent
+);
+
 .btn {
     padding: map-get($padding, 'm');
     padding-left: map-get($padding, 'l');

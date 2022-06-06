@@ -30,31 +30,6 @@ $color: (
     9: hsl(300, 100%, 25%)
 );
 
-$color-link: (
-    0: rgb(9, 74, 139),
-    1: hsl(0, 0%, 80%)
-);
-
-$color-header: (
-    0: hsl(0, 0%, 100%),
-    1: hsl(0, 0%, 0%)
-);
-
-$color-footer: (
-    0: hsl(0, 0%, 97%),
-    1: hsl(0, 0%, 8%)
-);
-
-$color-main-menu: (
-    0: hsl(0, 0%, 97%),
-    1: hsl(0, 0%, 8%)
-);
-
-$color-loader: (
-    0: hsl(0, 0%, 97%),
-    1: hsl(0, 0%, 8%)
-);
-
 $font-size: (
     xs: clamp(14px, 3vw, 16px),
     s: clamp(16px, 4vw, 18px),
@@ -63,26 +38,6 @@ $font-size: (
     xl: clamp(32px, 7vw, 36px),
     xxl: clamp(38px, 8vw, 46px),
     oversize: clamp(72px, 20vw, 150px)
-);
-
-$button: (
-    primary: rgb(99, 177, 255),
-    secondary: hsl(0, 0%, 90%),
-    cancel: black,
-    accept: rgb(66, 232, 141),
-    back: transparent,
-    send: rgb(99, 177, 255),
-    alert: rgb(255, 127, 127),
-    icon: transparent
-);
-
-$img-size: (
-    xs: 40px,
-    s: 60px,
-    m: 120px,
-    l: 220px,
-    xl: 300px,
-    xxl: 420px
 );
 
 $width: (

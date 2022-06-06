@@ -664,7 +664,7 @@ textarea:focus-within {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background: #f7f7f7;
+  background: white;
 }
 
 .loader.global {
@@ -739,7 +739,7 @@ textarea:focus-within {
 }
 
 body.dark-mode .loader {
-  background: #141414;
+  background: black;
 }
 
 body.dark-mode .loader .dot {

@@ -1,5 +1,14 @@
 // _img.scss
 
+$img-size: (
+    xs: 40px,
+    s: 60px,
+    m: 120px,
+    l: 220px,
+    xl: 300px,
+    xxl: 420px
+);
+
 .img-xs {
     width: map-get($img-size, 'xs');
 }
