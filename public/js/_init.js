@@ -1,11 +1,11 @@
 // _init.js
 
 $(document).ready(() => {
+    apply_theme()
     set_btnThemeFunctions()
     set_btnMainMenuFunctions()
     set_mainMenuFunctions()
     set_linkHeaderFunctions()
-    apply_theme()
     set_modalFunctions()
 })
 
@@ -17,7 +17,7 @@ const apply_theme = () => {
             case 'light':
                 $('#moon').show()
                 $('#sun').hide()
-                $('*').removeClass('dark-mode')
+                $('body').removeClass('dark-mode')
                 break;
             case 'dark':
                 $('#moon').hide()
@@ -182,7 +182,7 @@ const set_modalFunctions = () => {
 
 // NOTIFICATION
 
-const notification = async (title, message, icon, redirect) => {
+const get_notification = async (title, message, redirect, icon) => {
 
     const showNotification = () => {
 

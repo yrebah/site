@@ -1,13 +1,10 @@
 // main.js
 
 $(document).ready(() => {
-    notification(
+    get_notification(
         "title notif", 
         "message of la notif...",
-        "",
-        "https://www.google.com"
+        "https://www.google.com",
+        ""
     )
-
-    get_loader('tes','.test')
-
 })
