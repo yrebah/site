@@ -26,7 +26,7 @@ const apply_theme = () => {
                 break;
         }
     } else {
-        set_theme('light')
+        set_theme('dark')
     }
 }
 
