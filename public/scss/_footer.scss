@@ -38,6 +38,30 @@ $color-footer: (
                     h4 {
                         letter-spacing: 1px;
                     }
+
+                    @include screen-xs {
+                        justify-content: center;
+                    }
+    
+                    @include screen-s {
+                        justify-content: center;
+                    }
+    
+                    @include screen-m {
+                        justify-content: center;
+                    }
+    
+                    @include screen-l {
+                        justify-content: start;
+                    }
+    
+                    @include screen-xl {
+                        justify-content: start;
+                    }
+    
+                    @include screen-xxl {
+                        justify-content: start;
+                    }
                 }
 
                 p {

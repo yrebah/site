@@ -4,11 +4,19 @@
     <section>
         <div class="container-description">
             <div class="row">
-                <img class="img-xs" src="<%- data_site.logo_icon %>"/>
-                <h4><%- data_site.title %></h4>
+                <img class="img-xs" src="<%- data_site.logo_icon %>" />
+                <h4>
+                    <%- data_site.title %>
+                </h4>
             </div>
-            <p><%- data_site.description %></p>
-            <%- include('social-bar') %>
+            <div class="row">
+                <p>
+                    <%- data_site.description %>
+                </p>
+            </div>
+            <div class="row">
+                <%- include('social-bar') %>
+            </div>
         </div>
     </section>
     <section>
@@ -27,26 +35,29 @@
                                     <%- data_footer[key][key1].text %>
                                 </a>
                             </li>
-                        <% } %>
+                            <% } %>
                     </ul>
                 </div>
-            <% }) %>
+                <% }) %>
         </div>
         <div class="container-select">
             <% Object.keys(data_footer).forEach((key)=> { %>
                 <div class="row">
                     <div class="select">
                         <select onchange="window.location.replace(this.value)">
-                            <option disabled selected><%- key %></option>
+                            <option disabled selected>
+                                <%- key %>
+                            </option>
                             <% for (let key1 in data_footer[key]) { %>
-                                <option value="<%= data_footer[key][key1].href %>" data-target="<%= data_footer[key][key1].target %>">
+                                <option value="<%= data_footer[key][key1].href %>"
+                                    data-target="<%= data_footer[key][key1].target %>">
                                     <%- data_footer[key][key1].text %>
                                 </option>
                                 <% } %>
                         </select>
                     </div>
                 </div>
-            <% }) %>
+                <% }) %>
         </div>
     </section>
 </footer>
