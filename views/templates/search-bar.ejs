@@ -10,6 +10,7 @@
         <ul>
             <% data_searchBar_suggestion.forEach((elem)=> { %>
                 <li>
+                    <%- elem.icon %>
                     <a class="link" title="<%= elem.title %>" href="<%= elem.href %>"
                         target="<%= elem.target %>">
                         <%- elem.text %>

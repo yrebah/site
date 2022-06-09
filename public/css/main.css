@@ -647,6 +647,10 @@ body.dark-mode .btn-icon {
   padding-bottom: 24px;
 }
 
+.search-bar nav ul li i {
+  margin-right: 8px;
+}
+
 .search-bar nav ul li .link {
   font-size: clamp(16px, 4vw, 18px);
   color: white;

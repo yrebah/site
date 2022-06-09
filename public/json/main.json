@@ -90,42 +90,48 @@
         "suggestion": [
             {
                 "id": "search-bar-suggestion-link-1",
-                "text": "<i class='fa-brands fa-bilibili'></i> Une suggestion banale 1",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "Une suggestion banale 1",
                 "href": "#",
                 "target": "",
                 "title": ""
             },
             {
                 "id": "search-bar-suggestion-link-2",
-                "text": "<i class='fa-brands fa-bilibili'></i> Une suggestion banale 2",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "Une suggestion banale 2",
                 "href": "#",
                 "target": "",
                 "title": ""
             },
             {
                 "id": "search-bar-suggestion-link-3",
-                "text": "<i class='fa-brands fa-bilibili'></i> Une suggestion banale 3",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "Une suggestion banale 3",
                 "href": "#",
                 "target": "",
                 "title": ""
             },
             {
                 "id": "search-bar-suggestion-link-4",
-                "text": "<i class='fa-brands fa-bilibili'></i> Une suggestion banale 4",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "Une suggestion banale 4",
                 "href": "#",
                 "target": "",
                 "title": ""
             },
             {
                 "id": "search-bar-suggestion-link-5",
-                "text": "<i class='fa-brands fa-bilibili'></i> Une suggestion banale 5",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "Une suggestion banale 5",
                 "href": "#",
                 "target": "",
                 "title": ""
             },
             {
                 "id": "search-bar-suggestion-link-6",
-                "text": "<i class='fa-brands fa-bilibili'></i> Une suggestion banale 6",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "Une suggestion banale 6",
                 "href": "#",
                 "target": "",
                 "title": ""

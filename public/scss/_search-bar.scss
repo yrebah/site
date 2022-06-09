@@ -70,6 +70,10 @@
             li {
                 padding-bottom: map-get($padding, 'xl');
 
+                i {
+                    margin-right: map-get($margin, 'xs');
+                }
+
                 .link {
                     font-size: map-get($font-size, 's');
                     color: white;
