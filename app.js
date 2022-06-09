@@ -31,6 +31,7 @@ const data_header = main_json_parsed.header
 const data_mainMenu = main_json_parsed.mainMenu
 const data_socialBar = main_json_parsed.socialBar
 const data_footer = main_json_parsed.footer
+const data_searchBar_suggestion = main_json_parsed.searchBar.suggestion
 
 let isAuthentified = false
 
@@ -43,7 +44,8 @@ app.get('', (req, res) => {
         data_header,
         data_mainMenu,
         data_socialBar,
-        data_footer
+        data_footer,
+        data_searchBar_suggestion
     })
 })
 
@@ -56,7 +58,8 @@ app.get('/about', (req, res) => {
         data_header,
         data_mainMenu,
         data_socialBar,
-        data_footer
+        data_footer,
+        data_searchBar_suggestion
     })
 })
 

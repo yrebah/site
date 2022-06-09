@@ -23,18 +23,19 @@ $color-main-menu: (
         opacity: 1;
     }
 
-    .container {
+    .main-menu-wrapper {
         position: relative;
         background: map-get($color-main-menu, 0);
         display: grid;
-        flex: 25%;
+        flex: 30%;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.3fr 2.4fr 0.3fr;
-        gap: 0px 0px;
+        grid-template-rows: 0.2fr 0.4fr 3.1fr 0.3fr;
+        gap: 6px 0px;
         grid-template-areas:
-            "main-menu-header"
-            "main-menu-content"
-            "main-menu-footer";
+            "main-menu-row-1"
+            "main-menu-row-2"
+            "main-menu-row-3"
+            "main-menu-row-4";
         padding: map-get($padding, 'xxl');
         box-shadow: 2px 0px 5px -3px rgba(115, 115, 115, 1);
 
@@ -62,22 +63,48 @@ $color-main-menu: (
             min-width: 25%;
         }
 
-        .main-menu-header {
-            grid-area: main-menu-header;
+        .main-menu-row-1 {
+            position: relative;
+            grid-area: main-menu-row-1;
             font-size: map-get($font-size, "s");
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding-bottom: map-get($padding, 's');
+            transition: opacity 0.35s ease-in-out;
+
+            &.active {
+                opacity: 0;
+                pointer-events: none;
+            }
         }
 
-        .main-menu-content {
+        .main-menu-row-2 {
+            position: absolute;
+            grid-area: main-menu-row-2;
+            display: flex;
+            align-items: center;
+            top: 0px;
+            width: 100%;
+            transition: top 0.35s ease-in-out;
+
+            &.active {
+                top: -50px;
+            }
+        }
+
+        .main-menu-row-3 {
             position: relative;
-            grid-area: main-menu-content;
+            grid-area: main-menu-row-3;
             max-height: 100%;
             overflow-y: auto;
-            margin-top: map-get($margin, "s");
-            margin-bottom: map-get($margin, "s");
+            padding-top: map-get($padding, "l");
+            padding-bottom: map-get($padding, "l");
+            transition: opacity 0.35s ease-in-out;
+
+            &.active {
+                opacity: 0;
+                pointer-events: none;
+            }
 
             &::-webkit-scrollbar {
                 width: 6px;
@@ -86,16 +113,19 @@ $color-main-menu: (
 
             &::-webkit-scrollbar-track {
                 border-radius: 30px;
-                background: map-get($color-main-menu, 1);
+                background: hsla(0, 0%, 50%, 0.1);
             }
 
             &::-webkit-scrollbar-thumb {
                 border-radius: 30px;
-                background: map-get($color-main-menu, 0);
+                background: hsla(0, 0%, 22%, 0.50);
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                background: hsla(0, 0%, 22%, 0.75);
             }
 
             ul {
-                height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
@@ -122,11 +152,18 @@ $color-main-menu: (
             }
         }
 
-        .main-menu-footer {
-            grid-area: main-menu-footer;
+        .main-menu-row-4 {
+            position: relative;
+            grid-area: main-menu-row-4;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: opacity 0.35s ease-in-out;
+
+            &.active {
+                opacity: 0;
+                pointer-events: none;
+            }
 
             i {
                 font-size: map-get($font-size, "m");
@@ -141,14 +178,14 @@ $color-main-menu: (
     }
 
     .main-menu-outside {
-        flex: 75%;
+        flex: 70%;
     }
 }
 
 body {
     &.dark-mode {
         .main-menu {
-            .container {
+            .main-menu-wrapper {
                 background: map-get($color-main-menu, 1) !important;
 
                 .link {

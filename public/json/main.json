@@ -31,7 +31,7 @@
     "mainMenu": [
         {
             "id": "mainMenu-link-1",
-            "text": "Menu secondaire",
+            "text": "FIRST",
             "href": "#",
             "target": "",
             "title": ""
@@ -51,29 +51,22 @@
             "title": ""
         },
         {
-            "id": "mainMenu-link-4",
-            "text": "Link 4",
+            "id": "mainMenu-link-3",
+            "text": "Link 3",
             "href": "#",
             "target": "",
             "title": ""
         },
         {
-            "id": "mainMenu-link-5",
-            "text": "Link 5",
+            "id": "mainMenu-link-3",
+            "text": "Link 3",
             "href": "#",
             "target": "",
             "title": ""
         },
         {
-            "id": "mainMenu-link-1",
-            "text": "Menu secondaire",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-2",
-            "text": "Link 2",
+            "id": "mainMenu-link-3",
+            "text": "Link 3",
             "href": "#",
             "target": "",
             "title": ""
@@ -87,159 +80,58 @@
         },
         {
             "id": "mainMenu-link-4",
-            "text": "Link 4",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-5",
-            "text": "Link 5",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-1",
-            "text": "Menu secondaire",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-2",
-            "text": "Link 2",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-3",
-            "text": "Link 3",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-4",
-            "text": "Link 4",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-5",
-            "text": "Link 5",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-1",
-            "text": "Menu secondaire",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-2",
-            "text": "Link 2",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-3",
-            "text": "Link 3",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-4",
-            "text": "Link 4",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-5",
-            "text": "Link 5",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-1",
-            "text": "Menu secondaire",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-2",
-            "text": "Link 2",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-3",
-            "text": "Link 3",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-4",
-            "text": "Link 4",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-5",
-            "text": "Link 5",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-1",
-            "text": "Menu secondaire",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-2",
-            "text": "Link 2",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-3",
-            "text": "Link 3",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-4",
-            "text": "Link 4",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-5",
-            "text": "Link 5",
+            "text": "LAST",
             "href": "#",
             "target": "",
             "title": ""
         }
     ],
+    "searchBar": {
+        "suggestion": [
+            {
+                "id": "search-bar-suggestion-link-1",
+                "text": "<i class='fa-brands fa-bilibili'></i> Une suggestion banale 1",
+                "href": "#",
+                "target": "",
+                "title": ""
+            },
+            {
+                "id": "search-bar-suggestion-link-2",
+                "text": "<i class='fa-brands fa-bilibili'></i> Une suggestion banale 2",
+                "href": "#",
+                "target": "",
+                "title": ""
+            },
+            {
+                "id": "search-bar-suggestion-link-3",
+                "text": "<i class='fa-brands fa-bilibili'></i> Une suggestion banale 3",
+                "href": "#",
+                "target": "",
+                "title": ""
+            },
+            {
+                "id": "search-bar-suggestion-link-4",
+                "text": "<i class='fa-brands fa-bilibili'></i> Une suggestion banale 4",
+                "href": "#",
+                "target": "",
+                "title": ""
+            },
+            {
+                "id": "search-bar-suggestion-link-5",
+                "text": "<i class='fa-brands fa-bilibili'></i> Une suggestion banale 5",
+                "href": "#",
+                "target": "",
+                "title": ""
+            },
+            {
+                "id": "search-bar-suggestion-link-6",
+                "text": "<i class='fa-brands fa-bilibili'></i> Une suggestion banale 6",
+                "href": "#",
+                "target": "",
+                "title": ""
+            }
+        ]
+    },
     "faq": [
         {
             "id": "faq-1",

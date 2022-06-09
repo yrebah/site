@@ -1,0 +1,80 @@
+// _search-bar.scss
+
+.search-bar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 0%;
+    transition: height 0.5s ease-in-out;
+
+    &.active {
+        height: 400px;
+    }
+
+    .search-bar-wrapper {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding: map-get($padding, 's');
+        border-radius: map-get($border-radius, 'm');
+        background: hsl(0, 0%, 12%);
+
+        i {
+            flex: 5%;
+            margin-left: map-get($margin, 'xs');
+            margin-right: map-get($margin, 'xs');
+            color: rgb(199, 199, 199);
+        }
+
+        input {
+            flex: 95%;
+            font-size: map-get($font-size, 's');
+            padding: map-get($padding, 'xs');
+            width: 100%;
+            flex: 95%;
+            background: transparent;
+            border: none;
+            color: map-get($color-primary, 2);
+            outline: none;
+        }
+    }
+
+    nav {
+        position: relative;
+        height: 100%;
+        padding-left: map-get($padding, 's');
+        transform: translateY(50%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.50s ease-in-out, opacity 0.25s ease-in-out;
+
+        &.active {
+            transform: translateY(0%);
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        h4 {
+            padding-top: map-get($padding, 'xl');
+            padding-bottom: map-get($padding, 'xl');
+        }
+
+        ul {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-left: map-get($padding, 'xs');
+
+            li {
+                padding-bottom: map-get($padding, 'xl');
+
+                .link {
+                    font-size: map-get($font-size, 's');
+                    color: white;
+                }
+            }
+        }
+    }
+}

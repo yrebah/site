@@ -1,0 +1,21 @@
+<!-- TEMPLATE - search-bar -->
+
+<div class="search-bar">
+    <div class="search-bar-wrapper">
+        <i class='fa-solid fa-magnifying-glass'></i>
+        <input type="search">
+    </div>
+    <nav>
+        <h4>Suggestions</h4>
+        <ul>
+            <% data_searchBar_suggestion.forEach((elem)=> { %>
+                <li>
+                    <a class="link" title="<%= elem.title %>" href="<%= elem.href %>"
+                        target="<%= elem.target %>">
+                        <%- elem.text %>
+                    </a>
+                </li>
+            <% }) %>
+        </ul>
+    </nav>
+</div>
