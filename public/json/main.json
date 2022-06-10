@@ -9,7 +9,7 @@
         {
             "id": "header-link-1",
             "text": "<i class='fa-solid fa-house'></i>",
-            "href": "#home",
+            "href": "#index",
             "target": "",
             "title": "Accueil"
         },
