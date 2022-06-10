@@ -176,15 +176,15 @@ body.dark-mode .modal .modal-footer {
 
 @media (min-width: 0px) {
   .header {
-    padding-right: 10%;
-    padding-left: 10%;
+    padding-right: 5%;
+    padding-left: 5%;
   }
 }
 
 @media (min-width: 576px) {
   .header {
-    padding-right: 10%;
-    padding-left: 10%;
+    padding-right: 8%;
+    padding-left: 8%;
   }
 }
 

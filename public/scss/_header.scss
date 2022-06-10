@@ -19,13 +19,13 @@ $color-header: (
     background: map-get($color-header, 0);
 
     @include screen-xs {
-        padding-right: map-get($padding-block, 'l');
-        padding-left: map-get($padding-block, 'l');
+        padding-right: map-get($padding-block, 's');
+        padding-left: map-get($padding-block, 's');
     }
 
     @include screen-s {
-        padding-right: map-get($padding-block, 'l');
-        padding-left: map-get($padding-block, 'l');
+        padding-right: map-get($padding-block, 'm');
+        padding-left: map-get($padding-block, 'm');
     }
 
     @include screen-m {
