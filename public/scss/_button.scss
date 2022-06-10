@@ -17,7 +17,7 @@ $button: (
     padding-left: map-get($padding, 'l');
     padding-right: map-get($padding, 'l');
     border-radius: map-get($border-radius, 's');
-    font-size: map-get($font-size, 'xs');
+    font-size: map-get($font-size, 's');
     transition: 0.15s ease-in-out;
 
     &.btn-primary {

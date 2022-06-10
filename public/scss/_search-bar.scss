@@ -20,6 +20,11 @@
         padding: map-get($padding, 's');
         border-radius: map-get($border-radius, 'm');
         background: hsl(0, 0%, 12%);
+        transition: background 0.35s ease-in-out;
+
+        &:focus-within {
+            background: hsl(0, 0%, 16%);
+        }
 
         i {
             flex: 5%;

@@ -546,7 +546,7 @@ body.dark-mode .link {
   padding-left: 16px;
   padding-right: 16px;
   border-radius: 4px;
-  font-size: clamp(14px, 3vw, 16px);
+  font-size: clamp(16px, 4vw, 18px);
   transition: 0.15s ease-in-out;
 }
 
@@ -613,6 +613,11 @@ body.dark-mode .btn-icon {
   padding: 8px;
   border-radius: 6px;
   background: #1f1f1f;
+  transition: background 0.35s ease-in-out;
+}
+
+.search-bar .search-bar-wrapper:focus-within {
+  background: #292929;
 }
 
 .search-bar .search-bar-wrapper i {
@@ -969,7 +974,7 @@ body.dark-mode .loader .dot {
   display: grid;
   flex: 30%;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.4fr 0.4fr 2.9fr 0.3fr;
+  grid-template-rows: 0.4fr 0.4fr 2.7fr 0.5fr;
   gap: 6px 0px;
   grid-template-areas: "row-1" "row-2" "row-3" "row-4";
   padding: 30px;
@@ -1091,7 +1096,7 @@ body.dark-mode .loader .dot {
   grid-area: row-4;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   transition: opacity 0.35s ease-in-out;
 }
 

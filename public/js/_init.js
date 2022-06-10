@@ -8,6 +8,7 @@ $(document).ready(() => {
     set_linkHeaderFunctions()
     set_modalFunctions()
     set_searchBarFunctions()
+    set_btnSearchFunctions()
 })
 
 // THEME
@@ -104,6 +105,15 @@ const set_linkHeaderFunctions = () => {
             this.classList.add('active');
         });
     });
+}
+
+const set_btnSearchFunctions = () => {
+    $('#search').click(() => {
+        open_mainMenu()
+        setTimeout(() => {
+            $('#search-bar-input').focus()
+        }, 350)
+    })
 }
 
 // --------------------------------------
