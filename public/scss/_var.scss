@@ -1,20 +1,31 @@
 // _var.scss
 
-$font-family: (
-    0: segoe ui,
-    1: segoe ui,
-    2: segoe ui,
-    3: segoe ui,
-    4: segoe ui,
-    5: segoe ui
-);
-
 $color-primary: (
     0: transparent,
     1: black,
     2: white,
     3: lightgray,
-    4: gray
+    4: gray,
+    5: dodgerblue,
+    6: mediumseagreen,
+    7: orange,
+    8: red
+);
+
+$primary-color: (
+    transparent: transparent,
+    black: black,
+    lightblack: hsl(0, 0%, 15%),
+    darkgray: hsl(0, 0%, 30%),
+    gray: hsl(0, 0%, 55%),
+    lightgray: lightgray,
+    white: white,
+    blue: dodgerblue,
+    green: mediumseagreen,
+    yellow: yellow,
+    orange: orange,
+    red: red,
+    purple: purple
 );
 
 $color: (

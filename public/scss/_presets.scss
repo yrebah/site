@@ -47,54 +47,6 @@ ol {
     list-style-type: none;
 }
 
-.hide-scrollbar {
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-}
-
-.hide-scrollbar::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
-}
-
 html {
     scroll-behavior: smooth;
-}
-
-main {
-    position: relative;
-    min-height: calc(100vh - var(--header-height));
-    margin-top: map-get($margin, "m");
-    margin-bottom: map-get($margin, "xl");
-    padding-left: map-get($padding-block, "xxl");
-    padding-right: map-get($padding-block, "xxl");
-
-    @include screen-xs {
-        padding-left: map-get($padding-block, "m");
-        padding-right: map-get($padding-block, "m");
-    }
-
-    @include screen-s {
-        padding-left: map-get($padding-block, "m");
-        padding-right: map-get($padding-block, "m");
-    }
-
-    @include screen-m {
-        padding-left: map-get($padding-block, "m");
-        padding-right: map-get($padding-block, "m");
-    }
-
-    @include screen-l {
-        padding-left: map-get($padding-block, "l");
-        padding-right: map-get($padding-block, "l");
-    }
-
-    @include screen-xl {
-        padding-left: map-get($padding-block, "xl");
-        padding-right: map-get($padding-block, "xl");
-    }
-
-    @include screen-xxl {
-        padding-left: map-get($padding-block, "xxl");
-        padding-right: map-get($padding-block, "xxl");
-    }
 }
