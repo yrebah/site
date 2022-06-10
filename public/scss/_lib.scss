@@ -1,5 +1,26 @@
 // _lib.scss
 
+.slim-scrollbar {
+    &::-webkit-scrollbar {
+        width: 6px;
+        border-radius: 30px;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 30px;
+        background: hsla(0, 0%, 50%, 0.1);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 30px;
+        background: hsla(0, 0%, 22%, 0.50);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: hsla(0, 0%, 22%, 0.75);
+    }
+}
+
 .row {
     display: flex;
     align-items: center;

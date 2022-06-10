@@ -2,7 +2,7 @@
     "site": {
         "logo_icon": "../img/logo-icon.png",
         "logo_text": "../img/logo-text.png",
-        "title": "Titre du site",
+        "title": "GhostApp",
         "description": "Description du site, qui contient beaucoup d'information que personne ne lit jamais."
     },
     "header": [
@@ -31,6 +31,7 @@
     "mainMenu": [
         {
             "id": "mainMenu-link-1",
+            "icon": "<i class='fa-brands fa-bilibili'></i>",
             "text": "FIRST",
             "href": "#",
             "target": "",
@@ -38,6 +39,7 @@
         },
         {
             "id": "mainMenu-link-2",
+            "icon": "<i class='fa-brands fa-bilibili'></i>",
             "text": "Link 2",
             "href": "#",
             "target": "",
@@ -45,34 +47,7 @@
         },
         {
             "id": "mainMenu-link-3",
-            "text": "Link 3",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-3",
-            "text": "Link 3",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-3",
-            "text": "Link 3",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-3",
-            "text": "Link 3",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-3",
+            "icon": "<i class='fa-brands fa-bilibili'></i>",
             "text": "Link 3",
             "href": "#",
             "target": "",
@@ -80,6 +55,95 @@
         },
         {
             "id": "mainMenu-link-4",
+            "icon": "<i class='fa-brands fa-bilibili'></i>",
+            "text": "Link 4",
+            "href": "#",
+            "target": "",
+            "title": ""
+        },
+        {
+            "id": "mainMenu-link-5",
+            "icon": "<i class='fa-brands fa-bilibili'></i>",
+            "text": "Link 5",
+            "href": "#",
+            "target": "",
+            "title": ""
+        },
+        {
+            "id": "mainMenu-link-6",
+            "icon": "<i class='fa-brands fa-bilibili'></i>",
+            "text": "Link 6",
+            "href": "#",
+            "target": "",
+            "title": ""
+        },
+        {
+            "id": "mainMenu-link-6",
+            "icon": "<i class='fa-brands fa-bilibili'></i>",
+            "text": "Link 6",
+            "href": "#",
+            "target": "",
+            "title": ""
+        },
+        {
+            "id": "mainMenu-link-6",
+            "icon": "<i class='fa-brands fa-bilibili'></i>",
+            "text": "Link 6",
+            "href": "#",
+            "target": "",
+            "title": ""
+        },
+        {
+            "id": "mainMenu-link-6",
+            "icon": "<i class='fa-brands fa-bilibili'></i>",
+            "text": "Link 6",
+            "href": "#",
+            "target": "",
+            "title": ""
+        },
+        {
+            "id": "mainMenu-link-6",
+            "icon": "<i class='fa-brands fa-bilibili'></i>",
+            "text": "Link 6",
+            "href": "#",
+            "target": "",
+            "title": ""
+        },
+        {
+            "id": "mainMenu-link-6",
+            "icon": "<i class='fa-brands fa-bilibili'></i>",
+            "text": "Link 6",
+            "href": "#",
+            "target": "",
+            "title": ""
+        },
+        {
+            "id": "mainMenu-link-6",
+            "icon": "<i class='fa-brands fa-bilibili'></i>",
+            "text": "Link 6",
+            "href": "#",
+            "target": "",
+            "title": ""
+        },
+        {
+            "id": "mainMenu-link-6",
+            "icon": "<i class='fa-brands fa-bilibili'></i>",
+            "text": "Link 6",
+            "href": "#",
+            "target": "",
+            "title": ""
+        },
+        {
+            "id": "mainMenu-link-6",
+            "icon": "<i class='fa-brands fa-bilibili'></i>",
+            "text": "Link 6",
+            "href": "#",
+            "target": "",
+            "title": ""
+        },
+        {
+            "id": "mainMenu-link-6",
+            "icon": "<i class='fa-brands fa-bilibili'></i>",
             "text": "LAST",
             "href": "#",
             "target": "",
