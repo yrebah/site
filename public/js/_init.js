@@ -201,10 +201,14 @@ const get_popin = (container, title, content, footer) => {
 }
 
 const set_popinFunctions = () => {
+
+    $('body').css('overflow', 'hidden')
+
     $('.popin').click(() => {
         $('.popin').removeClass('active')
         setTimeout(() =>{
             $('.popin').remove()
+            $('body').css('overflow', 'auto')
         }, 500)
     }).children().click(() => {
         return false
