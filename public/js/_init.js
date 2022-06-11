@@ -142,10 +142,14 @@ const set_mainMenuFunctions = () => {
 
 const open_mainMenu = () => {
     $('.main-menu').addClass('active')
+    $('.main-menu-outside').addClass('active')
+    $('body').css('overflow', 'hidden')
 }
 
 const close_mainMenu = () => {
     $('.main-menu').removeClass('active')
+    $('.main-menu-outside').removeClass('active')
+    $('body').css('overflow', 'auto')
 }
 
 // --------------------------------------

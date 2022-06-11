@@ -1067,7 +1067,14 @@ body.dark-mode .loader .dot {
 }
 
 .main-menu .main-menu-outside {
+  background: rgba(0, 0, 0, 0.6);
+  transform: translateY(200%);
   flex: 70%;
+  transition: transform 0.5s;
+}
+
+.main-menu .main-menu-outside.active {
+  transform: translateY(0%);
 }
 
 body.dark-mode .main-menu .main-menu-wrapper {
