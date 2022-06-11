@@ -1366,7 +1366,7 @@ body.dark-mode .footer {
   bottom: 0;
   height: 100%;
   transform: translateX(100%);
-  animation: img-2 4s linear forwards;
+  animation: img-2 6s linear forwards;
   animation-delay: 6s;
 }
 

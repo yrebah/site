@@ -27,6 +27,7 @@ const main_json = fs.readFileSync('./public/json/main.json')
 const main_json_parsed = JSON.parse(main_json)
 
 const data_site = main_json_parsed.site
+const data_404 = main_json_parsed.page404
 const data_header = main_json_parsed.header
 const data_mainMenu = main_json_parsed.mainMenu
 const data_social = main_json_parsed.social
@@ -74,7 +75,8 @@ app.get('/my-account', (req, res) => {
 app.get('*', (req, res) => {
     res.render('404', {
         title: 'Erreur 404',
-        data_site
+        data_site,
+        data_404
     })
 })
 

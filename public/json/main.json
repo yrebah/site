@@ -10,6 +10,10 @@
             "revised": "GhostApp, 6/11/2022"
         }
     },
+    "page404": {
+        "subtitle": "Cette page n'existe pas !",
+        "linkRedirection": "Revenir en lieu sûr"
+    },
     "header": {
         "links": [
             {
