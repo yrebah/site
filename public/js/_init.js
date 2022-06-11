@@ -6,7 +6,6 @@ $(document).ready(() => {
     set_btnMainMenuFunctions()
     set_mainMenuFunctions()
     set_linkHeaderFunctions()
-    set_modalFunctions()
     set_searchBarFunctions()
     set_btnSearchFunctions()
 })
@@ -170,12 +169,13 @@ const set_searchBarFunctions = () => {
     })
 }
 
-// MODAL
+// POPIN
 
-const get_modal = (container, title, content, footer) => {
+const get_popin = (container, title, content, footer) => {
+
     const global =
-        `<div class="modal global active">
-            <div class="container">
+        `<div class="popin global active">
+            <div class="popin-wrapper">
                 <div class="modal-header">${title}</div>
                 <div class="modal-content">${content}</div>
                 <div class="modal-footer">${footer}</div>
@@ -183,8 +183,8 @@ const get_modal = (container, title, content, footer) => {
         </div>`
 
     const specific =
-        `<div class="modal specific active">
-            <div class="container">
+        `<div class="popin specific active">
+            <div class="popin-wrapper">
                 <div class="modal-header">${title}</div>
                 <div class="modal-content">${content}</div>
                 <div class="modal-footer">${footer}</div>
@@ -197,12 +197,15 @@ const get_modal = (container, title, content, footer) => {
         $(`${container}`).append(specific)
     }
 
-    set_modalFunctions()
+    set_popinFunctions()
 }
 
-const set_modalFunctions = () => {
-    $('.modal').click(() => {
-        $('.modal').removeClass('active')
+const set_popinFunctions = () => {
+    $('.popin').click(() => {
+        $('.popin').removeClass('active')
+        setTimeout(() =>{
+            $('.popin').remove()
+        }, 500)
     }).children().click(() => {
         return false
     })
