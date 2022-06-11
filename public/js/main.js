@@ -1,10 +1,10 @@
 // main.js
 
+// ---- WRITE YOUR FUNCTIONS HERE ----
+
 $(document).ready(() => {
-    get_notification(
-        "title notif", 
-        "message of la notif...",
-        "https://www.google.com",
-        ""
-    )
+    get_loader('loader', 'body')
+    setTimeout(() => {
+        remove_loader('#loader')
+    }, 1500)
 })

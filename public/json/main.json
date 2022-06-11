@@ -3,11 +3,12 @@
         "title": "GhostApp",
         "logo_icon": "../img/logo-icon.png",
         "logo_text": "../img/logo-text.png",
-        "description": "Description du site, qui contient beaucoup d'information que personne ne lit jamais.",
-        "author": "Yoann R.",
-        "keywords": "GhostApp, keyword1, keyword2, keyword3",
-        "revised": "GhostApp, 6/11/2022",
-        "cookie": "userid = xyz; expires = Wednesday, 08-Aug-22 23:59:59 GMT;"
+        "metadata": {
+            "description": "Description du site, qui contient beaucoup d'information que personne ne lit jamais.",
+            "author": "Yoann R.",
+            "keywords": "GhostApp, keyword1, keyword2, keyword3",
+            "revised": "GhostApp, 6/11/2022"
+        }
     },
     "header": {
         "links": [

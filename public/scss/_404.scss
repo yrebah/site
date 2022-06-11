@@ -31,7 +31,7 @@
             bottom: 0;
             height: 100%;
             transform: translateX(100%);
-            animation: img-2 5s infinite alternate;
+            animation: img-2 4s linear forwards;
             animation-delay: 6s;
 
             @keyframes img-2 {
@@ -148,6 +148,7 @@
             font-family: 'Poiret One', cursive;
             font-size: map-get($font-size, "m");
             font-weight: 600;
+            color: black !important;
         }
 
         a {

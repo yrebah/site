@@ -33,8 +33,6 @@ const data_social = main_json_parsed.social
 const data_footer = main_json_parsed.footer
 const data_searchBar = main_json_parsed.searchBar
 
-let isAuthentified = false
-
 // page Home
 app.get('', (req, res) => {
     res.render('index', {
@@ -68,14 +66,15 @@ app.get('/my-account', (req, res) => {
     res.render('my-account', {
         title: 'Mon Compte',
         h1: "Mon Compte",
-        isAuthentified
+        data_site
     })
 })
 
 // page 404
 app.get('*', (req, res) => {
     res.render('404', {
-        title: 'Erreur 404'
+        title: 'Erreur 404',
+        data_site
     })
 })
 
