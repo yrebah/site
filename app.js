@@ -16,6 +16,7 @@ app.use('/css', express.static(__dirname + '/public/css'));
 app.use('/js', express.static(__dirname + '/public/js'));
 app.use('/mjs', express.static(__dirname + '/public/mjs'));
 app.use('/img', express.static(__dirname + '/public/img'));
+app.use('/svg', express.static(__dirname + '/public/svg'));
 app.use('/json', express.static(__dirname + '/public/json'));
 
 // Set Views

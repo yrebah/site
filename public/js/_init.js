@@ -175,49 +175,45 @@ const set_searchBarFunctions = () => {
 
 // POPIN
 
-const get_popin = (container, title, content, footer) => {
+const get_popin = (props) => {
 
     const global =
-        `<div class="popin global active">
+        `<div class="popin global">
             <div class="popin-wrapper">
                 <div class="popin-header">
-                    <h4>${title}</h4>
+                    <div class="popin-cross">&times;</div>
+                    <h4>${props.title}</h4>
                 </div>
-                <div class="popin-content slim-scrollbar">${content}</div>
-                <div class="popin-footer">${footer}</div>
+                <div class="popin-content slim-scrollbar">${props.content}</div>
+                <div class="popin-footer">${props.footer}</div>
             </div>
         </div>`
 
     const specific =
-        `<div class="popin specific active">
+        `<div class="popin specific">
             <div class="popin-wrapper">
                 <div class="popin-header">
-                    <h4>${title}</h4>
+                    <div class="popin-cross">&times;</div>
+                    <h4>${props.title}</h4>
                 </div>
-                <div class="popin-content slim-scrollbar">${content}</div>
-                <div class="popin-footer">${footer}</div>
+                <div class="popin-content slim-scrollbar">${props.content}</div>
+                <div class="popin-footer">${props.footer}</div>
             </div>
         </div>`
 
-    if (container == 'body') {
+    if (props.container == 'body') {
         $('body').append(global)
     } else {
-        $(`${container}`).append(specific)
+        $(`${props.container}`).append(specific)
     }
 
     set_popinFunctions()
+
 }
 
 const set_popinFunctions = () => {
-
-    $('body').css('overflow', 'hidden')
-
-    $('.popin').click(() => {
-        $('.popin').removeClass('active')
-        setTimeout(() =>{
-            $('.popin').remove()
-            $('body').css('overflow', 'auto')
-        }, 500)
+    $('.popin, .popin-cross').click(() => {
+        $('.popin').remove()
     }).children().click(() => {
         return false
     })

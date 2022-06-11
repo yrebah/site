@@ -332,11 +332,30 @@ h1 {
   margin-bottom: 50px;
 }
 
+h1::after {
+  content: "";
+  background: dodgerblue;
+  height: 6px;
+  width: 50px;
+  display: block;
+  border-radius: 30px;
+  margin-top: 8px;
+}
+
 h2 {
   font-size: clamp(32px, 7vw, 36px);
   font-weight: 500;
-  margin-top: 100px;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
+}
+
+h2::after {
+  content: "";
+  background: orange;
+  height: 4px;
+  width: 50px;
+  display: block;
+  border-radius: 30px;
+  margin-top: 8px;
 }
 
 h3 {
@@ -371,7 +390,6 @@ h6 {
 .main {
   position: relative;
   min-height: calc(100vh - var(--header-height));
-  margin-top: 30px;
   margin-bottom: 70px;
   padding-left: 22%;
   padding-right: 22%;
@@ -803,11 +821,24 @@ body.dark-mode .loader .dot {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.6);
+  animation: popin 0.5s forwards;
+  transition: transform 0.50s ease-in-out, opacity 0.50s ease-in-out;
+}
+
+@keyframes popin {
+  0% {
+    opacity: 0;
+    background: transparent;
+  }
+  100% {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.popin.inactive {
   opacity: 0;
-  pointer-events: none;
-  transform: translateY(50%);
-  transition: 0.4s ease-in-out;
+  background: transparent;
 }
 
 .popin.global {
@@ -816,12 +847,6 @@ body.dark-mode .loader .dot {
 
 .popin.specific {
   position: absolute;
-}
-
-.popin.active {
-  opacity: 1;
-  pointer-events: all;
-  transform: translateY(0%);
 }
 
 .popin .popin-wrapper {
@@ -839,18 +864,16 @@ body.dark-mode .loader .dot {
   min-width: 50%;
   min-height: 50%;
   max-height: 70%;
-  animation: popin-wrapper 0.6s forwards;
+  animation: popin-wrapper 0.5s forwards;
 }
 
 @keyframes popin-wrapper {
   0% {
     opacity: 0;
-    pointer-events: none;
-    transform: translateY(-50%);
+    transform: translateY(-30%);
   }
   100% {
     opacity: 1;
-    pointer-events: all;
     transform: translateY(0%);
   }
 }
@@ -894,6 +917,20 @@ body.dark-mode .loader .dot {
 .popin .popin-wrapper .popin-header {
   position: relative;
   grid-area: popin-header;
+}
+
+.popin .popin-wrapper .popin-header .popin-cross {
+  position: absolute;
+  top: -15px;
+  right: 0;
+  color: black;
+  font-size: clamp(32px, 7vw, 36px);
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.popin .popin-wrapper .popin-header .popin-cross:hover {
+  color: #4d4d4d;
 }
 
 .popin .popin-wrapper .popin-content {
@@ -999,6 +1036,11 @@ body.dark-mode .loader .dot {
   align-items: center;
   justify-content: space-between;
   transition: opacity 0.35s ease-in-out;
+}
+
+.main-menu .main-menu-wrapper .main-menu-row.row-1 a img {
+  width: 32px;
+  filter: invert(100%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(102%) contrast(105%);
 }
 
 .main-menu .main-menu-wrapper .main-menu-row.row-2 {
@@ -1115,7 +1157,9 @@ body.dark-mode .main-menu .main-menu-wrapper .link {
 }
 
 .footer section:nth-child(1) .container-description .row img {
-  margin-right: 6px;
+  width: 32px;
+  filter: invert(100%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(102%) contrast(105%);
+  margin-right: 8px;
 }
 
 .footer section:nth-child(1) .container-description .row h4 {

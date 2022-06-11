@@ -80,6 +80,13 @@ $color-main-menu: (
                 align-items: center;
                 justify-content: space-between;
                 transition: opacity 0.35s ease-in-out;
+
+                a {
+                    img {
+                        width: 32px;
+                        filter: invert(100%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(102%) contrast(105%);
+                    }
+                }
             }
 
             &.row-2 {
