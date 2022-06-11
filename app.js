@@ -29,9 +29,9 @@ const main_json_parsed = JSON.parse(main_json)
 const data_site = main_json_parsed.site
 const data_header = main_json_parsed.header
 const data_mainMenu = main_json_parsed.mainMenu
-const data_socialBar = main_json_parsed.socialBar
+const data_social = main_json_parsed.social
 const data_footer = main_json_parsed.footer
-const data_searchBar_suggestion = main_json_parsed.searchBar.suggestion
+const data_searchBar = main_json_parsed.searchBar
 
 let isAuthentified = false
 
@@ -43,9 +43,9 @@ app.get('', (req, res) => {
         data_site,
         data_header,
         data_mainMenu,
-        data_socialBar,
+        data_social,
         data_footer,
-        data_searchBar_suggestion
+        data_searchBar
     })
 })
 
@@ -57,9 +57,9 @@ app.get('/about', (req, res) => {
         data_site,
         data_header,
         data_mainMenu,
-        data_socialBar,
+        data_social,
         data_footer,
-        data_searchBar_suggestion
+        data_searchBar
     })
 })
 

@@ -1,157 +1,165 @@
 {
     "site": {
+        "title": "GhostApp",
         "logo_icon": "../img/logo-icon.png",
         "logo_text": "../img/logo-text.png",
-        "title": "GhostApp",
-        "description": "Description du site, qui contient beaucoup d'information que personne ne lit jamais."
+        "description": "Description du site, qui contient beaucoup d'information que personne ne lit jamais.",
+        "author": "Yoann R.",
+        "keywords": "GhostApp, keyword1, keyword2, keyword3",
+        "revised": "GhostApp, 6/11/2022",
+        "cookie": "userid = xyz; expires = Wednesday, 08-Aug-22 23:59:59 GMT;"
     },
-    "header": [
-        {
-            "id": "header-link-1",
-            "text": "<i class='fa-solid fa-house'></i>",
-            "href": "#index",
-            "target": "",
-            "title": "Accueil"
-        },
-        {
-            "id": "header-link-2",
-            "text": "<i class='fa-solid fa-circle-question'></i>",
-            "href": "#faq",
-            "target": "",
-            "title": "FAQ"
-        },
-        {
-            "id": "header-link-3",
-            "text": "<i class='fa-brands fa-github'></i>",
-            "href": "#",
-            "target": "",
-            "title": "GitHub repo"
-        }
-    ],
-    "mainMenu": [
-        {
-            "id": "mainMenu-link-1",
-            "icon": "<i class='fa-brands fa-bilibili'></i>",
-            "text": "FIRST",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-2",
-            "icon": "<i class='fa-brands fa-bilibili'></i>",
-            "text": "Link 2",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-3",
-            "icon": "<i class='fa-brands fa-bilibili'></i>",
-            "text": "Link 3",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-4",
-            "icon": "<i class='fa-brands fa-bilibili'></i>",
-            "text": "Link 4",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-5",
-            "icon": "<i class='fa-brands fa-bilibili'></i>",
-            "text": "Link 5",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-6",
-            "icon": "<i class='fa-brands fa-bilibili'></i>",
-            "text": "Link 6",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-6",
-            "icon": "<i class='fa-brands fa-bilibili'></i>",
-            "text": "Link 6",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-6",
-            "icon": "<i class='fa-brands fa-bilibili'></i>",
-            "text": "Link 6",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-6",
-            "icon": "<i class='fa-brands fa-bilibili'></i>",
-            "text": "Link 6",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-6",
-            "icon": "<i class='fa-brands fa-bilibili'></i>",
-            "text": "Link 6",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-6",
-            "icon": "<i class='fa-brands fa-bilibili'></i>",
-            "text": "Link 6",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-6",
-            "icon": "<i class='fa-brands fa-bilibili'></i>",
-            "text": "Link 6",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-6",
-            "icon": "<i class='fa-brands fa-bilibili'></i>",
-            "text": "Link 6",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-6",
-            "icon": "<i class='fa-brands fa-bilibili'></i>",
-            "text": "Link 6",
-            "href": "#",
-            "target": "",
-            "title": ""
-        },
-        {
-            "id": "mainMenu-link-6",
-            "icon": "<i class='fa-brands fa-bilibili'></i>",
-            "text": "LAST",
-            "href": "#",
-            "target": "",
-            "title": ""
-        }
-    ],
+    "header": {
+        "links": [
+            {
+                "id": "header-link-1",
+                "text": "<i class='fa-solid fa-house'></i>",
+                "href": "#index",
+                "target": "",
+                "title": "Accueil"
+            },
+            {
+                "id": "header-link-2",
+                "text": "<i class='fa-solid fa-circle-question'></i>",
+                "href": "#faq",
+                "target": "",
+                "title": "FAQ"
+            },
+            {
+                "id": "header-link-3",
+                "text": "<i class='fa-brands fa-github'></i>",
+                "href": "#",
+                "target": "",
+                "title": "GitHub repo"
+            }
+        ]
+    },
+    "mainMenu": {
+        "links": [
+            {
+                "id": "mainMenu-link-1",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "FIRST",
+                "href": "#",
+                "target": "",
+                "title": ""
+            },
+            {
+                "id": "mainMenu-link-2",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "Link 2",
+                "href": "#",
+                "target": "",
+                "title": ""
+            },
+            {
+                "id": "mainMenu-link-3",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "Link 3",
+                "href": "#",
+                "target": "",
+                "title": ""
+            },
+            {
+                "id": "mainMenu-link-4",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "Link 4",
+                "href": "#",
+                "target": "",
+                "title": ""
+            },
+            {
+                "id": "mainMenu-link-5",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "Link 5",
+                "href": "#",
+                "target": "",
+                "title": ""
+            },
+            {
+                "id": "mainMenu-link-6",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "Link 6",
+                "href": "#",
+                "target": "",
+                "title": ""
+            },
+            {
+                "id": "mainMenu-link-6",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "Link 6",
+                "href": "#",
+                "target": "",
+                "title": ""
+            },
+            {
+                "id": "mainMenu-link-6",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "Link 6",
+                "href": "#",
+                "target": "",
+                "title": ""
+            },
+            {
+                "id": "mainMenu-link-6",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "Link 6",
+                "href": "#",
+                "target": "",
+                "title": ""
+            },
+            {
+                "id": "mainMenu-link-6",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "Link 6",
+                "href": "#",
+                "target": "",
+                "title": ""
+            },
+            {
+                "id": "mainMenu-link-6",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "Link 6",
+                "href": "#",
+                "target": "",
+                "title": ""
+            },
+            {
+                "id": "mainMenu-link-6",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "Link 6",
+                "href": "#",
+                "target": "",
+                "title": ""
+            },
+            {
+                "id": "mainMenu-link-6",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "Link 6",
+                "href": "#",
+                "target": "",
+                "title": ""
+            },
+            {
+                "id": "mainMenu-link-6",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "Link 6",
+                "href": "#",
+                "target": "",
+                "title": ""
+            },
+            {
+                "id": "mainMenu-link-6",
+                "icon": "<i class='fa-brands fa-bilibili'></i>",
+                "text": "LAST",
+                "href": "#",
+                "target": "",
+                "title": ""
+            }
+        ]
+    },
     "searchBar": {
-        "suggestion": [
+        "suggestions": [
             {
                 "id": "search-bar-suggestion-link-1",
                 "icon": "<i class='fa-brands fa-bilibili'></i>",
@@ -202,53 +210,57 @@
             }
         ]
     },
-    "faq": [
-        {
-            "id": "faq-1",
-            "question": "Comment vont-je ?",
-            "response": "loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum "
-        },
-        {
-            "id": "faq-2",
-            "question": "Bien ou bien ?",
-            "response": "loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum "
-        },
-        {
-            "id": "faq-3",
-            "question": "Quand suis-je ?",
-            "response": "loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum "
-        }
-    ],
-    "socialBar": [
-        {
-            "id": "social-link-1",
-            "href": "#",
-            "text": "<i class='fa-brands fa-facebook'></i>",
-            "target": "_blank",
-            "title": ""
-        },
-        {
-            "id": "social-link-2",
-            "href": "https://twitter.com/?lang=fr",
-            "text": "<i class='fa-brands fa-twitter'></i>",
-            "target": "_blank",
-            "title": ""
-        },
-        {
-            "id": "social-link-3",
-            "href": "#",
-            "text": "<i class='fa-brands fa-instagram'></i>",
-            "target": "_blank",
-            "title": ""
-        },
-        {
-            "id": "social-link-4",
-            "href": "#",
-            "text": "<i class='fa-solid fa-at'></i>",
-            "target": "_blank",
-            "title": ""
-        }
-    ],
+    "faq": {
+        "items": [
+            {
+                "id": "faq-1",
+                "question": "Comment vont-je ?",
+                "response": "loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum "
+            },
+            {
+                "id": "faq-2",
+                "question": "Bien ou bien ?",
+                "response": "loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum "
+            },
+            {
+                "id": "faq-3",
+                "question": "Quand suis-je ?",
+                "response": "loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum "
+            }
+        ]
+    },
+    "social": {
+        "links": [
+            {
+                "id": "social-link-1",
+                "href": "#",
+                "text": "<i class='fa-brands fa-facebook'></i>",
+                "target": "_blank",
+                "title": ""
+            },
+            {
+                "id": "social-link-2",
+                "href": "https://twitter.com/?lang=fr",
+                "text": "<i class='fa-brands fa-twitter'></i>",
+                "target": "_blank",
+                "title": ""
+            },
+            {
+                "id": "social-link-3",
+                "href": "#",
+                "text": "<i class='fa-brands fa-instagram'></i>",
+                "target": "_blank",
+                "title": ""
+            },
+            {
+                "id": "social-link-4",
+                "href": "#",
+                "text": "<i class='fa-solid fa-at'></i>",
+                "target": "_blank",
+                "title": ""
+            }
+        ]
+    },
     "footer": {
         "Accueil": [
             {
