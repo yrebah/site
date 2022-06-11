@@ -9,10 +9,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: hsla(0, 0%, 0%, 0.60);
     opacity: 0;
     pointer-events: none;
     transform: translateY(50%);
-    transition: 0.5s ease-in-out;
+    transition: 0.4s ease-in-out;
 
     &.global {
         position: fixed;
@@ -32,16 +33,17 @@
         position: relative;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.5fr 2fr 0.5fr;
+        grid-template-rows: 0.3fr 2.4fr 0.3fr;
         gap: 0px 0px;
         grid-template-areas:
             "popin-header"
             "popin-content"
             "popin-footer";
-        padding: map-get($padding, 'xxl');
-        background: map-get($color, 2);
-        border: 2px solid map-get($color, 3);
-        border-radius: map-get($border-radius, 'l');
+        padding: map-get($padding-block, 'xs');
+        color: black !important;
+        background: white;
+        border: 1px solid lightgray;
+        border-radius: map-get($border-radius, 'm');
         min-width: 50%;
         min-height: 50%;
         max-height: 70%;
@@ -86,11 +88,8 @@
         }
 
         .popin-header {
+            position: relative;
             grid-area: popin-header;
-            font-size: map-get($font-size, "m");
-            font-weight: 500;
-            border-bottom: 1px solid map-get($color, 3);
-            padding-bottom: map-get($padding, 's');
         }
 
         .popin-content {
@@ -98,15 +97,18 @@
             grid-area: popin-content;
             max-height: 100%;
             overflow-y: auto;
-            margin-top: map-get($margin, "l");
-            margin-bottom: map-get($margin, "xl");
+            padding-top: map-get($padding, "m");
+            padding-bottom: map-get($padding, "m");
+            margin-top: map-get($padding, "s");
+            margin-bottom: map-get($padding, "s");
         }
 
         .popin-footer {
+            position: relative;
             grid-area: popin-footer;
             display: flex;
-            justify-content: end;
-            gap: 12px;
+            justify-content: center;
+            align-items: end;
         }
     }
 }

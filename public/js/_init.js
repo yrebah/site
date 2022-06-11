@@ -176,18 +176,22 @@ const get_popin = (container, title, content, footer) => {
     const global =
         `<div class="popin global active">
             <div class="popin-wrapper">
-                <div class="modal-header">${title}</div>
-                <div class="modal-content">${content}</div>
-                <div class="modal-footer">${footer}</div>
+                <div class="popin-header">
+                    <h4>${title}</h4>
+                </div>
+                <div class="popin-content slim-scrollbar">${content}</div>
+                <div class="popin-footer">${footer}</div>
             </div>
         </div>`
 
     const specific =
         `<div class="popin specific active">
             <div class="popin-wrapper">
-                <div class="modal-header">${title}</div>
-                <div class="modal-content">${content}</div>
-                <div class="modal-footer">${footer}</div>
+                <div class="popin-header">
+                    <h4>${title}</h4>
+                </div>
+                <div class="popin-content slim-scrollbar">${content}</div>
+                <div class="popin-footer">${footer}</div>
             </div>
         </div>`
 
