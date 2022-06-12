@@ -12,7 +12,7 @@ const port = 3000;
 
 // Static files
 app.use(express.static(__dirname + '/public'));
-app.use('/css', express.static(__dirname + '/public/css'));
+app.use('/css', express.static(__dirname + '/public/dist/css'));
 app.use('/js', express.static(__dirname + '/public/js'));
 app.use('/mjs', express.static(__dirname + '/public/mjs'));
 app.use('/img', express.static(__dirname + '/public/img'));
@@ -24,8 +24,8 @@ app.set('views', './views');
 app.set('view engine', 'ejs');
 
 // Data page from main.json
-const main_json = fs.readFileSync('./public/json/main.json')
-const main_json_parsed = JSON.parse(main_json)
+const main_json = fs.readFileSync('./public/json/main.json');
+const main_json_parsed = JSON.parse(main_json);
 
 const data_site = main_json_parsed.site
 const data_404 = main_json_parsed.page404

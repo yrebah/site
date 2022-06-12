@@ -16,43 +16,18 @@ body {
         }
     }
 
-    &.dark-mode {
-        background: map-get($color-primary, 1);
-        color: map-get($color-primary, 2);
-
-        .header {
-            background: map-get($color-primary, 1);
-
-            .header-link {
-                color: map-get($color-primary, 1);
-
-                &::after {
-                    background: map-get($color, 0);
-                }
-            }
-
-            section {
-                ul {
-                    li {
-                        &:after {
-                            color: map-get($color-primary, 3);
-                        }
-                    }
-                }
-            }
-        }
-
-        .loader {
-            background: map-get($color-primary, 1);
-        }
-
-        .modal {
-
-            .modal-header,
-            .modal-content,
-            .modal-footer {
-                color: map-get($color, 1) !important;
-            }
-        }
+    &.light-mode {
+        background: map-get($primary-color, 'white');
+        color: map-get($primary-color, 'black');
     }
+
+    &.dark-mode {
+        background: map-get($primary-color, 'black');
+        color: map-get($primary-color, 'white');
+    }
+}
+
+body.light-mode {
+    background: map-get($primary-color, 'white');
+    color: map-get($primary-color, 'black');
 }

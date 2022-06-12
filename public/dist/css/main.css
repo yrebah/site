@@ -66,37 +66,6 @@ body {
   }
 }
 
-body.dark-mode {
-  background: black;
-  color: white;
-}
-
-body.dark-mode .header {
-  background: black;
-}
-
-body.dark-mode .header .header-link {
-  color: black;
-}
-
-body.dark-mode .header .header-link::after {
-  background: dodgerblue;
-}
-
-body.dark-mode .header section ul li:after {
-  color: lightgray;
-}
-
-body.dark-mode .loader {
-  background: black;
-}
-
-body.dark-mode .modal .modal-header,
-body.dark-mode .modal .modal-content,
-body.dark-mode .modal .modal-footer {
-  color: #dfeeff !important;
-}
-
 .header {
   position: sticky;
   z-index: 8;
@@ -325,6 +294,25 @@ body.dark-mode .header {
   background: black !important;
 }
 
+.slim-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 30px;
+}
+
+.slim-scrollbar::-webkit-scrollbar-track {
+  border-radius: 30px;
+  background: rgba(128, 128, 128, 0.1);
+}
+
+.slim-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background: rgba(56, 56, 56, 0.5);
+}
+
+.slim-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 56, 56, 0.75);
+}
+
 h1 {
   font-size: clamp(38px, 8vw, 46px);
   font-weight: 500;
@@ -435,25 +423,6 @@ h6 {
     padding-left: 22%;
     padding-right: 22%;
   }
-}
-
-.slim-scrollbar::-webkit-scrollbar {
-  width: 6px;
-  border-radius: 30px;
-}
-
-.slim-scrollbar::-webkit-scrollbar-track {
-  border-radius: 30px;
-  background: rgba(128, 128, 128, 0.1);
-}
-
-.slim-scrollbar::-webkit-scrollbar-thumb {
-  border-radius: 30px;
-  background: rgba(56, 56, 56, 0.5);
-}
-
-.slim-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(56, 56, 56, 0.75);
 }
 
 .row {
