@@ -12,6 +12,7 @@
         }
     },
     "page404": {
+        "title": "404",
         "subtitle": "Cette page n'existe pas !",
         "linkRedirection": "Revenir en lieu sûr"
     },

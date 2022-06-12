@@ -2,23 +2,17 @@
 <html lang="fr">
 
     <head>
-    <%- include('./templates/head') %>
+        <%- include('./templates/head') %>
     </head>
 
-<body id="404" style="overflow: hidden !important; background: white !important;">
+<body id="404">
 
-    <main class="page-404">
-        <image class="img-1" src="./img/robot-cute-white.jpg" />
-        <image class="img-2" src="./img/robot-watch-white.jpg" />
-        <div class="container">
-            <div class="title">
-                <div>4</div>
-                <div>0</div>
-                <div>4</div>
-            </div>
-            <div class="subtitle"><%= data_404.subtitle %></div>
-            <a class="link-redirection" href="/"><%= data_404.linkRedirection %></a>
-        </div>
+    <main class="main-404">
+        <section class="wrapper-main-404">
+            <h1><%= data_404.title %></h1>
+            <h3><%= data_404.subtitle %></h3>
+            <a href="/"><%= data_404.linkRedirection %></a>
+        </section>
     </main>
 
 </body>
