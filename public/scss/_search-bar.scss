@@ -87,3 +87,81 @@
         }
     }
 }
+
+body {
+    &[data-theme="light"] {
+        .search-bar {
+        
+            .search-bar-wrapper {
+                background: map-get($colors, gray);
+        
+                &:focus-within {
+                    background: map-get($colors, lightgray);
+                }
+        
+                i {
+                    color: map-get($colors, black);
+                }
+        
+                input {
+                    color: map-get($colors, black);
+                }
+            }
+        
+            nav {
+                h4 {
+                    color: map-get($colors, black);
+                }
+                ul {
+                    li {
+                        i {
+                            color: map-get($colors, lightblack);
+                        }
+        
+                        .link {
+                            color: map-get($colors, lightblack);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &[data-theme="dark"] {
+        .search-bar {
+        
+            .search-bar-wrapper {
+                background: hsl(0, 0%, 12%);
+        
+                &:focus-within {
+                    background: hsl(0, 0%, 16%);
+                }
+        
+                i {
+                    color: rgb(199, 199, 199);
+                }
+        
+                input {
+                    color: map-get($colors, white);
+                }
+            }
+        
+            nav {
+                h4 {
+                    color: map-get($colors, lightgray);
+                }
+                ul {
+                    li {
+                        i {
+                            color: map-get($colors, white);
+                        }
+        
+                        .link {
+                            color: map-get($colors, white);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

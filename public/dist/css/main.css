@@ -54,8 +54,6 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  background: black;
-  color: white;
   animation: body 3s forwards;
 }
 
@@ -70,6 +68,59 @@ body {
   }
 }
 
+body[data-theme="light"] {
+  background: white;
+  color: #262626;
+}
+
+body[data-theme="dark"] {
+  background: black;
+  color: white;
+}
+
+.slim-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 30px;
+}
+
+.slim-scrollbar::-webkit-scrollbar-track {
+  border-radius: 30px;
+  background: #ededed;
+}
+
+.slim-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background: #e0e0e0;
+}
+
+.slim-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a6a6a6;
+}
+
+body[data-theme="light"] .slim-scrollbar::-webkit-scrollbar-track {
+  background: #ededed;
+}
+
+body[data-theme="light"] .slim-scrollbar::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+}
+
+body[data-theme="light"] .slim-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a6a6a6;
+}
+
+body[data-theme="dark"] .slim-scrollbar::-webkit-scrollbar-track {
+  background: #262626;
+}
+
+body[data-theme="dark"] .slim-scrollbar::-webkit-scrollbar-thumb {
+  background: #a6a6a6;
+}
+
+body[data-theme="dark"] .slim-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #e0e0e0;
+}
+
 .header {
   position: sticky;
   z-index: 8;
@@ -81,7 +132,7 @@ body {
   height: var(--header-height);
   padding-left: 5%;
   padding-right: 5%;
-  background: black;
+  background: white;
 }
 
 @media (min-width: 0px) {
@@ -130,9 +181,9 @@ body {
   font-size: clamp(16px, 4vw, 18px);
   font-weight: 400;
   padding: 4px;
-  color: white;
   padding-left: 8px;
   padding-right: 8px;
+  color: black;
 }
 
 .header .link::after {
@@ -142,19 +193,19 @@ body {
   top: 112%;
   content: "";
   display: block;
-  background: dodgerblue;
   border-radius: 30px;
+  background: dodgerblue;
   height: 4px;
   width: 0%;
   transition: 0.15s ease-in-out;
 }
 
 .header .link:hover::after {
-  width: 10%;
+  width: 8%;
 }
 
 .header .link.active::after {
-  width: 30%;
+  width: 20%;
 }
 
 .header section {
@@ -181,7 +232,7 @@ body {
 .header section ul li:after {
   content: '|';
   font-weight: 300;
-  color: #8c8c8c;
+  color: #e0e0e0;
 }
 
 .header section ul li:last-child:after {
@@ -294,6 +345,30 @@ body {
   }
 }
 
+body[data-theme="light"] .header {
+  background: white;
+}
+
+body[data-theme="light"] .header .link {
+  color: black;
+}
+
+body[data-theme="light"] .header .link::after {
+  background: dodgerblue;
+}
+
+body[data-theme="dark"] .header {
+  background: black;
+}
+
+body[data-theme="dark"] .header .link {
+  color: white;
+}
+
+body[data-theme="dark"] .header .link::after {
+  background: dodgerblue;
+}
+
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -301,25 +376,6 @@ body {
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
-}
-
-.slim-scrollbar::-webkit-scrollbar {
-  width: 6px;
-  border-radius: 30px;
-}
-
-.slim-scrollbar::-webkit-scrollbar-track {
-  border-radius: 30px;
-  background: rgba(128, 128, 128, 0.1);
-}
-
-.slim-scrollbar::-webkit-scrollbar-thumb {
-  border-radius: 30px;
-  background: rgba(56, 56, 56, 0.5);
-}
-
-.slim-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(56, 56, 56, 0.75);
 }
 
 h1 {
@@ -535,6 +591,14 @@ h6 {
   justify-content: center;
 }
 
+body[data-theme="light"] .btn.btn-icon {
+  color: black;
+}
+
+body[data-theme="dark"] .btn.btn-icon {
+  color: white;
+}
+
 .search-bar {
   position: relative;
   display: flex;
@@ -623,27 +687,83 @@ h6 {
   color: white;
 }
 
+body[data-theme="light"] .search-bar .search-bar-wrapper {
+  background: #e0e0e0;
+}
+
+body[data-theme="light"] .search-bar .search-bar-wrapper:focus-within {
+  background: #ededed;
+}
+
+body[data-theme="light"] .search-bar .search-bar-wrapper i {
+  color: black;
+}
+
+body[data-theme="light"] .search-bar .search-bar-wrapper input {
+  color: black;
+}
+
+body[data-theme="light"] .search-bar nav h4 {
+  color: black;
+}
+
+body[data-theme="light"] .search-bar nav ul li i {
+  color: #262626;
+}
+
+body[data-theme="light"] .search-bar nav ul li .link {
+  color: #262626;
+}
+
+body[data-theme="dark"] .search-bar .search-bar-wrapper {
+  background: #1f1f1f;
+}
+
+body[data-theme="dark"] .search-bar .search-bar-wrapper:focus-within {
+  background: #292929;
+}
+
+body[data-theme="dark"] .search-bar .search-bar-wrapper i {
+  color: #c7c7c7;
+}
+
+body[data-theme="dark"] .search-bar .search-bar-wrapper input {
+  color: white;
+}
+
+body[data-theme="dark"] .search-bar nav h4 {
+  color: #ededed;
+}
+
+body[data-theme="dark"] .search-bar nav ul li i {
+  color: white;
+}
+
+body[data-theme="dark"] .search-bar nav ul li .link {
+  color: white;
+}
+
 textarea {
   border-radius: 3px;
   padding: 16px;
-  border: 1px solid #8c8c8c;
+  border: 1px solid #e0e0e0;
   font-size: clamp(14px, 3vw, 16px);
   color: white;
   transition: 0.15s ease-in-out;
 }
 
 textarea:read-only {
-  background: #8c8c8c;
+  background: #e0e0e0;
   color: black;
   border: none;
 }
 
 textarea:hover {
-  border-color: #8c8c8c;
+  border-color: #e0e0e0;
 }
 
 textarea:focus-within {
-  outline-color: #8c8c8c;
+  outline-color: #e0e0e0;
 }
 
 .select {
@@ -653,7 +773,7 @@ textarea:focus-within {
   align-items: center;
   padding-right: 14px;
   border-radius: 3px;
-  border: 1px solid #8c8c8c;
+  border: 1px solid #e0e0e0;
   transition: 0.15s ease-in-out;
 }
 
@@ -755,6 +875,22 @@ textarea:focus-within {
 .loader .container .dot:nth-child(4) {
   top: 50%;
   left: 0%;
+}
+
+body[data-theme="light"] .loader {
+  background: white;
+}
+
+body[data-theme="light"] .loader .container .dot {
+  background: black;
+}
+
+body[data-theme="dark"] .loader {
+  background: black;
+}
+
+body[data-theme="dark"] .loader .container .dot {
+  background: #ededed;
 }
 
 .popin {
@@ -918,7 +1054,7 @@ textarea:focus-within {
 
 .main-menu .main-menu-wrapper {
   position: relative;
-  background: black;
+  background: white;
   display: grid;
   flex: 30%;
   grid-template-columns: 1fr;
@@ -985,7 +1121,7 @@ textarea:focus-within {
 
 .main-menu .main-menu-wrapper .main-menu-row.row-1 a img {
   width: 32px;
-  filter: invert(100%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(102%) contrast(105%);
+  filter: invert(0%) sepia(6%) saturate(7476%) hue-rotate(278deg) brightness(106%) contrast(105%);
 }
 
 .main-menu .main-menu-wrapper .main-menu-row.row-2 {
@@ -1037,12 +1173,13 @@ textarea:focus-within {
 }
 
 .main-menu .main-menu-wrapper .main-menu-row.row-3 ul li div i {
+  color: black;
   margin-right: 8px;
 }
 
 .main-menu .main-menu-wrapper .main-menu-row.row-3 ul li div .link {
   font-size: clamp(16px, 4vw, 18px);
-  color: white;
+  color: black;
 }
 
 .main-menu .main-menu-wrapper .main-menu-row.row-4 {
@@ -1060,7 +1197,55 @@ textarea:focus-within {
 }
 
 .main-menu .main-menu-outside.active {
-  background: rgba(38, 38, 38, 0.6);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+body[data-theme="light"] .main-menu .main-menu-wrapper {
+  background: white;
+}
+
+body[data-theme="light"] .main-menu .main-menu-wrapper .main-menu-row.row-1 a img {
+  filter: invert(0%) sepia(6%) saturate(7476%) hue-rotate(278deg) brightness(106%) contrast(105%);
+}
+
+body[data-theme="light"] .main-menu .main-menu-wrapper .main-menu-row.row-3 ul li div:hover {
+  background: #ededed;
+}
+
+body[data-theme="light"] .main-menu .main-menu-wrapper .main-menu-row.row-3 ul li div i {
+  color: black;
+}
+
+body[data-theme="light"] .main-menu .main-menu-wrapper .main-menu-row.row-3 ul li div .link {
+  color: black;
+}
+
+body[data-theme="light"] .main-menu .main-menu-outside.active {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+body[data-theme="dark"] .main-menu .main-menu-wrapper {
+  background: black;
+}
+
+body[data-theme="dark"] .main-menu .main-menu-wrapper .main-menu-row.row-1 a img {
+  filter: invert(100%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(102%) contrast(105%);
+}
+
+body[data-theme="dark"] .main-menu .main-menu-wrapper .main-menu-row.row-3 ul li div:hover {
+  background: #262626;
+}
+
+body[data-theme="dark"] .main-menu .main-menu-wrapper .main-menu-row.row-3 ul li div i {
+  color: white;
+}
+
+body[data-theme="dark"] .main-menu .main-menu-wrapper .main-menu-row.row-3 ul li div .link {
+  color: white;
+}
+
+body[data-theme="dark"] .main-menu .main-menu-outside.active {
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .footer {

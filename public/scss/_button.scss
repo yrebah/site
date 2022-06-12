@@ -46,3 +46,21 @@
         justify-content: center;
     }
 }
+
+body {
+    &[data-theme="light"] {
+        .btn {
+            &.btn-icon {
+                color: map-get($colors, black);
+            }
+        }
+    }
+
+    &[data-theme="dark"] {
+        .btn {
+            &.btn-icon {
+                color: map-get($colors, white);
+            }
+        }
+    }
+}

@@ -83,3 +83,31 @@
         }
     }
 }
+
+body {
+    &[data-theme="light"] {
+        .loader {
+            background: map-get($colors, white);
+        
+            .container {
+        
+                .dot {
+                    background: map-get($colors, black);
+                }
+            }
+        }
+    }
+
+    &[data-theme="dark"] {
+        .loader {
+            background: map-get($colors, black);
+        
+            .container {
+        
+                .dot {
+                    background: map-get($colors, lightgray);
+                }
+            }
+        }
+    }
+}

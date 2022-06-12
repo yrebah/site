@@ -1,0 +1,56 @@
+// _scrollbar.scss
+
+.slim-scrollbar {
+    &::-webkit-scrollbar {
+        width: 6px;
+        border-radius: 30px;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 30px;
+        background: map-get($colors, lightgray);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 30px;
+        background: map-get($colors, gray);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: map-get($colors, darkgray);
+    }
+}
+
+body {
+    &[data-theme="light"] {
+        .slim-scrollbar {
+            &::-webkit-scrollbar-track {
+                background: map-get($colors, lightgray);
+            }
+        
+            &::-webkit-scrollbar-thumb {
+                background: map-get($colors, gray);
+            }
+        
+            &::-webkit-scrollbar-thumb:hover {
+                background: map-get($colors, darkgray);
+            }
+        }
+    }
+
+    &[data-theme="dark"] {
+        .slim-scrollbar {
+            &::-webkit-scrollbar-track {
+                background: map-get($colors, lightblack);
+            }
+        
+            &::-webkit-scrollbar-thumb {
+                background: map-get($colors, darkgray);
+            }
+        
+            &::-webkit-scrollbar-thumb:hover {
+                background: map-get($colors, gray);
+            }
+        }
+    }
+}

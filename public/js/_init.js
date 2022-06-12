@@ -18,12 +18,12 @@ const apply_theme = () => {
             case 'light':
                 $('#moon').show()
                 $('#sun').hide()
-                $('body').removeClass('dark-mode')
+                $('body').attr('data-theme', 'light')
                 break;
             case 'dark':
                 $('#moon').hide()
                 $('#sun').show()
-                $('body').addClass('dark-mode')
+                $('body').attr('data-theme', 'dark')
                 break;
         }
     } else {
@@ -33,7 +33,17 @@ const apply_theme = () => {
 
 const set_theme = (value) => {
     localStorage.setItem('theme', value)
+    $('body').data('data-theme', value)
     apply_theme()
+}
+
+const set_btnThemeFunctions = () => {
+    $('#moon').click(() => {
+        set_theme('dark')
+    })
+    $('#sun').click(() => {
+        set_theme('light')
+    })
 }
 
 // --------------------------------------
@@ -80,15 +90,6 @@ const remove_loader = (id) => {
 // --------------------------------------
 
 // HEADER
-
-const set_btnThemeFunctions = () => {
-    $('#moon').click(() => {
-        set_theme('dark')
-    })
-    $('#sun').click(() => {
-        set_theme('light')
-    })
-}
 
 const set_btnMainMenuFunctions = () => {
     $('#btn-main-menu').click(() => {

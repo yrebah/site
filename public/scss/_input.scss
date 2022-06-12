@@ -1,11 +1,11 @@
 // _input.scss
 
-input {
+.input {
     border-radius: map-get($border-radius, 'xs');
     padding: map-get($padding, 'l');
-    border: 1px solid map-get($colors, white);
+    border: 1px solid map-get($colors, lightblack);
+    color: map-get($colors, black);
     font-size: map-get($font-size, 'xs');
-    color: map-get($colors, white);
     transition: 0.15s ease-in-out;
 
     &:read-only {
@@ -15,10 +15,26 @@ input {
     }
 
     &:hover {
-        border-color: map-get($colors, lightblack);
+        border-color: map-get($colors, blue);
     }
 
     &:focus-within {
-        outline-color: map-get($colors, lightblack);
+        outline-color: map-get($colors, blue);
+    }
+}
+
+body {
+    &[data-theme="light"] {
+        .input {
+            border: 1px solid map-get($colors, lightblack);
+            color: map-get($colors, black);
+        }
+    }
+
+    &[data-theme="dark"] {
+        .input {
+            border: 1px solid map-get($colors, lightgray);
+            color: map-get($colors, white);
+        }
     }
 }
