@@ -2,6 +2,8 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    background: map-get($colors, black);
+    color: map-get($colors, white);
     animation: body 3s forwards;
 
     @keyframes body {
@@ -15,19 +17,4 @@ body {
             pointer-events: all;
         }
     }
-
-    &.light-mode {
-        background: map-get($primary-color, 'white');
-        color: map-get($primary-color, 'black');
-    }
-
-    &.dark-mode {
-        background: map-get($primary-color, 'black');
-        color: map-get($primary-color, 'white');
-    }
-}
-
-body.light-mode {
-    background: map-get($primary-color, 'white');
-    color: map-get($primary-color, 'black');
 }

@@ -1,10 +1,5 @@
 // _loader.scss
 
-$color-loader: (
-    0: hsl(0, 0%, 100%),
-    1: hsl(0, 0%, 0%)
-);
-
 .loader {
     top: 0;
     left: 0;
@@ -14,7 +9,7 @@ $color-loader: (
     justify-content: center;
     width: 100%;
     height: 100%;
-    background: map-get($color-loader, 0);
+    background: map-get($colors, black);
 
     &.global {
         position: fixed;
@@ -25,8 +20,8 @@ $color-loader: (
     }
 
     .container {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -34,19 +29,37 @@ $color-loader: (
         .circle {
             position: relative;
             border-radius: 50%;
-            width: 80%;
-            height: 80%;
-            animation: circle 1s infinite linear;
+            width: 85%;
+            height: 85%;
+            animation: circle 0.85s infinite linear;
+
+            @keyframes circle {
+                50% {
+                    width: 50%;
+                    height: 50%;
+                }
+        
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
         }
 
         .dot {
             position: absolute;
             transform: translate(-50%, -50%);
             border-radius: 50%;
-            background: map-get($color, 0);
+            background: map-get($colors, white);
             width: 16px;
             height: 16px;
             animation: dot 3s infinite linear;
+
+            @keyframes dot {
+                50% {
+                    border-radius: 0%;
+                    transform: translate(-50%, -50%) rotate(720deg);
+                }
+            }
 
             &:nth-child(1) {
                 top: 0%;
@@ -66,36 +79,6 @@ $color-loader: (
             &:nth-child(4) {
                 top: 50%;
                 left: 0%;
-            }
-        }
-    }
-
-    @keyframes circle {
-        50% {
-            width: 50%;
-            height: 50%;
-        }
-
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-
-    @keyframes dot {
-        50% {
-            border-radius: 0%;
-            transform: translate(-50%, -50%) rotate(720deg);
-        }
-    }
-}
-
-body {
-    &.dark-mode {
-        .loader {
-            background: map-get($color-loader, 1);
-
-            .dot {
-                background: map-get($color, 0);
             }
         }
     }

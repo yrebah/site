@@ -1,16 +1,11 @@
 // _footer.scss
 
-$color-footer: (
-    0: hsl(0, 0%, 97%),
-    1: hsl(0, 0%, 8%)
-);
-
 .footer {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     min-height: 25vh;
-    background: map-get($color-footer, 0);
+    background: map-get($colors, lightblack);
 
     section {
         position: relative;
@@ -161,14 +156,6 @@ $color-footer: (
                     width: 100%;
                 }
             }
-        }
-    }
-}
-
-body {
-    &.dark-mode {
-        .footer {
-            background: map-get($color-footer, 1) !important;
         }
     }
 }

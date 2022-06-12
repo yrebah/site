@@ -1,5 +1,14 @@
 // _lib.scss
 
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
 .slim-scrollbar {
     &::-webkit-scrollbar {
         width: 6px;
@@ -72,15 +81,6 @@ h5 {
 h6 {
     font-size: map-get($font-size, 'xs');
     font-weight: 500;
-}
-
-.hide-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
 }
 
 .main {

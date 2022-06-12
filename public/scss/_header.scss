@@ -1,10 +1,5 @@
 // _header.scss
 
-$color-header: (
-    0: hsl(0, 0%, 100%),
-    1: hsl(0, 0%, 0%)
-);
-
 .header {
     position: sticky;
     z-index: 8;
@@ -16,7 +11,7 @@ $color-header: (
     height: var(--header-height);
     padding-left: map-get($padding-block, 's');
     padding-right: map-get($padding-block, 's');
-    background: map-get($color-header, 0);
+    background: map-get($colors, black);
 
     @include screen-xs {
         padding-right: map-get($padding-block, 's');
@@ -52,7 +47,7 @@ $color-header: (
         font-size: map-get($font-size, "s");
         font-weight: 400;
         padding: map-get($padding, 'xs');
-        color: map-get($color-primary, 1);
+        color: map-get($colors, white);
         padding-left: map-get($padding, 's');
         padding-right: map-get($padding, 's');
 
@@ -63,7 +58,7 @@ $color-header: (
             top: 112%;
             content: "";
             display: block;
-            background: map-get($color, 0);
+            background: map-get($colors, blue);
             border-radius: map-get($border-radius, 'xl');
             height: 4px;
             width: 0%;
@@ -104,7 +99,7 @@ $color-header: (
                 &:after {
                     content: '|';
                     font-weight: 300;
-                    color: map-get($color, 4);
+                    color: map-get($colors, gray);
                 }
 
                 &:last-child:after {
@@ -197,14 +192,6 @@ $color-header: (
                     width: map-get($width, 's');
                 }
             }
-        }
-    }
-}
-
-body {
-    &.dark-mode {
-        .header {
-            background: map-get($color-header, 1) !important;
         }
     }
 }

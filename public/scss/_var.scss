@@ -1,21 +1,10 @@
 // _var.scss
 
-$color-primary: (
-    0: transparent,
-    1: black,
-    2: white,
-    3: lightgray,
-    4: gray,
-    5: dodgerblue,
-    6: mediumseagreen,
-    7: orange,
-    8: red
-);
-
-$primary-color: (
+$colors: (
     transparent: transparent,
     black: black,
     lightblack: hsl(0, 0%, 15%),
+    transblack: hsla(0, 0%, 15%, 0.60),
     darkgray: hsl(0, 0%, 30%),
     gray: hsl(0, 0%, 55%),
     lightgray: lightgray,
@@ -26,19 +15,6 @@ $primary-color: (
     orange: orange,
     red: red,
     purple: purple
-);
-
-$color: (
-    0: dodgerblue,
-    1: rgb(223, 238, 255),
-    2: orange,
-    3: darkorange,
-    4: darkred,
-    5: hsl(216, 82%, 57%),
-    6: hsl(60, 100%, 50%),
-    7: hsl(39, 100%, 50%),
-    8: hsl(0, 100%, 50%),
-    9: hsl(300, 100%, 25%)
 );
 
 $font-size: (

@@ -1,68 +1,48 @@
 // _button.scss
 
-$button: (
-    primary: rgb(99, 177, 255),
-    secondary: hsl(0, 0%, 90%),
-    cancel: black,
-    accept: rgb(66, 232, 141),
-    back: transparent,
-    send: rgb(99, 177, 255),
-    alert: rgb(255, 127, 127),
-    icon: transparent,
-    underline: transparent
-);
-
 .btn {
     padding: map-get($padding, 'm');
     padding-left: map-get($padding, 'l');
     padding-right: map-get($padding, 'l');
     border-radius: map-get($border-radius, 's');
     font-size: map-get($font-size, 's');
-    transition: 0.15s ease-in-out;
 
     &.btn-primary {
-        background: map-get($button, 'primary');
+        background: map-get($colors, blue);
     }
 
     &.btn-secondary {
-        background: map-get($button, 'secondary');
+        background: map-get($colors, blue);
     }
 
     &.btn-cancel {
-        background: map-get($button, 'cancel');
+        background: map-get($colors, blue);
     }
 
     &.btn-accept {
-        background: map-get($button, 'accept');
+        background: map-get($colors, blue);
     }
 
     &.btn-back {
-        background: map-get($button, 'back');
+        background: map-get($colors, blue);
     }
 
     &.btn-send {
-        background: map-get($button, 'send');
+        background: map-get($colors, blue);
     }
 
     &.btn-alert {
-        background: map-get($button, 'alert');
+        background: map-get($colors, blue);
     }
 
     &.btn-icon {
-        background: map-get($button, 'icon');
+        background: map-get($colors, transparent);
+        color: map-get($colors, white);
         width: 40px;
         height: 40px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-}
-
-body {
-    &.dark-mode {
-        .btn-icon {
-            color: map-get($color-primary, 2) !important;
-        }
     }
 }

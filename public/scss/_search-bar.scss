@@ -41,7 +41,7 @@
             flex: 95%;
             background: transparent;
             border: none;
-            color: map-get($color-primary, 2);
+            color: map-get($colors, white);
             outline: none;
         }
     }
