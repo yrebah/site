@@ -19,18 +19,18 @@
         width: 100%;
         padding: map-get($padding, 's');
         border-radius: map-get($border-radius, 'm');
-        background: hsl(0, 0%, 12%);
+        background: map-get($colors, gray);
         transition: background 0.35s ease-in-out;
 
         &:focus-within {
-            background: hsl(0, 0%, 16%);
+            background: map-get($colors, lightgray);
         }
 
         i {
             flex: 5%;
             margin-left: map-get($margin, 'xs');
             margin-right: map-get($margin, 'xs');
-            color: rgb(199, 199, 199);
+            color: map-get($colors, darkgray);
         }
 
         input {
@@ -41,7 +41,7 @@
             flex: 95%;
             background: transparent;
             border: none;
-            color: map-get($colors, white);
+            color: map-get($colors, black);
             outline: none;
         }
     }
@@ -100,7 +100,7 @@ body {
                 }
         
                 i {
-                    color: map-get($colors, black);
+                    color: map-get($colors, darkgray);
                 }
         
                 input {
@@ -131,14 +131,14 @@ body {
         .search-bar {
         
             .search-bar-wrapper {
-                background: hsl(0, 0%, 12%);
+                background: map-get($colors, lightblack);
         
                 &:focus-within {
-                    background: hsl(0, 0%, 16%);
+                    background: map-get($colors, lightblack2);
                 }
         
                 i {
-                    color: rgb(199, 199, 199);
+                    color: map-get($colors, darkgray);
                 }
         
                 input {

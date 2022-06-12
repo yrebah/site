@@ -134,7 +134,7 @@
                     margin: 30px;
 
                     h5 {
-                        color: mapget($colors, lightblack);
+                        color: map-get($colors, lightblack);
                         margin-bottom: 20px;
                     }
 
@@ -142,8 +142,13 @@
                         li {
                             margin-bottom: 8px;
 
-                            a {
-                                color: mapget($colors, blue);
+                            .link {
+                                color: map-get($colors, darkgray);
+                                transition: 0.15s;
+
+                                &:hover {
+                                    color: map-get($colors, blue) !important;
+                                }
                             }
                         }
                     }
@@ -222,13 +227,13 @@ body {
                         .column {
         
                             h5 {
-                                color: mapget($colors, lightblack);
+                                color: map-get($colors, lightblack);
                             }
         
                             ul {
                                 li {
-                                    a {
-                                        color: mapget($colors, blue);
+                                    .link {
+                                        color: map-get($colors, darkgray);
                                     }
                                 }
                             }
@@ -270,13 +275,13 @@ body {
                         .column {
         
                             h5 {
-                                color: mapget($colors, lightgray);
+                                color: map-get($colors, white);
                             }
         
                             ul {
                                 li {
-                                    a {
-                                        color: mapget($colors, blue);
+                                    .link {
+                                        color: map-get($colors, gray);
                                     }
                                 }
                             }
