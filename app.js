@@ -63,15 +63,6 @@ app.get('/about', (req, res) => {
     })
 })
 
-// page my-account
-app.get('/my-account', (req, res) => {
-    res.render('my-account', {
-        title: 'Mon Compte',
-        h1: "Mon Compte",
-        data_site
-    })
-})
-
 // page 404
 app.get('*', (req, res) => {
     res.render('404', {
