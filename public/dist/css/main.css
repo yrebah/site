@@ -636,7 +636,7 @@ body[data-theme="dark"] .btn.btn-icon {
   flex: 5%;
   margin-left: 8px;
   margin-right: 8px;
-  color: gray;
+  color: #2e2e2e;
 }
 
 .search-bar .search-bar-wrapper input {
@@ -701,7 +701,7 @@ body[data-theme="light"] .search-bar .search-bar-wrapper:focus-within {
 }
 
 body[data-theme="light"] .search-bar .search-bar-wrapper i {
-  color: gray;
+  color: #2e2e2e;
 }
 
 body[data-theme="light"] .search-bar .search-bar-wrapper input {
@@ -1593,6 +1593,11 @@ body[data-theme="dark"] .footer section:nth-child(2) .container-column .column u
 
 .social-bar .link {
   font-size: clamp(22px, 5vw, 24px);
+  color: gray;
+}
+
+.social-bar .link:hover {
+  color: dodgerblue !important;
 }
 
 .social-bar ul {
@@ -1600,6 +1605,14 @@ body[data-theme="dark"] .footer section:nth-child(2) .container-column .column u
   width: 100%;
   justify-content: space-between;
   align-items: center;
+}
+
+body[data-theme="light"] .social-bar .link {
+  color: gray;
+}
+
+body[data-theme="dark"] .social-bar .link {
+  color: gray;
 }
 
 .my-account {

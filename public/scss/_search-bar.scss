@@ -30,7 +30,7 @@
             flex: 5%;
             margin-left: map-get($margin, 'xs');
             margin-right: map-get($margin, 'xs');
-            color: map-get($colors, darkgray);
+            color: map-get($colors, lightblack2);
         }
 
         input {
@@ -100,7 +100,7 @@ body {
                 }
         
                 i {
-                    color: map-get($colors, darkgray);
+                    color: map-get($colors, lightblack2);
                 }
         
                 input {

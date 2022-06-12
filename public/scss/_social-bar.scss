@@ -8,6 +8,11 @@
 
     .link {
         font-size: map-get($font-size, "m");
+        color: map-get($colors, darkgray);
+
+        &:hover {
+            color: map-get($colors, blue) !important;
+        }
     }
 
     ul {
@@ -15,5 +20,25 @@
         width: 100%;
         justify-content: space-between;
         align-items: center;
+    }
+}
+
+body {
+    &[data-theme="light"] {
+        .social-bar {
+        
+            .link {
+                color: map-get($colors, darkgray);
+            }
+        }
+    }
+
+    &[data-theme="dark"] {
+        .social-bar {
+        
+            .link {
+                color: map-get($colors, darkgray);
+            }
+        }
     }
 }
