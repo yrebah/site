@@ -5,10 +5,12 @@
     padding-left: map-get($padding, 'l');
     padding-right: map-get($padding, 'l');
     border-radius: map-get($border-radius, 's');
-    font-size: map-get($font-size, 's');
+    font-size: map-get($font-size, 'xs');
+    width: 100%;
 
     &.btn-primary {
-        background: map-get($colors, blue);
+        background: map-get($colors, green);
+        color: white;
     }
 
     &.btn-secondary {
@@ -50,6 +52,11 @@
 body {
     &[data-theme="light"] {
         .btn {
+            &.btn-primary {
+                background: map-get($colors, green);
+                color: white;
+            }
+
             &.btn-icon {
                 color: map-get($colors, black);
             }
@@ -58,6 +65,11 @@ body {
 
     &[data-theme="dark"] {
         .btn {
+            &.btn-primary {
+                background: map-get($colors, darkgreen);
+                color: white;
+            }
+            
             &.btn-icon {
                 color: map-get($colors, white);
             }

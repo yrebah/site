@@ -300,8 +300,9 @@ body[data-theme="dark"] .slim-scrollbar::-webkit-scrollbar-thumb:hover {
 .input {
   border-radius: 3px;
   padding: 16px;
-  border: 1px solid #212121;
+  border: 1px solid gray;
   color: black;
+  background: white;
   font-size: clamp(14px, 3vw, 16px);
   transition: 0.15s ease-in-out;
 }
@@ -313,21 +314,27 @@ body[data-theme="dark"] .slim-scrollbar::-webkit-scrollbar-thumb:hover {
 }
 
 .input:hover {
-  border-color: dodgerblue;
-}
-
-.input:focus-within {
-  outline-color: dodgerblue;
+  border-color: dodgerblue !important;
 }
 
 body[data-theme="light"] .input {
-  border: 1px solid #212121;
+  border: 1px solid gray;
   color: black;
+  background: white;
+}
+
+body[data-theme="light"] .input:focus-within {
+  border-color: dodgerblue !important;
 }
 
 body[data-theme="dark"] .input {
-  border: 1px solid #f2f2f2;
+  border: 1px solid gray;
   color: white;
+  background: black;
+}
+
+body[data-theme="dark"] .input:focus-within {
+  border-color: dodgerblue !important;
 }
 
 .header {
@@ -596,11 +603,13 @@ body[data-theme="dark"] .header img {
   padding-left: 16px;
   padding-right: 16px;
   border-radius: 4px;
-  font-size: clamp(16px, 4vw, 18px);
+  font-size: clamp(14px, 3vw, 16px);
+  width: 100%;
 }
 
 .btn.btn-primary {
-  background: dodgerblue;
+  background: mediumseagreen;
+  color: white;
 }
 
 .btn.btn-secondary {
@@ -638,8 +647,18 @@ body[data-theme="dark"] .header img {
   justify-content: center;
 }
 
+body[data-theme="light"] .btn.btn-primary {
+  background: mediumseagreen;
+  color: white;
+}
+
 body[data-theme="light"] .btn.btn-icon {
   color: black;
+}
+
+body[data-theme="dark"] .btn.btn-primary {
+  background: #147942;
+  color: white;
 }
 
 body[data-theme="dark"] .btn.btn-icon {
@@ -1655,6 +1674,210 @@ body[data-theme="light"] .social-bar .link {
 
 body[data-theme="dark"] .social-bar .link {
   color: gray;
+}
+
+.main-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.main-login .grid-main-login {
+  position: relative;
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.5fr 1.2fr 1.2fr 0.5fr 1fr 1.6fr;
+  gap: 16px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "row-1" "row-2" "row-3" "row-4" "row-5" "row-6" "row-7";
+}
+
+.main-login .grid-main-login .row-1 {
+  grid-area: row-1;
+  text-align: center;
+}
+
+.main-login .grid-main-login .row-1 img {
+  width: 50px;
+  filter: invert(0%) sepia(6%) saturate(7476%) hue-rotate(278deg) brightness(106%) contrast(105%);
+}
+
+.main-login .grid-main-login .row-2 {
+  grid-area: row-2;
+  text-align: center;
+}
+
+.main-login .grid-main-login .row-2 h1 {
+  font-size: clamp(16px, 4vw, 18px);
+  font-weight: 200;
+}
+
+.main-login .grid-main-login .row-3 {
+  grid-area: row-3;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-login .grid-main-login .row-3 label {
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.main-login .grid-main-login .row-4 {
+  grid-area: row-4;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-login .grid-main-login .row-4 label {
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.main-login .grid-main-login .row-5 {
+  grid-area: row-5;
+  text-align: right;
+}
+
+.main-login .grid-main-login .row-6 {
+  grid-area: row-6;
+  text-align: center;
+}
+
+.main-login .grid-main-login .row-7 {
+  grid-area: row-7;
+  text-align: center;
+}
+
+.main-login .grid-main-login .row-7 .link {
+  border-bottom: 1px solid dodgerblue;
+}
+
+.main-login .grid-main-login .link {
+  color: dodgerblue;
+}
+
+body[data-theme="light"] .main-login .grid-main-login .row-1 img {
+  filter: invert(0%) sepia(6%) saturate(7476%) hue-rotate(278deg) brightness(106%) contrast(105%);
+}
+
+body[data-theme="light"] .main-login .grid-main-login .link {
+  color: dodgerblue;
+}
+
+body[data-theme="dark"] .main-login .grid-main-login .row-1 img {
+  filter: invert(100%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(102%) contrast(105%);
+}
+
+body[data-theme="dark"] .main-login .grid-main-login .link {
+  color: dodgerblue;
+}
+
+.main-register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.main-register .grid-main-register {
+  position: relative;
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.5fr 1.2fr 1.2fr 1.2fr 1fr 1.6fr;
+  gap: 16px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "row-1" "row-2" "row-3" "row-4" "row-5" "row-6" "row-7";
+}
+
+.main-register .grid-main-register .row-1 {
+  grid-area: row-1;
+  text-align: center;
+}
+
+.main-register .grid-main-register .row-1 img {
+  width: 50px;
+  filter: invert(0%) sepia(6%) saturate(7476%) hue-rotate(278deg) brightness(106%) contrast(105%);
+}
+
+.main-register .grid-main-register .row-2 {
+  grid-area: row-2;
+  text-align: center;
+}
+
+.main-register .grid-main-register .row-2 h1 {
+  font-size: clamp(16px, 4vw, 18px);
+  font-weight: 200;
+}
+
+.main-register .grid-main-register .row-3 {
+  grid-area: row-3;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-register .grid-main-register .row-3 label {
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.main-register .grid-main-register .row-4 {
+  grid-area: row-4;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-register .grid-main-register .row-4 label {
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.main-register .grid-main-register .row-5 {
+  grid-area: row-5;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-register .grid-main-register .row-5 label {
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.main-register .grid-main-register .row-6 {
+  grid-area: row-6;
+  text-align: center;
+}
+
+.main-register .grid-main-register .row-7 {
+  grid-area: row-7;
+  text-align: center;
+}
+
+.main-register .grid-main-register .row-7 .link {
+  border-bottom: 1px solid dodgerblue;
+}
+
+.main-register .grid-main-register .link {
+  color: dodgerblue;
+}
+
+body[data-theme="light"] .main-register .grid-main-register .row-1 img {
+  filter: invert(0%) sepia(6%) saturate(7476%) hue-rotate(278deg) brightness(106%) contrast(105%);
+}
+
+body[data-theme="light"] .main-register .grid-main-register .link {
+  color: dodgerblue;
+}
+
+body[data-theme="dark"] .main-register .grid-main-register .row-1 img {
+  filter: invert(100%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(102%) contrast(105%);
+}
+
+body[data-theme="dark"] .main-register .grid-main-register .link {
+  color: dodgerblue;
 }
 
 .main-404 {

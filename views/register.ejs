@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <%- include('./templates/head') %>
+        <script defer type="module" src="js/register.js"></script>
+    </head>
+
+<body id="register" class="hide-scrollbar" style="height:100vh;">
+
+    <main class="main-register">
+
+        <div class="grid-main-register">
+            <div class="row-1">
+                <img src="<%- data_site.logo_icon %>" alt="logo du site" />
+            </div>
+            <div class="row-2">
+                <h1>Créer un compte sur <%- data_site.title %></h1>
+            </div>
+            <div class="row-3">
+                <label for="identifier">Identifiant</label>
+                <input id="identifier" type="text" class="input" placeholder="Identifiant ou mail">
+            </div>
+            <div class="row-4">
+                <label for="password">Mot de passe</label>
+                <input id="password" type="password" class="input" placeholder="Mot de passe">
+            </div>
+            <div class="row-5">
+                <label for="confirm">Confirmer</label>
+                <input id="confirm" type="password" class="input" placeholder="Confirmer">
+            </div>
+            <div class="row-6">
+                <button class="btn btn-primary">Créer le compte</button>
+            </div>
+            <div class="row-7">
+                <div>Déjà membre ? <a class="link" href="/login">Se connecter</a></div>
+            </div>
+        </div>
+        
+    </main>
+    
+</body>
+
+</html>

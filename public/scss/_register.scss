@@ -1,0 +1,129 @@
+// _register.scss
+
+.main-register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    .grid-main-register {
+        position: relative;
+        min-width: 300px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.5fr 1.2fr 1.2fr 1.2fr 1fr 1.6fr;
+        gap: 16px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "row-1"
+            "row-2"
+            "row-3"
+            "row-4"
+            "row-5"
+            "row-6"
+            "row-7";
+
+        .row-1 {
+            grid-area: row-1;
+            text-align: center;
+
+            img {
+                width: 50px;
+                filter: map-get($colors, black-svg);
+            }
+        }
+
+        .row-2 {
+            grid-area: row-2;
+            text-align: center;
+
+            h1 {
+                font-size: map-get($font-size, 's');
+                font-weight: 200;
+            }
+        }
+
+        .row-3 {
+            grid-area: row-3;
+            display: flex;
+            flex-direction: column;
+
+            label {
+                font-weight: 400;
+                margin-bottom: map-get($margin, 'xs');
+            }
+        }
+
+        .row-4 {
+            grid-area: row-4;
+            display: flex;
+            flex-direction: column;
+
+            label {
+                font-weight: 400;
+                margin-bottom: map-get($margin, 'xs');
+            }
+        }
+
+        .row-5 {
+            grid-area: row-5;
+            display: flex;
+            flex-direction: column;
+
+            label {
+                font-weight: 400;
+                margin-bottom: map-get($margin, 'xs');
+            }
+        }
+
+        .row-6 {
+            grid-area: row-6;
+            text-align: center;
+        }
+
+        .row-7 {
+            grid-area: row-7;
+            text-align: center;
+
+            .link {
+                border-bottom: 1px solid map-get($colors, blue);
+            }
+        }
+
+        .link {
+            color: map-get($colors, blue);
+        }
+    }
+}
+
+body {
+    &[data-theme="light"] {
+        .main-register {
+            .grid-main-register {
+                .row-1 {
+                    img {
+                        filter: map-get($colors, black-svg);
+                    }
+                }
+                .link {
+                    color: map-get($colors, blue);
+                }
+            }
+        }
+    }
+
+    &[data-theme="dark"] {
+        .main-register {
+            .grid-main-register {
+                .row-1 {
+                    img {
+                        filter: map-get($colors, white-svg);
+                    }
+                }
+                .link {
+                    color: map-get($colors, blue);
+                }
+            }
+        }
+    }
+}

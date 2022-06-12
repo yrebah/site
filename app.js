@@ -38,7 +38,7 @@ const data_searchBar = main_json_parsed.searchBar
 // page Home
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Accueil',
+        title: `${data_site.title} - Accueil`,
         h1: "Accueil",
         data_site,
         data_header,
@@ -52,7 +52,7 @@ app.get('', (req, res) => {
 // page About
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'A propos',
+        title: `${data_site.title} - A propos`,
         h1: "A propos",
         data_site,
         data_header,
@@ -63,10 +63,28 @@ app.get('/about', (req, res) => {
     })
 })
 
+// page Login
+app.get('/login', (req, res) => {
+    res.render('login', {
+        title: `${data_site.title} - Connexion`,
+        h1: "Se connecter",
+        data_site
+    })
+})
+
+// page Register
+app.get('/register', (req, res) => {
+    res.render('register', {
+        title: `${data_site.title} - Créer un compte`,
+        h1: "Créer un compte",
+        data_site
+    })
+})
+
 // page 404
 app.get('*', (req, res) => {
     res.render('404', {
-        title: 'Erreur 404',
+        title: `${data_site.title} - 404`,
         data_site,
         data_404
     })
