@@ -1,15 +1,58 @@
 // _404.scss
 
-.main-404 {
-    .wrapper-main-404 {
-        h1 {
-            
-        }
-        h3 {
-            
-        }
-        a {
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&display=swap');
 
+.main-404 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    .wrapper-main-404 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 35px;
+
+        h1 {
+            font-size: map-get($font-size, oversize);
+            font-family: 'Exo', sans-serif;
+        }
+
+        a {
+            background: map-get($colors, blue);
+            border-radius: map-get($border-radius, 's');
+            padding: map-get($padding, 'm');
+            padding-left: map-get($padding, 'l');
+            padding-right: map-get($padding, 'l');
+            transition: 0.15s ease-in-out;
+        }
+
+        span {
+            font-weight: 500;
+        }
+    }
+}
+
+body {
+    &[data-theme="light"] {
+        .main-404 {
+            .wrapper-main-404 {
+                a {
+                    color: map-get($colors, lightblack);
+                }
+            }
+        }
+    }
+
+    &[data-theme="dark"] {
+        .main-404 {
+            .wrapper-main-404 {
+                a {
+                    color: map-get($colors, lightgray);
+                }
+            }
         }
     }
 }

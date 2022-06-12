@@ -3,6 +3,7 @@
 
     <head>
         <%- include('./templates/head') %>
+        <script defer type="module" src="js/404.js"></script>
     </head>
 
 <body id="404">
@@ -10,8 +11,8 @@
     <main class="main-404">
         <section class="wrapper-main-404">
             <h1><%= data_404.title %></h1>
-            <h3><%= data_404.subtitle %></h3>
-            <a href="/"><%= data_404.linkRedirection %></a>
+            <h5><%= data_404.subtitle %></h5>
+            <a href="/">Redirection automatique dans <span id="span-value-time"></span>s</a>
         </section>
     </main>
 

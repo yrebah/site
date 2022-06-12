@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@100&display=swap");
 :root {
   --header-height: 80px;
 }
@@ -1654,4 +1655,45 @@ body[data-theme="light"] .social-bar .link {
 
 body[data-theme="dark"] .social-bar .link {
   color: gray;
+}
+
+.main-404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.main-404 .wrapper-main-404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.main-404 .wrapper-main-404 h1 {
+  font-size: clamp(72px, 20vw, 150px);
+  font-family: 'Exo', sans-serif;
+}
+
+.main-404 .wrapper-main-404 a {
+  background: dodgerblue;
+  border-radius: 4px;
+  padding: 14px;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: 0.15s ease-in-out;
+}
+
+.main-404 .wrapper-main-404 span {
+  font-weight: 500;
+}
+
+body[data-theme="light"] .main-404 .wrapper-main-404 a {
+  color: #212121;
+}
+
+body[data-theme="dark"] .main-404 .wrapper-main-404 a {
+  color: #f2f2f2;
 }
