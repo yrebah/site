@@ -2,27 +2,23 @@
 
 <header class="header">
     <section>
-        <!-- <ul>
-            <li>
-                
-            </li>
-            <li>
-                <a href="/">
-                    <img class="img-m" src="<%- data_site.logo_text %>" />
-                </a>
-            </li>
-        </ul> -->
         <button id="btn-main-menu" class="btn btn-icon" title="Menu principal">
             <i class="fa-solid fa-bars"></i>
         </button>
     </section>
     <section>
         <ul>
+            <li>
+                <div>
+                    <a title="Accueil" href="/" target="" style="position: absolute; top: -20px;">
+                        <img src="<%- data_site.logo_icon %>" alt="logo du site" />
+                    </a>
+                </div>
+            </li>
             <% data_header.links.forEach((elem)=> { %>
                 <li>
                     <div>
-                        <a class="link" title="<%= elem.title %>" href="<%= elem.href %>"
-                            target="<%= elem.target %>">
+                        <a class="link" title="<%= elem.title %>" href="<%= elem.href %>" target="<%= elem.target %>">
                             <%- elem.text %>
                         </a>
                     </div>

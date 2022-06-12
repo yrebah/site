@@ -51,7 +51,7 @@
         padding-right: map-get($padding, 's');
         color: map-get($colors, black);
 
-        &::after {
+        &:not(:first-of-type)::after {
             position: absolute;
             transform: translate(-50%, -50%);
             left: 50%;
@@ -76,6 +76,11 @@
                 width: 20%;
             }
         }
+    }
+
+    img {
+        filter: map-get($colors, black-svg);
+        width: 28px;
     }
 
     section {
@@ -208,6 +213,10 @@ body {
                     background: map-get($colors, blue);
                 }
             }
+
+            img {
+                filter: map-get($colors, black-svg);
+            }
         }
     }
 
@@ -221,6 +230,10 @@ body {
                 &::after {
                     background: map-get($colors, blue);
                 }
+            }
+
+            img {
+                filter: map-get($colors, white-svg);
             }
         }
     }
