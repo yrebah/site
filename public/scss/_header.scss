@@ -51,7 +51,7 @@
         padding-right: map-get($padding, 's');
         color: map-get($colors, black);
 
-        &:not(:first-of-type)::after {
+        &::after {
             position: absolute;
             transform: translate(-50%, -50%);
             left: 50%;

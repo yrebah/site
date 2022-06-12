@@ -186,7 +186,7 @@ body[data-theme="dark"] .slim-scrollbar::-webkit-scrollbar-thumb:hover {
   color: black;
 }
 
-.header .link:not(:first-of-type)::after {
+.header .link::after {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
