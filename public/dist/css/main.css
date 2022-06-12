@@ -381,8 +381,6 @@ body[data-theme="dark"] .header .link::after {
 h1 {
   font-size: clamp(38px, 8vw, 46px);
   font-weight: 500;
-  margin-top: 50px;
-  margin-bottom: 50px;
 }
 
 h1::after {
@@ -399,16 +397,6 @@ h2 {
   font-size: clamp(32px, 7vw, 36px);
   font-weight: 500;
   margin-bottom: 50px;
-}
-
-h2::after {
-  content: "";
-  background: orange;
-  height: 4px;
-  width: 50px;
-  display: block;
-  border-radius: 30px;
-  margin-top: 8px;
 }
 
 h3 {
@@ -479,6 +467,10 @@ h6 {
     padding-left: 22%;
     padding-right: 22%;
   }
+}
+
+.section {
+  padding-top: var(--header-height);
 }
 
 .row {
@@ -773,17 +765,21 @@ textarea:focus-within {
   align-items: center;
   padding-right: 14px;
   border-radius: 3px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #262626;
   transition: 0.15s ease-in-out;
 }
 
 .select select {
   padding: 16px;
   font-size: clamp(14px, 10vw, 16px);
-  color: white;
+  color: black;
   width: 100%;
   height: 100%;
   flex: 90%;
+}
+
+.select select option {
+  background: white;
 }
 
 .select:hover {
@@ -792,6 +788,46 @@ textarea:focus-within {
 
 .select:focus {
   border-color: #262626;
+}
+
+body[data-theme="light"] .select {
+  border: 1px solid #262626;
+}
+
+body[data-theme="light"] .select select {
+  color: black;
+}
+
+body[data-theme="light"] .select select option {
+  background: white;
+}
+
+body[data-theme="light"] .select:hover {
+  border-color: #262626;
+}
+
+body[data-theme="light"] .select:focus {
+  border-color: #262626;
+}
+
+body[data-theme="dark"] .select {
+  border: 1px solid #a6a6a6;
+}
+
+body[data-theme="dark"] .select select {
+  color: white;
+}
+
+body[data-theme="dark"] .select select option {
+  background: #262626;
+}
+
+body[data-theme="dark"] .select:hover {
+  border-color: white;
+}
+
+body[data-theme="dark"] .select:focus {
+  border-color: white;
 }
 
 .loader {
@@ -1253,7 +1289,7 @@ body[data-theme="dark"] .main-menu .main-menu-outside.active {
   display: flex;
   flex-wrap: wrap;
   min-height: 25vh;
-  background: #262626;
+  background: #ededed;
 }
 
 .footer section {
@@ -1279,12 +1315,12 @@ body[data-theme="dark"] .main-menu .main-menu-outside.active {
 
 .footer section:nth-child(1) .container-description .row img {
   width: 32px;
-  filter: invert(100%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(102%) contrast(105%);
+  filter: invert(0%) sepia(6%) saturate(7476%) hue-rotate(278deg) brightness(106%) contrast(105%);
   margin-right: 8px;
 }
 
 .footer section:nth-child(1) .container-description .row h4 {
-  letter-spacing: 1px;
+  color: black;
 }
 
 @media (min-width: 0px) {
@@ -1324,8 +1360,45 @@ body[data-theme="dark"] .main-menu .main-menu-outside.active {
 }
 
 .footer section:nth-child(1) .container-description p {
+  color: #262626;
   padding-top: 14px;
   padding-bottom: 14px;
+}
+
+@media (min-width: 0px) {
+  .footer section:nth-child(1) .container-description p {
+    text-align: center;
+  }
+}
+
+@media (min-width: 576px) {
+  .footer section:nth-child(1) .container-description p {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer section:nth-child(1) .container-description p {
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer section:nth-child(1) .container-description p {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer section:nth-child(1) .container-description p {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1400px) {
+  .footer section:nth-child(1) .container-description p {
+    text-align: left;
+  }
 }
 
 .footer section:nth-child(2) {
@@ -1384,11 +1457,16 @@ body[data-theme="dark"] .main-menu .main-menu-outside.active {
 }
 
 .footer section:nth-child(2) .container-column .column h5 {
+  color: mapget((transparent: transparent, black: black, black-svg: invert(0%) sepia(6%) saturate(7476%) hue-rotate(278deg) brightness(106%) contrast(105%), lightblack: #262626, transblack: rgba(0, 0, 0, 0.6), darkgray: #a6a6a6, gray: #e0e0e0, lightgray: #ededed, white: white, white-svg: invert(100%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(102%) contrast(105%), transwhite: rgba(255, 255, 255, 0.6), blue: dodgerblue, green: mediumseagreen, yellow: yellow, orange: orange, red: red, purple: purple), lightblack);
   margin-bottom: 20px;
 }
 
 .footer section:nth-child(2) .container-column .column ul li {
   margin-bottom: 8px;
+}
+
+.footer section:nth-child(2) .container-column .column ul li a {
+  color: mapget((transparent: transparent, black: black, black-svg: invert(0%) sepia(6%) saturate(7476%) hue-rotate(278deg) brightness(106%) contrast(105%), lightblack: #262626, transblack: rgba(0, 0, 0, 0.6), darkgray: #a6a6a6, gray: #e0e0e0, lightgray: #ededed, white: white, white-svg: invert(100%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(102%) contrast(105%), transwhite: rgba(255, 255, 255, 0.6), blue: dodgerblue, green: mediumseagreen, yellow: yellow, orange: orange, red: red, purple: purple), blue);
 }
 
 .footer section:nth-child(2) .container-select {
@@ -1438,6 +1516,54 @@ body[data-theme="dark"] .main-menu .main-menu-outside.active {
 .footer section:nth-child(2) .container-select .row {
   margin: 12px;
   width: 100%;
+}
+
+body[data-theme="light"] .footer {
+  background: #ededed;
+}
+
+body[data-theme="light"] .footer section:nth-child(1) .container-description .row img {
+  filter: invert(0%) sepia(6%) saturate(7476%) hue-rotate(278deg) brightness(106%) contrast(105%);
+}
+
+body[data-theme="light"] .footer section:nth-child(1) .container-description .row h4 {
+  color: black;
+}
+
+body[data-theme="light"] .footer section:nth-child(1) .container-description p {
+  color: #262626;
+}
+
+body[data-theme="light"] .footer section:nth-child(2) .container-column .column h5 {
+  color: mapget((transparent: transparent, black: black, black-svg: invert(0%) sepia(6%) saturate(7476%) hue-rotate(278deg) brightness(106%) contrast(105%), lightblack: #262626, transblack: rgba(0, 0, 0, 0.6), darkgray: #a6a6a6, gray: #e0e0e0, lightgray: #ededed, white: white, white-svg: invert(100%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(102%) contrast(105%), transwhite: rgba(255, 255, 255, 0.6), blue: dodgerblue, green: mediumseagreen, yellow: yellow, orange: orange, red: red, purple: purple), lightblack);
+}
+
+body[data-theme="light"] .footer section:nth-child(2) .container-column .column ul li a {
+  color: mapget((transparent: transparent, black: black, black-svg: invert(0%) sepia(6%) saturate(7476%) hue-rotate(278deg) brightness(106%) contrast(105%), lightblack: #262626, transblack: rgba(0, 0, 0, 0.6), darkgray: #a6a6a6, gray: #e0e0e0, lightgray: #ededed, white: white, white-svg: invert(100%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(102%) contrast(105%), transwhite: rgba(255, 255, 255, 0.6), blue: dodgerblue, green: mediumseagreen, yellow: yellow, orange: orange, red: red, purple: purple), blue);
+}
+
+body[data-theme="dark"] .footer {
+  background: #262626;
+}
+
+body[data-theme="dark"] .footer section:nth-child(1) .container-description .row img {
+  filter: invert(100%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(102%) contrast(105%);
+}
+
+body[data-theme="dark"] .footer section:nth-child(1) .container-description .row h4 {
+  color: #ededed;
+}
+
+body[data-theme="dark"] .footer section:nth-child(1) .container-description p {
+  color: #ededed;
+}
+
+body[data-theme="dark"] .footer section:nth-child(2) .container-column .column h5 {
+  color: mapget((transparent: transparent, black: black, black-svg: invert(0%) sepia(6%) saturate(7476%) hue-rotate(278deg) brightness(106%) contrast(105%), lightblack: #262626, transblack: rgba(0, 0, 0, 0.6), darkgray: #a6a6a6, gray: #e0e0e0, lightgray: #ededed, white: white, white-svg: invert(100%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(102%) contrast(105%), transwhite: rgba(255, 255, 255, 0.6), blue: dodgerblue, green: mediumseagreen, yellow: yellow, orange: orange, red: red, purple: purple), lightgray);
+}
+
+body[data-theme="dark"] .footer section:nth-child(2) .container-column .column ul li a {
+  color: mapget((transparent: transparent, black: black, black-svg: invert(0%) sepia(6%) saturate(7476%) hue-rotate(278deg) brightness(106%) contrast(105%), lightblack: #262626, transblack: rgba(0, 0, 0, 0.6), darkgray: #a6a6a6, gray: #e0e0e0, lightgray: #ededed, white: white, white-svg: invert(100%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(102%) contrast(105%), transwhite: rgba(255, 255, 255, 0.6), blue: dodgerblue, green: mediumseagreen, yellow: yellow, orange: orange, red: red, purple: purple), blue);
 }
 
 .social-bar {

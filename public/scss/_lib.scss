@@ -12,8 +12,6 @@
 h1 {
     font-size: map-get($font-size, 'xxl');
     font-weight: 500;
-    margin-top: map-get($margin, 'l');
-    margin-bottom: map-get($margin, 'l');
 
     &::after {
         content: "";
@@ -30,16 +28,6 @@ h2 {
     font-size: map-get($font-size, 'xl');
     font-weight: 500;
     margin-bottom: map-get($margin, 'l');
-
-    &::after {
-        content: "";
-        background: orange;
-        height: 4px;
-        width: 50px;
-        display: block;
-        border-radius: map-get($border-radius, 'xl');
-        margin-top: map-get($margin, 'xs');
-    }
 }
 
 h3 {
@@ -98,6 +86,10 @@ h6 {
         padding-left: map-get($padding-block, "xxl");
         padding-right: map-get($padding-block, "xxl");
     }
+}
+
+.section {
+    padding-top: var(--header-height);
 }
 
 .row {

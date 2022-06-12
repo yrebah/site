@@ -5,7 +5,7 @@
     display: flex;
     flex-wrap: wrap;
     min-height: 25vh;
-    background: map-get($colors, lightblack);
+    background: map-get($colors, lightgray);
 
     section {
         position: relative;
@@ -28,12 +28,12 @@
                 .row {
                     img {
                         width: 32px;
-                        filter: invert(100%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(102%) contrast(105%);
+                        filter: map-get($colors, black-svg);
                         margin-right: 8px;
                     }
 
                     h4 {
-                        letter-spacing: 1px;
+                        color: map-get($colors, black);
                     }
 
                     @include screen-xs {
@@ -62,8 +62,33 @@
                 }
 
                 p {
+                    color: map-get($colors, lightblack);
                     padding-top: map-get($padding, "m");
                     padding-bottom: map-get($padding, "m");
+
+                    @include screen-xs {
+                        text-align: center;
+                    }
+    
+                    @include screen-s {
+                        text-align: center;
+                    }
+    
+                    @include screen-m {
+                        text-align: center;
+                    }
+    
+                    @include screen-l {
+                        text-align: left;
+                    }
+    
+                    @include screen-xl {
+                        text-align: left;
+                    }
+    
+                    @include screen-xxl {
+                        text-align: left;
+                    }
                 }
             }
         }
@@ -109,12 +134,17 @@
                     margin: 30px;
 
                     h5 {
+                        color: mapget($colors, lightblack);
                         margin-bottom: 20px;
                     }
 
                     ul {
                         li {
                             margin-bottom: 8px;
+
+                            a {
+                                color: mapget($colors, blue);
+                            }
                         }
                     }
                 }
@@ -154,6 +184,104 @@
                 .row {
                     margin: 12px;
                     width: 100%;
+                }
+            }
+        }
+    }
+}
+
+body {
+    &[data-theme="light"] {
+        .footer {
+            background: map-get($colors, lightgray);
+        
+            section {
+                &:nth-child(1) {
+                    .container-description {
+
+                        .row {
+                            img {
+                                filter: map-get($colors, black-svg);
+                            }
+        
+                            h4 {
+                                color: map-get($colors, black);
+                            }
+                        }
+        
+                        p {
+                            color: map-get($colors, lightblack);
+                        }
+                    }
+                }
+        
+                &:nth-child(2) {
+        
+                    .container-column {
+
+                        .column {
+        
+                            h5 {
+                                color: mapget($colors, lightblack);
+                            }
+        
+                            ul {
+                                li {
+                                    a {
+                                        color: mapget($colors, blue);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &[data-theme="dark"] {
+        .footer {
+            background: map-get($colors, lightblack);
+        
+            section {
+                &:nth-child(1) {
+                    .container-description {
+
+                        .row {
+                            img {
+                                filter: map-get($colors, white-svg);
+                            }
+        
+                            h4 {
+                                color: map-get($colors, lightgray);
+                            }
+                        }
+        
+                        p {
+                            color: map-get($colors, lightgray);
+                        }
+                    }
+                }
+        
+                &:nth-child(2) {
+        
+                    .container-column {
+                        
+                        .column {
+        
+                            h5 {
+                                color: mapget($colors, lightgray);
+                            }
+        
+                            ul {
+                                li {
+                                    a {
+                                        color: mapget($colors, blue);
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
