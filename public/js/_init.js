@@ -224,13 +224,13 @@ const set_popinFunctions = () => {
 
 // NOTIFICATION
 
-const get_notification = async (title, message, redirect, icon) => {
+const get_notification = async (props) => {
 
     const showNotification = () => {
 
-        const notification = new Notification(title, {
-            body: message,
-            icon: ""
+        const notification = new Notification(props.title, {
+            body: props.message,
+            icon: props.icon
         })
 
         setTimeout(() => {
@@ -239,7 +239,7 @@ const get_notification = async (title, message, redirect, icon) => {
 
         if (redirect != null) {
             notification.addEventListener('click', () => {
-                window.open(redirect, '_blank');
+                window.open(props.redirect, '_blank');
             })
         }
     }
