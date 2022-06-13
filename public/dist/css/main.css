@@ -1686,7 +1686,7 @@ body[data-theme="dark"] .social-bar .link {
 
 .main-login .grid-main-login {
   position: relative;
-  min-width: 300px;
+  min-width: 320px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 0.5fr 1.2fr 1.2fr 0.5fr 1fr 1.6fr;
@@ -1785,7 +1785,7 @@ body[data-theme="dark"] .main-login .grid-main-login .link {
 
 .main-register .grid-main-register {
   position: relative;
-  min-width: 300px;
+  min-width: 320px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 0.5fr 1.2fr 1.2fr 1.2fr 1fr 1.6fr;

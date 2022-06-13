@@ -67,7 +67,7 @@ app.get('/about', (req, res) => {
 app.get('/login', (req, res) => {
     res.render('login', {
         title: `${data_site.title} - Connexion`,
-        h1: "Se connecter",
+        h1: `Se connecter à ${data_site.title}`,
         data_site
     })
 })
@@ -76,7 +76,7 @@ app.get('/login', (req, res) => {
 app.get('/register', (req, res) => {
     res.render('register', {
         title: `${data_site.title} - Créer un compte`,
-        h1: "Créer un compte",
+        h1: `Créer un compte sur ${data_site.title}`,
         data_site
     })
 })
