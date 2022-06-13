@@ -38,6 +38,7 @@
     }
 
     &.btn-icon {
+        font-size: map-get($font-size, 's');
         background: map-get($colors, transparent);
         color: map-get($colors, white);
         width: 40px;

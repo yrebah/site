@@ -70,7 +70,7 @@
                 grid-area: row-1;
                 font-size: map-get($font-size, "s");
                 display: flex;
-                align-items: center;
+                align-items: start;
                 justify-content: space-between;
                 transition: opacity 0.35s ease-in-out;
 

@@ -637,6 +637,7 @@ body[data-theme="dark"] .header img {
 }
 
 .btn.btn-icon {
+  font-size: clamp(16px, 4vw, 18px);
   background: transparent;
   color: white;
   width: 40px;
@@ -1224,7 +1225,7 @@ body[data-theme="dark"] .loader .container .dot {
   grid-area: row-1;
   font-size: clamp(16px, 4vw, 18px);
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   transition: opacity 0.35s ease-in-out;
 }
