@@ -9,44 +9,62 @@
     width: 100%;
 
     &.btn-primary {
-        background: map-get($colors, green);
+        background: map-get($colors, _green);
         color: white;
     }
 
     &.btn-secondary {
-        background: map-get($colors, blue);
+        background: map-get($colors, _blue);
     }
 
     &.btn-cancel {
-        background: map-get($colors, blue);
+        background: map-get($colors, _blue);
     }
 
     &.btn-accept {
-        background: map-get($colors, blue);
+        background: map-get($colors, _blue);
     }
 
     &.btn-back {
-        background: map-get($colors, blue);
+        background: map-get($colors, _blue);
     }
 
     &.btn-send {
-        background: map-get($colors, blue);
+        background: map-get($colors, _blue);
     }
 
     &.btn-alert {
-        background: map-get($colors, blue);
+        background: map-get($colors, _blue);
     }
 
     &.btn-icon {
         font-size: map-get($font-size, 's');
-        background: map-get($colors, transparent);
-        color: map-get($colors, white);
-        width: 40px;
-        height: 40px;
+        background: map-get($colors, _transparent);
+        color: map-get($colors, _white);
+        width: 30px;
+        height: 30px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &.btn-user-initial {
+        font-size: map-get($font-size, 's');
+        background: map-get($colors, _lightblack2);
+        color: map-get($colors, _white);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -54,12 +72,16 @@ body {
     &[data-theme="light"] {
         .btn {
             &.btn-primary {
-                background: map-get($colors, green);
-                color: white;
+                background: map-get($colors, _green);
+                color: map-get($colors, _white);
             }
 
             &.btn-icon {
-                color: map-get($colors, black);
+                color: map-get($colors, _black);
+            }
+
+            &.btn-user-initial {
+                background: map-get($colors, _blue);
             }
         }
     }
@@ -67,12 +89,16 @@ body {
     &[data-theme="dark"] {
         .btn {
             &.btn-primary {
-                background: map-get($colors, darkgreen);
-                color: white;
+                background: map-get($colors, _darkgreen);
+                color: map-get($colors, _white);
             }
             
             &.btn-icon {
-                color: map-get($colors, white);
+                color: map-get($colors, _white);
+            }
+
+            &.btn-user-initial {
+                background: map-get($colors, _blue);
             }
         }
     }

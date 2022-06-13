@@ -3,44 +3,44 @@
 .input {
     border-radius: map-get($border-radius, 'xs');
     padding: map-get($padding, 'l');
-    border: 1px solid map-get($colors, darkgray);
-    color: map-get($colors, black);
-    background: map-get($colors, white);
+    border: 1px solid map-get($colors, _darkgray);
+    color: map-get($colors, _black);
+    background: map-get($colors, _white);
     font-size: map-get($font-size, 'xs');
     transition: 0.15s ease-in-out;
 
     &:read-only {
-        background: map-get($colors, gray);
-        color: map-get($colors, black);
+        background: map-get($colors, _gray);
+        color: map-get($colors, _black);
         border: none;
     }
 
     &:hover {
-        border-color: map-get($colors, blue) !important;
+        border-color: map-get($colors, _blue) !important;
     }
 }
 
 body {
     &[data-theme="light"] {
         .input {
-            border: 1px solid map-get($colors, darkgray);
-            color: map-get($colors, black);
-            background: map-get($colors, white);
+            border: 1px solid map-get($colors, _darkgray);
+            color: map-get($colors, _black);
+            background: map-get($colors, _white);
 
             &:focus-within {
-                border-color: map-get($colors, blue) !important;
+                border-color: map-get($colors, _blue) !important;
             }
         }
     }
 
     &[data-theme="dark"] {
         .input {
-            border: 1px solid map-get($colors, darkgray);
-            color: map-get($colors, white);
-            background: map-get($colors, black);
+            border: 1px solid map-get($colors, _darkgray);
+            color: map-get($colors, _white);
+            background: map-get($colors, _black);
 
             &:focus-within {
-                border-color: map-get($colors, blue) !important;
+                border-color: map-get($colors, _blue) !important;
             }
         }
     }

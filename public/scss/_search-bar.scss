@@ -19,18 +19,18 @@
         width: 100%;
         padding: map-get($padding, 's');
         border-radius: map-get($border-radius, 'm');
-        background: map-get($colors, gray);
+        background: map-get($colors, _gray);
         transition: background 0.35s ease-in-out;
 
         &:focus-within {
-            background: map-get($colors, lightgray);
+            background: map-get($colors, _lightgray);
         }
 
         i {
             flex: 5%;
             margin-left: map-get($margin, 'xs');
             margin-right: map-get($margin, 'xs');
-            color: map-get($colors, lightblack2);
+            color: map-get($colors, _lightblack2);
         }
 
         input {
@@ -41,7 +41,7 @@
             flex: 95%;
             background: transparent;
             border: none;
-            color: map-get($colors, black);
+            color: map-get($colors, _black);
             outline: none;
         }
     }
@@ -93,33 +93,33 @@ body {
         .search-bar {
         
             .search-bar-wrapper {
-                background: map-get($colors, gray);
+                background: map-get($colors, _gray);
         
                 &:focus-within {
-                    background: map-get($colors, lightgray);
+                    background: map-get($colors, _lightgray);
                 }
         
                 i {
-                    color: map-get($colors, lightblack2);
+                    color: map-get($colors, _lightblack2);
                 }
         
                 input {
-                    color: map-get($colors, black);
+                    color: map-get($colors, _black);
                 }
             }
         
             nav {
                 h4 {
-                    color: map-get($colors, black);
+                    color: map-get($colors, _black);
                 }
                 ul {
                     li {
                         i {
-                            color: map-get($colors, lightblack);
+                            color: map-get($colors, _lightblack);
                         }
         
                         .link {
-                            color: map-get($colors, lightblack);
+                            color: map-get($colors, _lightblack);
                         }
                     }
                 }
@@ -131,33 +131,33 @@ body {
         .search-bar {
         
             .search-bar-wrapper {
-                background: map-get($colors, lightblack);
+                background: map-get($colors, _lightblack);
         
                 &:focus-within {
-                    background: map-get($colors, lightblack2);
+                    background: map-get($colors, _lightblack2);
                 }
         
                 i {
-                    color: map-get($colors, darkgray);
+                    color: map-get($colors, _darkgray);
                 }
         
                 input {
-                    color: map-get($colors, white);
+                    color: map-get($colors, _white);
                 }
             }
         
             nav {
                 h4 {
-                    color: map-get($colors, lightgray);
+                    color: map-get($colors, _lightgray);
                 }
                 ul {
                     li {
                         i {
-                            color: map-get($colors, white);
+                            color: map-get($colors, _white);
                         }
         
                         .link {
-                            color: map-get($colors, white);
+                            color: map-get($colors, _white);
                         }
                     }
                 }

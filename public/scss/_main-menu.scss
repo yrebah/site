@@ -20,7 +20,7 @@
 
     .main-menu-wrapper {
         position: relative;
-        background: map-get($colors, white);
+        background: map-get($colors, _white);
         display: grid;
         flex: 30%;
         grid-template-columns: 1fr;
@@ -77,7 +77,7 @@
                 a {
                     img {
                         width: 28px;
-                        filter: map-get($colors, black-svg);
+                        filter: map-get($colors, _black-svg);
                     }
                 }
             }
@@ -126,17 +126,17 @@
                             cursor: pointer;
 
                             &:hover {
-                                background: hsl(0, 0%, 10%);
+                                background: map-get($colors, _lightblack);
                             }
 
                             i {
-                                color: map-get($colors, black);
+                                color: map-get($colors, _black);
                                 margin-right: map-get($margin, 'xs');
                             }
 
                             .link {
                                 font-size: map-get($font-size, 's');
-                                color: map-get($colors, black);
+                                color: map-get($colors, _black);
                             }
                         }
                     }
@@ -159,7 +159,7 @@
         transition-delay: 0.3s;
 
         &.active {
-            background: map-get($colors, transwhite);
+            background: map-get($colors, _transwhite);
         }
     }
 }
@@ -169,14 +169,14 @@ body {
         .main-menu {
 
             .main-menu-wrapper {
-                background: map-get($colors, white);
+                background: map-get($colors, _white);
         
                 .main-menu-row {
 
                     &.row-1 {
                         a {
                             img {
-                                filter: map-get($colors, black-svg);
+                                filter: map-get($colors, _black-svg);
                             }
                         }
                     }
@@ -186,15 +186,15 @@ body {
                             li {
                                 div {
                                     &:hover {
-                                        background: map-get($colors, lightgray);
+                                        background: map-get($colors, _lightgray);
                                     }
         
                                     i {
-                                        color: map-get($colors, black);
+                                        color: map-get($colors, _black);
                                     }
         
                                     .link {
-                                        color: map-get($colors, black);
+                                        color: map-get($colors, _black);
                                     }
                                 }
                             }
@@ -206,7 +206,7 @@ body {
             .main-menu-outside {
         
                 &.active {
-                    background: map-get($colors, transblack);
+                    background: map-get($colors, _transblack);
                 }
             }
         }
@@ -216,14 +216,14 @@ body {
         .main-menu {
             
             .main-menu-wrapper {
-                background: map-get($colors, black);
+                background: map-get($colors, _black);
         
                 .main-menu-row {
         
                     &.row-1 {
                         a {
                             img {
-                                filter: map-get($colors, white-svg);
+                                filter: map-get($colors, _white-svg);
                             }
                         }
                     }
@@ -233,15 +233,15 @@ body {
                             li {
                                 div {
                                     &:hover {
-                                        background: map-get($colors, lightblack);
+                                        background: map-get($colors, _lightblack);
                                     }
         
                                     i {
-                                        color: map-get($colors, white);
+                                        color: map-get($colors, _white);
                                     }
         
                                     .link {
-                                        color: map-get($colors, white);
+                                        color: map-get($colors, _white);
                                     }
                                 }
                             }
@@ -253,7 +253,7 @@ body {
             .main-menu-outside {
         
                 &.active {
-                    background: map-get($colors, transblack);
+                    background: map-get($colors, _transblack);
                 }
             }
         }

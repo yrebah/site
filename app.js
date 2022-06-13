@@ -35,6 +35,9 @@ const data_social = main_json_parsed.social
 const data_footer = main_json_parsed.footer
 const data_searchBar = main_json_parsed.searchBar
 
+const user = "yoann@gmail.com"
+const user_initial = user.substring(0,1)
+
 // page Home
 app.get('', (req, res) => {
     res.render('index', {
@@ -45,7 +48,9 @@ app.get('', (req, res) => {
         data_mainMenu,
         data_social,
         data_footer,
-        data_searchBar
+        data_searchBar,
+        user,
+        user_initial
     })
 })
 
@@ -59,7 +64,9 @@ app.get('/about', (req, res) => {
         data_mainMenu,
         data_social,
         data_footer,
-        data_searchBar
+        data_searchBar,
+        user,
+        user_initial
     })
 })
 

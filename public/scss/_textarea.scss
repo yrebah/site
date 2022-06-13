@@ -3,22 +3,22 @@
 textarea {
     border-radius: map-get($border-radius, 'xs');
     padding: map-get($padding, 'l');
-    border: 1px solid map-get($colors, gray);
+    border: 1px solid map-get($colors, _gray);
     font-size: map-get($font-size, 'xs');
-    color: map-get($colors, white);
+    color: map-get($colors, _white);
     transition: 0.15s ease-in-out;
 
     &:read-only {
-        background: map-get($colors, gray);
-        color: map-get($colors, black);
+        background: map-get($colors, _gray);
+        color: map-get($colors, _black);
         border: none;
     }
 
     &:hover {
-        border-color: map-get($colors, gray);
+        border-color: map-get($colors, _gray);
     }
 
     &:focus-within {
-        outline-color: map-get($colors, gray);
+        outline-color: map-get($colors, _gray);
     }
 }

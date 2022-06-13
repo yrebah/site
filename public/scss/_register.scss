@@ -29,7 +29,7 @@
 
             img {
                 width: 50px;
-                filter: map-get($colors, black-svg);
+                filter: map-get($colors, _black-svg);
             }
         }
 
@@ -86,12 +86,12 @@
             text-align: center;
 
             .link {
-                border-bottom: 1px solid map-get($colors, blue);
+                border-bottom: 1px solid map-get($colors, _blue);
             }
         }
 
         .link {
-            color: map-get($colors, blue);
+            color: map-get($colors, _blue);
         }
     }
 }
@@ -102,11 +102,11 @@ body {
             .grid-main-register {
                 .row-1 {
                     img {
-                        filter: map-get($colors, black-svg);
+                        filter: map-get($colors, _black-svg);
                     }
                 }
                 .link {
-                    color: map-get($colors, blue);
+                    color: map-get($colors, _blue);
                 }
             }
         }
@@ -117,11 +117,11 @@ body {
             .grid-main-register {
                 .row-1 {
                     img {
-                        filter: map-get($colors, white-svg);
+                        filter: map-get($colors, _white-svg);
                     }
                 }
                 .link {
-                    color: map-get($colors, blue);
+                    color: map-get($colors, _blue);
                 }
             }
         }

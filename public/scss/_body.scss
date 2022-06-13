@@ -17,12 +17,12 @@ body {
     }
 
     &[data-theme="light"] {
-        background: map-get($colors, white);
-        color: map-get($colors, lightblack);
+        background: map-get($colors, _white);
+        color: map-get($colors, _lightblack);
     }
 
     &[data-theme="dark"] {
-        background: map-get($colors, black);
-        color: map-get($colors, white);
+        background: map-get($colors, _black);
+        color: map-get($colors, _white);
     }
 }

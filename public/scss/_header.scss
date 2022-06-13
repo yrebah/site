@@ -11,7 +11,7 @@
     height: var(--header-height);
     padding-left: map-get($padding-block, 's');
     padding-right: map-get($padding-block, 's');
-    background: map-get($colors, white);
+    background: map-get($colors, _white);
 
     @include screen-xs {
         padding-right: map-get($padding-block, 's');
@@ -49,7 +49,7 @@
         padding: map-get($padding, 'xs');
         padding-left: map-get($padding, 's');
         padding-right: map-get($padding, 's');
-        color: map-get($colors, black);
+        color: map-get($colors, _black);
 
         &::after {
             position: absolute;
@@ -59,7 +59,7 @@
             content: "";
             display: block;
             border-radius: map-get($border-radius, 'xl');
-            background: map-get($colors, blue);
+            background: map-get($colors, _blue);
             height: 4px;
             width: 0%;
             transition: 0.15s ease-in-out;
@@ -79,7 +79,7 @@
     }
 
     img {
-        filter: map-get($colors, black-svg);
+        filter: map-get($colors, _black-svg);
         width: 28px;
     }
 
@@ -104,7 +104,7 @@
                 &:after {
                     content: '|';
                     font-weight: 300;
-                    color: map-get($colors, gray);
+                    color: map-get($colors, _gray);
                 }
 
                 &:last-child:after {
@@ -204,36 +204,36 @@
 body {
     &[data-theme="light"] {
         .header {
-            background: map-get($colors, white);
+            background: map-get($colors, _white);
 
             .link {
-                color: map-get($colors, black);
+                color: map-get($colors, _black);
         
                 &::after {
-                    background: map-get($colors, blue);
+                    background: map-get($colors, _blue);
                 }
             }
 
             img {
-                filter: map-get($colors, black-svg);
+                filter: map-get($colors, _black-svg);
             }
         }
     }
 
     &[data-theme="dark"] {
         .header {
-            background: map-get($colors, black);
+            background: map-get($colors, _black);
 
             .link {
-                color: map-get($colors, white);
+                color: map-get($colors, _white);
         
                 &::after {
-                    background: map-get($colors, blue);
+                    background: map-get($colors, _blue);
                 }
             }
 
             img {
-                filter: map-get($colors, white-svg);
+                filter: map-get($colors, _white-svg);
             }
         }
     }

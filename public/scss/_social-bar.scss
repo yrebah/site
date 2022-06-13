@@ -8,10 +8,10 @@
 
     .link {
         font-size: map-get($font-size, "m");
-        color: map-get($colors, darkgray);
+        color: map-get($colors, _darkgray);
 
         &:hover {
-            color: map-get($colors, blue) !important;
+            color: map-get($colors, _blue) !important;
         }
     }
 
@@ -28,7 +28,7 @@ body {
         .social-bar {
         
             .link {
-                color: map-get($colors, darkgray);
+                color: map-get($colors, _darkgray);
             }
         }
     }
@@ -37,7 +37,7 @@ body {
         .social-bar {
         
             .link {
-                color: map-get($colors, darkgray);
+                color: map-get($colors, _darkgray);
             }
         }
     }

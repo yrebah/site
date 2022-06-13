@@ -7,72 +7,72 @@
     align-items: center;
     padding-right: map-get($padding, 'm');
     border-radius: map-get($border-radius, 'xs');
-    border: 1px solid map-get($colors, lightblack);
+    border: 1px solid map-get($colors, _lightblack);
     transition: 0.15s ease-in-out;
 
     select {
         padding: map-get($padding, 'l');
         font-size: clamp(14px, 10vw, 16px);
-        color: map-get($colors, black);
+        color: map-get($colors, _black);
         width: 100%;
         height: 100%;
         flex: 90%;
 
         option {
-            background: map-get($colors, white);
+            background: map-get($colors, _white);
         }
     }
 
     &:hover {
-        border-color: map-get($colors, lightblack);
+        border-color: map-get($colors, _lightblack);
     }
 
     &:focus {
-        border-color: map-get($colors, lightblack);
+        border-color: map-get($colors, _lightblack);
     }
 }
 
 body {
     &[data-theme="light"] {
         .select {
-            border: 1px solid map-get($colors, lightblack);
+            border: 1px solid map-get($colors, _lightblack);
         
             select {
-                color: map-get($colors, black);
+                color: map-get($colors, _black);
 
                 option {
-                    background: map-get($colors, white);
+                    background: map-get($colors, _white);
                 }
             }
         
             &:hover {
-                border-color: map-get($colors, lightblack);
+                border-color: map-get($colors, _lightblack);
             }
         
             &:focus {
-                border-color: map-get($colors, lightblack);
+                border-color: map-get($colors, _lightblack);
             }
         }
     }
 
     &[data-theme="dark"] {
         .select {
-            border: 1px solid map-get($colors, darkgray);
+            border: 1px solid map-get($colors, _darkgray);
         
             select {
-                color: map-get($colors, white);
+                color: map-get($colors, _white);
 
                 option {
-                    background: map-get($colors, lightblack);
+                    background: map-get($colors, _lightblack);
                 }
             }
         
             &:hover {
-                border-color: map-get($colors, white);
+                border-color: map-get($colors, _white);
             }
         
             &:focus {
-                border-color: map-get($colors, white);
+                border-color: map-get($colors, _white);
             }
         }
     }

@@ -5,7 +5,7 @@
     display: flex;
     flex-wrap: wrap;
     min-height: 25vh;
-    background: map-get($colors, lightgray);
+    background: map-get($colors, _lightgray);
 
     section {
         position: relative;
@@ -28,12 +28,12 @@
                 .row {
                     img {
                         width: 32px;
-                        filter: map-get($colors, black-svg);
+                        filter: map-get($colors, _black-svg);
                         margin-right: 8px;
                     }
 
                     h4 {
-                        color: map-get($colors, black);
+                        color: map-get($colors, _black);
                     }
 
                     @include screen-xs {
@@ -62,7 +62,7 @@
                 }
 
                 p {
-                    color: map-get($colors, lightblack);
+                    color: map-get($colors, _lightblack);
                     padding-top: map-get($padding, "m");
                     padding-bottom: map-get($padding, "m");
 
@@ -134,7 +134,7 @@
                     margin: 30px;
 
                     h5 {
-                        color: map-get($colors, lightblack);
+                        color: map-get($colors, _lightblack);
                         margin-bottom: 20px;
                     }
 
@@ -143,11 +143,11 @@
                             margin-bottom: 8px;
 
                             .link {
-                                color: map-get($colors, darkgray);
+                                color: map-get($colors, _darkgray);
                                 transition: 0.15s;
 
                                 &:hover {
-                                    color: map-get($colors, blue) !important;
+                                    color: map-get($colors, _blue) !important;
                                 }
                             }
                         }
@@ -198,7 +198,7 @@
 body {
     &[data-theme="light"] {
         .footer {
-            background: map-get($colors, lightgray);
+            background: map-get($colors, _lightgray);
         
             section {
                 &:nth-child(1) {
@@ -206,16 +206,16 @@ body {
 
                         .row {
                             img {
-                                filter: map-get($colors, black-svg);
+                                filter: map-get($colors, _black-svg);
                             }
         
                             h4 {
-                                color: map-get($colors, black);
+                                color: map-get($colors, _black);
                             }
                         }
         
                         p {
-                            color: map-get($colors, lightblack);
+                            color: map-get($colors, _lightblack);
                         }
                     }
                 }
@@ -233,7 +233,7 @@ body {
                             ul {
                                 li {
                                     .link {
-                                        color: map-get($colors, darkgray);
+                                        color: map-get($colors, _darkgray);
                                     }
                                 }
                             }
@@ -246,7 +246,7 @@ body {
 
     &[data-theme="dark"] {
         .footer {
-            background: map-get($colors, lightblack);
+            background: map-get($colors, _lightblack);
         
             section {
                 &:nth-child(1) {
@@ -254,16 +254,16 @@ body {
 
                         .row {
                             img {
-                                filter: map-get($colors, white-svg);
+                                filter: map-get($colors, _white-svg);
                             }
         
                             h4 {
-                                color: map-get($colors, lightgray);
+                                color: map-get($colors, _lightgray);
                             }
                         }
         
                         p {
-                            color: map-get($colors, lightgray);
+                            color: map-get($colors, _lightgray);
                         }
                     }
                 }
@@ -275,13 +275,13 @@ body {
                         .column {
         
                             h5 {
-                                color: map-get($colors, white);
+                                color: map-get($colors, _white);
                             }
         
                             ul {
                                 li {
                                     .link {
-                                        color: map-get($colors, gray);
+                                        color: map-get($colors, _gray);
                                     }
                                 }
                             }

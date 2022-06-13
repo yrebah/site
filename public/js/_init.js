@@ -8,6 +8,7 @@ $(document).ready(() => {
     set_linkHeaderFunctions()
     set_searchBarFunctions()
     set_btnSearchFunctions()
+    check_userIsAuthentified()
 })
 
 // THEME
@@ -136,9 +137,21 @@ const set_mainMenuFunctions = () => {
         }, 150)
     })
 
-    $('#btn-user-account').click(() => {
-        $(location).prop('href', 'my-account')
+    $('#btn-user').click(() => {
+        $(location).prop('href', 'login')
     })
+
+    $('#btn-user-authentified').click(() => {
+        console.log('vers détails mon compte')
+    })
+}
+
+const check_userIsAuthentified = () => {
+    if(localStorage.getItem('user_authentified') == true) {
+        
+    } else {
+
+    }
 }
 
 const open_mainMenu = () => {

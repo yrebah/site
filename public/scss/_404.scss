@@ -21,7 +21,7 @@
         }
 
         a {
-            background: map-get($colors, blue);
+            background: map-get($colors, _blue);
             border-radius: map-get($border-radius, 's');
             padding: map-get($padding, 'm');
             padding-left: map-get($padding, 'l');
@@ -40,7 +40,7 @@ body {
         .main-404 {
             .wrapper-main-404 {
                 a {
-                    color: map-get($colors, lightblack);
+                    color: map-get($colors, _lightblack);
                 }
             }
         }
@@ -50,7 +50,7 @@ body {
         .main-404 {
             .wrapper-main-404 {
                 a {
-                    color: map-get($colors, lightgray);
+                    color: map-get($colors, _lightgray);
                 }
             }
         }
