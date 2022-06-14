@@ -1,22 +1,26 @@
 // _init.js
 
-import { Theme } from "../components/_theme.js";
-
-const theme = new Theme('light')
+import { Theme } from "../class/_theme.js";
+import { Loader } from "../class/_loader.js";
 
 $(document).ready(() => {
     // Theme
     theme.ApplyTheme()
     set_btnThemeFunctions()
+    // MainMenu
     set_btnMainMenuFunctions()
     set_mainMenuFunctions()
+    // Header
     set_linkHeaderFunctions()
+    // SearchBar
     set_searchBarFunctions()
     set_btnSearchFunctions()
-    check_userIsAuthentified()
 })
 
 // Theme ----------------------------
+
+const theme = new Theme('light')
+
 const set_btnThemeFunctions = () => {
     $('#moon').click(() => {
         theme.SetTheme('dark')
@@ -26,48 +30,19 @@ const set_btnThemeFunctions = () => {
     })
 }
 
-// LOADER
+// Loader ----------------------------
 
-const get_loader = (id, container) => {
-
-    const global =
-        `<div id="${id}" class="loader global">
-            <div class="container">
-                <div class="circle">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                </div>
-            </div>
-        </div>`
-
-    const specific =
-        `<div id="${id}" class="loader specific">
-            <div class="container">
-                <div class="circle">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                </div>
-            </div>
-        </div>`
-
-    if (container == 'body') {
-        $('body').append(global)
-    } else {
-        $(`${container}`).append(specific)
-    }
+export const ShowLoader = (id, container) => {
+    const loader = new Loader(id, container)
+    loader.ShowLoader()
 }
 
-const remove_loader = (id) => {
-    $(`${id}`).remove()
+export const HideLoader = (id) => {
+    const loader = new Loader(id)
+    loader.HideLoader()
 }
 
-// --------------------------------------
-
-// HEADER
+// Header ----------------------------
 
 const set_btnMainMenuFunctions = () => {
     $('#btn-main-menu').click(() => {
@@ -94,9 +69,7 @@ const set_btnSearchFunctions = () => {
     })
 }
 
-// --------------------------------------
-
-// MAIN MENU
+// MainMenu ----------------------------
 
 const set_mainMenuFunctions = () => {
 
@@ -123,14 +96,6 @@ const set_mainMenuFunctions = () => {
     })
 }
 
-const check_userIsAuthentified = () => {
-    if(localStorage.getItem('user_authentified') == true) {
-        
-    } else {
-
-    }
-}
-
 const open_mainMenu = () => {
     $('.main-menu').addClass('active')
     $('.main-menu-outside').addClass('active')
@@ -143,9 +108,7 @@ const close_mainMenu = () => {
     $('body').css('overflow', 'auto')
 }
 
-// --------------------------------------
-
-// SEARCH BAR
+// SearchBar ----------------------------
 
 const set_searchBarFunctions = () => {
 
@@ -164,7 +127,7 @@ const set_searchBarFunctions = () => {
     })
 }
 
-// POPIN
+// Popin ----------------------------
 
 const get_popin = (props) => {
 
@@ -210,13 +173,11 @@ const set_popinFunctions = () => {
     })
 }
 
-// --------------------------------------
+// Notification ----------------------------
 
-// NOTIFICATION
+export const ShowNotification = async (props) => {
 
-const get_notification = async (props) => {
-
-    const showNotification = () => {
+    const getNotif = () => {
 
         const notification = new Notification(props.title, {
             body: props.message,
@@ -243,5 +204,5 @@ const get_notification = async (props) => {
         granted = permission === 'granted' ? true : false
     }
 
-    if (granted) showNotification()
+    if (granted) getNotif()
 }

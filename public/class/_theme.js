@@ -7,11 +7,8 @@ export class Theme {
     }
 
     ApplyTheme() {
-
         if(this.GetTheme() != null) {
-
             this.SetThemeBody(this.GetTheme())
-
             switch (this.GetTheme()) {
                 case 'light':
                     this.ShowBtnDarkMode()

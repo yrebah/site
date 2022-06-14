@@ -1,12 +1,12 @@
 // index.js
 
-// ---- WRITE YOUR FUNCTIONS HERE ----
+import { ShowLoader, HideLoader } from "./_init.js";
 
 $(document).ready(() => {
-    
-    // get_loader('loader', 'body')
-    // setTimeout(() => {
-    //     remove_loader('#loader')
-    // }, 2000)
+
+    ShowLoader('loader', 'body')
+    setTimeout(() => {
+        HideLoader('#loader')
+    },2000)
 
 })
