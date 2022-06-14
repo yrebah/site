@@ -1,7 +1,12 @@
 // _init.js
 
+import { Theme } from "../components/_theme.js";
+
+const theme = new Theme('light')
+
 $(document).ready(() => {
-    apply_theme()
+    // Theme
+    theme.ApplyTheme()
     set_btnThemeFunctions()
     set_btnMainMenuFunctions()
     set_mainMenuFunctions()
@@ -11,43 +16,15 @@ $(document).ready(() => {
     check_userIsAuthentified()
 })
 
-// THEME
-
-const apply_theme = () => {
-    if (localStorage.getItem('theme') != null) {
-        switch (localStorage.getItem('theme')) {
-            case 'light':
-                $('#moon').show()
-                $('#sun').hide()
-                $('body').attr('data-theme', 'light')
-                break;
-            case 'dark':
-                $('#moon').hide()
-                $('#sun').show()
-                $('body').attr('data-theme', 'dark')
-                break;
-        }
-    } else {
-        set_theme('dark')
-    }
-}
-
-const set_theme = (value) => {
-    localStorage.setItem('theme', value)
-    $('body').data('data-theme', value)
-    apply_theme()
-}
-
+// Theme ----------------------------
 const set_btnThemeFunctions = () => {
     $('#moon').click(() => {
-        set_theme('dark')
+        theme.SetTheme('dark')
     })
     $('#sun').click(() => {
-        set_theme('light')
+        theme.SetTheme('light')
     })
 }
-
-// --------------------------------------
 
 // LOADER
 

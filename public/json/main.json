@@ -4,6 +4,7 @@
         "description": "Description du site, qui contient beaucoup d'information que personne ne lit jamais.",
         "logo_icon": "../svg/bear.svg",
         "logo_text": "../img/logo-text.png",
+        "defaultTheme": "dark",
         "metadata": {
             "description": "Description du site, qui contient beaucoup d'information que personne ne lit jamais.",
             "author": "Yoann R.",

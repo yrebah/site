@@ -9,15 +9,12 @@
             <a href="/">
                 <img src="<%- data_site.logo_icon %>" />
             </a>
-            <% if(user != "") { %>
-                <button id="btn-user-authentified" class="btn btn-user-initial" title="Compte de <%- user %>">
-                    <%- user_initial %>
-                </button>
-            <% } else { %>
-                <button id="btn-user" class="btn btn-icon" title="Se connecter">
-                    <i class="fa-solid fa-circle-user"></i>
-                </button>
-            <% } %>
+            <button id="sun" class="btn btn-icon" title="Thème Light">
+                <i class="fa-solid fa-sun"></i>
+            </button>
+            <button id="moon" class="btn btn-icon" title="Thème Dark">
+                <i class="fa-solid fa-moon"></i>
+            </button>
         </div>
         <div class="main-menu-row row-2">
             <%- include('search-bar') %>
@@ -38,12 +35,6 @@
             </ul>
         </div>
         <div class="main-menu-row row-4">
-            <button id="sun" class="btn btn-icon" title="Thème Light">
-                <i class="fa-solid fa-sun"></i>
-            </button>
-            <button id="moon" class="btn btn-icon" title="Thème Dark">
-                <i class="fa-solid fa-moon"></i>
-            </button>
             <button id="btn-user-settings" class="btn btn-icon" title="Paramètres">
                 <i class="fa-solid fa-gear"></i>
             </button>

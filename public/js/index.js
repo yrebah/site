@@ -4,9 +4,9 @@
 
 $(document).ready(() => {
     
-    get_loader('loader', 'body')
-    setTimeout(() => {
-        remove_loader('#loader')
-    }, 2000)
+    // get_loader('loader', 'body')
+    // setTimeout(() => {
+    //     remove_loader('#loader')
+    // }, 2000)
 
 })

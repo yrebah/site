@@ -24,11 +24,24 @@
                     </div>
                 </li>
             <% }) %>
+            <li>
+                <div>
+                    <a id="search" title="Rechercher">
+                        <i class='fa-solid fa-magnifying-glass'></i>
+                    </a>
+                </div>
+            </li>
         </ul>
     </section>
     <section>
-        <button id="search" class="btn btn-icon" title="Rechercher">
-            <i class='fa-solid fa-magnifying-glass'></i>
-        </button>
+        <% if(user != "") { %>
+            <button id="btn-user-authentified" class="btn btn-user-initial" title="Compte de <%- user %>">
+                <%- user_initial %>
+            </button>
+        <% } else { %>
+            <button id="btn-user" class="btn btn-icon" title="Se connecter">
+                <i class="fa-solid fa-circle-user"></i>
+            </button>
+        <% } %>
     </section>
 </header>
