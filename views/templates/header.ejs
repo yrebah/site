@@ -18,7 +18,7 @@
             <% data_header.links.forEach((elem)=> { %>
                 <li>
                     <div>
-                        <a class="link" title="<%= elem.title %>" href="<%= elem.href %>" target="<%= elem.target %>">
+                        <a class="header-link" title="<%= elem.title %>" href="<%= elem.href %>" target="<%= elem.target %>">
                             <%- elem.text %>
                         </a>
                     </div>
@@ -35,11 +35,11 @@
     </section>
     <section>
         <% if(user != "") { %>
-            <button id="btn-user-authentified" class="btn btn-user-initial" title="Compte de <%- user %>">
+            <button id="btn-user-authenticated" class="btn btn-user-initial" title="Compte de <%- user %>">
                 <%- user_initial %>
             </button>
         <% } else { %>
-            <button id="btn-user" class="btn btn-icon" title="Se connecter">
+            <button id="btn-login" class="btn btn-icon" title="Se connecter">
                 <i class="fa-solid fa-circle-user"></i>
             </button>
         <% } %>

@@ -6,6 +6,15 @@ export class Theme {
         this.defaultTheme = defaultTheme
     }
 
+    SetFunctions() {
+        $('#moon').click(() => {
+            this.SetTheme('dark')
+        })
+        $('#sun').click(() => {
+            this.SetTheme('light')
+        })
+    }
+
     ApplyTheme() {
         if(this.GetTheme() != null) {
             this.SetThemeBody(this.GetTheme())

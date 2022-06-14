@@ -43,7 +43,7 @@
         padding-left: map-get($padding-block, 's');
     }
 
-    .link {
+    .header-link {
         font-size: map-get($font-size, "s");
         font-weight: 400;
         padding: map-get($padding, 'xs');
@@ -206,7 +206,7 @@ body {
         .header {
             background: map-get($colors, _white);
 
-            .link {
+            .header-link {
                 color: map-get($colors, _black);
         
                 &::after {
@@ -224,7 +224,7 @@ body {
         .header {
             background: map-get($colors, _black);
 
-            .link {
+            .header-link {
                 color: map-get($colors, _white);
         
                 &::after {

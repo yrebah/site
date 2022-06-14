@@ -1,6 +1,6 @@
 // index.js
 
-import { ShowLoader, HideLoader } from "./_init.js";
+import { ShowLoader, HideLoader, ShowPopin, HidePopin, ShowNotification } from "./_init.js";
 
 $(document).ready(() => {
 
