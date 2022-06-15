@@ -104,7 +104,7 @@
                 &:after {
                     content: '|';
                     font-weight: 300;
-                    color: map-get($colors, _gray);
+                    color: map-get($colors, _lightblack2);
                 }
 
                 &:last-child:after {
@@ -214,6 +214,16 @@ body {
                 }
             }
 
+            section {
+                ul {
+                    li {
+                        &:after {
+                            color: map-get($colors, _lightblack2);
+                        }
+                    }
+                }
+            }
+
             img {
                 filter: map-get($colors, _black-svg);
             }
@@ -229,6 +239,16 @@ body {
         
                 &::after {
                     background: map-get($colors, _blue);
+                }
+            }
+
+            section {
+                ul {
+                    li {
+                        &:after {
+                            color: map-get($colors, _darkgray);
+                        }
+                    }
                 }
             }
 

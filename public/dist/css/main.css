@@ -90,11 +90,13 @@ body[data-theme="dark"] {
 h1 {
   font-size: clamp(38px, 8vw, 46px);
   font-weight: 500;
+  margin-bottom: 50px;
 }
 
 h2 {
   font-size: clamp(32px, 7vw, 36px);
   font-weight: 500;
+  margin-bottom: 30px;
 }
 
 h3 {
@@ -103,7 +105,7 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(22px, 5vw, 24px);
+  font-size: clamp(20px, 5vw, 22px);
   font-weight: 500;
 }
 
@@ -115,6 +117,11 @@ h5 {
 h6 {
   font-size: clamp(14px, 3vw, 16px);
   font-weight: 500;
+}
+
+p {
+  font-size: clamp(20px, 5vw, 22px);
+  font-weight: 200;
 }
 
 .main {
@@ -453,7 +460,7 @@ body[data-theme="dark"] .input:focus-within {
 .header section ul li:after {
   content: '|';
   font-weight: 300;
-  color: #e6e6e6;
+  color: #262626;
 }
 
 .header section ul li:last-child:after {
@@ -578,6 +585,10 @@ body[data-theme="light"] .header .header-link::after {
   background: dodgerblue;
 }
 
+body[data-theme="light"] .header section ul li:after {
+  color: #262626;
+}
+
 body[data-theme="light"] .header img {
   filter: invert(0%) sepia(6%) saturate(7476%) hue-rotate(278deg) brightness(106%) contrast(105%);
 }
@@ -592,6 +603,10 @@ body[data-theme="dark"] .header .header-link {
 
 body[data-theme="dark"] .header .header-link::after {
   background: dodgerblue;
+}
+
+body[data-theme="dark"] .header section ul li:after {
+  color: gray;
 }
 
 body[data-theme="dark"] .header img {
@@ -1677,7 +1692,7 @@ body[data-theme="dark"] .footer section:nth-child(2) .container-column .column u
 }
 
 .social-bar .link {
-  font-size: clamp(22px, 5vw, 24px);
+  font-size: clamp(20px, 5vw, 22px);
   color: gray;
 }
 
