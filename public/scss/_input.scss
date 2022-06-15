@@ -18,6 +18,10 @@
     &:hover {
         border-color: map-get($colors, _blue) !important;
     }
+
+    &.input-error {
+        border-color: map-get($colors, _red) !important;
+    }
 }
 
 body {

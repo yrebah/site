@@ -324,6 +324,10 @@ body[data-theme="dark"] .slim-scrollbar::-webkit-scrollbar-thumb:hover {
   border-color: dodgerblue !important;
 }
 
+.input.input-error {
+  border-color: red !important;
+}
+
 body[data-theme="light"] .input {
   border-color: #e6e6e6;
   color: black;
@@ -1733,6 +1737,42 @@ body[data-theme="dark"] .social-bar .link {
   grid-template-areas: "row-1" "row-2" "row-3" "row-4" "row-5" "row-6" "row-7";
 }
 
+@media (min-width: 0px) {
+  .main-login .grid-main-login {
+    min-width: 80%;
+  }
+}
+
+@media (min-width: 576px) {
+  .main-login .grid-main-login {
+    min-width: 75%;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-login .grid-main-login {
+    min-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-login .grid-main-login {
+    min-width: 40%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-login .grid-main-login {
+    min-width: 30%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-login .grid-main-login {
+    min-width: 25%;
+  }
+}
+
 .main-login .grid-main-login .row-1 {
   grid-area: row-1;
   display: flex;
@@ -1840,7 +1880,6 @@ body[data-theme="dark"] .main-login .grid-main-login .link {
 
 .main-register .grid-main-register {
   position: relative;
-  min-width: 320px;
   max-height: 90%;
   display: grid;
   grid-template-columns: 1fr;
@@ -1848,6 +1887,42 @@ body[data-theme="dark"] .main-login .grid-main-login .link {
   gap: 10px 0px;
   grid-auto-flow: row;
   grid-template-areas: "row-1" "row-2" "row-3" "row-4" "row-5" "row-6" "row-7" "row-8";
+}
+
+@media (min-width: 0px) {
+  .main-register .grid-main-register {
+    min-width: 80%;
+  }
+}
+
+@media (min-width: 576px) {
+  .main-register .grid-main-register {
+    min-width: 75%;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-register .grid-main-register {
+    min-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-register .grid-main-register {
+    min-width: 40%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-register .grid-main-register {
+    min-width: 30%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-register .grid-main-register {
+    min-width: 25%;
+  }
 }
 
 .main-register .grid-main-register .row-1 {
@@ -1954,13 +2029,48 @@ body[data-theme="dark"] .main-register .grid-main-register .link {
 
 .main-forgot-password .grid-main-forgot-password {
   position: relative;
-  min-width: 320px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 0.5fr 1.2fr 0.7fr 1.6fr;
   gap: 16px 0px;
   grid-auto-flow: row;
   grid-template-areas: "row-1" "row-2" "row-3" "row-4" "row-5";
+}
+
+@media (min-width: 0px) {
+  .main-forgot-password .grid-main-forgot-password {
+    min-width: 80%;
+  }
+}
+
+@media (min-width: 576px) {
+  .main-forgot-password .grid-main-forgot-password {
+    min-width: 75%;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-forgot-password .grid-main-forgot-password {
+    min-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-forgot-password .grid-main-forgot-password {
+    min-width: 40%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-forgot-password .grid-main-forgot-password {
+    min-width: 30%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-forgot-password .grid-main-forgot-password {
+    min-width: 25%;
+  }
 }
 
 .main-forgot-password .grid-main-forgot-password .row-1 {
@@ -2051,7 +2161,6 @@ body[data-theme="dark"] .main-forgot-password .grid-main-forgot-password .row-1 
 
 .main-account-details .grid-main-account-details {
   position: relative;
-  min-width: 320px;
   max-height: 90%;
   display: grid;
   grid-template-columns: 1fr;
@@ -2059,6 +2168,42 @@ body[data-theme="dark"] .main-forgot-password .grid-main-forgot-password .row-1 
   gap: 16px 0px;
   grid-auto-flow: row;
   grid-template-areas: "row-1" "row-2" "row-3" "row-4" "row-5" "row-6" "row-7";
+}
+
+@media (min-width: 0px) {
+  .main-account-details .grid-main-account-details {
+    min-width: 80%;
+  }
+}
+
+@media (min-width: 576px) {
+  .main-account-details .grid-main-account-details {
+    min-width: 75%;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-account-details .grid-main-account-details {
+    min-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-account-details .grid-main-account-details {
+    min-width: 40%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-account-details .grid-main-account-details {
+    min-width: 30%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-account-details .grid-main-account-details {
+    min-width: 25%;
+  }
 }
 
 .main-account-details .grid-main-account-details .row-1 {
