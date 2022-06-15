@@ -9,7 +9,7 @@
     width: 100%;
 
     &.btn-primary {
-        background: map-get($colors, _green);
+        background: map-get($colors, _blue);
         color: white;
     }
 
@@ -89,7 +89,7 @@ body {
     &[data-theme="dark"] {
         .btn {
             &.btn-primary {
-                background: map-get($colors, _darkgreen);
+                background: map-get($colors, _green);
                 color: map-get($colors, _white);
             }
             

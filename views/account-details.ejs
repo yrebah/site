@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <%- include('./templates/head') %>
+        <script defer type="module" src="js/account-details.js"></script>
+    </head>
+
+<body id="account-details" class="hide-scrollbar" style="height:100vh;">
+
+    <main class="main-account-details">
+
+        <div class="grid-main-account-details">
+            <div class="row-1">
+                <a href="/" title="Accueil">
+                    <img src="<%- data_site.logo_icon %>" alt="logo du site" />
+                </a>
+            </div>
+            <div class="row-2">
+                <h1><%= h1 %></h1>
+            </div>
+            <div class="row-3">
+                <label for="identifier">Votre identifiant</label>
+                <input id="identifier" type="text" class="input">
+            </div>
+            <div class="row-4">
+                <label for="mail">Votre adresse mail</label>
+                <input id="mail" type="mail" class="input">
+            </div>
+            <div class="row-5">
+                <label for="password">Votre mot de passe</label>
+                <input id="password" type="password" class="input">
+            </div>
+            <div class="row-6">
+                <button class="btn btn-primary">Appliquer les modifications</button>
+            </div>
+            <div class="row-7">
+                <div>Revenir à la <a class="link" href="/">Page d'accueil</a></div>
+            </div>
+        </div>
+        
+    </main>
+    
+</body>
+
+</html>
