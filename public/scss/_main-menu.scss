@@ -137,6 +137,7 @@
                             .link {
                                 font-size: map-get($font-size, 's');
                                 color: map-get($colors, _black);
+                                width: 100%;
                             }
                         }
                     }

@@ -48,8 +48,8 @@
                 "id": "mainMenu-link-2",
                 "icon": "<i class='fa-brands fa-bilibili'></i>",
                 "text": "Link 2",
-                "href": "#",
-                "target": "",
+                "href": "#faq",
+                "target": "_blank",
                 "title": ""
             },
             {
