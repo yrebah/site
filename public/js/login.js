@@ -1,7 +1,9 @@
 // login.js
 
-import { Loader, Popin, Notify } from "./_init.js";
+import { _Login } from "../class/_login.js";
 
-$(document).ready(() => {
-    
+const login = new _Login();
+
+$(document).ready(()=>{
+    login.SetFunctions()
 })

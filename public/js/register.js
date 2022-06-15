@@ -1,7 +1,9 @@
 // register.js
 
-import { Loader, Popin, Notify } from "./_init.js";
+import { _Register } from "../class/_register.js";
 
-$(document).ready(() => {
-    
+const register = _Register();
+
+$(document).ready(()=>{
+    register.SetFunctions()
 })
