@@ -1,16 +1,16 @@
 // _init.js
 
-import { Theme } from "../class/_theme.js";
-import { Header } from "../class/_header.js";
-import { MainMenu } from "../class/_mainMenu.js";
-import { Loader } from "../class/_loader.js";
-import { SearchBar } from "../class/_searchBar.js";
-import { Popin } from "../class/_popin.js";
+import { _Theme } from "../class/_theme.js";
+import { _Header } from "../class/_header.js";
+import { _MainMenu } from "../class/_mainMenu.js";
+import { _Loader } from "../class/_loader.js";
+import { _SearchBar } from "../class/_searchBar.js";
+import { _Popin } from "../class/_popin.js";
 
-const theme = new Theme('light')
-const header = new Header()
-const mainMenu = new MainMenu()
-const searchBar = new SearchBar()
+const theme = new _Theme('light')
+const header = new _Header()
+const mainMenu = new _MainMenu()
+const searchBar = new _SearchBar()
 
 $(document).ready(() => {
 
@@ -30,39 +30,54 @@ $(document).ready(() => {
 
 // Loader ----------------------------
 
-export const ShowLoader = (id, container) => {
-    const loader = new Loader(id, container)
-    loader.ShowLoader()
+export const Loader = {
+    Show: (id, container) => {
+        const loader = new _Loader(id, container)
+        loader.ShowLoader()
+    },
+    Hide: (id) => {
+        const loader = new _Loader(id)
+        loader.HideLoader()
+    }
 }
 
-export const HideLoader = (id) => {
-    const loader = new Loader(id)
-    loader.HideLoader()
-}
+// example :
+
+// Loader.Show('loader', 'body')
+// setTimeout(() => {
+//     Loader.Hide('#loader')
+// }, 2000)
 
 // Popin ----------------------------
 
-export const ShowPopin = (props) => {
-    const popin = new Popin({
-        id : props.id,
-        title : props.title,
-        content : props.content,
-        footer : props.footer,
-        container : container
-    })
-    popin.ShowPopin()
+export const Popin = {
+    Show: (props) => {
+        const popin = new _Popin({
+            id: props.id,
+            title: props.title,
+            content: props.content,
+            footer: props.footer,
+            container: props.container
+        })
+        popin.ShowPopin()
+    }
 }
 
-export const HidePopin = (id) => {
-    const popin = new Popin(id)
-    popin.HidePopin()
-}
+// example :
+
+// Popin.Show({
+//     id: "popin",
+//     title: "Popin de test",
+//     content: "contenu de la popin",
+//     footer: "Footer popin",
+//     container: "body"
+// })
 
 // Notification ----------------------------
 
-export const ShowNotification = async (props) => {
+export const Notify = async (props) => {
 
-    const getNotif = () => {
+    const createNotif = () => {
 
         const notification = new Notification(props.title, {
             body: props.message,
@@ -73,7 +88,7 @@ export const ShowNotification = async (props) => {
             notification.close()
         }, 10000)
 
-        if (redirect != null) {
+        if (props.redirect != null) {
             notification.addEventListener('click', () => {
                 window.open(props.redirect, '_blank');
             })
@@ -89,5 +104,14 @@ export const ShowNotification = async (props) => {
         granted = permission === 'granted' ? true : false
     }
 
-    if (granted) getNotif()
+    if (granted) createNotif()
 }
+
+// example :
+
+// Notify({
+//     title: "Hello World !",
+//     message: "Message de la notification",
+//     icon: "",
+//     redirect: "/"
+// })

@@ -1,6 +1,6 @@
 // _mainMenu.js
 
-export class MainMenu {
+export class _MainMenu {
 
     SetFunctions() {
         this.SetBtnClose()

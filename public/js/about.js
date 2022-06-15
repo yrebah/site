@@ -1,5 +1,7 @@
 // about.js
 
-// ---- WRITE YOUR FUNCTIONS HERE ----
+import { Loader, Popin, Notify } from "./_init.js";
 
-$(document).ready(() => {})
+$(document).ready(() => {
+    
+})

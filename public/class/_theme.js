@@ -1,6 +1,6 @@
 // _theme.js
 
-export class Theme {
+export class _Theme {
 
     constructor(defaultTheme) {
         this.defaultTheme = defaultTheme

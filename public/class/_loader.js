@@ -1,6 +1,6 @@
 // _loader.js
 
-export class Loader {
+export class _Loader {
 
     constructor(id, container) {
         this.id = id

@@ -1,9 +1,9 @@
 // _header.js
 
-import { MainMenu } from "./_mainMenu.js"
-const mainMenu = new MainMenu()
+import { _MainMenu } from "./_mainMenu.js"
+const mainMenu = new _MainMenu()
 
-export class Header {
+export class _Header {
 
     SetFunctions() {
         this.SetLinkFunctions()

@@ -1,5 +1,7 @@
 // login.js
 
-$(document).ready(()=>{
+import { Loader, Popin, Notify } from "./_init.js";
+
+$(document).ready(() => {
     
 })

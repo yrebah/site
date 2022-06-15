@@ -1,13 +1,13 @@
 // _popin.js
 
-export class Popin {
+export class _Popin {
 
     constructor(props) {
         this.id = props.id
         this.title = props.title
         this.content = props.content
         this.footer = props.footer
-        this.container = container
+        this.container = props.container
         this.defaultContainer = 'body'
     }
 
@@ -56,6 +56,6 @@ export class Popin {
     }
 
     HidePopin() {
-        $(this.id).remove()
+        $(`#${this.id}`).remove()
     }
 }

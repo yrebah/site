@@ -1,9 +1,9 @@
 // _searchBar.js
 
-import { MainMenu } from "./_mainMenu.js"
-const mainMenu = new MainMenu()
+import { _MainMenu } from "./_mainMenu.js"
+const mainMenu = new _MainMenu()
 
-export class SearchBar {
+export class _SearchBar {
 
     SetFunctions() {
         this.SetFocusBlur()

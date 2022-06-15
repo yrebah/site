@@ -1,12 +1,12 @@
 // index.js
 
-import { ShowLoader, HideLoader, ShowPopin, HidePopin, ShowNotification } from "./_init.js";
+import { Loader, Popin, Notify } from "./_init.js";
 
 $(document).ready(() => {
 
-    ShowLoader('loader', 'body')
+    Loader.Show('loader', 'body')
     setTimeout(() => {
-        HideLoader('#loader')
-    },2000)
+        Loader.Hide('#loader')
+    }, 2000)
 
 })
