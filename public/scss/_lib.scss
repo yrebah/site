@@ -9,43 +9,6 @@
     }
 }
 
-h1 {
-    font-size: map-get($font-size, 'xxl');
-    font-weight: 500;
-    margin-bottom: map-get($margin, 'l');
-}
-
-h2 {
-    font-size: map-get($font-size, 'xl');
-    font-weight: 500;
-    margin-bottom: map-get($margin, 'm');
-}
-
-h3 {
-    font-size: map-get($font-size, 'l');
-    font-weight: 500;
-}
-
-h4 {
-    font-size: map-get($font-size, 'm');
-    font-weight: 500;
-}
-
-h5 {
-    font-size: map-get($font-size, 's');
-    font-weight: 500;
-}
-
-h6 {
-    font-size: map-get($font-size, 'xs');
-    font-weight: 500;
-}
-
-p {
-    font-size: map-get($font-size, 'm');
-    font-weight: 200;
-}
-
 .main {
     position: relative;
     min-height: calc(100vh - var(--header-height));

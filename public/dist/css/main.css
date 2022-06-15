@@ -11,6 +11,43 @@
   box-sizing: border-box;
 }
 
+h1 {
+  font-size: clamp(38px, 8vw, 46px);
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-size: clamp(32px, 7vw, 36px);
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: clamp(26px, 6vw, 30px);
+  font-weight: 500;
+}
+
+h4 {
+  font-size: clamp(20px, 5vw, 22px);
+  font-weight: 500;
+}
+
+h5 {
+  font-size: clamp(16px, 4vw, 18px);
+  font-weight: 500;
+}
+
+h6 {
+  font-size: clamp(14px, 3vw, 16px);
+  font-weight: 500;
+}
+
+p {
+  font-size: clamp(20px, 5vw, 22px);
+  font-weight: 200;
+}
+
 button,
 select,
 input {
@@ -85,43 +122,6 @@ body[data-theme="dark"] {
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
-}
-
-h1 {
-  font-size: clamp(38px, 8vw, 46px);
-  font-weight: 500;
-  margin-bottom: 50px;
-}
-
-h2 {
-  font-size: clamp(32px, 7vw, 36px);
-  font-weight: 500;
-  margin-bottom: 30px;
-}
-
-h3 {
-  font-size: clamp(26px, 6vw, 30px);
-  font-weight: 500;
-}
-
-h4 {
-  font-size: clamp(20px, 5vw, 22px);
-  font-weight: 500;
-}
-
-h5 {
-  font-size: clamp(16px, 4vw, 18px);
-  font-weight: 500;
-}
-
-h6 {
-  font-size: clamp(14px, 3vw, 16px);
-  font-weight: 500;
-}
-
-p {
-  font-size: clamp(20px, 5vw, 22px);
-  font-weight: 200;
 }
 
 .main {
