@@ -2,7 +2,7 @@
 
 import { _Register } from "../class/_register.js";
 
-const register = _Register();
+const register = new _Register();
 
 $(document).ready(()=>{
     register.SetFunctions()

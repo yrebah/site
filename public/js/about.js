@@ -1,6 +1,6 @@
 // about.js
 
-import { Loader, Popin, Notify } from "./_init.js";
+import { Loader, Popin, Notify } from "./_common.js";
 
 $(document).ready(() => {
     

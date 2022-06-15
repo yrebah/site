@@ -1,5 +1,7 @@
 // 404.js
 
+import { Loader, Popin, Notify } from "./_common.js";
+
 $(document).ready(()=>{
     $('#span-value-time').html(time_delay)
     set_autoredirect()
