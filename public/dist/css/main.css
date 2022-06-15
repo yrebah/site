@@ -89,32 +89,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  animation: body 1s forwards;
-}
-
-@keyframes body {
-  0% {
-    opacity: 0;
-    pointer-events: none;
-  }
-  100% {
-    opacity: 1;
-    pointer-events: all;
-  }
-}
-
-body[data-theme="light"] {
-  background: white;
-  color: #1a1a1a;
-}
-
-body[data-theme="dark"] {
-  background: black;
-  color: white;
-}
-
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -235,6 +209,32 @@ body[data-theme="dark"] {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  animation: body 1s forwards;
+}
+
+@keyframes body {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+body[data-theme="light"] {
+  background: white;
+  color: #1a1a1a;
+}
+
+body[data-theme="dark"] {
+  background: black;
+  color: white;
 }
 
 .slim-scrollbar::-webkit-scrollbar {
