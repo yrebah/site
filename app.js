@@ -79,6 +79,10 @@ app.get('/login', (req, res) => {
     })
 })
 
+app.post('/login', (req, res) => {
+    console.log('from /login')
+})
+
 // page register
 app.get('/register', (req, res) => {
     res.render('register', {
@@ -86,6 +90,10 @@ app.get('/register', (req, res) => {
         h1: `Créer un compte sur ${data_site.title}`,
         data_site
     })
+})
+
+app.post('/register', (req, res) => {
+    console.log('from /register')
 })
 
 // page forgot-password
@@ -97,6 +105,10 @@ app.get('/forgot-password', (req, res) => {
     })
 })
 
+app.post('/forgot-password', (req, res) => {
+    console.log('from /forgot-password')
+})
+
 // page account-details
 app.get('/account-details', (req, res) => {
     res.render('account-details', {
@@ -104,6 +116,10 @@ app.get('/account-details', (req, res) => {
         h1: `Détails de votre compte ${data_site.title}`,
         data_site
     })
+})
+
+app.post('/account-details', (req, res) => {
+    console.log('from /account-details')
 })
 
 // page 404
