@@ -6,7 +6,7 @@
     justify-content: center;
     height: 100%;
 
-    .grid-main-register {
+    .form {
         position: relative;
         max-height: 90%;
         display: grid;
@@ -135,7 +135,7 @@
 body {
     &[data-theme="light"] {
         .main-register {
-            .grid-main-register {
+            .form {
                 .row-1 {
                     img {
                         filter: map-get($colors, _black-svg);
@@ -151,7 +151,7 @@ body {
 
     &[data-theme="dark"] {
         .main-register {
-            .grid-main-register {
+            .form {
                 .row-1 {
                     img {
                         filter: map-get($colors, _white-svg);

@@ -9,7 +9,7 @@
 
     <main class="main-account-details">
 
-        <div class="grid-main-account-details">
+        <form class="form" action="/account-details" method="POST">
             <div class="row-1">
                 <a href="/" title="Accueil">
                     <img src="<%- data_site.logo_icon %>" alt="logo du site" />
@@ -19,24 +19,24 @@
                 <h1><%= h1 %></h1>
             </div>
             <div class="row-3">
-                <label for="identifier">Votre identifiant</label>
-                <input id="identifier" type="text" class="input">
+                <label for="name">Votre identifiant</label>
+                <input id="name" name="name" type="text" class="input">
             </div>
             <div class="row-4">
-                <label for="mail">Votre adresse mail</label>
-                <input id="mail" type="mail" class="input">
+                <label for="email">Votre adresse email</label>
+                <input id="email" name="email" type="email" class="input">
             </div>
             <div class="row-5">
                 <label for="password">Votre mot de passe</label>
-                <input id="password" type="password" class="input" title="Cliquez pour afficher le mot de passe">
+                <input id="password" name="password" type="password" class="input" title="Cliquez pour afficher le mot de passe">
             </div>
             <div class="row-6">
-                <button id="btn-add-changes" class="btn btn-primary">Appliquer les modifications</button>
+                <button id="btn-add-changes" class="btn btn-primary" type="submit">Appliquer les modifications</button>
             </div>
             <div class="row-7">
                 <div>Revenir à la <a class="link" href="/">Page d'accueil</a></div>
             </div>
-        </div>
+        </form>
         
     </main>
     
