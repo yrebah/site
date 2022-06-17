@@ -109,17 +109,17 @@ app.post('/forgot-password', (req, res) => {
     console.log('from /forgot-password')
 })
 
-// account-details
-app.get('/account-details', (req, res) => {
-    res.render('account-details', {
+// profile
+app.get('/profile', (req, res) => {
+    res.render('profile', {
         title: `${data_site.title} - Détails du compte`,
         h1: `Détails de votre compte ${data_site.title}`,
         data_site
     })
 })
 
-app.post('/account-details', (req, res) => {
-    console.log('from /account-details')
+app.post('/profile', (req, res) => {
+    console.log('from /profile')
 })
 
 // 404

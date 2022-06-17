@@ -2152,14 +2152,14 @@ body[data-theme="dark"] .main-forgot-password .form .row-1 img {
   filter: invert(100%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(102%) contrast(105%);
 }
 
-.main-account-details {
+.main-profile {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
 }
 
-.main-account-details .form {
+.main-profile .form {
   position: relative;
   max-height: 90%;
   display: grid;
@@ -2171,49 +2171,49 @@ body[data-theme="dark"] .main-forgot-password .form .row-1 img {
 }
 
 @media (min-width: 0px) {
-  .main-account-details .form {
+  .main-profile .form {
     min-width: 80%;
   }
 }
 
 @media (min-width: 576px) {
-  .main-account-details .form {
+  .main-profile .form {
     min-width: 75%;
   }
 }
 
 @media (min-width: 768px) {
-  .main-account-details .form {
+  .main-profile .form {
     min-width: 50%;
   }
 }
 
 @media (min-width: 992px) {
-  .main-account-details .form {
+  .main-profile .form {
     min-width: 40%;
   }
 }
 
 @media (min-width: 1200px) {
-  .main-account-details .form {
+  .main-profile .form {
     min-width: 30%;
   }
 }
 
 @media (min-width: 1400px) {
-  .main-account-details .form {
+  .main-profile .form {
     min-width: 25%;
   }
 }
 
-.main-account-details .form .row-1 {
+.main-profile .form .row-1 {
   grid-area: row-1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.main-account-details .form .row-1 a img {
+.main-profile .form .row-1 a img {
   display: block;
   width: 50px;
   filter: invert(0%) sepia(6%) saturate(7476%) hue-rotate(278deg) brightness(106%) contrast(105%);
@@ -2231,82 +2231,82 @@ body[data-theme="dark"] .main-forgot-password .form .row-1 img {
   }
 }
 
-.main-account-details .form .row-2 {
+.main-profile .form .row-2 {
   grid-area: row-2;
   text-align: center;
 }
 
-.main-account-details .form .row-2 h1 {
+.main-profile .form .row-2 h1 {
   font-size: clamp(16px, 4vw, 18px);
   font-weight: 200;
 }
 
-.main-account-details .form .row-3 {
+.main-profile .form .row-3 {
   grid-area: row-3;
   display: flex;
   flex-direction: column;
 }
 
-.main-account-details .form .row-3 label {
+.main-profile .form .row-3 label {
   font-weight: 400;
   margin-bottom: 8px;
   padding-left: 4px;
 }
 
-.main-account-details .form .row-4 {
+.main-profile .form .row-4 {
   grid-area: row-4;
   display: flex;
   flex-direction: column;
 }
 
-.main-account-details .form .row-4 label {
+.main-profile .form .row-4 label {
   font-weight: 400;
   margin-bottom: 8px;
   padding-left: 4px;
 }
 
-.main-account-details .form .row-5 {
+.main-profile .form .row-5 {
   grid-area: row-5;
   display: flex;
   flex-direction: column;
 }
 
-.main-account-details .form .row-5 label {
+.main-profile .form .row-5 label {
   font-weight: 400;
   margin-bottom: 8px;
 }
 
-.main-account-details .form .row-6 {
+.main-profile .form .row-6 {
   grid-area: row-6;
   text-align: center;
 }
 
-.main-account-details .form .row-7 {
+.main-profile .form .row-7 {
   grid-area: row-7;
   text-align: center;
 }
 
-.main-account-details .form .row-7 .link {
+.main-profile .form .row-7 .link {
   border-bottom: 1px solid dodgerblue;
 }
 
-.main-account-details .form .link {
+.main-profile .form .link {
   color: dodgerblue;
 }
 
-body[data-theme="light"] .main-account-details .form .row-1 img {
+body[data-theme="light"] .main-profile .form .row-1 img {
   filter: invert(0%) sepia(6%) saturate(7476%) hue-rotate(278deg) brightness(106%) contrast(105%);
 }
 
-body[data-theme="light"] .main-account-details .form .link {
+body[data-theme="light"] .main-profile .form .link {
   color: dodgerblue;
 }
 
-body[data-theme="dark"] .main-account-details .form .row-1 img {
+body[data-theme="dark"] .main-profile .form .row-1 img {
   filter: invert(100%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(102%) contrast(105%);
 }
 
-body[data-theme="dark"] .main-account-details .form .link {
+body[data-theme="dark"] .main-profile .form .link {
   color: dodgerblue;
 }
 

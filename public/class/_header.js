@@ -40,7 +40,7 @@ export class _Header {
 
     SetBtnUserAuthenticated() {
         $('#btn-user-authenticated').click(() => {
-            $(location).prop('href', 'account-details')
+            $(location).prop('href', 'profile')
         })
     }
 

@@ -1,10 +1,10 @@
-// _account-details.js
+// _profile.js
 
 import { _Common } from "./_common.js"
 
 const common = new _Common()
 
-export class _AccountDetails {
+export class _Profile {
 
     SetFunctions() {
         this.TogglePassword()
