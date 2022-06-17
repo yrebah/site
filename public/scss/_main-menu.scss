@@ -26,11 +26,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: 0.4fr 0.4fr 2.7fr 0.5fr;
         gap: 6px 0px;
-        grid-template-areas:
-            "row-1"
-            "row-2"
-            "row-3"
-            "row-4";
+        grid-template-areas: "row-1" "row-2" "row-3" "row-4";
         padding: map-get($padding, 'xxl');
         box-shadow: 2px 0px 5px -3px rgba(115, 115, 115, 1);
 

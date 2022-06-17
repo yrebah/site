@@ -1092,11 +1092,11 @@ body[data-theme="dark"] .loader .container .dot {
   grid-template-columns: 1fr;
   grid-template-rows: 0.3fr 2.4fr 0.3fr;
   gap: 0px 0px;
-  grid-template-areas: "popin-header" "popin-content" "popin-footer";
+  grid-template-areas: "popin-header" "popin-content" "popin-footer";
   padding: 3%;
   color: black !important;
-  background: white;
-  border: 1px solid lightgray;
+  background: white !important;
+  border: 1px solid #f2f2f2;
   border-radius: 6px;
   min-width: 50%;
   min-height: 50%;
@@ -1216,7 +1216,7 @@ body[data-theme="dark"] .loader .container .dot {
   grid-template-columns: 1fr;
   grid-template-rows: 0.4fr 0.4fr 2.7fr 0.5fr;
   gap: 6px 0px;
-  grid-template-areas: "row-1" "row-2" "row-3" "row-4";
+  grid-template-areas: "row-1" "row-2" "row-3" "row-4";
   padding: 30px;
   box-shadow: 2px 0px 5px -3px #737373;
 }
@@ -1734,7 +1734,7 @@ body[data-theme="dark"] .social-bar .link {
   grid-template-rows: 1fr 0.20fr 1.25fr 1.25fr 0.5fr 1fr 1.80fr;
   gap: 10px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "row-1" "row-2" "row-3" "row-4" "row-5" "row-6" "row-7";
+  grid-template-areas: "row-1" "row-2" "row-3" "row-4" "row-5" "row-6" "row-7";
 }
 
 @media (min-width: 0px) {
@@ -1886,7 +1886,7 @@ body[data-theme="dark"] .main-login .form .link {
   grid-template-rows: 0.85fr 0.25fr 1.35fr 1.35fr 1.35fr 1.35fr 1fr 0.5fr;
   gap: 10px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "row-1" "row-2" "row-3" "row-4" "row-5" "row-6" "row-7" "row-8";
+  grid-template-areas: "row-1" "row-2" "row-3" "row-4" "row-5" "row-6" "row-7" "row-8";
 }
 
 @media (min-width: 0px) {
@@ -2034,7 +2034,7 @@ body[data-theme="dark"] .main-register .form .link {
   grid-template-rows: 1fr 0.5fr 1.2fr 0.7fr 1.6fr;
   gap: 16px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "row-1" "row-2" "row-3" "row-4" "row-5";
+  grid-template-areas: "row-1" "row-2" "row-3" "row-4" "row-5";
 }
 
 @media (min-width: 0px) {
@@ -2167,7 +2167,7 @@ body[data-theme="dark"] .main-forgot-password .form .row-1 img {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 16px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "row-1" "row-2" "row-3" "row-4" "row-5" "row-6" "row-7";
+  grid-template-areas: "row-1" "row-2" "row-3" "row-4" "row-5" "row-6" "row-7";
 }
 
 @media (min-width: 0px) {

@@ -7,11 +7,24 @@ const common = new _Common()
 export class _Login {
 
     SetFunctions() {
-        this.SetBtnLogin()
+        this.SetSubmitForm()
     }
 
-    SetBtnLogin() {
-        console.log('login')
+    SetSubmitForm() {
+        $('#login-form').submit((e)=>{
+
+            e.preventDefault()
+
+            $('#name').removeClass('input-error')
+            $('#password').removeClass('input-error')
+
+            if(!common.IsEmpty($('#name').val()) || !common.IsEmpty($('#password').val())) {
+                console.log('logged !')
+            } else {
+                $('#name').addClass('input-error')
+                $('#password').addClass('input-error')
+            }
+        })
     }
 
 }

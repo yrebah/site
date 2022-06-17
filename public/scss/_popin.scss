@@ -19,7 +19,7 @@
         }
         100% {
             opacity: 1;
-            background: hsla(0, 0%, 0%, 0.60);
+            background: map-get($colors, _transblack);
         }
     }
 
@@ -42,14 +42,11 @@
         grid-template-columns: 1fr;
         grid-template-rows: 0.3fr 2.4fr 0.3fr;
         gap: 0px 0px;
-        grid-template-areas:
-            "popin-header"
-            "popin-content"
-            "popin-footer";
+        grid-template-areas: "popin-header" "popin-content" "popin-footer";
         padding: map-get($padding-block, 'xs');
-        color: black !important;
-        background: white;
-        border: 1px solid lightgray;
+        color: map-get($colors, _black) !important;
+        background: map-get($colors, _white) !important;
+        border: 1px solid map-get($colors, _lightgray);
         border-radius: map-get($border-radius, 'm');
         min-width: 50%;
         min-height: 50%;
@@ -99,7 +96,7 @@
                 position: absolute;
                 top: -15px;
                 right: 0;
-                color: black;
+                color: map-get($colors, _black);
                 font-size: map-get($font-size, 'xl');
                 cursor: pointer;
                 transition: 0.15s;

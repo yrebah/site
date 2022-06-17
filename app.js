@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import express from 'express';
 import fs from 'fs';
+import { queries } from "./controller/db.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -36,7 +37,10 @@ const data_footer = main_json_parsed.footer
 const data_searchBar = main_json_parsed.searchBar
 
 const user = "yoann@gmail.com"
-const user_initial = user.substring(0,1)
+const user_initial = user.substring(0, 1)
+
+const q = await queries.COMMON.GetAllContains('users_x79', 'email', '2')
+console.log(q)
 
 // page Home
 app.get('', (req, res) => {
