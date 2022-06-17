@@ -70,7 +70,7 @@ app.get('/about', (req, res) => {
     })
 })
 
-// page login
+// login
 app.get('/login', (req, res) => {
     res.render('login', {
         title: `${data_site.title} - Connexion`,
@@ -83,7 +83,7 @@ app.post('/login', (req, res) => {
     console.log('from /login')
 })
 
-// page register
+// register
 app.get('/register', (req, res) => {
     res.render('register', {
         title: `${data_site.title} - Créer un compte`,
@@ -96,7 +96,7 @@ app.post('/register', (req, res) => {
     console.log('from /register')
 })
 
-// page forgot-password
+// forgot-password
 app.get('/forgot-password', (req, res) => {
     res.render('forgot-password', {
         title: `${data_site.title} - Mot de passe oublié`,
@@ -109,7 +109,7 @@ app.post('/forgot-password', (req, res) => {
     console.log('from /forgot-password')
 })
 
-// page account-details
+// account-details
 app.get('/account-details', (req, res) => {
     res.render('account-details', {
         title: `${data_site.title} - Détails du compte`,
@@ -122,7 +122,7 @@ app.post('/account-details', (req, res) => {
     console.log('from /account-details')
 })
 
-// page 404
+// 404
 app.get('*', (req, res) => {
     res.render('404', {
         title: `${data_site.title} - 404`,
