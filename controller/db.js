@@ -47,6 +47,24 @@ export const queries = {
     },
 
     USER: {
+        GetName: async(id) => {
+            const db = await dbConnection()
+            const result = await db.query(`SELECT name FROM users_x79 WHERE id = ${id}`)
+            await db.end()
+            return result
+        },
+        GetEmail: async(id) => {
+            const db = await dbConnection()
+            const result = await db.query(`SELECT email FROM users_x79 WHERE id = ${id}`)
+            await db.end()
+            return result
+        },
+        GetPassword: async(id) => {
+            const db = await dbConnection()
+            const result = await db.query(`SELECT password FROM users_x79 WHERE id = ${id}`)
+            await db.end()
+            return result
+        },
         UpdateName: async (name, id) => {
             const db = await dbConnection()
             db.query(`UPDATE users_x79 SET name = '${name}' WHERE id = ${id}`)

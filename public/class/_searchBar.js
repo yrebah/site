@@ -1,8 +1,5 @@
 // _searchBar.js
 
-import { _MainMenu } from "./_mainMenu.js"
-const mainMenu = new _MainMenu()
-
 export class _SearchBar {
 
     SetFunctions() {

@@ -3,7 +3,9 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import express from 'express';
 import fs from 'fs';
+import bodyParser from 'body-parser';
 import { queries } from "./controller/db.js";
+import { tools } from "./controller/tools.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -12,6 +14,7 @@ const app = express();
 const port = 3000;
 
 // Static files
+app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static(__dirname + '/public'));
 app.use('/css', express.static(__dirname + '/public/dist/css'));
 app.use('/js', express.static(__dirname + '/public/js'));
@@ -36,11 +39,8 @@ const data_social = main_json_parsed.social
 const data_footer = main_json_parsed.footer
 const data_searchBar = main_json_parsed.searchBar
 
-const user = "yoann@gmail.com"
-const user_initial = user.substring(0, 1)
-
-const q = await queries.COMMON.GetAllContains('users_x79', 'email', '2')
-console.log(q)
+let userName = await queries.USER.GetName('5')
+userName = userName[0].name
 
 // page Home
 app.get('', (req, res) => {
@@ -53,8 +53,7 @@ app.get('', (req, res) => {
         data_social,
         data_footer,
         data_searchBar,
-        user,
-        user_initial
+        userName
     })
 })
 
@@ -84,7 +83,12 @@ app.get('/login', (req, res) => {
 })
 
 app.post('/login', (req, res) => {
-    console.log('from /login')
+    
+    let data = {
+        name: req.body.name,
+        password: req.body.password
+    }
+
 })
 
 // register
@@ -97,7 +101,16 @@ app.get('/register', (req, res) => {
 })
 
 app.post('/register', (req, res) => {
-    console.log('from /register')
+
+    let data = {
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password,
+        confirmPassword: req.body.confirmPassword
+    }
+    
+    
+
 })
 
 // forgot-password

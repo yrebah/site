@@ -34,9 +34,9 @@
         </ul>
     </section>
     <section>
-        <% if(user != "") { %>
-            <button id="btn-user-authenticated" class="btn btn-user-initial" title="Compte de <%- user %>">
-                <%- user_initial %>
+        <% if(userName != "") { %>
+            <button id="btn-user-authenticated" class="btn btn-user-initial" title="Profil de <%- userName %>">
+                <%- userName.substring(0, 1) %>
             </button>
         <% } else { %>
             <button id="btn-login" class="btn btn-icon" title="Se connecter">

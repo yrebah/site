@@ -9,7 +9,7 @@
 
     <main class="main-login">
 
-        <form id="login-form" class="form">
+        <form id="login-form" class="form" action="/login" method="POST">
             <div class="row-1">
                 <a href="/" title="Accueil">
                     <img src="<%- data_site.logo_icon %>" alt="logo du site" />
@@ -20,17 +20,17 @@
             </div>
             <div class="row-3">
                 <label for="name">Identifiant</label>
-                <input id="name" name="name" type="text" class="input" placeholder="Identifiant ou mail">
+                <input name="name" type="text" class="input" placeholder="Identifiant ou mail">
             </div>
             <div class="row-4">
                 <label for="password">Mot de passe</label>
-                <input id="password" name="password" type="password" class="input" placeholder="Mot de passe">
+                <input name="password" type="password" class="input" placeholder="Mot de passe">
             </div>
             <div class="row-5">
                 <a class="link" href="/forgot-password">Mot de passe oublié ?</a>
             </div>
             <div class="row-6">
-                <button id="btn-login" class="btn btn-primary" type="submit">Connexion</button>
+                <button class="btn btn-primary" type="submit">Connexion</button>
             </div>
             <div class="row-7">
                 <div>Nouveau sur <%- data_site.title %> ? <a class="link" href="/register">Créer un compte</a></div>
