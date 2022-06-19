@@ -23,8 +23,34 @@ export const tools = {
     },
     RegisterValidator: (data) => {
         if (data == null) return
-        else {
-            return data.name != '' && data.email != '' && data.password != '' && data.confirmPassword != ''
+        if (data.name != '' && data.email != '' && data.password != '' && data.confirmPassword != '') {
+            if (tools.IsMail(data.email) && data.password == data.confirmPassword) {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return false
+        }
+    },
+    ProfileValidator: (data) => {
+        if (data == null) return
+        if (data.name != '' && data.email != '' && data.password != '') {
+            if (tools.IsMail(data.email) && tools.IsMail(data.password)) {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return false
+        }
+    },
+    ForgotPasswordValidator: (data) => {
+        if (data == null) return
+        if (data.email != '') {
+            return tools.IsMail(data.email)
+        } else {
+            return false
         }
     }
 }

@@ -2,6 +2,8 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 import express from 'express';
+import session from 'express-session';
+import passport from 'passport';
 import fs from 'fs';
 import bodyParser from 'body-parser';
 import { queries } from "./controller/db.js";
@@ -13,8 +15,8 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const port = 3000;
 
-// Static files
-app.use(bodyParser.urlencoded({extended: false}))
+// app use
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(__dirname + '/public'));
 app.use('/css', express.static(__dirname + '/public/dist/css'));
 app.use('/js', express.static(__dirname + '/public/js'));
@@ -68,8 +70,7 @@ app.get('/about', (req, res) => {
         data_social,
         data_footer,
         data_searchBar,
-        user,
-        user_initial
+        userName
     })
 })
 
@@ -83,10 +84,14 @@ app.get('/login', (req, res) => {
 })
 
 app.post('/login', (req, res) => {
-    
+
     let data = {
         name: req.body.name,
         password: req.body.password
+    }
+
+    if(tools.LoginValidator(data)) {
+        console.log('register ok')
     }
 
 })
@@ -108,13 +113,16 @@ app.post('/register', (req, res) => {
         password: req.body.password,
         confirmPassword: req.body.confirmPassword
     }
-    
-    
+
+    if(tools.RegisterValidator(data)) {
+        console.log('register ok')
+    }
 
 })
 
 // forgot-password
 app.get('/forgot-password', (req, res) => {
+
     res.render('forgot-password', {
         title: `${data_site.title} - Mot de passe oublié`,
         h1: `Renouveler votre mot de passe ${data_site.title}`,
@@ -123,7 +131,14 @@ app.get('/forgot-password', (req, res) => {
 })
 
 app.post('/forgot-password', (req, res) => {
-    console.log('from /forgot-password')
+
+    let data = {
+        email: req.body.email
+    }
+
+    if(tools.ForgotPasswordValidator(data)) {
+        console.log('register ok')
+    }
 })
 
 // profile
@@ -131,12 +146,22 @@ app.get('/profile', (req, res) => {
     res.render('profile', {
         title: `${data_site.title} - Détails du compte`,
         h1: `Détails de votre compte ${data_site.title}`,
-        data_site
+        data_site,
+        userName
     })
 })
 
 app.post('/profile', (req, res) => {
-    console.log('from /profile')
+
+    let data = {
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password
+    }
+
+    if(tools.ProfileValidator(data)) {
+        console.log('register ok')
+    }
 })
 
 // 404
@@ -149,4 +174,4 @@ app.get('*', (req, res) => {
 })
 
 // Listen on port 3000
-app.listen(port, () => console.info(`listening on port ${port}`))
+app.listen(port, () => console.info(`listening on http://localhost:${port}`))
