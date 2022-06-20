@@ -2,17 +2,18 @@
 
 import { _Loader } from "../class/_loader.js";
 import { _Popin } from "../class/_popin.js";
+import { _Headband } from "../class/_headband.js";
 
 // Loader ----------------------------
 
 export const Loader = {
     Show: (id, container) => {
         const loader = new _Loader(id, container)
-        loader.ShowLoader()
+        loader.Show()
     },
     Hide: (id) => {
         const loader = new _Loader(id)
-        loader.HideLoader()
+        loader.Hide()
     }
 }
 
@@ -90,3 +91,28 @@ export const Notify = async (props) => {
 //     icon: "",
 //     redirect: "/"
 // })
+
+// Headband ----------------------------
+
+export const Headband = {
+    Show: (id, container, message, type) => {
+        const headband = new _Headband(id, container, message, type)
+        headband.Show()
+    },
+    Hide: (id) => {
+        const headband = new _Headband(id)
+        headband.Hide()
+    }
+}
+
+// example :
+
+// Headband.Show(
+//     'Headband', 
+//     'main',
+//     'Ceci est un message quelconque',
+//     'error'
+// )
+// setTimeout(() => {
+//     Headband.Hide('#Headband')
+// }, 2000)

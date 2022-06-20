@@ -1189,6 +1189,59 @@ body[data-theme="dark"] .loader .container .dot {
   align-items: end;
 }
 
+.headband {
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  animation: headband 0.5s forwards;
+}
+
+@keyframes headband {
+  0% {
+    opacity: 0;
+    height: 0px;
+  }
+  100% {
+    opacity: 1;
+    height: 40px;
+  }
+}
+
+.headband.success {
+  background: dodgerblue;
+}
+
+.headband.error {
+  background: #df2a2a;
+}
+
+.headband.global {
+  position: fixed;
+}
+
+.headband.specific {
+  position: absolute;
+}
+
+.headband .message {
+  color: white;
+  font-size: clamp(14px, 3vw, 16px);
+  animation: message 1s forwards;
+}
+
+@keyframes message {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .main-menu {
   position: fixed;
   z-index: 8;

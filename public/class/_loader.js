@@ -8,7 +8,7 @@ export class _Loader {
         this.defaultContainer = 'body'
     }
 
-    ShowLoader() {
+    Show() {
         if (this.container == this.defaultContainer) {
             $('body').append(
                 `<div id="${this.id}" class="loader global">
@@ -38,7 +38,7 @@ export class _Loader {
         }
     }
 
-    HideLoader() {
+    Hide() {
         $(this.id).remove()
     }
 }

@@ -1,6 +1,6 @@
 // index.js
 
-import { Loader, Popin, Notify } from "./_common.js";
+import { Loader, Popin, Notify, Headband } from "./_common.js";
 
 $(document).ready(() => {
 
