@@ -251,7 +251,6 @@ body {
             section {
                 &:nth-child(1) {
                     .container-description {
-
                         .row {
                             img {
                                 filter: map-get($colors, _white-svg);
@@ -263,6 +262,7 @@ body {
                         }
         
                         p {
+                            font-size: map-get($font-size, 'xs');
                             color: map-get($colors, _lightgray);
                         }
                     }

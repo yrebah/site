@@ -1730,6 +1730,7 @@ body[data-theme="dark"] .footer section:nth-child(1) .container-description .row
 }
 
 body[data-theme="dark"] .footer section:nth-child(1) .container-description p {
+  font-size: clamp(14px, 3vw, 16px);
   color: #f2f2f2;
 }
 
