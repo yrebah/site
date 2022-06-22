@@ -1,5 +1,12 @@
 // common tools
 export const tools = {
+    GetUrlParameter: (url, parameter) => {
+        const urlParams = new URLSearchParams(url)
+        return urlParams.get(parameter)
+    },
+    IsSameValue: (val1, val2) => {
+        return val1 === val2
+    },
     IsEmpty: (data) => {
         return data.length == 0
     },

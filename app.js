@@ -67,7 +67,7 @@ app.get('/about', (req, res) => {
 app.get('/login', (req, res) => {
     res.render('login', {
         title: `${mainData.data_site.title} - Connexion`,
-        h1: `Se connecter à ${data_site.title}`,
+        h1: `Se connecter à ${mainData.data_site.title}`,
         data_site: mainData.data_site
     })
 })
@@ -97,23 +97,31 @@ app.get('/register', (req, res) => {
 app.post('/register', async (req, res) => {
 
     let data = {
-        name: req.body.name,
-        email: req.body.email,
-        password: req.body.password,
-        confirmPassword: req.body.confirmPassword
+        name: !tools.IsEmpty(req.body.name) ? req.body.name : null,
+        email: tools.IsMail(req.body.email) ? req.body.email : null,
+        password: tools.IsPassword(req.body.password) ? req.body.password : null,
+        confirmPassword: tools.IsSameValue(req.body.password, req.body.confirmPassword) ? req.body.confirmPassword : null
     }
 
-    try {
-        const alreadyRegister = await queries.USER.AlreadyRegister(req.body.email)
-        if(alreadyRegister.length > 0) {
-            res.redirect(`http://localhost:3000/user-already-exist`)
-        } else {
-            const hashedPassword = await bcrypt.hash(data.password, 10)
-            queries.USER.Register(req.body.name, req.body.email, hashedPassword)
-            res.redirect(`http://localhost:3000/register-success`)
+    if(!tools.RegisterValidator(data)) {
+        const urlParams = btoa(JSON.stringify(data))
+        res.redirect(`/register?${urlParams}`)
+    } else {
+        try {
+
+            const alreadyRegister = await queries.USER.AlreadyRegister(req.body.email)
+
+            if(alreadyRegister.length > 0) {
+                res.redirect(`/user-already-exist`)
+            } else {
+                const hashedPassword = await bcrypt.hash(data.password, 10)
+                queries.USER.Register(req.body.name, req.body.email, hashedPassword)
+                res.redirect(`/register-success`)
+            }
+
+        } catch (error) {
+            console.log(error)
         }
-    } catch (error) {
-        console.log(error)
     }
 
 })
