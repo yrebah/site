@@ -12,8 +12,9 @@ export const tools = {
         return regex.test(data)
     },
     IsPassword: (data) => {
-        const regex = new RegExp(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8,})$/)
-        return regex.test(data)
+        // const regex = new RegExp(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8,})$/)
+        // return regex.test(data)
+        return data
     },
     LoginValidator: (data) => {
         if (data == null) return

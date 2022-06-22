@@ -3,9 +3,9 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import express from 'express';
 import session from 'express-session';
-import passport from 'passport';
 import fs from 'fs';
 import bodyParser from 'body-parser';
+import bcrypt from 'bcrypt';
 import { queries } from "./controller/db.js";
 import { tools } from "./controller/tools.js";
 
@@ -41,7 +41,7 @@ const data_social = main_json_parsed.social
 const data_footer = main_json_parsed.footer
 const data_searchBar = main_json_parsed.searchBar
 
-let userName = await queries.USER.GetName('5')
+let userName = await queries.USER.GetNameById('5')
 userName = userName[0].name
 
 // page Home
@@ -90,7 +90,7 @@ app.post('/login', (req, res) => {
         password: req.body.password
     }
 
-    if(tools.LoginValidator(data)) {
+    if (tools.LoginValidator(data)) {
         console.log('register ok')
     }
 
@@ -105,7 +105,7 @@ app.get('/register', (req, res) => {
     })
 })
 
-app.post('/register', (req, res) => {
+app.post('/register', async (req, res) => {
 
     let data = {
         name: req.body.name,
@@ -114,10 +114,37 @@ app.post('/register', (req, res) => {
         confirmPassword: req.body.confirmPassword
     }
 
-    if(tools.RegisterValidator(data)) {
-        console.log('register ok')
+    try {
+        const alreadyRegister = await queries.USER.AlreadyRegister(req.body.email)
+        if(alreadyRegister.length > 0) {
+            res.redirect(`http://localhost:3000/user-already-exist`)
+        } else {
+            const hashedPassword = await bcrypt.hash(data.password, 10)
+            queries.USER.Register(req.body.name, req.body.email, hashedPassword)
+            res.redirect(`http://localhost:3000/register-success`)
+        }
+    } catch (error) {
+        console.log(error)
     }
 
+})
+
+// register-success
+app.get('/register-success', (req, res) => {
+    res.render('register-success', {
+        title: `${data_site.title} - Compte créé avec succès !`,
+        h1: `Votre compte ${data_site.title} a été créé avec succès !`,
+        data_site
+    })
+})
+
+// user-already-exist
+app.get('/user-already-exist', (req, res) => {
+    res.render('user-already-exist', {
+        title: `${data_site.title} - Erreur lors de la création du compte`,
+        h1: `L'adresse mail renseignée correpond déjà à un compte ${data_site.title}`,
+        data_site
+    })
 })
 
 // forgot-password
@@ -136,7 +163,7 @@ app.post('/forgot-password', (req, res) => {
         email: req.body.email
     }
 
-    if(tools.ForgotPasswordValidator(data)) {
+    if (tools.ForgotPasswordValidator(data)) {
         console.log('register ok')
     }
 })
@@ -159,7 +186,7 @@ app.post('/profile', (req, res) => {
         password: req.body.password
     }
 
-    if(tools.ProfileValidator(data)) {
+    if (tools.ProfileValidator(data)) {
         console.log('register ok')
     }
 })

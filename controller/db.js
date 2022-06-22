@@ -47,35 +47,46 @@ export const queries = {
     },
 
     USER: {
-        GetName: async(id) => {
+        Register: async (name, email, password) => {
+            const db = await dbConnection()
+            await db.query(`INSERT INTO users_x79 (name, email, password) values ('${name}', '${email}', '${password}')`)
+            await db.end()
+        },
+        AlreadyRegister: async (email) => {
+            const db = await dbConnection()
+            const result = await db.query(`SELECT * FROM users_x79 WHERE email = '${email}'`)
+            await db.end()
+            return result
+        },
+        GetNameById: async(id) => {
             const db = await dbConnection()
             const result = await db.query(`SELECT name FROM users_x79 WHERE id = ${id}`)
             await db.end()
             return result
         },
-        GetEmail: async(id) => {
+        GetEmailById: async(id) => {
             const db = await dbConnection()
             const result = await db.query(`SELECT email FROM users_x79 WHERE id = ${id}`)
             await db.end()
             return result
         },
-        GetPassword: async(id) => {
+        GetPasswordById: async(id) => {
             const db = await dbConnection()
             const result = await db.query(`SELECT password FROM users_x79 WHERE id = ${id}`)
             await db.end()
             return result
         },
-        UpdateName: async (name, id) => {
+        UpdateNameById: async (name, id) => {
             const db = await dbConnection()
             db.query(`UPDATE users_x79 SET name = '${name}' WHERE id = ${id}`)
             await db.end()
         },
-        UpdateEmail: async (email, id) => {
+        UpdateEmailById: async (email, id) => {
             const db = await dbConnection()
             db.query(`UPDATE users_x79 SET email = '${email}' WHERE id = '${id}'`)
             await db.end()
         },
-        UpdatePassword: async (password, id) => {
+        UpdatePasswordById: async (password, id) => {
             const db = await dbConnection()
             db.query(`UPDATE users_x79 SET password = '${password}' WHERE id = ${id}`)
             await db.end()
