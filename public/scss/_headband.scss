@@ -41,6 +41,7 @@
     .message {
         color: map-get($colors, _white);
         font-size: map-get($font-size, 'xs');
+        font-weight: 300;
         animation: message 1s forwards;
 
         @keyframes message {

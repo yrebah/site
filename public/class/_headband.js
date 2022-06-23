@@ -31,6 +31,6 @@ export class _Headband {
     }
 
     Hide() {
-        $(this.id).remove()
+        $(`#${this.id}`).remove()
     }
 }

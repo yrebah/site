@@ -6,9 +6,12 @@ import session from 'express-session';
 import fs from 'fs';
 import bodyParser from 'body-parser';
 import bcrypt from 'bcrypt';
+import cookieParser from 'cookie-parser';
+import { createToken } from './controller/JWT.js'
 import { queries } from "./controller/db.js";
 import { tools } from "./controller/tools.js";
 import { mainData } from "./controller/mainData.js";
+import 'dotenv/config';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -17,6 +20,7 @@ const app = express();
 const port = 3000;
 
 // app use
+app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(__dirname + '/public'));
 app.use('/css', express.static(__dirname + '/public/dist/css'));
@@ -30,7 +34,7 @@ app.use('/json', express.static(__dirname + '/public/json'));
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
-let userName = await queries.USER.GetNameById('5')
+let userName = await queries.USER.GetNameById(process.env.USERS_TABLE, '18')
 userName = userName[0].name
 
 // page Home
@@ -72,15 +76,35 @@ app.get('/login', (req, res) => {
     })
 })
 
-app.post('/login', (req, res) => {
+app.post('/login', async (req, res) => {
 
     let data = {
-        name: req.body.name,
-        password: req.body.password
+        name: !tools.IsEmpty(req.body.name) ? req.body.name : null,
+        password: tools.IsPassword(req.body.password) ? req.body.password : null
     }
 
-    if (tools.LoginValidator(data)) {
-        console.log('register ok')
+    if (!tools.LoginValidator(data)) res.redirect(`/login`)
+    else {
+        const user = await queries.USER.GetUserByName(process.env.USERS_TABLE, req.body.name)
+        if(user.length == 0) res.redirect(`/login`)
+        else {
+            const password = await queries.USER.GetPasswordByName(process.env.USERS_TABLE, req.body.name)
+            bcrypt.compare(req.body.password, password[0].password).then((match) => {
+                if(!match) {
+                    const urlParams = btoa('wrongLogin')
+                    res.redirect(`/login?${urlParams}`)
+                } else {
+                    const accessToken = createToken(user[0].name, user[0].id)
+                    console.log(accessToken)
+                    res.cookie(`token`, accessToken, {
+                        expires: new Date(Date.now() + 9999999),
+                        secure: true,
+                        httpOnly: true
+                    })
+                    //res.status(200).send({ user, token: jwt.token });
+                }
+            })
+        }
     }
 
 })
@@ -104,26 +128,22 @@ app.post('/register', async (req, res) => {
     }
 
     if(!tools.RegisterValidator(data)) {
+
         const urlParams = btoa(JSON.stringify(data))
         res.redirect(`/register?${urlParams}`)
+
     } else {
-        try {
 
-            const alreadyRegister = await queries.USER.AlreadyRegister(req.body.email)
+        const alreadyRegister = await queries.USER.AlreadyRegister(process.env.USERS_TABLE, req.body.email)
 
-            if(alreadyRegister.length > 0) {
-                res.redirect(`/user-already-exist`)
-            } else {
-                const hashedPassword = await bcrypt.hash(data.password, 10)
-                queries.USER.Register(req.body.name, req.body.email, hashedPassword)
-                res.redirect(`/register-success`)
-            }
-
-        } catch (error) {
-            console.log(error)
+        if(alreadyRegister.length > 0) {
+            res.redirect(`/user-already-exist`)
+        } else {
+            const hashedPassword = await bcrypt.hash(data.password, 10)
+            queries.USER.Register(process.env.USERS_TABLE, req.body.name, req.body.email, hashedPassword)
+            res.redirect(`/register-success`)
         }
     }
-
 })
 
 // register-success

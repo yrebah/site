@@ -47,48 +47,60 @@ export const queries = {
     },
 
     USER: {
-        Register: async (name, email, password) => {
+        Register: async (table, name, email, password) => {
             const db = await dbConnection()
-            await db.query(`INSERT INTO users_x79 (name, email, password) values ('${name}', '${email}', '${password}')`)
+            await db.query(`INSERT INTO ${table} (name, email, password) values ('${name}', '${email}', '${password}')`)
             await db.end()
         },
-        AlreadyRegister: async (email) => {
+        AlreadyRegister: async (table, email) => {
             const db = await dbConnection()
-            const result = await db.query(`SELECT * FROM users_x79 WHERE email = '${email}'`)
-            await db.end()
-            return result
-        },
-        GetNameById: async(id) => {
-            const db = await dbConnection()
-            const result = await db.query(`SELECT name FROM users_x79 WHERE id = ${id}`)
+            const result = await db.query(`SELECT * FROM ${table} WHERE email = '${email}'`)
             await db.end()
             return result
         },
-        GetEmailById: async(id) => {
+        GetUserByName: async(table, name) => {
             const db = await dbConnection()
-            const result = await db.query(`SELECT email FROM users_x79 WHERE id = ${id}`)
+            const result = await db.query(`SELECT * FROM ${table} WHERE name = '${name}'`)
             await db.end()
             return result
         },
-        GetPasswordById: async(id) => {
+        GetNameById: async(table, id) => {
             const db = await dbConnection()
-            const result = await db.query(`SELECT password FROM users_x79 WHERE id = ${id}`)
+            const result = await db.query(`SELECT name FROM ${table} WHERE id = '${id}'`)
             await db.end()
             return result
         },
-        UpdateNameById: async (name, id) => {
+        GetEmailById: async(table, id) => {
             const db = await dbConnection()
-            db.query(`UPDATE users_x79 SET name = '${name}' WHERE id = ${id}`)
+            const result = await db.query(`SELECT email FROM ${table} WHERE id = '${id}'`)
+            await db.end()
+            return result
+        },
+        GetPasswordByName: async(table, name) => {
+            const db = await dbConnection()
+            const result = await db.query(`SELECT password FROM ${table} WHERE name = '${name}'`)
+            await db.end()
+            return result
+        },
+        GetPasswordById: async(table, id) => {
+            const db = await dbConnection()
+            const result = await db.query(`SELECT password FROM ${table} WHERE id = '${id}'`)
+            await db.end()
+            return result
+        },
+        UpdateNameById: async (table, name, id) => {
+            const db = await dbConnection()
+            db.query(`UPDATE ${table} SET name = '${name}' WHERE id = '${id}'`)
             await db.end()
         },
-        UpdateEmailById: async (email, id) => {
+        UpdateEmailById: async (table, email, id) => {
             const db = await dbConnection()
-            db.query(`UPDATE users_x79 SET email = '${email}' WHERE id = '${id}'`)
+            db.query(`UPDATE ${table} SET email = '${email}' WHERE id = '${id}'`)
             await db.end()
         },
-        UpdatePasswordById: async (password, id) => {
+        UpdatePasswordById: async (table, password, id) => {
             const db = await dbConnection()
-            db.query(`UPDATE users_x79 SET password = '${password}' WHERE id = ${id}`)
+            db.query(`UPDATE ${table} SET password = '${password}' WHERE id = '${id}'`)
             await db.end()
         }
     }

@@ -41,6 +41,10 @@ export class _Register {
             )
 
             headband.Show()
+
+            setTimeout(() => {
+                headband.Hide()
+            },5000)
         }
 
     }

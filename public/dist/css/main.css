@@ -338,6 +338,11 @@ body[data-theme="light"] .input:focus-within {
   border-color: dodgerblue !important;
 }
 
+body[data-theme="light"] .input:-webkit-autofill, body[data-theme="light"] .input:-webkit-autofill:hover, body[data-theme="light"] .input:-webkit-autofill:focus, body[data-theme="light"] .input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: black !important;
+}
+
 body[data-theme="dark"] .input {
   border-color: #262626;
   color: white;
@@ -346,6 +351,11 @@ body[data-theme="dark"] .input {
 
 body[data-theme="dark"] .input:focus-within {
   border-color: dodgerblue !important;
+}
+
+body[data-theme="dark"] .input:-webkit-autofill, body[data-theme="dark"] .input:-webkit-autofill:hover, body[data-theme="dark"] .input:-webkit-autofill:focus, body[data-theme="dark"] .input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px black inset !important;
+  -webkit-text-fill-color: white !important;
 }
 
 .header {
@@ -626,6 +636,11 @@ body[data-theme="dark"] .header img {
   width: 100%;
 }
 
+.btn.btn-login {
+  background: dodgerblue;
+  color: white;
+}
+
 .btn.btn-primary {
   background: dodgerblue;
   color: white;
@@ -685,6 +700,11 @@ body[data-theme="dark"] .header img {
   padding-right: 0;
 }
 
+body[data-theme="light"] .btn.btn-login {
+  background: dodgerblue;
+  color: white;
+}
+
 body[data-theme="light"] .btn.btn-primary {
   background: #34a075;
   color: white;
@@ -696,6 +716,11 @@ body[data-theme="light"] .btn.btn-icon {
 
 body[data-theme="light"] .btn.btn-user-initial {
   background: dodgerblue;
+}
+
+body[data-theme="dark"] .btn.btn-login {
+  background: dodgerblue;
+  color: white;
 }
 
 body[data-theme="dark"] .btn.btn-primary {
@@ -1230,6 +1255,7 @@ body[data-theme="dark"] .loader .container .dot {
 .headband .message {
   color: white;
   font-size: clamp(14px, 3vw, 16px);
+  font-weight: 300;
   animation: message 1s forwards;
 }
 

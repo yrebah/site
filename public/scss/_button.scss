@@ -8,6 +8,11 @@
     font-size: map-get($font-size, 'xs');
     width: 100%;
 
+    &.btn-login {
+        background: map-get($colors, _blue);
+        color: white;
+    }
+
     &.btn-primary {
         background: map-get($colors, _blue);
         color: white;
@@ -71,6 +76,11 @@
 body {
     &[data-theme="light"] {
         .btn {
+            &.btn-login {
+                background: map-get($colors, _blue);
+                color: white;
+            }
+
             &.btn-primary {
                 background: map-get($colors, _green);
                 color: map-get($colors, _white);
@@ -88,6 +98,11 @@ body {
 
     &[data-theme="dark"] {
         .btn {
+            &.btn-login {
+                background: map-get($colors, _blue);
+                color: white;
+            }
+            
             &.btn-primary {
                 background: map-get($colors, _green);
                 color: map-get($colors, _white);
