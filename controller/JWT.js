@@ -1,9 +1,35 @@
 import jwt from 'jsonwebtoken';
 import 'dotenv/config';
 
-export const createToken = (name, id) => {
-    const accessToken = jwt.sign({user: name, id: id}, process.env.JWT_SECRET)
-    return accessToken
+// create token
+export const signToken = (name, id) => {
+    const token = jwt.sign({user: name, id: id}, process.env.JWT_SECRET)
+    return token
+}
+
+// verify token
+export const verifyToken = (name, id) => {
+    const token = jwt.verify({user: name, id: id}, process.env.JWT_SECRET)
+    return token
+}
+
+// is authorized by token (middleware)
+export const authByToken = (req, res, next) => {
+
+    const { authorization } = req.headers
+
+    console.log(authorization)
+
+    if(authorization) {
+        const token = authorization.split(' ')[1]
+        const result = jwt.verify(token, process.env.JWT_SECRET)
+
+        req.user = result
+        next()
+
+    } else {
+        res.redirect(`/login`)
+    }
 }
 
 export const verifyJWT = (req, res, next) => {

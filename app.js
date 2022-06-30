@@ -7,7 +7,7 @@ import fs from 'fs';
 import bodyParser from 'body-parser';
 import bcrypt from 'bcrypt';
 import cookieParser from 'cookie-parser';
-import { createToken, verifyJWT } from './controller/JWT.js'
+import { signToken, verifyToken, authByToken } from './controller/JWT.js'
 import { queries } from "./controller/db.js";
 import { tools } from "./controller/tools.js";
 import { mainData } from "./controller/mainData.js";
@@ -17,7 +17,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
 // app use
 app.use(cookieParser());
@@ -34,7 +34,11 @@ app.use('/json', express.static(__dirname + '/public/json'));
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
-let user_name = null
+let user_obj = {
+    id: null,
+    name: null,
+    email: null
+}
 
 // page Home
 app.get('', (req, res) => {
@@ -47,7 +51,7 @@ app.get('', (req, res) => {
         data_social: mainData.data_social,
         data_footer: mainData.data_footer,
         data_searchBar: mainData.data_searchBar,
-        user_name
+        user_obj
     })
 })
 
@@ -62,7 +66,7 @@ app.get('/about', (req, res) => {
         data_social: mainData.data_social,
         data_footer: mainData.data_footer,
         data_searchBar: mainData.data_searchBar,
-        user_name
+        user_obj
     })
 })
 
@@ -94,11 +98,11 @@ app.post('/login', async (req, res) => {
             const urlParams = btoa('wrongLogin')
             res.redirect(`/login?${urlParams}`)
         } else {
-            const accessToken = createToken(user[0].name, user[0].id)
+            const accessToken = signToken(user[0].name, user[0].id)
             res.cookie('token', accessToken, {
                 httpOnly: true
             })
-            user_name = user[0].name
+            user_obj = { id: user[0].id, name: user[0].name, email: user[0].email}
             res.redirect(`/`)
         }
     })
@@ -179,12 +183,12 @@ app.post('/forgot-password', (req, res) => {
 })
 
 // profile
-app.get('/profile', verifyJWT, (req, res) => {
+app.get('/profile', (req, res) => {
     res.render('profile', {
         title: `${mainData.data_site.title} - Détails du compte`,
         h1: `Détails de votre compte ${mainData.data_site.title}`,
         data_site: mainData.data_site,
-        userName
+        user_obj
     })
 })
 
