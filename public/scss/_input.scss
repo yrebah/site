@@ -35,6 +35,10 @@ body {
                 border-color: map-get($colors, _blue) !important;
             }
 
+            &.input-error {
+                border-color: map-get($colors, _red) !important;
+            }
+
             &:-webkit-autofill,
             &:-webkit-autofill:hover,
             &:-webkit-autofill:focus,
@@ -53,6 +57,10 @@ body {
 
             &:focus-within {
                 border-color: map-get($colors, _blue) !important;
+            }
+
+            &.input-error {
+                border-color: map-get($colors, _darkred) !important;
             }
 
             &:-webkit-autofill,

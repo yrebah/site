@@ -27,7 +27,7 @@
     }
 
     &.error {
-        background: map-get($colors, _lightred);
+        background: map-get($colors, _darkred);
     }
 
     &.global {

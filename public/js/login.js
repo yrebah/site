@@ -6,4 +6,5 @@ const login = new _Login();
 
 $(document).ready(()=>{
     login.SetFunctions()
+    login.SetErrorFields(window.location.href)
 })

@@ -338,6 +338,10 @@ body[data-theme="light"] .input:focus-within {
   border-color: dodgerblue !important;
 }
 
+body[data-theme="light"] .input.input-error {
+  border-color: red !important;
+}
+
 body[data-theme="light"] .input:-webkit-autofill, body[data-theme="light"] .input:-webkit-autofill:hover, body[data-theme="light"] .input:-webkit-autofill:focus, body[data-theme="light"] .input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
   -webkit-text-fill-color: black !important;
@@ -351,6 +355,10 @@ body[data-theme="dark"] .input {
 
 body[data-theme="dark"] .input:focus-within {
   border-color: dodgerblue !important;
+}
+
+body[data-theme="dark"] .input.input-error {
+  border-color: #8d1616 !important;
 }
 
 body[data-theme="dark"] .input:-webkit-autofill, body[data-theme="dark"] .input:-webkit-autofill:hover, body[data-theme="dark"] .input:-webkit-autofill:focus, body[data-theme="dark"] .input:-webkit-autofill:active {
@@ -1241,7 +1249,7 @@ body[data-theme="dark"] .loader .container .dot {
 }
 
 .headband.error {
-  background: #c32c2c;
+  background: #8d1616;
 }
 
 .headband.global {

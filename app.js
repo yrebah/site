@@ -83,30 +83,43 @@ app.post('/login', async (req, res) => {
 
     let data = {
         name: !tools.IsEmpty(req.body.name) ? req.body.name : null,
-        password: tools.IsPassword(req.body.password) ? req.body.password : null
+        password: tools.IsPassword(req.body.password) ? req.body.password : null,
+        message: ''
     }
 
-    if (!tools.LoginValidator(data)) res.redirect(`/login`)
+    if (!tools.LoginValidator(data)) {
+        res.redirect(`/login`)
+    } else {
+        const user = await queries.USER.GetUserByName(process.env.USERS_TABLE, data.name)
 
-    const user = await queries.USER.GetUserByName(process.env.USERS_TABLE, req.body.name)
-
-    if (user.length == 0) res.redirect(`/login`)
-
-    const password = await queries.USER.GetPasswordByName(process.env.USERS_TABLE, req.body.name)
-    bcrypt.compare(req.body.password, password[0].password).then((match) => {
-        if (!match) {
-            const urlParams = btoa('wrongLogin')
+        if (user.length == 0) {
+            data.message = 'error'
+            const urlParams = btoa(JSON.stringify(data))
             res.redirect(`/login?${urlParams}`)
         } else {
-            const accessToken = signToken(user[0].name, user[0].id)
-            res.cookie('token', accessToken, {
-                httpOnly: true
-            })
-            user_obj = { id: user[0].id, name: user[0].name, email: user[0].email}
-            res.redirect(`/`)
+            const password = await queries.USER.GetPasswordByName(process.env.USERS_TABLE, data.name)
+            if (password.length == 0) {
+                data.message = 'error'
+                const urlParams = btoa(JSON.stringify(data))
+                res.redirect(`/login?${urlParams}`)
+            } else {
+                bcrypt.compare(data.password, password[0].password).then((match) => {
+                    if (!match) {
+                        data.message = 'error'
+                        const urlParams = btoa(JSON.stringify(data))
+                        res.redirect(`/login?${urlParams}`)
+                    } else {
+                        const accessToken = signToken(user[0].name, user[0].id)
+                        res.cookie('token', accessToken, {
+                            httpOnly: true
+                        })
+                        user_obj = { id: user[0].id, name: user[0].name, email: user[0].email }
+                        res.redirect(`/`)
+                    }
+                })
+            }
         }
-    })
-
+    }
 })
 
 // register
