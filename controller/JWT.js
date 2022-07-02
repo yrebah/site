@@ -1,3 +1,4 @@
+import cookieParser from 'cookie-parser';
 import jwt from 'jsonwebtoken';
 import 'dotenv/config';
 
@@ -17,8 +18,6 @@ export const verifyToken = (name, id) => {
 export const authByToken = (req, res, next) => {
 
     const { authorization } = req.headers
-
-    console.log(authorization)
 
     if(authorization) {
         const token = authorization.split(' ')[1]
@@ -50,20 +49,19 @@ export const verifyJWT = (req, res, next) => {
 
 export const validateToken = (req, res, next) => {
 
-    const accessToken = req.cookies('access-token')
+    const accessToken = req.cookies['access-token']
 
-    if(!accessToken) return res.status(400).json({status: 'user not connected'})
-
-    try{
-
-        const valideToken = jwt.verify(accessToken, process.env.JWT_SECRET)
-
-        if(valideToken) {
-            req.authenticated = true
-            return next()
+    if(!accessToken) {
+        res.redirect(`/login`)
+    } else {
+        try{
+            const valideToken = jwt.verify(accessToken, process.env.JWT_SECRET)
+            if(valideToken) {
+                req.authenticated = true
+                return next()
+            }
+        } catch(err){
+            console.log(err)
         }
-
-    } catch(err){
-        console.log(err)
     }
 }

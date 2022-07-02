@@ -7,7 +7,7 @@ import fs from 'fs';
 import bodyParser from 'body-parser';
 import bcrypt from 'bcrypt';
 import cookieParser from 'cookie-parser';
-import { signToken, verifyToken, authByToken } from './controller/JWT.js'
+import { signToken, validateToken } from './controller/JWT.js'
 import { queries } from "./controller/db.js";
 import { tools } from "./controller/tools.js";
 import { mainData } from "./controller/mainData.js";
@@ -41,7 +41,7 @@ let user_obj = {
 }
 
 // page Home
-app.get('', (req, res) => {
+app.get('', validateToken, (req, res) => {
     res.render('index', {
         title: `${mainData.data_site.title} - Accueil`,
         h1: "Accueil",
@@ -110,7 +110,8 @@ app.post('/login', async (req, res) => {
                         res.redirect(`/login?${urlParams}`)
                     } else {
                         const accessToken = signToken(user[0].name, user[0].id)
-                        res.cookie('token', accessToken, {
+                        res.cookie('access-token', accessToken, {
+                            maxAge: 60*60*24*30*100,
                             httpOnly: true
                         })
                         user_obj = { id: user[0].id, name: user[0].name, email: user[0].email }
@@ -196,7 +197,7 @@ app.post('/forgot-password', (req, res) => {
 })
 
 // profile
-app.get('/profile', (req, res) => {
+app.get('/profile', validateToken, (req, res) => {
     res.render('profile', {
         title: `${mainData.data_site.title} - Détails du compte`,
         h1: `Détails de votre compte ${mainData.data_site.title}`,
