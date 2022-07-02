@@ -162,7 +162,7 @@ app.get('/register-success', (req, res) => {
     res.render('register-success', {
         title: `${mainData.data_site.title} - Compte créé avec succès !`,
         h1: `Votre compte ${mainData.data_site.title}`,
-        subtitle: `a été créé avec succès !`,
+        h1Subtitle: `a été créé avec succès !`,
         data_site: mainData.data_site
     })
 })
