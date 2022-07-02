@@ -2,8 +2,6 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 import express from 'express';
-import session from 'express-session';
-import fs from 'fs';
 import bodyParser from 'body-parser';
 import bcrypt from 'bcrypt';
 import cookieParser from 'cookie-parser';
@@ -56,7 +54,7 @@ app.get('', validateToken, (req, res) => {
 })
 
 // page About
-app.get('/about', (req, res) => {
+app.get('/about', validateToken, (req, res) => {
     res.render('about', {
         title: `${mainData.data_site.title} - A propos`,
         h1: "A propos",
@@ -94,24 +92,21 @@ app.post('/login', async (req, res) => {
 
         if (user.length == 0) {
             data.message = 'error'
-            const urlParams = btoa(JSON.stringify(data))
-            res.redirect(`/login?${urlParams}`)
+            tools.RedirectWithParameters(res, 'login', data)
         } else {
             const password = await queries.USER.GetPasswordByName(process.env.USERS_TABLE, data.name)
             if (password.length == 0) {
                 data.message = 'error'
-                const urlParams = btoa(JSON.stringify(data))
-                res.redirect(`/login?${urlParams}`)
+                tools.RedirectWithParameters(res, 'login', data)
             } else {
                 bcrypt.compare(data.password, password[0].password).then((match) => {
                     if (!match) {
                         data.message = 'error'
-                        const urlParams = btoa(JSON.stringify(data))
-                        res.redirect(`/login?${urlParams}`)
+                        tools.RedirectWithParameters(res, 'login', data)
                     } else {
                         const accessToken = signToken(user[0].name, user[0].id)
                         res.cookie('access-token', accessToken, {
-                            maxAge: 60*60*24*30*100,
+                            maxAge: 60 * 60 * 24 * 30 * 100,
                             httpOnly: true
                         })
                         user_obj = { id: user[0].id, name: user[0].name, email: user[0].email }
@@ -141,24 +136,22 @@ app.post('/register', async (req, res) => {
         confirmPassword: tools.IsSameValue(req.body.password, req.body.confirmPassword) ? req.body.confirmPassword : null
     }
 
-    if (!tools.RegisterValidator(data)) {
-        const urlParams = btoa(JSON.stringify(data))
-        res.redirect(`/register?${urlParams}`)
-    }
+    if (!tools.RegisterValidator(data)) tools.RedirectWithParameters(res, 'register', data)
+    else {
+        const alreadyRegister = await queries.USER.AlreadyRegister(process.env.USERS_TABLE, req.body.email)
 
-    const alreadyRegister = await queries.USER.AlreadyRegister(process.env.USERS_TABLE, req.body.email)
-
-    if (alreadyRegister.length > 0) {
-        res.redirect(`/user-already-exist`)
-    } else {
-        const hashedPassword = await bcrypt.hash(data.password, 10)
-        queries.USER.Register(process.env.USERS_TABLE, req.body.name, req.body.email, hashedPassword)
-        res.redirect(`/register-success`)
+        if (alreadyRegister.length > 0) {
+            res.redirect(`/user-already-exist`)
+        } else {
+            const hashedPassword = await bcrypt.hash(data.password, 10)
+            queries.USER.Register(process.env.USERS_TABLE, req.body.name, req.body.email, hashedPassword)
+            res.redirect(`/register-success`)
+        }
     }
 })
 
 // register-success
-app.get('/register-success', (req, res) => {
+app.get('/register-success', validateToken, (req, res) => {
     res.render('register-success', {
         title: `${mainData.data_site.title} - Compte créé avec succès !`,
         h1: `Votre compte ${mainData.data_site.title}`,
@@ -178,7 +171,6 @@ app.get('/user-already-exist', (req, res) => {
 
 // forgot-password
 app.get('/forgot-password', (req, res) => {
-
     res.render('forgot-password', {
         title: `${mainData.data_site.title} - Mot de passe oublié`,
         h1: `Renouveler votre mot de passe ${mainData.data_site.title}`,
@@ -221,7 +213,7 @@ app.post('/profile', (req, res) => {
 })
 
 // 404
-app.get('*', (req, res) => {
+app.get('*', validateToken, (req, res) => {
     res.render('404', {
         title: `${mainData.data_site.title} - 404`,
         data_site: mainData.data_site,

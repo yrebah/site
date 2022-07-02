@@ -4,6 +4,9 @@ export const tools = {
         const urlParams = new URLSearchParams(url)
         return urlParams.get(parameter)
     },
+    RedirectWithParameters: (res, page, json) => {
+        res.redirect(`/${page}?${btoa(JSON.stringify(json))}`)
+    },
     IsSameValue: (val1, val2) => {
         return val1 === val2
     },
