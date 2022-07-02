@@ -61,7 +61,7 @@ export const validateToken = (req, res, next) => {
                 return next()
             }
         } catch(err){
-            console.log(err)
+            res.redirect(`/login?${btoa(err)}`)
         }
     }
 }

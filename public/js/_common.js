@@ -3,6 +3,7 @@
 import { _Loader } from "../class/_loader.js";
 import { _Popin } from "../class/_popin.js";
 import { _Headband } from "../class/_headband.js";
+import { _Fireworks } from "../class/_fireworks.js";
 
 // Loader ----------------------------
 
@@ -115,4 +116,27 @@ export const Headband = {
 // )
 // setTimeout(() => {
 //     Headband.Hide('#Headband')
+// }, 2000)
+
+// Fireworks ----------------------------
+
+export const Fireworks = {
+    Show: (id, container) => {
+        const fireworks = new _Fireworks(id, container)
+        fireworks.Show()
+    },
+    Hide: (id) => {
+        const fireworks = new _Fireworks(id)
+        fireworks.Hide()
+    }
+}
+
+// example :
+
+// Fireworks.Show(
+//     'Fireworks', 
+//     'main'
+// )
+// setTimeout(() => {
+//     Fireworks.Hide('#Fireworks')
 // }, 2000)

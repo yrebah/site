@@ -1276,6 +1276,81 @@ body[data-theme="dark"] .loader .container .dot {
   }
 }
 
+.fireworks {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fireworks.global {
+  position: fixed;
+}
+
+.fireworks.specific {
+  position: absolute;
+}
+
+.fireworks > .before,
+.fireworks > .after {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  box-shadow: 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff;
+  animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+}
+
+.fireworks > .after {
+  animation-delay: 1.25s, 1.25s, 1.25s;
+  animation-duration: 1.25s, 1.25s, 6.25s;
+}
+
+@keyframes bang {
+  to {
+    box-shadow: 6px 64.33333px #e600ff, -31px -93.66667px #6600ff, -116px -351.66667px #ffd000, 27px -212.66667px #00ff44, -17px 67.33333px #ff0088, -195px -384.66667px #ff007b, 216px -19.66667px #00ffc8, 99px -176.66667px #00ff8c, -136px -187.66667px #ff00fb, -62px -196.66667px #ffd900, 73px -85.66667px #ff0073, 33px -135.66667px #0022ff, -165px 76.33333px #00ff88, -193px -203.66667px #ff00ee, -139px -306.66667px #ff4800, -188px -355.66667px #ff0040, 21px -403.66667px #e600ff, -28px -68.66667px #00ffd9, -222px 44.33333px #00ff40, 138px -237.66667px #04ff00, 35px -359.66667px #009dff, -171px 77.33333px #dd00ff, -80px -150.66667px #91ff00, 250px -283.66667px #00ff77, 103px -161.66667px #d9ff00, -177px 9.33333px #004dff, 113px -246.66667px #4400ff, 205px 38.33333px #ff0095, 200px -273.66667px #ffb300, -207px -75.66667px #00ff0d, 25px -274.66667px #ff6f00, -1px -338.66667px #001aff, 32px 3.33333px #0062ff, -135px 25.33333px #9d00ff, 60px -118.66667px #00ffc8, 116px -98.66667px #ff00d0, -109px -51.66667px #c8ff00, 136px 58.33333px #ff1e00, -99px 70.33333px #62ff00, -30px -405.66667px #91ff00, -147px -5.66667px #ffa200, 194px 80.33333px #00ff95, -133px -4.66667px #1100ff, -137px -8.66667px #c800ff, -140px -386.66667px #d000ff, 151px -90.66667px #00eeff, -3px -282.66667px #6f00ff, 136px -359.66667px #ff00e6, -107px -266.66667px #1e00ff, 13px -167.66667px #00ff99, -158px -120.66667px #ff0048;
+  }
+}
+
+@keyframes gravity {
+  to {
+    transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    opacity: 0;
+  }
+}
+
+@keyframes position {
+  0%,
+  19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+  20%,
+  39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+  40%,
+  59.9% {
+    margin-top: 20%;
+    margin-left: 70%;
+  }
+  60%,
+  79.9% {
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+  80%,
+  99.9% {
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
+
 .main-menu {
   position: fixed;
   z-index: 8;
@@ -2106,6 +2181,23 @@ body[data-theme="dark"] .main-register .form .row-1 img {
 
 body[data-theme="dark"] .main-register .form .link {
   color: dodgerblue;
+}
+
+.main-register-success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-register-success h1 {
+  text-align: center;
+  font-size: clamp(26px, 6vw, 30px);
+  font-weight: 300;
+}
+
+.main-register-success h1 span {
+  font-size: clamp(32px, 7vw, 36px);
 }
 
 .main-forgot-password {
