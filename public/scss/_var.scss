@@ -26,6 +26,7 @@ $colors: (
 );
 
 $font-size: (
+    xxs: clamp(12px, 3vw, 14px),
     xs: clamp(14px, 3vw, 16px),
     s: clamp(16px, 4vw, 18px),
     m: clamp(20px, 5vw, 22px),

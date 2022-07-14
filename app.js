@@ -38,7 +38,7 @@ let user_obj = {
     email: null
 }
 
-// page Home
+// index
 app.get('', validateToken, (req, res) => {
     res.render('index', {
         title: `${mainData.data_site.title} - Accueil`,
@@ -53,7 +53,9 @@ app.get('', validateToken, (req, res) => {
     })
 })
 
-// page About
+// -------------------------------------------------------------------------------------------
+
+// about
 app.get('/about', validateToken, (req, res) => {
     res.render('about', {
         title: `${mainData.data_site.title} - A propos`,
@@ -67,6 +69,8 @@ app.get('/about', validateToken, (req, res) => {
         user_obj
     })
 })
+
+// -------------------------------------------------------------------------------------------
 
 // login
 app.get('/login', (req, res) => {
@@ -85,9 +89,8 @@ app.post('/login', async (req, res) => {
         message: ''
     }
 
-    if (!tools.LoginValidator(data)) {
-        res.redirect(`/login`)
-    } else {
+    if (!tools.LoginValidator(data)) res.redirect(`/login`)
+    else {
         const user = await queries.USER.GetUserByName(process.env.USERS_TABLE, data.name)
 
         if (user.length == 0) {
@@ -117,6 +120,8 @@ app.post('/login', async (req, res) => {
         }
     }
 })
+
+// -------------------------------------------------------------------------------------------
 
 // register
 app.get('/register', (req, res) => {
@@ -150,6 +155,8 @@ app.post('/register', async (req, res) => {
     }
 })
 
+// -------------------------------------------------------------------------------------------
+
 // register-success
 app.get('/register-success', validateToken, (req, res) => {
     res.render('register-success', {
@@ -160,6 +167,8 @@ app.get('/register-success', validateToken, (req, res) => {
     })
 })
 
+// -------------------------------------------------------------------------------------------
+
 // user-already-exist
 app.get('/user-already-exist', (req, res) => {
     res.render('user-already-exist', {
@@ -168,6 +177,8 @@ app.get('/user-already-exist', (req, res) => {
         data_site: mainData.data_site
     })
 })
+
+// -------------------------------------------------------------------------------------------
 
 // forgot-password
 app.get('/forgot-password', (req, res) => {
@@ -188,6 +199,8 @@ app.post('/forgot-password', (req, res) => {
         console.log('register ok')
     }
 })
+
+// -------------------------------------------------------------------------------------------
 
 // profile
 app.get('/profile', validateToken, (req, res) => {
@@ -212,6 +225,8 @@ app.post('/profile', (req, res) => {
     }
 })
 
+// -------------------------------------------------------------------------------------------
+
 // 404
 app.get('*', validateToken, (req, res) => {
     res.render('404', {
@@ -220,6 +235,8 @@ app.get('*', validateToken, (req, res) => {
         data_404: mainData.data_404
     })
 })
+
+// -------------------------------------------------------------------------------------------
 
 // Listen on port 3000
 app.listen(port, () => console.info(`listening on http://localhost:${port}`))

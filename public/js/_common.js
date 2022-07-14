@@ -4,6 +4,30 @@ import { _Loader } from "../class/_loader.js";
 import { _Popin } from "../class/_popin.js";
 import { _Headband } from "../class/_headband.js";
 import { _Fireworks } from "../class/_fireworks.js";
+import { _Colors } from "../class/_colors.js";
+import { _Charts } from "../class/_charts.js";
+
+// Charts ----------------------------
+
+export const Charts = {
+    Bar: (id, container, data) => {
+        const charts = new _Charts(id, container, data)
+        return charts.Bar()
+    }
+}
+
+// Colors ----------------------------
+
+export const Colors = {
+    GetColors: () => {
+        const colors = new _Colors()
+        return colors.GetColors()
+    },
+    GetRandomColor: () => {
+        const colors = new _Colors()
+        return colors.GetRandomColor()
+    }
+}
 
 // Loader ----------------------------
 
@@ -134,7 +158,7 @@ export const Fireworks = {
 // example :
 
 // Fireworks.Show(
-//     'Fireworks', 
+//     'Fireworks',
 //     'main'
 // )
 // setTimeout(() => {
