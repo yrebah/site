@@ -100,7 +100,7 @@ html {
 
 .main {
   position: relative;
-  min-height: calc(100vh - var(--header-height));
+  z-index: 1;
   padding-left: 22%;
   padding-right: 22%;
 }
@@ -366,7 +366,7 @@ body[data-theme="dark"] .input:-webkit-autofill, body[data-theme="dark"] .input:
 }
 
 .header {
-  position: sticky;
+  position: relative;
   z-index: 8;
   top: 0;
   display: flex;
@@ -744,11 +744,23 @@ body[data-theme="dark"] .btn.btn-user-initial {
 }
 
 .window {
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 90%;
   border-radius: 30px 30px 0px 0px;
+  animation: window 0.5s ease-in-out;
+}
+
+@keyframes window {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 .window.global {
@@ -759,22 +771,17 @@ body[data-theme="dark"] .btn.btn-user-initial {
   position: absolute;
 }
 
-.window.active {
-  pointer-events: all;
-  opacity: 1;
-  transform: translateY(0%);
-}
-
 .window .header-window {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 70px;
 }
 
 .window .header-window i {
   color: black;
-  font-size: clamp(16px, 4vw, 18px);
+  font-size: clamp(20px, 5vw, 22px);
   cursor: pointer;
   transition: 0.25s;
 }
@@ -788,50 +795,50 @@ body[data-theme="dark"] .btn.btn-user-initial {
   width: 93%;
   height: 90%;
   overflow-y: auto;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
   margin: 0 auto;
 }
 
 @media (min-width: 0px) {
+  .window .content {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+@media (min-width: 576px) {
   .window .content {
     padding-left: 5%;
     padding-right: 5%;
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
+  .window .content {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
+
+@media (min-width: 992px) {
   .window .content {
     padding-left: 8%;
     padding-right: 8%;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .window .content {
     padding-left: 12%;
     padding-right: 12%;
   }
 }
 
-@media (min-width: 992px) {
-  .window .content {
-    padding-left: 18%;
-    padding-right: 18%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .window .content {
-    padding-left: 20%;
-    padding-right: 20%;
-  }
-}
-
 @media (min-width: 1400px) {
   .window .content {
-    padding-left: 24%;
-    padding-right: 24%;
+    padding-left: 15%;
+    padding-right: 15%;
   }
 }
 
@@ -950,6 +957,51 @@ body[data-theme="dark"] .window .header-window i:hover {
   text-overflow: ellipsis;
   max-width: 100%;
   text-align: center;
+}
+
+.main-settings {
+  position: relative;
+  height: 80%;
+}
+
+.main-settings h1 {
+  font-size: clamp(26px, 6vw, 30px);
+}
+
+.main-settings .grid-settings {
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "left-side right-side";
+}
+
+.main-settings .grid-settings .left-side {
+  position: relative;
+  grid-area: left-side;
+  max-height: 90%;
+  overflow: auto;
+}
+
+.main-settings .grid-settings .menu-settings {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-settings .grid-settings .menu-settings li {
+  margin-bottom: 12px;
+}
+
+.main-settings .grid-settings .menu-settings li a {
+  font-size: clamp(16px, 4vw, 18px);
+}
+
+.main-settings .right-side {
+  position: relative;
+  grid-area: right-side;
 }
 
 .search-bar {
@@ -1517,7 +1569,7 @@ body[data-theme="dark"] .loader .container .dot {
 
 @keyframes bang {
   to {
-    box-shadow: -243px -192.66667px #0400ff, -229px -340.66667px #00ff84, -99px -207.66667px #7300ff, -100px -87.66667px #ff0022, -160px -190.66667px #ff00fb, 226px -16.66667px #ff0015, -80px -233.66667px #2600ff, 129px -31.66667px #00ffc8, 43px -296.66667px #ffb700, 99px -205.66667px #ffdd00, -184px 82.33333px #ffea00, -212px -249.66667px #ff0091, -44px -204.66667px #00ff8c, 118px -98.66667px #c4ff00, 246px -108.66667px #ff1500, 133px -405.66667px #00ff09, -101px -300.66667px #5e00ff, 75px 26.33333px #ff0011, 59px -171.66667px #a6ff00, -30px -46.66667px #ff00c4, -210px -141.66667px #d500ff, -117px -124.66667px magenta, -43px -9.66667px #00ff0d, 210px -86.66667px #fbff00, 182px -160.66667px #c4ff00, 178px -121.66667px #f200ff, -11px -250.66667px #ff00e6, 201px -370.66667px #006aff, 93px 6.33333px #ff0022, 111px 77.33333px #00aaff, 123px -83.66667px #00ff51, 109px -249.66667px #ff0015, 159px 79.33333px #ff6f00, -236px -250.66667px #0080ff, -109px 61.33333px #ff8400, 170px -80.66667px #ff004d, 226px -120.66667px #0040ff, -56px -146.66667px #ff00f2, 152px -95.66667px #009dff, -243px 79.33333px #88ff00, -25px -383.66667px #0004ff, 211px -238.66667px #0051ff, -62px -131.66667px #ff0091, -31px -233.66667px #9900ff, 40px -357.66667px #40ff00, 33px -27.66667px #0062ff, -233px -354.66667px #0099ff, -182px -383.66667px #00ddff, 86px -179.66667px #ff009d, -238px -393.66667px #00ffb3, 220px -346.66667px #ffb300;
+    box-shadow: 158px -83.66667px #ff0088, -243px -212.66667px #ffcc00, 42px -291.66667px #ff2200, -53px -166.66667px #00e6ff, -200px -326.66667px #eaff00, -18px -42.66667px #00fbff, 210px -285.66667px #2200ff, 17px -217.66667px #0004ff, -181px -343.66667px #00e6ff, -132px -115.66667px #8000ff, -242px -106.66667px #6aff00, 55px 1.33333px #ff001e, 151px -321.66667px #ff5100, -199px -11.66667px #00ffb7, 167px -363.66667px #22ff00, -232px -403.66667px #00fbff, -81px -367.66667px #001eff, -114px -363.66667px #ff3700, -197px -337.66667px #00ff51, 110px -337.66667px #ff9500, 97px -305.66667px #fff700, 73px -277.66667px #ff00f2, 124px -352.66667px #00ff55, 76px -54.66667px #6200ff, 69px -201.66667px #008cff, 4px -213.66667px #ff0091, 58px -220.66667px #ffbb00, -117px -302.66667px #0022ff, -199px -293.66667px #00ccff, 195px -81.66667px #9900ff, 48px -18.66667px #ff0048, -248px 50.33333px #0059ff, 247px -412.66667px #eaff00, 26px 33.33333px #00ff84, -91px -287.66667px #ffb300, 153px 61.33333px #ffd500, -77px -63.66667px #dd00ff, 14px -224.66667px #c400ff, -218px -396.66667px #ff00e1, 90px -390.66667px #ff3300, -91px -137.66667px #ff0037, 117px -4.66667px #37ff00, 185px -261.66667px #001eff, 66px 45.33333px #5900ff, 233px -391.66667px #ff0037, 225px -246.66667px #f200ff, 42px -233.66667px #00ffae, 194px -235.66667px #ff9100, 14px -204.66667px #ff00ea, -19px -18.66667px #5e00ff, -40px -140.66667px #ff0091;
   }
 }
 

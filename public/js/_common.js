@@ -6,6 +6,16 @@ import { _Headband } from "../class/_headband.js";
 import { _Fireworks } from "../class/_fireworks.js";
 import { _Colors } from "../class/_colors.js";
 import { _Charts } from "../class/_charts.js";
+import { _Window } from "../class/_window.js";
+
+// Window ----------------------------
+
+export const Window = {
+    Show: (id, container, path) => {
+        const window = new _Window(id, container, path)
+        window.Show()
+    }
+}
 
 // Charts ----------------------------
 

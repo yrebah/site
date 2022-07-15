@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <%- include('../public/templates/heads/head-settings') %>
+</head>
+
+<body id="settings" class="hide-scrollbar">
+
+    <main class="main-settings">
+        <h1>
+            <%= h1 %>
+        </h1>
+
+        <div class="grid-settings">
+            <div class="left-side slim-scrollbar">
+                <ul class="menu-settings">
+                    <% data_settings.links.forEach((elem)=> { %>
+                        <li>
+                            <a id="<%= elem.id %>" href="<%= elem.href %>" title="<%= elem.title %>"><%= elem.text %></a>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+            <div class="right-side"></div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

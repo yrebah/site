@@ -1,0 +1,46 @@
+// _settings.scss
+
+.main-settings {
+    position: relative;
+    height: 80%;
+
+    h1 {
+        font-size: map-get($font-size, 'l')
+    }
+
+    .grid-settings {
+        position: relative;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 0.5fr 1.5fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas: "left-side right-side";
+
+        .left-side {
+            position: relative;
+            grid-area: left-side;
+            max-height: 90%;
+            overflow: auto;
+        }
+
+        .menu-settings {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+
+            li {
+                margin-bottom: 12px;
+
+                a {
+                    font-size: map-get($font-size, 's');
+                }
+            }
+        }
+    }
+
+    .right-side {
+        position: relative;
+        grid-area: right-side;
+    }
+}

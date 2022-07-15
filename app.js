@@ -55,6 +55,18 @@ app.get('', validateToken, (req, res) => {
 
 // -------------------------------------------------------------------------------------------
 
+// settings
+app.get('/settings', validateToken, (req, res) => {
+    res.render('settings', {
+        title: `${mainData.data_site.title} - Paramètres`,
+        h1: "Paramètres",
+        data_site: mainData.data_site,
+        data_settings : mainData.data_settings
+    })
+})
+
+// -------------------------------------------------------------------------------------------
+
 // about
 app.get('/about', validateToken, (req, res) => {
     res.render('about', {

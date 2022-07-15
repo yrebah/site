@@ -11,5 +11,6 @@ export const mainData = {
     data_mainMenu : main_json_parsed.mainMenu,
     data_social : main_json_parsed.social,
     data_footer : main_json_parsed.footer,
-    data_searchBar : main_json_parsed.searchBar
+    data_searchBar : main_json_parsed.searchBar,
+    data_settings : main_json_parsed.settings
 }
