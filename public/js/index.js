@@ -9,10 +9,4 @@ $(document).ready(() => {
     //     Loader.Hide('#loader')
     // }, 2000)
 
-    Window.Show(
-        'window', 
-        'body',
-        '/settings'
-    )
-
 })

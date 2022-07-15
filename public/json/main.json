@@ -20,155 +20,50 @@
         "links": [
             {
                 "id": "settings-link-1",
-                "text": "settings-link 1",
-                "href": "#faq",
+                "text": "about",
+                "path": "/about",
                 "target": "",
                 "title": "settings-link-1"
             },
             {
                 "id": "settings-link-2",
-                "text": "settings-link 2",
-                "href": "#faq",
+                "text": "register-success",
+                "path": "/register-success",
                 "target": "",
                 "title": "settings-link-2"
             },
             {
                 "id": "settings-link-3",
                 "text": "settings-link 3",
-                "href": "#faq",
+                "path": "#faq",
                 "target": "",
                 "title": "settings-link-3"
             },
             {
-                "id": "settings-link-4",
-                "text": "settings-link 4",
-                "href": "#faq",
-                "target": "",
-                "title": "settings-link-4"
-            },
-            {
                 "id": "settings-link-5",
                 "text": "settings-link 5",
-                "href": "#faq",
+                "path": "#faq",
                 "target": "",
                 "title": "settings-link-5"
             },
             {
                 "id": "settings-link-5",
                 "text": "settings-link 5",
-                "href": "#faq",
+                "path": "#faq",
                 "target": "",
                 "title": "settings-link-5"
             },
             {
                 "id": "settings-link-5",
                 "text": "settings-link 5",
-                "href": "#faq",
+                "path": "#faq",
                 "target": "",
                 "title": "settings-link-5"
             },
             {
                 "id": "settings-link-5",
                 "text": "settings-link 5",
-                "href": "#faq",
-                "target": "",
-                "title": "settings-link-5"
-            },
-            {
-                "id": "settings-link-5",
-                "text": "settings-link 5",
-                "href": "#faq",
-                "target": "",
-                "title": "settings-link-5"
-            },
-            {
-                "id": "settings-link-5",
-                "text": "settings-link 5",
-                "href": "#faq",
-                "target": "",
-                "title": "settings-link-5"
-            },
-            {
-                "id": "settings-link-5",
-                "text": "settings-link 5",
-                "href": "#faq",
-                "target": "",
-                "title": "settings-link-5"
-            },
-            {
-                "id": "settings-link-5",
-                "text": "settings-link 5",
-                "href": "#faq",
-                "target": "",
-                "title": "settings-link-5"
-            },
-            {
-                "id": "settings-link-5",
-                "text": "settings-link 5",
-                "href": "#faq",
-                "target": "",
-                "title": "settings-link-5"
-            },
-            {
-                "id": "settings-link-5",
-                "text": "settings-link 5",
-                "href": "#faq",
-                "target": "",
-                "title": "settings-link-5"
-            },
-            {
-                "id": "settings-link-5",
-                "text": "settings-link 5",
-                "href": "#faq",
-                "target": "",
-                "title": "settings-link-5"
-            },
-            {
-                "id": "settings-link-5",
-                "text": "settings-link 5",
-                "href": "#faq",
-                "target": "",
-                "title": "settings-link-5"
-            },
-            {
-                "id": "settings-link-5",
-                "text": "settings-link 5",
-                "href": "#faq",
-                "target": "",
-                "title": "settings-link-5"
-            },
-            {
-                "id": "settings-link-5",
-                "text": "settings-link 5",
-                "href": "#faq",
-                "target": "",
-                "title": "settings-link-5"
-            },
-            {
-                "id": "settings-link-5",
-                "text": "settings-link 5",
-                "href": "#faq",
-                "target": "",
-                "title": "settings-link-5"
-            },
-            {
-                "id": "settings-link-5",
-                "text": "settings-link 5",
-                "href": "#faq",
-                "target": "",
-                "title": "settings-link-5"
-            },
-            {
-                "id": "settings-link-5",
-                "text": "settings-link 5",
-                "href": "#faq",
-                "target": "",
-                "title": "settings-link-5"
-            },
-            {
-                "id": "settings-link-5",
-                "text": "settings-link 5",
-                "href": "#faq",
+                "path": "#faq",
                 "target": "",
                 "title": "settings-link-5"
             }

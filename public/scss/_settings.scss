@@ -4,8 +4,44 @@
     position: relative;
     height: 80%;
 
-    h1 {
-        font-size: map-get($font-size, 'l')
+    .header-settings {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 36px;
+
+        h1 {
+            font-size: map-get($font-size, 'l')
+        }
+
+        .select {
+            width: 150px;
+
+            @include screen-xs {
+                display: block;
+            }
+        
+            @include screen-s {
+                display: block;
+            }
+        
+            @include screen-m {
+                display: none;
+            }
+        
+            @include screen-l {
+                display: none;
+            }
+        
+            @include screen-xl {
+                display: none;
+            }
+        
+            @include screen-xxl {
+                display: none;
+            }
+        }
     }
 
     .grid-settings {
@@ -17,11 +53,59 @@
         gap: 0px 0px;
         grid-template-areas: "left-side right-side";
 
+        @include screen-xs {
+            grid-template-columns: 0fr 1fr;
+        }
+    
+        @include screen-s {
+            grid-template-columns: 0fr 1fr;
+        }
+    
+        @include screen-m {
+            grid-template-columns: 0.5fr 1.5fr;
+        }
+    
+        @include screen-l {
+            grid-template-columns: 0.5fr 1.5fr;
+        }
+    
+        @include screen-xl {
+            grid-template-columns: 0.5fr 1.5fr;
+        }
+    
+        @include screen-xxl {
+            grid-template-columns: 0.5fr 1.5fr;
+        }
+
         .left-side {
             position: relative;
             grid-area: left-side;
             max-height: 90%;
             overflow: auto;
+
+            @include screen-xs {
+                display: none;
+            }
+        
+            @include screen-s {
+                display: none;
+            }
+        
+            @include screen-m {
+                display: block;
+            }
+        
+            @include screen-l {
+                display: block;
+            }
+        
+            @include screen-xl {
+                display: block;
+            }
+        
+            @include screen-xxl {
+                display: block;
+            }
         }
 
         .menu-settings {
@@ -42,5 +126,7 @@
     .right-side {
         position: relative;
         grid-area: right-side;
+        max-height: 100%;
+        overflow: auto;
     }
 }

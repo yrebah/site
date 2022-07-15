@@ -8,21 +8,33 @@
 <body id="settings" class="hide-scrollbar">
 
     <main class="main-settings">
-        <h1>
-            <%= h1 %>
-        </h1>
+
+        <header class="header-settings">
+            <h1>
+                <%= h1 %>
+            </h1>
+            <div class="select">
+                <select>
+                    <% data_settings.links.forEach((elem)=> { %>
+                        <option id="<%= elem.id %>" class="options-settings" data-path="<%= elem.path %>" title="<%= elem.title %>">
+                            <%= elem.text %>
+                        </option>
+                    <% }) %>
+                </select>
+            </div>
+        </header>
 
         <div class="grid-settings">
             <div class="left-side slim-scrollbar">
                 <ul class="menu-settings">
                     <% data_settings.links.forEach((elem)=> { %>
                         <li>
-                            <a id="<%= elem.id %>" href="<%= elem.href %>" title="<%= elem.title %>"><%= elem.text %></a>
+                            <a id="<%= elem.id %>" class="links-settings" data-path="<%= elem.path %>" title="<%= elem.title %>"><%= elem.text %></a>
                         </li>
                     <% }) %>
                 </ul>
             </div>
-            <div class="right-side"></div>
+            <div class="right-side slim-scrollbar"></div>
         </div>
 
     </main>

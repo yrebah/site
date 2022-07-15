@@ -14,13 +14,11 @@
 h1 {
   font-size: clamp(38px, 8vw, 46px);
   font-weight: 500;
-  margin-bottom: 50px;
 }
 
 h2 {
   font-size: clamp(32px, 7vw, 36px);
   font-weight: 500;
-  margin-bottom: 30px;
 }
 
 h3 {
@@ -748,7 +746,6 @@ body[data-theme="dark"] .btn.btn-user-initial {
   left: 0;
   width: 100%;
   height: 90%;
-  border-radius: 30px 30px 0px 0px;
   animation: window 0.5s ease-in-out;
 }
 
@@ -802,43 +799,43 @@ body[data-theme="dark"] .btn.btn-user-initial {
 
 @media (min-width: 0px) {
   .window .content {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
+@media (min-width: 576px) {
+  .window .content {
     padding-left: 4%;
     padding-right: 4%;
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .window .content {
     padding-left: 5%;
     padding-right: 5%;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .window .content {
     padding-left: 6%;
     padding-right: 6%;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .window .content {
     padding-left: 8%;
     padding-right: 8%;
   }
 }
 
-@media (min-width: 1200px) {
-  .window .content {
-    padding-left: 12%;
-    padding-right: 12%;
-  }
-}
-
 @media (min-width: 1400px) {
   .window .content {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 
@@ -855,7 +852,7 @@ body[data-theme="light"] .window .header-window i:hover {
 }
 
 body[data-theme="dark"] .window {
-  background: #1a1a1a;
+  background: #0f0f0f;
 }
 
 body[data-theme="dark"] .window .header-window i {
@@ -964,8 +961,56 @@ body[data-theme="dark"] .window .header-window i:hover {
   height: 80%;
 }
 
-.main-settings h1 {
+.main-settings .header-settings {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.main-settings .header-settings h1 {
   font-size: clamp(26px, 6vw, 30px);
+}
+
+.main-settings .header-settings .select {
+  width: 150px;
+}
+
+@media (min-width: 0px) {
+  .main-settings .header-settings .select {
+    display: block;
+  }
+}
+
+@media (min-width: 576px) {
+  .main-settings .header-settings .select {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-settings .header-settings .select {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-settings .header-settings .select {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-settings .header-settings .select {
+    display: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-settings .header-settings .select {
+    display: none;
+  }
 }
 
 .main-settings .grid-settings {
@@ -978,11 +1023,83 @@ body[data-theme="dark"] .window .header-window i:hover {
   grid-template-areas: "left-side right-side";
 }
 
+@media (min-width: 0px) {
+  .main-settings .grid-settings {
+    grid-template-columns: 0fr 1fr;
+  }
+}
+
+@media (min-width: 576px) {
+  .main-settings .grid-settings {
+    grid-template-columns: 0fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-settings .grid-settings {
+    grid-template-columns: 0.5fr 1.5fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-settings .grid-settings {
+    grid-template-columns: 0.5fr 1.5fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-settings .grid-settings {
+    grid-template-columns: 0.5fr 1.5fr;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-settings .grid-settings {
+    grid-template-columns: 0.5fr 1.5fr;
+  }
+}
+
 .main-settings .grid-settings .left-side {
   position: relative;
   grid-area: left-side;
   max-height: 90%;
   overflow: auto;
+}
+
+@media (min-width: 0px) {
+  .main-settings .grid-settings .left-side {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .main-settings .grid-settings .left-side {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-settings .grid-settings .left-side {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-settings .grid-settings .left-side {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-settings .grid-settings .left-side {
+    display: block;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-settings .grid-settings .left-side {
+    display: block;
+  }
 }
 
 .main-settings .grid-settings .menu-settings {
@@ -1002,6 +1119,8 @@ body[data-theme="dark"] .window .header-window i:hover {
 .main-settings .right-side {
   position: relative;
   grid-area: right-side;
+  max-height: 100%;
+  overflow: auto;
 }
 
 .search-bar {
@@ -1569,7 +1688,7 @@ body[data-theme="dark"] .loader .container .dot {
 
 @keyframes bang {
   to {
-    box-shadow: 158px -83.66667px #ff0088, -243px -212.66667px #ffcc00, 42px -291.66667px #ff2200, -53px -166.66667px #00e6ff, -200px -326.66667px #eaff00, -18px -42.66667px #00fbff, 210px -285.66667px #2200ff, 17px -217.66667px #0004ff, -181px -343.66667px #00e6ff, -132px -115.66667px #8000ff, -242px -106.66667px #6aff00, 55px 1.33333px #ff001e, 151px -321.66667px #ff5100, -199px -11.66667px #00ffb7, 167px -363.66667px #22ff00, -232px -403.66667px #00fbff, -81px -367.66667px #001eff, -114px -363.66667px #ff3700, -197px -337.66667px #00ff51, 110px -337.66667px #ff9500, 97px -305.66667px #fff700, 73px -277.66667px #ff00f2, 124px -352.66667px #00ff55, 76px -54.66667px #6200ff, 69px -201.66667px #008cff, 4px -213.66667px #ff0091, 58px -220.66667px #ffbb00, -117px -302.66667px #0022ff, -199px -293.66667px #00ccff, 195px -81.66667px #9900ff, 48px -18.66667px #ff0048, -248px 50.33333px #0059ff, 247px -412.66667px #eaff00, 26px 33.33333px #00ff84, -91px -287.66667px #ffb300, 153px 61.33333px #ffd500, -77px -63.66667px #dd00ff, 14px -224.66667px #c400ff, -218px -396.66667px #ff00e1, 90px -390.66667px #ff3300, -91px -137.66667px #ff0037, 117px -4.66667px #37ff00, 185px -261.66667px #001eff, 66px 45.33333px #5900ff, 233px -391.66667px #ff0037, 225px -246.66667px #f200ff, 42px -233.66667px #00ffae, 194px -235.66667px #ff9100, 14px -204.66667px #ff00ea, -19px -18.66667px #5e00ff, -40px -140.66667px #ff0091;
+    box-shadow: -196px -195.66667px #ffbf00, 218px -119.66667px #55ff00, 179px -60.66667px #ff00a2, 218px 54.33333px #c8ff00, -165px -112.66667px #ff00bb, 199px -355.66667px #6f00ff, 147px 22.33333px red, 27px -415.66667px #ffb300, 240px -388.66667px #b300ff, -144px -378.66667px #ff0055, -190px -323.66667px #ff4000, 71px -49.66667px #bfff00, -56px -283.66667px #0088ff, -105px -332.66667px #9500ff, -1px 35.33333px #00ff15, 192px 26.33333px #ff7300, 122px -280.66667px #ffcc00, 171px -245.66667px #00ff88, 164px 58.33333px #00ffc4, 89px -123.66667px #ff0040, -98px -20.66667px #00ffc8, 181px -193.66667px #4d00ff, 248px -159.66667px #ff00fb, -105px -307.66667px darkorange, -74px -132.66667px #9dff00, 140px 10.33333px #8cff00, 125px 17.33333px #001eff, 13px -361.66667px #c800ff, -57px 26.33333px #e1ff00, 176px -401.66667px #ff00f7, 224px -83.66667px #00eeff, 246px -76.66667px #ff001e, 5px -318.66667px #6600ff, -24px -93.66667px #e600ff, -16px -383.66667px #c400ff, 121px -53.66667px #006fff, -242px -75.66667px #ffdd00, 164px -401.66667px #ffd000, -77px -327.66667px #ff4000, -54px -112.66667px #2b00ff, 30px -280.66667px #00c4ff, 239px -175.66667px #ccff00, 160px 82.33333px #77ff00, 78px -208.66667px #00ffd5, 0px -82.66667px #00ff73, -87px -381.66667px #ff00f2, -58px -320.66667px #c4ff00, -175px -352.66667px #d0ff00, -19px -107.66667px #ff00a6, 98px -136.66667px #a6ff00, -213px -397.66667px #0051ff;
   }
 }
 

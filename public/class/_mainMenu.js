@@ -1,11 +1,26 @@
 // _mainMenu.js
 
+import { _Window } from "./_window.js";
+
 export class _MainMenu {
 
     SetFunctions() {
         this.SetBtnClose()
         this.SetOutside()
         this.SetLinks()
+        this.SetBtnUserSettings()
+    }
+
+    SetBtnUserSettings() {
+        $('#btn-user-settings').click(() => {
+            this.Close()
+            const window = new _Window(
+                'window-settings', 
+                'body',
+                '/settings'
+            )
+            window.Show()
+        })
     }
 
     SetBtnClose() {

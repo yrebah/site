@@ -1,12 +1,19 @@
 // _settings.js
 
-// _settings.js
-
 export class _Settings {
 
-    constructor(props) {
-
+    SetFunctions() {
+        document.querySelectorAll('.links-settings').forEach((link)=>{
+            link.addEventListener('click', (e)=>{
+                this.Load(
+                    document.querySelector('.right-side'),
+                    e.target.getAttribute('data-path')
+                )
+            })
+        })
     }
 
-    SetFunctions() {}
+    Load(container, path) {
+        $(container).load(path)
+    }
 }

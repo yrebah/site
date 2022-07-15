@@ -4,6 +4,7 @@ $colors: (
     _transparent: transparent,
     _black: black,
     _black-svg: invert(0%) sepia(6%) saturate(7476%) hue-rotate(278deg) brightness(106%) contrast(105%),
+    _lightblack0: hsl(0, 0%, 6%),
     _lightblack: hsl(0, 0%, 10%),
     _lightblack2: hsl(0, 0%, 15%),
     _transblack: hsla(0, 0%, 0%, 0.60),
