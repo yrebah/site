@@ -7,7 +7,7 @@
     height: 90%;
     opacity: 0;
     transform: translateY(100%);
-    transition: 0.5s ease-in-out;
+    transition: 0.45s ease-in-out;
 
     &.active {
         opacity: 1;
@@ -90,10 +90,10 @@ body {
 
             .header-window {
                 i {
-                    color: map-get($colors, _black);
+                    color: map-get($colors, _darkgray);
 
                     &:hover {
-                        color: map-get($colors, _gray);
+                        color: map-get($colors, _lightblack2);
                     }
                 }
             }

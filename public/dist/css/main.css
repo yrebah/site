@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Exo:wght@100&display=swap");
 :root {
   --header-height: 80px;
@@ -9,6 +10,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 h1 {
@@ -81,10 +90,6 @@ strong {
 ul,
 ol {
   list-style-type: none;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 .hide-scrollbar {
@@ -748,7 +753,7 @@ body[data-theme="dark"] .btn.btn-user-initial {
   height: 90%;
   opacity: 0;
   transform: translateY(100%);
-  transition: 0.5s ease-in-out;
+  transition: 0.45s ease-in-out;
 }
 
 .window.active {
@@ -840,11 +845,11 @@ body[data-theme="light"] .window {
 }
 
 body[data-theme="light"] .window .header-window i {
-  color: black;
+  color: gray;
 }
 
 body[data-theme="light"] .window .header-window i:hover {
-  color: #e6e6e6;
+  color: #262626;
 }
 
 body[data-theme="dark"] .window {
@@ -1062,7 +1067,7 @@ body[data-theme="dark"] .window .header-window i:hover {
   grid-area: left-side;
   max-height: 90%;
   overflow: auto;
-  border-right: 1px solid #3d3d3d;
+  border-right: 1.5px solid #262626;
 }
 
 @media (min-width: 0px) {
@@ -1192,6 +1197,42 @@ body[data-theme="dark"] .window .header-window i:hover {
   .main-settings .right-side {
     padding-left: 25px;
   }
+}
+
+.main-settings .right-side .layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.main-settings .right-side .layer h2 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 25%;
+  text-align: center;
+  font-size: clamp(16px, 4vw, 18px);
+  font-weight: 400;
+  color: gray;
+}
+
+.main-settings .right-side .layer i {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  font-size: clamp(72px, 20vw, 150px);
+  color: #262626;
+}
+
+body[data-theme="light"] .main-settings .grid-settings .left-side {
+  border-right: 1px solid #cccccc;
+}
+
+body[data-theme="dark"] .main-settings .grid-settings .left-side {
+  border-right: 1px solid #3d3d3d;
 }
 
 .search-bar {
@@ -1759,7 +1800,7 @@ body[data-theme="dark"] .loader .container .dot {
 
 @keyframes bang {
   to {
-    box-shadow: 202px -404.66667px #ffdd00, -108px -377.66667px #0011ff, -39px 31.33333px #001eff, -206px -41.66667px #ff009d, -208px -122.66667px #000dff, -23px -339.66667px #00ff4d, 155px -47.66667px #d0ff00, -137px -278.66667px #4400ff, -47px 68.33333px #00ff59, 28px 67.33333px #fff700, -178px -295.66667px #ff9100, 236px -356.66667px #00ff2f, 64px 20.33333px #ff002b, 147px -358.66667px #1eff00, -210px -278.66667px #00ff80, -75px -246.66667px #ff1a00, 58px -90.66667px #00eaff, -172px -116.66667px #00f7ff, -93px 67.33333px #ff8000, 51px -309.66667px #40ff00, 161px -387.66667px #26ff00, -98px -102.66667px #ff1a00, 164px -5.66667px #ff0066, -47px -65.66667px #ff3700, 47px -121.66667px #2b00ff, 43px -17.66667px #ee00ff, -225px 75.33333px #88ff00, 85px -352.66667px #ff00e6, 135px -218.66667px #d0ff00, -181px -172.66667px #00ff09, 43px -259.66667px #00ff33, -123px -50.66667px #f700ff, -102px -194.66667px #00ff73, 35px -115.66667px #00c4ff, 238px -105.66667px #00ff5e, -56px -106.66667px #00aeff, 87px -234.66667px #ff003c, 137px -353.66667px #5e00ff, -60px -343.66667px #00ffb3, 200px -320.66667px #59ff00, -92px -154.66667px #fff700, 130px -322.66667px #ff2b00, -220px -359.66667px #0037ff, 104px -91.66667px #ff0015, 60px -384.66667px #00d9ff, 91px -85.66667px #4000ff, 69px -38.66667px #7b00ff, 121px -111.66667px #0095ff, 118px -251.66667px #6fff00, -71px -255.66667px #0091ff, -69px -176.66667px #00ff48;
+    box-shadow: -2px -140.66667px #00ff04, -98px 36.33333px #ffa200, 75px -5.66667px #ff0d00, 166px 61.33333px #0d00ff, 161px -215.66667px #ff4d00, -71px -307.66667px #001eff, 70px -401.66667px #00ffa6, 37px -204.66667px #fffb00, 173px -140.66667px #00ff88, -74px -93.66667px #aaff00, 174px -122.66667px #0022ff, -233px -143.66667px #9d00ff, -202px -322.66667px #0004ff, 30px -145.66667px #ff002f, 218px -172.66667px #7bff00, -69px -408.66667px #0084ff, 212px -352.66667px #ffa600, -63px -363.66667px #84ff00, -228px -314.66667px #d9ff00, -40px -352.66667px #ae00ff, 69px -163.66667px #00ff22, 136px 68.33333px #95ff00, -117px -275.66667px #c400ff, -119px -154.66667px #ff00a6, 30px -95.66667px #ff0066, 108px -65.66667px #00ff37, 126px -129.66667px #ff00a2, 19px -225.66667px #000dff, 67px -30.66667px #ff5100, 84px -77.66667px #ff00c8, 128px -28.66667px #00ffcc, 241px -197.66667px #11ff00, -162px 13.33333px #00ff0d, -31px 74.33333px #d9ff00, -181px -400.66667px #d0ff00, 75px -189.66667px #00ffd9, 231px -73.66667px #00ff40, -144px 14.33333px #2fff00, -126px 34.33333px #7700ff, 76px -158.66667px #3700ff, -61px 74.33333px #00ffd9, 157px -5.66667px #ffd500, 73px -86.66667px #ffaa00, -109px -283.66667px #ff00ea, -53px 62.33333px #c8ff00, -166px -128.66667px #ffb300, -244px -66.66667px #ff9d00, -230px -248.66667px #00ffcc, -181px 50.33333px #6a00ff, -197px -117.66667px #ff0055, 210px -97.66667px #0095ff;
   }
 }
 
