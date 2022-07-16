@@ -58,7 +58,6 @@ export class _Window {
         setTimeout(() => {
             $(`#${this.id}`).addClass('active')
         }, 100)
-        
     }
 
     Hide() {

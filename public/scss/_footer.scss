@@ -246,7 +246,7 @@ body {
 
     &[data-theme="dark"] {
         .footer {
-            background: map-get($colors, _lightblack);
+            background: map-get($colors, _lightblack0);
         
             section {
                 &:nth-child(1) {

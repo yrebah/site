@@ -1759,7 +1759,7 @@ body[data-theme="dark"] .loader .container .dot {
 
 @keyframes bang {
   to {
-    box-shadow: -161px -55.66667px #0099ff, 83px -157.66667px #00ffb3, -190px -68.66667px #ff00b7, 225px 79.33333px #d900ff, -127px -108.66667px #001eff, 148px -304.66667px #bbff00, -206px -151.66667px #ff0073, 78px -258.66667px #00ff84, -166px -218.66667px #e600ff, 244px -176.66667px #ff0073, 81px -143.66667px #bb00ff, 66px -328.66667px #b3ff00, 24px -143.66667px #80ff00, 229px -164.66667px #ff0011, -15px -167.66667px #e1ff00, -93px -343.66667px #ffe600, 207px -225.66667px #ff005e, -16px -188.66667px #ee00ff, 39px -145.66667px #0026ff, 21px -47.66667px #ff00d0, 87px -402.66667px #6200ff, 136px 8.33333px #5e00ff, 118px 83.33333px #0084ff, 29px -315.66667px #c4ff00, -164px -178.66667px #ff3700, -49px -228.66667px #00d0ff, 58px -56.66667px #4400ff, -62px 47.33333px #00a2ff, 120px -377.66667px #aa00ff, -2px -198.66667px #00ff22, 148px -95.66667px #ffe100, 206px -209.66667px #ff007b, 38px -77.66667px #ff005e, 86px 27.33333px #66ff00, -142px 27.33333px #00f7ff, -239px 9.33333px #1e00ff, 53px -177.66667px #00f2ff, -238px -310.66667px #ffd900, 101px 55.33333px #00ff6a, 92px 2.33333px #0055ff, -25px -226.66667px #00ff37, 82px 77.33333px #00ff51, -209px -19.66667px #5e00ff, 33px 10.33333px #006aff, -102px -279.66667px #ff0099, -234px -343.66667px #ff0066, 239px -65.66667px #9500ff, -46px -354.66667px #9d00ff, 91px -317.66667px #00e1ff, -85px -164.66667px #5eff00, 74px -176.66667px #ff5100;
+    box-shadow: 202px -404.66667px #ffdd00, -108px -377.66667px #0011ff, -39px 31.33333px #001eff, -206px -41.66667px #ff009d, -208px -122.66667px #000dff, -23px -339.66667px #00ff4d, 155px -47.66667px #d0ff00, -137px -278.66667px #4400ff, -47px 68.33333px #00ff59, 28px 67.33333px #fff700, -178px -295.66667px #ff9100, 236px -356.66667px #00ff2f, 64px 20.33333px #ff002b, 147px -358.66667px #1eff00, -210px -278.66667px #00ff80, -75px -246.66667px #ff1a00, 58px -90.66667px #00eaff, -172px -116.66667px #00f7ff, -93px 67.33333px #ff8000, 51px -309.66667px #40ff00, 161px -387.66667px #26ff00, -98px -102.66667px #ff1a00, 164px -5.66667px #ff0066, -47px -65.66667px #ff3700, 47px -121.66667px #2b00ff, 43px -17.66667px #ee00ff, -225px 75.33333px #88ff00, 85px -352.66667px #ff00e6, 135px -218.66667px #d0ff00, -181px -172.66667px #00ff09, 43px -259.66667px #00ff33, -123px -50.66667px #f700ff, -102px -194.66667px #00ff73, 35px -115.66667px #00c4ff, 238px -105.66667px #00ff5e, -56px -106.66667px #00aeff, 87px -234.66667px #ff003c, 137px -353.66667px #5e00ff, -60px -343.66667px #00ffb3, 200px -320.66667px #59ff00, -92px -154.66667px #fff700, 130px -322.66667px #ff2b00, -220px -359.66667px #0037ff, 104px -91.66667px #ff0015, 60px -384.66667px #00d9ff, 91px -85.66667px #4000ff, 69px -38.66667px #7b00ff, 121px -111.66667px #0095ff, 118px -251.66667px #6fff00, -71px -255.66667px #0091ff, -69px -176.66667px #00ff48;
   }
 }
 
@@ -2278,7 +2278,7 @@ body[data-theme="light"] .footer section:nth-child(2) .container-column .column 
 }
 
 body[data-theme="dark"] .footer {
-  background: #1a1a1a;
+  background: #0f0f0f;
 }
 
 body[data-theme="dark"] .footer section:nth-child(1) .container-description .row img {
