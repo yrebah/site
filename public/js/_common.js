@@ -11,9 +11,21 @@ import { _Window } from "../class/_window.js";
 // Window ----------------------------
 
 export const Window = {
+    Append: (id, container, path) => {
+        const window = new _Window(id, container, path)
+        window.Append()
+    },
     Show: (id, container, path) => {
         const window = new _Window(id, container, path)
         window.Show()
+    },
+    Hide: (id, container, path) => {
+        const window = new _Window(id, container, path)
+        window.Hide()
+    },
+    Remove: (id, container, path) => {
+        const window = new _Window(id, container, path)
+        window.Remove()
     }
 }
 

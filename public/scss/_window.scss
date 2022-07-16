@@ -5,18 +5,13 @@
     left: 0;
     width: 100%;
     height: 90%;
-    animation: window 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 0.5s ease-in-out;
 
-    @keyframes window {
-        0% {
-            opacity: 0;
-            transform: translateY(100%);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateY(0%);
-        }
+    &.active {
+        opacity: 1;
+        transform: translateY(0%);
     }
 
     &.global {
@@ -32,11 +27,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 70px;
+        height: 50px;
 
         i {
             color: map-get($colors, _black);
-            font-size: map-get($font-size, 'm');
+            font-size: map-get($font-size, 's');
             cursor: pointer;
             transition: 0.25s;
 

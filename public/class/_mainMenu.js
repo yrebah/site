@@ -1,6 +1,9 @@
 // _mainMenu.js
 
 import { _Window } from "./_window.js";
+import { Window } from "../js/_common.js";
+
+Window.Append('window-settings', 'body', '/settings')
 
 export class _MainMenu {
 
@@ -14,12 +17,7 @@ export class _MainMenu {
     SetBtnUserSettings() {
         $('#btn-user-settings').click(() => {
             this.Close()
-            const window = new _Window(
-                'window-settings', 
-                'body',
-                '/settings'
-            )
-            window.Show()
+            Window.Show('window-settings', 'body', '/settings')
         })
     }
 
