@@ -8,7 +8,6 @@
     padding-right: map-get($padding, 'm');
     border-radius: map-get($border-radius, 'xs');
     border: 1px solid map-get($colors, _lightblack);
-    transition: 0.15s ease-in-out;
 
     select {
         padding: map-get($padding, 'l');

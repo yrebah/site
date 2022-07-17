@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
-    height: var(--header-height);
+    height: 80px;
     padding-left: map-get($padding-block, 's');
     padding-right: map-get($padding-block, 's');
     background: map-get($colors, _white);
@@ -62,7 +62,6 @@
             background: map-get($colors, _blue);
             height: 4px;
             width: 0%;
-            transition: 0.15s ease-in-out;
         }
 
         &:hover {

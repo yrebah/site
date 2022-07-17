@@ -6,7 +6,6 @@ textarea {
     border: 1px solid map-get($colors, _gray);
     font-size: map-get($font-size, 'xs');
     color: map-get($colors, _white);
-    transition: 0.15s ease-in-out;
 
     &:read-only {
         background: map-get($colors, _gray);

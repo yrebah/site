@@ -3,7 +3,6 @@
 .main-index {
     position: relative;
     min-height: 100vh;
-    margin-top: 30px;
     margin-bottom: 30px;
     background-image: url(../img/wp_1.jpg);
     background-size: cover;
@@ -15,6 +14,7 @@
 
         &.--section-1 {
             h1 {
+                padding-top: 50px;
                 margin-bottom: 50px;
                 font-size: map-get($font-size, 'xl');
                 font-weight:500;
@@ -41,6 +41,36 @@
             iframe {
                 width:100%;
                 height:100%;
+            }
+        }
+    }
+}
+
+body {
+    &[data-theme="light"] {
+        .main-index {
+            background-image: url(../img/wp_2.jpg);
+
+            .main-section {
+                &.--section-1 {
+                    .--wrapper-1 {
+                        background: #c5c5c5b1;
+                    }
+                }
+            }
+        }
+    }
+
+    &[data-theme="dark"] {
+        .main-index {
+            background-image: url(../img/wp_1.jpg);
+
+            .main-section {
+                &.--section-1 {
+                    .--wrapper-1 {
+                        background: #100f0fb1;
+                    }
+                }
             }
         }
     }

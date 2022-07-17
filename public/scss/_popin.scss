@@ -99,7 +99,6 @@
                 color: map-get($colors, _black);
                 font-size: map-get($font-size, 'xl');
                 cursor: pointer;
-                transition: 0.15s;
 
                 &:hover {
                     color: hsl(0, 0%, 30%);

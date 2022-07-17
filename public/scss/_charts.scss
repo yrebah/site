@@ -31,7 +31,6 @@
                 justify-content: end;
                 flex: 1;
                 cursor: pointer;
-                transition: 0.20s ease-in-out;
 
                 &.lowlight{
                     filter: brightness(60%);

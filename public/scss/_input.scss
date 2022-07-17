@@ -7,7 +7,6 @@
     color: map-get($colors, _black);
     background: map-get($colors, _white);
     font-size: map-get($font-size, 'xs');
-    transition: 0.15s ease-in-out;
 
     &:read-only {
         background: map-get($colors, _gray);

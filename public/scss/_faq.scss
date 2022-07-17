@@ -11,7 +11,6 @@
         border-radius: 8px;
         margin-bottom: 8px;
         cursor: pointer;
-        transition: 0.20s ease-in-out;
 
         &:hover {
             filter: brightness(95%);
@@ -24,13 +23,36 @@
             align-items: center;
             justify-content: space-between;
 
+            @include screen-xs {
+                font-size: map-get($font-size, 'xs');
+            }
+        
+            @include screen-s {
+                font-size: map-get($font-size, 's');
+            }
+        
+            @include screen-m {
+                font-size: map-get($font-size, 'm');
+            }
+
             i {
                 margin-right: 12px;
                 font-size: map-get($font-size, 'm');
-                transition: 0.15s ease-in-out;
 
                 &.active {
                     transform: rotate(90deg);
+                }
+
+                @include screen-xs {
+                    font-size: map-get($font-size, 'xs');
+                }
+            
+                @include screen-s {
+                    font-size: map-get($font-size, 's');
+                }
+            
+                @include screen-m {
+                    font-size: map-get($font-size, 'm');
                 }
             }
         }
