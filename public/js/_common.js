@@ -7,6 +7,28 @@ import { _Fireworks } from "../class/_fireworks.js";
 import { _Colors } from "../class/_colors.js";
 import { _Charts } from "../class/_charts.js";
 import { _Window } from "../class/_window.js";
+// import { spotifyApiTools } from "app.js";
+
+// Spotify ----------------------------
+
+// export const Spotify = {
+//     GetArtistAlbums: (key, callback) => {
+//         const spotify = new _Spotify()
+//         spotify.GetArtistAlbums(key, callback)
+//     },
+//     SearchArtists: (value, callback) => {
+//         const spotify = new _Spotify()
+//         spotify.SearchArtists(value, callback)
+//     },
+//     GetListArtistName: (value, callback) => {
+//         const spotify = new _Spotify()
+//         spotify.GetListArtistName(value, callback)
+//     },
+//     SearchTracks: (value, callback) => {
+//         const spotify = new _Spotify()
+//         spotify.SearchTracks(value, callback)
+//     }
+// }
 
 // Window ----------------------------
 

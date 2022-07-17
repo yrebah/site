@@ -5,6 +5,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import bcrypt from 'bcrypt';
 import cookieParser from 'cookie-parser';
+import SpotifyWebApi from 'spotify-web-api-node';
 import { signToken, validateToken } from './controller/JWT.js'
 import { queries } from "./controller/db.js";
 import { tools } from "./controller/tools.js";
@@ -49,6 +50,7 @@ app.get('', validateToken, (req, res) => {
         data_social: mainData.data_social,
         data_footer: mainData.data_footer,
         data_searchBar: mainData.data_searchBar,
+        data_faq: mainData.data_faq,
         user_obj
     })
 })
@@ -61,7 +63,7 @@ app.get('/settings', validateToken, (req, res) => {
         title: `${mainData.data_site.title} - Paramètres`,
         h1: "Paramètres",
         data_site: mainData.data_site,
-        data_settings : mainData.data_settings
+        data_settings: mainData.data_settings
     })
 })
 
@@ -236,6 +238,68 @@ app.post('/profile', (req, res) => {
         console.log('register ok')
     }
 })
+
+// -------------------------------------------------------------------------------------------
+
+// spotify
+app.get('/spotify', validateToken, (req, res) => {
+    res.render('spotify', {
+        title: `${mainData.data_site.title} - Spotify`,
+        data_site: mainData.data_site,
+        data_header: mainData.data_header,
+        data_mainMenu: mainData.data_mainMenu,
+        data_social: mainData.data_social,
+        data_footer: mainData.data_footer,
+        data_searchBar: mainData.data_searchBar,
+        user_obj
+    })
+})
+
+const spotifyApi = new SpotifyWebApi({
+    clientId: process.env.SPOTIFY_CLIENT_ID,
+    clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
+    redirectUri: 'http://localhost:3000/'
+})
+
+const initSpotifyApi = async (callback) => {
+    const access_token = await spotifyApi.clientCredentialsGrant()
+    spotifyApi.setAccessToken(access_token.body.access_token)
+    callback()
+}
+
+export const spotifyApiTools = {
+    GetArtistAlbums: async (key, callback) => {
+        initSpotifyApi(() => {
+            spotifyApi.getArtistAlbums(key).then((data) => {
+                callback(data.body)
+            })
+        })
+    },
+    SearchArtists: async (value, callback) => {
+        initSpotifyApi(() => {
+            spotifyApi.searchArtists(value).then((data) => {
+                callback(data.body)
+            })
+        })
+    },
+    GetListArtistName: async (value, callback) => {
+        initSpotifyApi(() => {
+            spotifyApi.searchArtists(value).then((data) => {
+                const result = data.body.artists.items
+                result.forEach((elem) => {
+                    callback(elem.name)
+                })
+            })
+        })
+    },
+    SearchTracks: async (value, callback) => {
+        initSpotifyApi(() => {
+            spotifyApi.searchTracks(value).then((data) => {
+                callback(data.body)
+            })
+        })
+    }
+}
 
 // -------------------------------------------------------------------------------------------
 

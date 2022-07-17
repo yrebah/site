@@ -10,7 +10,17 @@
     <%- include('../public/templates/header') %>
     <%- include('../public/templates/main-menu') %>
 
-        <main id="main" class="main"></main>
+    <main class="main main-index">
+
+        <section id="faq" class="main-section --section-1">
+            <h1><%= h1 %></h1>
+            <div class="--wrapper-1 highlight-hover">
+                <h2 class="title-faq">Comment que je fais ?</h2>
+                <%- include('../public/templates/faq/faq-index') %>
+            </div>
+        </section>
+        
+    </main>
 
     <%- include('../public/templates/footer') %>
 

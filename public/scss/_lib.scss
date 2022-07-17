@@ -108,3 +108,10 @@
     align-items: center;
     justify-content: flex-end;
 }
+
+.highlight-hover {
+    transition:0.20s ease-in-out;
+    &:hover {
+        filter: brightness(108%);
+    }
+}

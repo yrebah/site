@@ -1,0 +1,17 @@
+<!-- TEMPLATE - faq-index -->
+
+<div class="faq --faq-index">
+    <% Object.keys(data_faq.index).forEach((key)=> { %>
+        <% for (let key1 in data_faq.index[key]) { %>
+            <div class="container">
+                <h2 class="faq-question">
+                    <%- data_faq.index[key][key1].question %>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </h2>
+                <div class="faq-response">
+                    <%- data_faq.index[key][key1].response %>
+                </div>
+            </div>
+        <% } %>
+    <% }) %>
+</div>

@@ -1,0 +1,75 @@
+// _faq.scss
+
+.faq {
+    position: relative;
+    margin: 0 auto;
+
+    .container {
+        position: relative;
+        padding: 20px;
+        background: #171717;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        cursor: pointer;
+        transition: 0.20s ease-in-out;
+
+        &:hover {
+            filter: brightness(95%);
+        }
+
+        .faq-question {
+            font-size: map-get($font-size, 'm');
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            i {
+                margin-right: 12px;
+                font-size: map-get($font-size, 'm');
+                transition: 0.15s ease-in-out;
+
+                &.active {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        .faq-response {
+            position: relative;
+            font-size: map-get($font-size, 's');
+            margin-top: 18px;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+}
+
+body {
+    &[data-theme="light"] {
+        .faq {
+            .container {
+                background: map-get($colors, _lightgray);
+        
+                &::before {
+                    background: map-get($colors, _gray);
+                }
+            }
+        }
+    }
+
+    &[data-theme="dark"] {
+        .faq {
+            .container {
+                background: map-get($colors, _lightblack);
+        
+                &::before {
+                    background: map-get($colors, _lightblack3);
+                }
+            }
+        }
+    }
+}

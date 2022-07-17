@@ -264,23 +264,32 @@
         ]
     },
     "faq": {
-        "items": [
-            {
-                "id": "faq-1",
-                "question": "Comment vont-je ?",
-                "response": "loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum "
-            },
-            {
-                "id": "faq-2",
-                "question": "Bien ou bien ?",
-                "response": "loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum "
-            },
-            {
-                "id": "faq-3",
-                "question": "Quand suis-je ?",
-                "response": "loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum "
-            }
-        ]
+        "index": {
+            "faq01": [
+                {
+                    "id": "faq-01-1",
+                    "question": "Ceci est une question 1 ?",
+                    "response": "rep 1 loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum "
+                }
+            ],
+            "faq02": [
+                {
+                    "id": "faq-02-1",
+                    "question": "question 4 ?",
+                    "response": "rep 4 loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum "
+                },
+                {
+                    "id": "faq-02-2",
+                    "question": "question 5 ?",
+                    "response": "rep 5 loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum "
+                },
+                {
+                    "id": "faq-02-3",
+                    "question": "question 6 ?",
+                    "response": "rep 6 loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum "
+                }
+            ]
+        }
     },
     "social": {
         "links": [

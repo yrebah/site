@@ -1,10 +1,15 @@
-// main.scss
+/*
+    main.scss
+*/
 
+// base
 @import "./_fonts.scss";
 @import "./_var.scss";
 @import "./_presets.scss";
 @import "./_lib.scss";
 @import "./_body.scss";
+
+// components
 @import "./_scrollbar.scss";
 @import "./_img.scss";
 @import "./_input.scss";
@@ -12,7 +17,6 @@
 @import "./_button.scss";
 @import "./_window.scss";
 @import "./_charts.scss";
-@import "./_settings.scss";
 @import "./_search-bar.scss";
 @import "./_textarea.scss";
 @import "./_select.scss";
@@ -23,10 +27,16 @@
 @import "./_main-menu.scss";
 @import "./_footer.scss";
 @import "./_social-bar.scss";
+@import "./_faq.scss";
+
+// pages
+@import "./_index.scss";
+@import "./_404.scss";
+@import "./_profile.scss";
 @import "./_login.scss";
 @import "./_register.scss";
 @import "./_register-success.scss";
 @import "./_user-already-exist.scss";
 @import "./_forgot-password.scss";
-@import "./_profile.scss";
-@import "./_404.scss";
+@import "./_settings.scss";
+@import "./_spotify.scss";
