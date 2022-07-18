@@ -4,7 +4,7 @@ import { Loader, Popin, Notify } from "./_common.js";
 
 $(document).ready(()=>{
     $('#span-value-time').html(time_delay)
-    set_autoredirect()
+    //set_autoredirect()
 })
 
 let time_delay = 9

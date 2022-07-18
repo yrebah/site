@@ -24,7 +24,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(__dirname + '/public'));
 app.use('/css', express.static(__dirname + '/public/dist/css'));
 app.use('/js', express.static(__dirname + '/public/js'));
-app.use('/mjs', express.static(__dirname + '/public/mjs'));
+app.use('/class', express.static(__dirname + '/public/class'));
+app.use('/controller', express.static(__dirname + '/controller'));
 app.use('/img', express.static(__dirname + '/public/img'));
 app.use('/svg', express.static(__dirname + '/public/svg'));
 app.use('/json', express.static(__dirname + '/public/json'));
@@ -255,60 +256,72 @@ app.get('/spotify', validateToken, (req, res) => {
     })
 })
 
-const spotifyApi = new SpotifyWebApi({
-    clientId: process.env.SPOTIFY_CLIENT_ID,
-    clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
-    redirectUri: 'http://localhost:3000/'
-})
+// const spotifyApi = new SpotifyWebApi({
+//     clientId: process.env.SPOTIFY_CLIENT_ID,
+//     clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
+//     redirectUri: 'http://localhost:3000/'
+// })
 
-const initSpotifyApi = async (callback) => {
-    const access_token = await spotifyApi.clientCredentialsGrant()
-    spotifyApi.setAccessToken(access_token.body.access_token)
-    callback()
-}
+// const initSpotifyApi = async (callback) => {
+//     const access_token = await spotifyApi.clientCredentialsGrant()
+//     spotifyApi.setAccessToken(access_token.body.access_token)
+//     callback()
+// }
 
-export const spotifyApiTools = {
-    GetArtistAlbums: async (key, callback) => {
-        initSpotifyApi(() => {
-            spotifyApi.getArtistAlbums(key).then((data) => {
-                callback(data.body)
-            })
-        })
-    },
-    SearchArtists: async (value, callback) => {
-        initSpotifyApi(() => {
-            spotifyApi.searchArtists(value).then((data) => {
-                callback(data.body)
-            })
-        })
-    },
-    GetListArtistName: async (value, callback) => {
-        initSpotifyApi(() => {
-            spotifyApi.searchArtists(value).then((data) => {
-                const result = data.body.artists.items
-                result.forEach((elem) => {
-                    callback(elem.name)
-                })
-            })
-        })
-    },
-    SearchTracks: async (value, callback) => {
-        initSpotifyApi(() => {
-            spotifyApi.searchTracks(value).then((data) => {
-                callback(data.body)
-            })
-        })
-    }
-}
+// export const spotifyApiTools = {
+//     GetArtistAlbums: async (key, callback) => {
+//         initSpotifyApi(() => {
+//             spotifyApi.getArtistAlbums(key).then((data) => {
+//                 callback(data.body)
+//             })
+//         })
+//     },
+//     SearchArtists: async (value, callback) => {
+//         initSpotifyApi(() => {
+//             spotifyApi.searchArtists(value).then((data) => {
+//                 callback(data.body)
+//             })
+//         })
+//     },
+//     GetListArtistName: async (value, callback) => {
+//         initSpotifyApi(() => {
+//             spotifyApi.searchArtists(value).then((data) => {
+//                 const result = data.body.artists.items
+//                 result.forEach((elem) => {
+//                     callback(elem.name)
+//                 })
+//             })
+//         })
+//     },
+//     SearchTracks: async (value, callback) => {
+//         initSpotifyApi(() => {
+//             spotifyApi.searchTracks(value).then((data) => {
+//                 callback(data.body)
+//             })
+//         })
+//     }
+// }
 
 // -------------------------------------------------------------------------------------------
 
 // 404
+
 app.get('*', validateToken, (req, res) => {
     res.render('404', {
         title: `${mainData.data_site.title} - 404`,
         data_site: mainData.data_site,
         data_404: mainData.data_404
+    })
+})
+
+// -------------------------------------------------------------------------------------------
+
+// theme
+app.get('/theme', validateToken, (req, res) => {
+    res.render('theme', {
+        title: `${mainData.data_site.title} - Thème`,
+        data_site: mainData.data_site,
+        data_theme: mainData.data_theme
     })
 })
 

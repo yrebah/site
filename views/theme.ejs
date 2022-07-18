@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <%- include('../public/templates/heads/head-theme') %>
+</head>
+
+<body id="theme" class="hide-scrollbar">
+
+    <main class="main-theme global">
+        <% Object.keys(data_theme).forEach(function(key) { %>
+            console.log('Key : ' + key + ', Value : ' + data[key])
+        <% }) %>
+    </main>
+
+</body>
+
+</html>

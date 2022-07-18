@@ -13,5 +13,6 @@ export const mainData = {
     data_footer : main_json_parsed.footer,
     data_searchBar : main_json_parsed.searchBar,
     data_settings : main_json_parsed.settings,
-    data_faq : main_json_parsed.faq
+    data_faq : main_json_parsed.faq,
+    data_theme : main_json_parsed.theme
 }

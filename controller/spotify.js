@@ -1,13 +1,13 @@
 import SpotifyWebApi from 'spotify-web-api-node';
 import 'dotenv/config';
 
-export const spotifyApi = new SpotifyWebApi({
+const spotifyApi = new SpotifyWebApi({
     clientId: process.env.SPOTIFY_CLIENT_ID,
     clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
     redirectUri: 'http://localhost:3000/'
 })
 
-export const init = async (callback) => {
+const init = async (callback) => {
     const access_token = await spotifyApi.clientCredentialsGrant()
     spotifyApi.setAccessToken(access_token.body.access_token)
     callback()

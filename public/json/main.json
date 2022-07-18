@@ -16,12 +16,16 @@
         "title": "404",
         "subtitle": "Cette page n'existe pas !"
     },
+    "theme":{
+        "light": "Thème Light",
+        "dark": "Thème Dark"
+    },
     "settings": {
         "links": [
             {
                 "id": "settings-link-1",
                 "text": "Choix du thème",
-                "path": "/about",
+                "path": "/theme",
                 "target": "",
                 "title": "Choix du thème"
             },
