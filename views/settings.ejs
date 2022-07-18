@@ -14,7 +14,7 @@
                 <%= h1 %>
             </h1>
             <div class="select">
-                <select>
+                <select class="select-settings">
                     <% data_settings.links.forEach((elem)=> { %>
                         <option id="<%= elem.id %>" class="options-settings" data-path="<%= elem.path %>" title="<%= elem.title %>">
                             <%= elem.text %>
@@ -36,7 +36,6 @@
             </div>
             <div class="right-side slim-scrollbar">
                 <div class="layer">
-                    <h2>Vos paramètres et préférences</h2>
                     <i class="fa-solid fa-gears"></i>
                 </div>
             </div>

@@ -9,11 +9,13 @@
     height: 100%;
     display: flex;
     flex-wrap: nowrap;
+    pointer-events: none;
     transform: translateY(-100%);
     opacity: 0;
     transition: transform 0.40s ease-in-out, opacity 0.50s ease-in-out;
 
     &.active {
+        pointer-events: all;
         transform: translateY(0%);
         opacity: 1;
     }

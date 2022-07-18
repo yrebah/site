@@ -4,9 +4,9 @@ import { Loader, Popin, Notify, Headband, Colors, Charts, Window } from "./_comm
 
 $(document).ready(() => {
 
-    // Loader.Show('loader', 'body')
-    // setTimeout(() => {
-    //     Loader.Hide('#loader')
-    // }, 2000)
+    Loader.Show('loader', 'body')
+    setTimeout(() => {
+        Loader.Hide('#loader')
+    }, 3500)
 
 })

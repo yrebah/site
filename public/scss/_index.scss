@@ -4,11 +4,6 @@
     position: relative;
     min-height: 100vh;
     margin-bottom: 30px;
-    background-image: url(../img/wp_1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
 
     .main-section {
 
@@ -49,7 +44,6 @@
 body {
     &[data-theme="light"] {
         .main-index {
-            background-image: url(../img/wp_2.jpg);
 
             .main-section {
                 &.--section-1 {
@@ -63,7 +57,6 @@ body {
 
     &[data-theme="dark"] {
         .main-index {
-            background-image: url(../img/wp_1.jpg);
 
             .main-section {
                 &.--section-1 {

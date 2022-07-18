@@ -13,11 +13,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  transition: 0.25s ease-in-out;
 }
 
 html, body {
   scroll-behavior: smooth;
+  transition: 0.25s ease-in-out;
 }
 
 h1 {
@@ -1519,7 +1519,7 @@ body[data-theme="dark"] .loader .container .dot {
 
 @keyframes bang {
   to {
-    box-shadow: 188px -293.66667px #4800ff, -98px -394.66667px #ffc800, 124px -8.66667px #ff0080, -31px -78.66667px #2200ff, -11px -330.66667px #fff200, -240px -235.66667px #ff0080, -219px -242.66667px #ff9900, -124px 68.33333px #4dff00, 206px 58.33333px #8800ff, -52px -404.66667px #0022ff, -149px -158.66667px #ff005e, 210px 49.33333px #40ff00, -204px -380.66667px #ffd000, -76px -5.66667px #e100ff, -122px -81.66667px #37ff00, -172px -42.66667px #1eff00, 5px 2.33333px #ff00c4, 194px -374.66667px #00ffb3, 61px -58.66667px #d500ff, 150px -176.66667px #ffa600, -170px -47.66667px #ff0015, -184px -290.66667px #ff0099, -246px -78.66667px #eaff00, -124px -132.66667px #6aff00, 163px -143.66667px #0400ff, -245px -189.66667px #ff00bf, -20px -61.66667px #ff0091, -233px -111.66667px #00fff7, 34px -220.66667px #0066ff, 216px -67.66667px #0d00ff, -141px 42.33333px #00ff26, 33px -393.66667px #00ff91, 49px -393.66667px #4400ff, -38px -20.66667px #5eff00, -94px -375.66667px #ffe600, 227px -120.66667px #0040ff, 131px 59.33333px #002fff, -220px -391.66667px #00ffa2, -89px -158.66667px #00e1ff, -188px 74.33333px #00ff37, 39px -324.66667px #7300ff, -157px 56.33333px #ffe100, -240px -122.66667px deepskyblue, -101px -123.66667px #ff0033, -133px -231.66667px #00d0ff, -96px -130.66667px #ffa200, 200px -184.66667px #0011ff, 249px -191.66667px #ffd500, -245px -410.66667px #bbff00, -220px 15.33333px #ff0044, -217px -394.66667px #ff1e00;
+    box-shadow: 214px -196.66667px #ff0d00, 146px -273.66667px #000dff, 246px -120.66667px #7300ff, 180px -107.66667px #ff005e, 3px -111.66667px #00ff2f, -139px -121.66667px #00d9ff, -228px -51.66667px #001eff, 233px -225.66667px #ff00ae, 75px -368.66667px #0015ff, 89px -347.66667px #aaff00, 124px 72.33333px #0080ff, -49px -365.66667px #00a6ff, 156px -61.66667px #0095ff, 248px -229.66667px yellow, -55px -405.66667px #eaff00, -164px -180.66667px #3300ff, 103px -86.66667px #a2ff00, -38px -171.66667px #ffe600, -232px -142.66667px #ff9100, -205px -241.66667px #00ffb7, 63px -134.66667px #2600ff, 96px -333.66667px #ffaa00, 245px -145.66667px #2bff00, -148px -335.66667px #e100ff, -142px 19.33333px #2600ff, 228px -129.66667px #ccff00, 232px 37.33333px #ff2f00, 193px -295.66667px #00ffe6, 149px -27.66667px #80ff00, -137px -277.66667px #40ff00, 159px -2.66667px #0048ff, 134px -140.66667px #00ff59, 185px -125.66667px #00a2ff, -125px -84.66667px #4800ff, 176px -251.66667px #0073ff, 5px -127.66667px #0044ff, -42px -410.66667px #0048ff, -75px 25.33333px #b300ff, -7px -319.66667px #0022ff, -147px -280.66667px #ff8000, -217px -326.66667px #11ff00, 180px 25.33333px #aaff00, 0px -344.66667px #d000ff, -211px -209.66667px #ff3700, -151px -355.66667px #ff1a00, 49px -78.66667px #0004ff, -242px -298.66667px #ff0088, -2px -253.66667px #00ff5e, 122px -260.66667px #f700ff, 127px -245.66667px #ff8000, -197px -53.66667px #ff006f;
   }
 }
 
@@ -1571,12 +1571,14 @@ body[data-theme="dark"] .loader .container .dot {
   height: 100%;
   display: flex;
   flex-wrap: nowrap;
+  pointer-events: none;
   transform: translateY(-100%);
   opacity: 0;
   transition: transform 0.40s ease-in-out, opacity 0.50s ease-in-out;
 }
 
 .main-menu.active {
+  pointer-events: all;
   transform: translateY(0%);
   opacity: 1;
 }
@@ -2194,11 +2196,6 @@ body[data-theme="dark"] .faq .container::before {
   position: relative;
   min-height: 100vh;
   margin-bottom: 30px;
-  background-image: url(../img/wp_1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
 }
 
 .main-index .main-section.--section-1 h1 {
@@ -2231,16 +2228,8 @@ body[data-theme="dark"] .faq .container::before {
   height: 100%;
 }
 
-body[data-theme="light"] .main-index {
-  background-image: url(../img/wp_2.jpg);
-}
-
 body[data-theme="light"] .main-index .main-section.--section-1 .--wrapper-1 {
   background: #c5c5c5b1;
-}
-
-body[data-theme="dark"] .main-index {
-  background-image: url(../img/wp_1.jpg);
 }
 
 body[data-theme="dark"] .main-index .main-section.--section-1 .--wrapper-1 {
@@ -3078,6 +3067,14 @@ body[data-theme="dark"] .main-forgot-password .form .row-1 img {
   font-size: clamp(16px, 4vw, 18px);
 }
 
+.main-settings .grid-settings .menu-settings li a.active {
+  color: #34a075;
+}
+
+.main-settings .grid-settings .menu-settings li a.hover {
+  color: gray;
+}
+
 @media (min-width: 0px) {
   .main-settings .grid-settings .menu-settings li a {
     font-size: clamp(14px, 3vw, 16px);
@@ -3165,22 +3162,11 @@ body[data-theme="dark"] .main-forgot-password .form .row-1 img {
   left: 0;
 }
 
-.main-settings .right-side .layer h2 {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 25%;
-  text-align: center;
-  font-size: clamp(16px, 4vw, 18px);
-  font-weight: 400;
-  color: gray;
-}
-
 .main-settings .right-side .layer i {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-  top: 50%;
+  top: 35%;
   font-size: clamp(72px, 20vw, 150px);
   color: #262626;
 }
@@ -3189,6 +3175,14 @@ body[data-theme="light"] .main-settings .grid-settings .left-side {
   border-right: 1px solid #cccccc;
 }
 
+body[data-theme="light"] .main-settings .grid-settings .right-side .layer i {
+  color: #cccccc;
+}
+
 body[data-theme="dark"] .main-settings .grid-settings .left-side {
   border-right: 1px solid #3d3d3d;
+}
+
+body[data-theme="dark"] .main-settings .grid-settings .right-side .layer i {
+  color: #1a1a1a;
 }

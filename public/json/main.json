@@ -20,10 +20,10 @@
         "links": [
             {
                 "id": "settings-link-1",
-                "text": "about",
+                "text": "Choix du thème",
                 "path": "/about",
                 "target": "",
-                "title": "settings-link-1"
+                "title": "Choix du thème"
             },
             {
                 "id": "settings-link-2",
