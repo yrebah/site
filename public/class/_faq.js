@@ -8,7 +8,6 @@ export class _Faq {
 
     SetToggle() {
         document.querySelectorAll('.faq .container').forEach((elem) => {
-            console.log(elem.querySelector('.faq-response'))
             elem.addEventListener('click', (e) => {
                 if (elem.querySelector('.faq-response').classList.contains('active')) {
                     elem.querySelector('.faq-response').classList.remove('active')

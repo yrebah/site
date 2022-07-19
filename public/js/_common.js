@@ -7,7 +7,6 @@ import { _Fireworks } from "../class/_fireworks.js";
 import { _Colors } from "../class/_colors.js";
 import { _Charts } from "../class/_charts.js";
 import { _Window } from "../class/_window.js";
-import { _Spotify } from "../class/_spotify.js";
 
 // Window ----------------------------
 
